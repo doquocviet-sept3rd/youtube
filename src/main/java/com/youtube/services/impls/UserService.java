@@ -1,4 +1,6 @@
 package com.youtube.services.impls;
 
-public class UserService {
+import com.youtube.services.IUserService;
+
+public class UserService implements IUserService {
 }

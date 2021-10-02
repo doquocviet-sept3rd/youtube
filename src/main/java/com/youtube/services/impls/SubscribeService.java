@@ -1,4 +1,6 @@
 package com.youtube.services.impls;
 
-public class SubscribeService {
+import com.youtube.services.ISubscribeService;
+
+public class SubscribeService implements ISubscribeService {
 }

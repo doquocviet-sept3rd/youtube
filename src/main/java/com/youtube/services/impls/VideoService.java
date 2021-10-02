@@ -1,4 +1,7 @@
 package com.youtube.services.impls;
 
-public class VideoService {
+import com.youtube.services.IVideoService;
+
+public class VideoService implements IVideoService {
+
 }

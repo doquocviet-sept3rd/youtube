@@ -1,4 +1,7 @@
 package com.youtube.services.impls;
 
-public class ComInteractService {
+import com.youtube.services.IComInteractService;
+
+public class ComInteractService implements IComInteractService {
+
 }

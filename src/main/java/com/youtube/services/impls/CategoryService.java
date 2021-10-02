@@ -1,4 +1,7 @@
 package com.youtube.services.impls;
 
-public class CategoryService {
+import com.youtube.services.ICategoryService;
+
+public class CategoryService implements ICategoryService {
+
 }

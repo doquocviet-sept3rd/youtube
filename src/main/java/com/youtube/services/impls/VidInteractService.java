@@ -1,4 +1,6 @@
 package com.youtube.services.impls;
 
-public class VidInteractService {
+import com.youtube.services.IVidInteractService;
+
+public class VidInteractService implements IVidInteractService {
 }

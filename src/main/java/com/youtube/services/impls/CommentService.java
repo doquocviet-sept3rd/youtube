@@ -1,4 +1,6 @@
 package com.youtube.services.impls;
 
-public class CommentService {
+import com.youtube.services.ICommentService;
+
+public class CommentService implements ICommentService {
 }
