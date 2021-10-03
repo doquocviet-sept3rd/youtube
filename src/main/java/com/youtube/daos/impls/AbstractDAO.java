@@ -249,7 +249,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         }
 
         for (int i = 0; i < keys.length; i++) {
-            sql.append("entity.").append(keys[i]).append(" = ").append(params[i]).append(" ");
+            sql.append("entity.").append(keys[i]).append(" = ").append(params[i]).append(" and ");
         }
 
         return sql.toString();
