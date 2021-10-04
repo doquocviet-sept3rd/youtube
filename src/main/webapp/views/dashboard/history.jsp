@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-
+<h1>/history/</h1>
+<h1>Method POST</h1>
 </body>
 </html>
