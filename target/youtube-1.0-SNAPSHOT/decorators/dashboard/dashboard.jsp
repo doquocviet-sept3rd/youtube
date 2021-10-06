@@ -20,10 +20,6 @@
 <%@ include file="/common/dashboard/header.jsp" %>
 <%-- header --%>
 
-<%-- panel --%>
-<%@ include file="/common/dashboard/panel.jsp" %>
-<%-- panel --%>
-
 <%-- container --%>
 <dec:body/>
 <%-- container --%>
