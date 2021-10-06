@@ -1,6 +1,8 @@
 package com.youtube.controllers.dashboard.watch;
 
+import com.youtube.entities.Video;
 import com.youtube.services.*;
+import com.youtube.services.impls.VideoService;
 
 import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
@@ -32,11 +34,15 @@ public class WatchController extends HttpServlet {
     @Inject
     private IComInteractService comInteractService;
 
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // do get
+        videoService = new VideoService();
         String id = request.getParameter("v");
-        request.setAttribute("userId", id);
+        Video video = videoService.findOne((Long.parseLong(id)));
+        request.setAttribute("video", video);
+        System.out.println(video);
         RequestDispatcher rd = request.getRequestDispatcher("/views/dashboard/watch.jsp");
         rd.forward(request, response);
     }

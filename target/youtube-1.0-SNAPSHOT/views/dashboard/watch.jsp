@@ -21,6 +21,27 @@
 <h1>Subscribe {full}</h1>
 <h1>VidInteract {full}</h1>
 <h1>Comment {full}</h1>
-<h1>${model}</h1>
+<h1>${video.id}</h1>
+<h1>${video.name}</h1>
+<h1>${video.src}</h1>
+<h1>${video.views}</h1>
+<h1>${video.postingTime}</h1>
+<h1>${video.hashtag}</h1>
+<h1>${video.content}</h1>
+<h1>${video.likes}</h1>
+<h1>${video.dislikes}</h1>
+<h1>
+    Video
+        + findOne
+            + getProperties...
+            + getUser
+            + getComments
+            + getVidInteracts
+            + getCategories -> getVideos
+    Comment
+        + getComInteracts
+    Subscribe
+        + get set subscribe (video -> user)
+</h1>
 </body>
 </html>

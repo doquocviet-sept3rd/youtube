@@ -53,6 +53,21 @@ public class Video {
         this.categoryId = categoryId;
     }
 
+    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId) {
+        this.name = name;
+        this.src = src;
+        this.views = views;
+        this.postingTime = postingTime;
+        this.hashtag = hashtag;
+        this.content = content;
+        this.likes = likes;
+        this.dislikes = dislikes;
+        this.avatarUrl = avatarUrl;
+        this.timeLimit = timeLimit;
+        this.userId = userId;
+        this.categoryId = categoryId;
+    }
+
     @Id
     @Column(name = "id", nullable = false)
     @GeneratedValue(strategy = GenerationType.IDENTITY)

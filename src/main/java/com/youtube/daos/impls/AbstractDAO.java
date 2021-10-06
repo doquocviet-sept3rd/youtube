@@ -11,10 +11,11 @@ import java.util.List;
 
 public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
-    SessionFactory factory = HibernateUtils.getSessionFactory();
-
     @Override /* Find all entity from database */
     public List<Entity> findAll(String className) {
+
+        // Get session factory
+        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -26,10 +27,10 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
             // Query
             @SuppressWarnings("unchecked")
-            Query<Entity> query = session.createQuery("from " + className);
+            Query<Entity> query = session.createQuery("select e from " + className + " e");
 
             // Commit into database
-            session.getTransaction().commit();
+            // session.getTransaction().commit();
             System.out.println("Found All Successfully");
 
             return query.list();
@@ -45,8 +46,8 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         } finally {
 
             // Close transaction
-            factory.close();
-            session.close();
+            // factory.close();
+             session.close();
 
         }
         return null;
@@ -54,6 +55,9 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
     @Override /* Insert entity into database */
     public Long insert(Entity entity) {
+
+        // Get session factory
+        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -87,7 +91,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         } finally {
 
             // Close transaction
-            factory.close();
+            // factory.close();
             session.close();
 
         }
@@ -97,6 +101,9 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
     @Override /* Update entity in database */
     public boolean update(Entity entity) {
+
+        // Get session factory
+        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -127,7 +134,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         } finally {
 
             // Close transaction
-            factory.close();
+            // factory.close();
             session.close();
         }
         // Return false if update error
@@ -136,6 +143,9 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
     @Override /* Delete entity in database */
     public boolean delete(Entity entity) {
+
+        // Get session factory
+        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -166,7 +176,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         } finally {
 
             // Close transaction
-            factory.close();
+            // factory.close();
             session.close();
 
         }
@@ -177,6 +187,9 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
     @Override /* Find entity by primary key */
     public Entity findOne(String className, Object... params) {
 
+        // Get session factory
+        SessionFactory factory = HibernateUtils.getSessionFactory();
+
         // Get session current
         Session session = factory.getCurrentSession();
 
@@ -184,13 +197,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
             // Begin transaction
             session.getTransaction().begin();
-
-            // Return entity if contains id
-            if (params.length == 1) {
-                @SuppressWarnings("unchecked")
-                Entity entity = (Entity) session.load(className, params);
-                return entity;
-            }
 
             // Init string query
             String sql = getSqlParameter(className, params);
@@ -213,8 +219,8 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         } finally {
 
             // Close transaction
-            factory.close();
-            session.close();
+            // factory.close();
+             session.close();
 
         }
         // Return null if error or not found
@@ -225,6 +231,11 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
     public String getSqlParameter(String className, Object... params) {
 
         StringBuilder sql = new StringBuilder("select entity from " + className + " entity where ");
+
+        if (params.length == 1) {
+            sql.append("id = ").append(params[0]);
+            return sql.toString();
+        }
 
         String[] keys = new String[2];
         switch (className) {
@@ -248,9 +259,8 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             }
         }
 
-        for (int i = 0; i < keys.length; i++) {
-            sql.append("entity.").append(keys[i]).append(" = ").append(params[i]).append(" and ");
-        }
+        sql.append("entity.").append(keys[0]).append(" = ").append(params[0]).append(" and ")
+                .append("entity.").append(keys[1]).append(" = ").append(params[1]);
 
         return sql.toString();
     }
