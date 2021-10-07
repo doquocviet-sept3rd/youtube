@@ -16,13 +16,15 @@
 </head>
 <body>
 
-<%-- header --%>
-<%@ include file="/common/dashboard/header.jsp" %>
-<%-- header --%>
+<div class="main">
+    <%-- header --%>
+    <%@ include file="/common/dashboard/header.jsp" %>
+    <%-- header --%>
 
-<%-- container --%>
-<dec:body/>
-<%-- container --%>
+    <%-- container --%>
+    <dec:body/>
+    <%-- container --%>
+</div>
 
 </body>
 </html>
