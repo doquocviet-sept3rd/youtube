@@ -10,9 +10,15 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<%--    <meta charset="UTF-8">--%>
-<%--    <meta http-equiv="X-UA-Compatible" content="IE=edge">--%>
-<%--    <meta name="viewport" content="width=device-width, initial-scale=1.0">--%>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/base.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/style.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/common/assets/fonts/Fontawesome_pro_v6/css/all.css'/>"
+          type="text/css" media="all">
     <title><dec:title default="Home"/></title>
 </head>
 <body>

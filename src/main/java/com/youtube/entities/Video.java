@@ -1,8 +1,9 @@
 package com.youtube.entities;
 
+import org.hibernate.annotations.Nationalized;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Arrays;
 import java.util.Collection;
 import java.util.Objects;
 
@@ -121,6 +122,7 @@ public class Video {
 
     @Basic
     @Column(name = "hashtag")
+    @Nationalized
     public String getHashtag() {
         return hashtag;
     }

@@ -5,16 +5,13 @@
   Time: 11:32 PM
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java"%>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title>header</title>
-    <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/base.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/style.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/common/assets/fonts/Fontawesome_pro_v6/css/all.css'/>" type="text/css" media="all">
+    <title></title>
 </head>
 
 <body>
