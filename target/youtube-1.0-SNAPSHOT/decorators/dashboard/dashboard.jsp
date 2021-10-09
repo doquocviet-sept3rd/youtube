@@ -37,5 +37,7 @@
     <%-- container --%>
 </div>
 
+<script src="<c:url value='/templates/header/assets/js/main.js'/>" type="text/javascript"></script>
+<script src="<c:url value="/templates/watch/assets/js/main.js"/>" type="text/javascript"></script>
 </body>
 </html>

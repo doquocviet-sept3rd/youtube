@@ -346,7 +346,6 @@
 </div>
 <!-- end: secondary -->
 
-<script src="<c:url value="/templates/watch/assets/js/main.js"/>"></script>
 </body>
 
 </html>

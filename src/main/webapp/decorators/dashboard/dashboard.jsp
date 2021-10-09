@@ -16,8 +16,6 @@
     <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/base.css'/>" type="text/css" media="all">
     <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/style.css'/>" type="text/css" media="all">
     <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/responsive.css'/>" type="text/css" media="all">
-<%--    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">--%>
-<%--    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">--%>
     <link rel="stylesheet" href="<c:url value='/templates/common/assets/fonts/Fontawesome_pro_v6/css/all.css'/>"
           type="text/css" media="all">
     <title></title>
@@ -37,5 +35,7 @@
     <%-- container --%>
 </div>
 
+<script src="<c:url value="/templates/header/assets/js/main.js"/>" type="text/javascript"></script>
+<script src="<c:url value="/templates/watch/assets/js/main.js"/>" type="text/javascript"></script>
 </body>
 </html>

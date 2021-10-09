@@ -249,8 +249,6 @@
 
 </header>
 
-<script src="<c:url value='/templates/header/assets/js/main.js'/>"></script>
-
 </body>
 
 </html>

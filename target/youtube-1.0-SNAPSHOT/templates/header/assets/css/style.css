@@ -280,13 +280,3 @@ header {
 }
 
 /* End: header */
-
-.blur::after {
-    position: absolute;
-    content: '';
-    background-color: rgba(3, 3, 3, 0.295);
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
