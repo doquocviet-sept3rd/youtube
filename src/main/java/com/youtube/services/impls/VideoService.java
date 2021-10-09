@@ -24,4 +24,15 @@ public class VideoService implements IVideoService {
         videoDAO = new VideoDAO();
         return videoDAO.findAll();
     }
+
+    @Override
+    public String converNumberToString(long number) {
+        videoDAO = new VideoDAO();
+        return videoDAO.converNumberToString(number);
+    }
+
+    @Override
+    public String converNumberToHaveDot(long number) {
+        return null;
+    }
 }

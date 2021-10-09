@@ -1,3 +1,4 @@
+<jsp:useBean id="videoService" scope="request" type="com.youtube.services.impls.VideoService"/>
 <jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <%--<jsp:useBean id="comments" scope="request" type="java.util.List"/>--%>
@@ -14,6 +15,12 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/responsive.css'/>" type="text/css" media="all">
     <title><dec:title default="${video.name}"/></title>
 </head>
 
@@ -33,9 +40,9 @@
         </p>
         <div class="interaction">
             <i class="fal fa-thumbs-up active"></i>
-            <span>${video.likes}</span>
+            <span>${videoService.converNumberToString(video.likes)}</span>
             <i class="fal fa-thumbs-down"></i>
-            <span>${video.dislikes}</span>
+            <span>${videoService.converNumberToString(video.dislikes)}</span>
             <i class="fal fa-share"></i>
             <span>SHARE</span>
             <i class="fal fa-save"></i>
@@ -130,6 +137,25 @@
 <%--                </div>--%>
 <%--            </div>--%>
 <%--        </c:forEach>--%>
+        <div class="heading">
+            <span>289 bình luận</span>
+            <span>
+                <i class="fal fa-sort-amount-up-alt"></i>
+                SẮP XẾP THEO
+            </span>
+        </div>
+        <div class="add-comment">
+            <figure>
+                <img src="<c:url value="/templates/watch/assets/img/avatar.jpg"/>" alt="avatar" />
+            </figure>
+            <label>
+                <input type="text" placeholder="Bình luận công khai...">
+            </label>
+        </div>
+        <div class="save-comment">
+            <button class="cancel">HỦY</button>
+            <button class="save">BÌNH LUẬN</button>
+        </div>
         <div class="comment">
             <figure>
                 <img src="<c:url value="/templates/watch/assets/img/avatar.jpg"/>" alt="avatar">
@@ -149,6 +175,19 @@
                         <span>
                             <i class="fal fa-thumbs-down"></i>
                             31
+                        </span>
+                        <span>
+                            <i class="fal fa-ellipsis-v options"></i>
+                            <div class="comment-edit-delete">
+                                <a href="<c:url value="/#"/>">
+                                    <i class="fal fa-edit"></i>
+                                    <span>Chỉnh sửa</span>
+                                </a>
+                                <a href="<c:url value="/#"/>">
+                                    <i class="fal fa-trash-alt"></i>
+                                    <span>Xóa</span>
+                                </a>
+                            </div>
                         </span>
                     </div>
                 </div>

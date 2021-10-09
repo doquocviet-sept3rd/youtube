@@ -1,20 +1,11 @@
 
+
 /* Begin: container */
 
 #container {
     display: flex;
     background-color: #f9f9f9;
     padding: 24px 100px 0 100px;
-}
-
-.blur::after {
-    position: absolute;
-    content: '';
-    background-color: rgba(3, 3, 3, 0.295);
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
 }
 
 /* begin: primary */
@@ -28,12 +19,12 @@
     opacity: 0.3;
 }
 
-#primary .video iframe {
-    width: 100%;
-}
-
 #primary .video {
     font-weight: 600;
+}
+
+#primary .video iframe {
+    width: 100%;
 }
 
 #primary .video > p {
@@ -85,6 +76,7 @@
 
 #primary .content .info .profile {
     display: flex;
+    text-decoration: none;
 }
 
 #primary .content .info .profile figure {
@@ -119,6 +111,12 @@
     font-size: 14px;
     border-radius: 5px;
     cursor: pointer;
+}
+
+#primary .content .info .subscribeb {
+    background-color: #bbbbbb !important;
+    color: #333;
+    font-weight: 600;
 }
 
 #primary .content .expander {
@@ -159,6 +157,10 @@
     padding-top: 10px;
 }
 
+#primary .comments .comment > div {
+    width: 100%;
+}
+
 #primary .comments .add-comment label {
     width: 100%;
 }
@@ -170,6 +172,31 @@
     font-size: 14px;
     border-bottom: 1px solid #d4d4d4;
     outline: none;
+    padding: 5px;
+}
+
+#primary .comments .save-comment {
+    text-align: right;
+    display: none;
+}
+
+#primary .comments .save-comment > button {
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#primary .comments .save-comment .save {
+    background-color: rgb(235, 30, 30);
+    color: #fff;
+    border-radius: 5px;
+}
+
+#primary .comments .save-comment .cancel {
+    background-color: transparent;
 }
 
 #primary .comments .comment .name {
@@ -198,6 +225,8 @@
 
 #primary .comments .comment .comment-content .interaction {
     margin-top: 5px;
+    width: 100%;
+    position: relative;
 }
 
 #primary .comments .comment .comment-content .interaction > * {
@@ -207,6 +236,50 @@
 
 #primary .comments .comment .comment-content .interaction .active {
     font-weight: 600;
+}
+
+#primary .comments .comment .comment-content .options {
+    float: right;
+    clear: both;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+#primary .comments .comment .comment-content .options:hover {
+    background-color: #d3d3d3;
+}
+
+#primary .comments .comment .comment-content .comment-edit-delete {
+    position: absolute;
+    right: 0;
+    top: 40px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(177, 177, 177, 0.5);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+}
+
+#primary .comments .comment .comment-content .comment-edit-delete > a {
+    display: block;
+    color: #030303;
+    text-decoration: none;
+    padding: 15px 20px;
+    cursor: pointer;
+}
+
+#primary .comments .comment .comment-content .comment-edit-delete > a::selection,
+#primary .comments .comment .comment-content .comment-edit-delete > a span::selection {
+    background-color: transparent;
+}
+
+#primary .comments .comment .comment-content .comment-edit-delete > a:hover {
+    background-color: #d3d3d3;
 }
 
 /* end: primary */
@@ -230,6 +303,7 @@
 
 #secondary .session > div {
     padding: 0 10px;
+    flex-basis: 50%;
 }
 
 #secondary .session > div .name {
@@ -237,7 +311,6 @@
     font-size: 14px;
     font-weight: 600;
     line-height: 1.3;
-    text-align: justify;
 }
 
 #secondary .session > div .user,
@@ -252,13 +325,14 @@
     float: right;
     clear: right;
     font-size: 25px;
-    display: none;
+    opacity: 0;
+    flex-basis: 10%;
     min-width: 20px;
     transition: all 0.4s ease;
 }
 
 #secondary .session:hover i {
-    display: inline;
+    opacity: 1;
 }
 
 

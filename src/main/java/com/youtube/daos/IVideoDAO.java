@@ -18,4 +18,8 @@ public interface IVideoDAO extends GenericDAO<Video> {
     boolean delete(Video video);
 
     Video findOne(Object... params);
+
+    String converNumberToString(long number);
+
+    String converNumberToHaveDot(long number);
 }

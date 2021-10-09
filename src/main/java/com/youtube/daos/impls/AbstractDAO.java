@@ -227,6 +227,17 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         return null;
     }
 
+    @Override
+    public String converNumberToString(long number) {
+        String key = "";
+        if (number > 1000000) {
+            key = number/1000000 + "M";
+        } else if (number > 1000) {
+            key = number/1000 + "N";
+        }
+        return key;
+    }
+
     /* Init string sql */
     public String getSqlParameter(String className, Object... params) {
 

@@ -20,16 +20,19 @@ public class WatchController extends HttpServlet {
             throws ServletException, IOException {
         // do get
         IVideoService videoService = new VideoService();
+        request.setAttribute("videoService", videoService);
 
         // get video id
         String id = request.getParameter("v");
         Video video = videoService.findOne((Long.parseLong(id)));
 
         request.setAttribute("video", video);
+
         List<Video> videos = videoService.findAll();
         request.setAttribute("videos", videos);
-//        System.out.println(video);
-        request.setAttribute("comments", null);
+
+//        request.setAttribute("comments", null);
+
 
         RequestDispatcher rd = request.getRequestDispatcher("/views/dashboard/watch.jsp");
         rd.forward(request, response);

@@ -33,4 +33,19 @@ public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
     public Video findOne(Object... params) {
         return super.findOne(className, params);
     }
+
+    @Override
+    public String converNumberToString(long number) {
+        return super.converNumberToString(number);
+    }
+
+    @Override
+    public String converNumberToHaveDot(long number) {
+        String key = String.valueOf(number);
+        String result = "";
+        for (int i = key.length() - 1; i >= 0; i--) {
+            
+        }
+        return null;
+    }
 }

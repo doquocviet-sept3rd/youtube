@@ -9,4 +9,8 @@ public interface IVideoService {
     Video findOne(long id);
 
     List<Video> findAll();
+
+    String converNumberToString(long number);
+
+    String converNumberToHaveDot(long number);
 }

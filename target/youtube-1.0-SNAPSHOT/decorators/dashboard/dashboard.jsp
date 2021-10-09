@@ -15,11 +15,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/base.css'/>" type="text/css" media="all">
     <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/style.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/header/assets/css/responsive.css'/>" type="text/css" media="all">
+<%--    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">--%>
+<%--    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">--%>
     <link rel="stylesheet" href="<c:url value='/templates/common/assets/fonts/Fontawesome_pro_v6/css/all.css'/>"
           type="text/css" media="all">
-    <title><dec:title default="Home"/></title>
+    <title></title>
 </head>
 <body>
 
@@ -30,6 +31,7 @@
 
     <%-- container --%>
     <div id="container">
+        <dec:head/>
         <dec:body/>
     </div>
     <%-- container --%>

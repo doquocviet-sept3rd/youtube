@@ -2,33 +2,29 @@ const $ = document.querySelector.bind(document);
 // const $$ = document.querySelectorAll.bind(document);
 
 // toggle menu when menubar onclick
-const toggleMenuBar = function () {
-
+const toggleMenuBar = function (isDisplay) {
     const menuBar = $('#menu-bar');
-    //const container = $('#container');
-    let isDisplay = false;
+    const menuBehavior = $('#menu-behavior');
+    const container = $('#container');
 
     menuBar.onclick = () => {
-        const menuBehavior = $('#menu-behavior');
         if (!isDisplay) {
             menuBehavior.style.display = 'block';
-            //container.classList.add('blur');
+            container.classList.add('blur');
         } else {
             menuBehavior.style.display = 'none';
-            //container.classList.remove('blur');
+            container.classList.remove('blur');
         }
         isDisplay = !isDisplay;
     }
 };
 
 // toggle profile when avatar onlick
-const toggleProfile = function () {
-
+const toggleProfile = function (isDisplay) {
     const avatar = $('#avatar');
-    let isDisplay = false;
+    const profile = $('#profile');
 
     avatar.onclick = () => {
-        const profile = $('#profile');
         if (!isDisplay) {
             profile.style.display = 'block';
         } else {
@@ -38,16 +34,32 @@ const toggleProfile = function () {
     }
 };
 
-// undisplay toggel all when window onclick
-const windowOnClick = function () {
-
+const disableItems = function() {
+    const container = $('#container');
+    const menuBehavior = $('#menu-behavior');
+    const profile = $('#profile');
+    if (menuBehavior.style.display === 'block') {
+        menuBehavior.style.display = 'none';
+        toggleMenuBar(false);
+    }
+    if (profile.style.display === 'block') {
+        profile.style.display = 'none';
+        toggleProfile(false);
+    }
+    container.classList.remove('blur');
 };
 
-// window onresize
-window.onresize = function() {
-
+// hide menu bar and more if container onlick
+const hideItem = function () {
+    const container = $('#container');
+    container.onclick = () => {
+        disableItems();
+    }
+    window.onscroll = () => {
+        disableItems();
+    }
 }
 
-toggleMenuBar();
-toggleProfile();
-windowOnClick();
+toggleMenuBar(false);
+toggleProfile(false);
+hideItem();

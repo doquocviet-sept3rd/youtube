@@ -6,8 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <link rel="stylesheet" href="/assets/Fontawesome_pro_v6/css/all.css">
+    <link rel="stylesheet" href="/assets/css/style_test.css">
+    <link rel="stylesheet" href="/assets/css/responsive_test.css">
+    <link rel="stylesheet" href="/assets/Fontawesome_pro_v6 - Copy/css/all.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
 
         <!-- begin: start -->
         <div id="start">
-            <div id="menu-bar" class="text-center w-40 h-40 line-h-40">
+            <div id="menu-bar" class="text-center">
                 <i class="fal fa-bars"></i>
             </div>
             <a href="/#" id=logo>
@@ -245,7 +246,7 @@
     <div id="container">
         <!-- begin: primary -->
         <div id="primary">
-            <div class="video">
+            <div class="video fw-600">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/0jqeAOC4ddE?autoplay=1"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -272,7 +273,7 @@
             <hr />
             <div class="content">
                 <div class="info">
-                    <div class="profile">
+                    <a href="/#" class="profile">
                         <figure>
                             <img src="/assets/img/avatar.jpg" alt="avatar" />
                         </figure>
@@ -280,8 +281,8 @@
                             <p>Chuyện Chàng Tom</p>
                             <span>151 người đăng ký</span>
                         </div>
-                    </div>
-                    <input type="submit" value="ĐĂNG KÝ" />
+                    </a>
+                    <input type="submit" value="ĐĂNG KÝ" class="subscribeb" />
                 </div>
                 <div class="expander">
                     <p>🛎 Nếu thấy video hay hãy nhấn 𝐋𝐈𝐊𝐄 và 𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 ủng hộ Chuyện Chàng Tom ở đây nha:
@@ -330,6 +331,10 @@
                     </figure>
                     <input type="text" placeholder="Bình luận công khai...">
                 </div>
+                <div class="save-comment">
+                    <button class="cancel">HỦY</button>
+                    <button class="save">BÌNH LUẬN</button>
+                </div>
                 <div class="comment">
                     <figure>
                         <img src="/assets/img/avatar.jpg" alt="avatar">
@@ -349,6 +354,19 @@
                                 <span>
                                     <i class="fal fa-thumbs-down"></i>
                                     31
+                                </span>
+                                <span>
+                                    <i class="fal fa-ellipsis-v options"></i>
+                                    <div class="comment-edit-delete">
+                                        <a href="/#">
+                                            <i class="fal fa-edit"></i>
+                                            <span>Chỉnh sửa</span>
+                                        </a>
+                                        <a href="/#">
+                                            <i class="fal fa-trash-alt"></i>
+                                            <span>Xóa</span>
+                                        </a>
+                                    </div>
                                 </span>
                             </div>
                         </div>
@@ -517,31 +535,7 @@
             </a>
             <a href="/#" class="session">
                 <figure>
-                    <img src="https://i.ytimg.com/vi/gr_0md1U1mI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDhCofZhJYHWiMIpYBeZzL_v1UFvQ"
-                        alt="">
-                </figure>
-                <div>
-                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
-                    <p class="user">Phạm Nguyên Ngọc</p>
-                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
-                </div>
-                <i class="fal fa-ellipsis-v"></i>
-            </a>
-            <a href="/#" class="session">
-                <figure>
                     <img src="https://i.ytimg.com/vi/z35r-OeqLgQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCxPMpJOWm_XojhB51SCfN8A-1ZKw"
-                        alt="">
-                </figure>
-                <div>
-                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
-                    <p class="user">Phạm Nguyên Ngọc</p>
-                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
-                </div>
-                <i class="fal fa-ellipsis-v"></i>
-            </a>
-            <a href="/#" class="session">
-                <figure>
-                    <img src="https://i.ytimg.com/an_webp/k3zkzr0foiI/mqdefault_6s.webp?du=3000&sqp=CPDR-YoG&rs=AOn4CLCmxyekvslPyQDfv2SHEa7OMNWnVg"
                         alt="">
                 </figure>
                 <div>
@@ -601,7 +595,79 @@
             </a>
             <a href="/#" class="session">
                 <figure>
-                    <img src="https://i.ytimg.com/an_webp/k3zkzr0foiI/mqdefault_6s.webp?du=3000&sqp=CPDR-YoG&rs=AOn4CLCmxyekvslPyQDfv2SHEa7OMNWnVg"
+                    <img src="https://i.ytimg.com/vi/1VUYkDNeJfI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB4CHnTI3MlFEQ0DV7RvdSY4TJDHQ"
+                        alt="">
+                </figure>
+                <div>
+                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
+                    <p class="user">Phạm Nguyên Ngọc</p>
+                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
+                </div>
+                <i class="fal fa-ellipsis-v"></i>
+            </a>
+            <a href="/#" class="session">
+                <figure>
+                    <img src="https://i.ytimg.com/vi/LtuydLwIiHw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD-OWcC9xRt2shMffJbIKs2lsmqng"
+                        alt="">
+                </figure>
+                <div>
+                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
+                    <p class="user">Phạm Nguyên Ngọc</p>
+                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
+                </div>
+                <i class="fal fa-ellipsis-v"></i>
+            </a>
+            <a href="/#" class="session">
+                <figure>
+                    <img src="https://i.ytimg.com/vi/z35r-OeqLgQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCxPMpJOWm_XojhB51SCfN8A-1ZKw"
+                        alt="">
+                </figure>
+                <div>
+                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
+                    <p class="user">Phạm Nguyên Ngọc</p>
+                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
+                </div>
+                <i class="fal fa-ellipsis-v"></i>
+            </a>
+            <a href="/#" class="session">
+                <figure>
+                    <img src="https://i.ytimg.com/vi/1VUYkDNeJfI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLB4CHnTI3MlFEQ0DV7RvdSY4TJDHQ"
+                        alt="">
+                </figure>
+                <div>
+                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
+                    <p class="user">Phạm Nguyên Ngọc</p>
+                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
+                </div>
+                <i class="fal fa-ellipsis-v"></i>
+            </a>
+            <a href="/#" class="session">
+                <figure>
+                    <img src="https://i.ytimg.com/vi/LtuydLwIiHw/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLD-OWcC9xRt2shMffJbIKs2lsmqng"
+                        alt="">
+                </figure>
+                <div>
+                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
+                    <p class="user">Phạm Nguyên Ngọc</p>
+                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
+                </div>
+                <i class="fal fa-ellipsis-v"></i>
+            </a>
+            <a href="/#" class="session">
+                <figure>
+                    <img src="https://i.ytimg.com/vi/gr_0md1U1mI/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDhCofZhJYHWiMIpYBeZzL_v1UFvQ"
+                        alt="">
+                </figure>
+                <div>
+                    <p class="name">Phạm Nguyên Ngọc | Mashup "Anh sẽ ổn thôi & Cao ốc 20"</p>
+                    <p class="user">Phạm Nguyên Ngọc</p>
+                    <p class="info">5,7 Tr lượt xem &#183; 1 năm Trước</p>
+                </div>
+                <i class="fal fa-ellipsis-v"></i>
+            </a>
+            <a href="/#" class="session">
+                <figure>
+                    <img src="https://i.ytimg.com/vi/z35r-OeqLgQ/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLCxPMpJOWm_XojhB51SCfN8A-1ZKw"
                         alt="">
                 </figure>
                 <div>
@@ -616,7 +682,7 @@
     </div>
     <!-- End: container -->
 
-    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/main_test.js"></script>
 </body>
 
 </html>
