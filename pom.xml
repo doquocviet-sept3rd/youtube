@@ -20,6 +20,7 @@
         <jstl.version>1.2</jstl.version>
         <sitemesh.version>2.4.2</sitemesh.version>
         <inject.version>1</inject.version>
+        <weld.servlet.version>2.4.8.Final</weld.servlet.version>
         <maven.war.plugin.version>3.3.1</maven.war.plugin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -102,6 +103,13 @@
             <groupId>javax.inject</groupId>
             <artifactId>javax.inject</artifactId>
             <version>${inject.version}</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.jboss.weld.servlet/weld-servlet -->
+        <dependency>
+            <groupId>org.jboss.weld.servlet</groupId>
+            <artifactId>weld-servlet</artifactId>
+            <version>${weld.servlet.version}</version>
         </dependency>
 
     </dependencies>

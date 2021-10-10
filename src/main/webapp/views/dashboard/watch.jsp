@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kitsu
-  Date: 10/2/2021
-  Time: 10:00 PM
-  To change this template use File | Settings | File Templates.
---%>
 <jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <jsp:useBean id="commonService" scope="request" type="com.youtube.services.ICommonService"/>
@@ -16,7 +9,8 @@
 <head>
     <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">
     <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/responsive.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/responsive.css'/>" type="text/css"
+          media="all">
     <title><dec:title default="${video.name}"/></title>
 </head>
 
@@ -46,7 +40,7 @@
             <i class="fal fa-ellipsis-h"></i>
         </div>
     </div>
-    <hr />
+    <hr/>
     <div class="content">
         <div class="info">
             <div class="profile">
@@ -58,81 +52,81 @@
                     <span>${commonService.convertNumberToString(video.user.subscribe) != null ? commonService.convertNumberToString(video.user.subscribe) : 0} người đăng ký</span>
                 </div>
             </div>
-            <input type="submit" value="ĐĂNG KÝ" />
+            <input type="submit" value="ĐĂNG KÝ"/>
         </div>
         <div class="expander">
             ${video.content}
-<%--            <p>🛎 Nếu thấy video hay hãy nhấn 𝐋𝐈𝐊𝐄 và 𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 ủng hộ Chuyện Chàng Tom ở đây nha:--%>
-<%--            </p>--%>
-<%--            <p>https://bit.ly/ChuyenChangTom</p>--%>
-<%--            <p>Link MV gốc: https://youtu.be/WeVIWSJkARw</p>--%>
-<%--            <p>👆 Click xem thêm:</p>--%>
-<%--            <p>▶️ Tổng hợp nhạc viral: https://bit.ly/ChuyenChangTomViralMusics</p>--%>
-<%--            <p>▶️ Tổng hợp video hài hước: https://bit.ly/ChuyenChangTomBestFunny</p>--%>
-<%--            <p>#PhamNguyenNgoc #CauTraiDungHatMotMinh #B_Entertainment #ChuyenChangTom #CTDHMM</p>--%>
-<%--            <p>==========</p>--%>
-<%--            <p>Follow Chuyện Chàng Tom tại đây nhé:</p>--%>
-<%--            <p>► FANPAGE: https://www.facebook.com/ChuyenChangTom/</p>--%>
-<%--            <p>► GROUP: https://www.facebook.com/groups/Chuye...</p>--%>
-<%--            <p>► TIKTOK: https://www.tiktok.com/@chuyenchangtom</p>--%>
-<%--            <p>► INSTAGRAM: https://www.instagram.com/chuyenchang...</p>--%>
-<%--            <p>==========</p>--%>
-<%--            <p>➥ Follow Phạm Nguyên Ngọc:</p>--%>
-<%--            <p>👉Facebook: https://www.facebook.com/phamnguyenngocc</p>--%>
-<%--            <p>👉Fanpage: https://www.facebook.com/pnn.official</p>--%>
-<%--            <p>👉Instagram: https://www.instagram.com/pham.nguyen....</p>--%>
-<%--            <p>👉Group: https://www.facebook.com/groups/bancu...</p>--%>
-<%--            <p>👉TikTok: https://www.tiktok.com/@pham.nguyenngoc</p>--%>
-<%--            <p>==========</p>--%>
-<%--            <p>© Copyright by B Entertainment - Chuyện Chàng Tom 👉 DO NOT REUP</p>--%>
-<%--            <p>Liên hệ quảng cáo hay thắc mắc, khiếu nại về bản quyền âm nhạc và hình ảnh có trong video xin vui--%>
-<%--            </p>--%>
-<%--            <p>lòng liên hệ trực tiếp qua địa chỉ: hi@buithanhbinh.com để được feedback ngay lập tức.</p>--%>
+            <%--            <p>🛎 Nếu thấy video hay hãy nhấn 𝐋𝐈𝐊𝐄 và 𝐒𝐔𝐁𝐒𝐂𝐑𝐈𝐁𝐄 ủng hộ Chuyện Chàng Tom ở đây nha:--%>
+            <%--            </p>--%>
+            <%--            <p>https://bit.ly/ChuyenChangTom</p>--%>
+            <%--            <p>Link MV gốc: https://youtu.be/WeVIWSJkARw</p>--%>
+            <%--            <p>👆 Click xem thêm:</p>--%>
+            <%--            <p>▶️ Tổng hợp nhạc viral: https://bit.ly/ChuyenChangTomViralMusics</p>--%>
+            <%--            <p>▶️ Tổng hợp video hài hước: https://bit.ly/ChuyenChangTomBestFunny</p>--%>
+            <%--            <p>#PhamNguyenNgoc #CauTraiDungHatMotMinh #B_Entertainment #ChuyenChangTom #CTDHMM</p>--%>
+            <%--            <p>==========</p>--%>
+            <%--            <p>Follow Chuyện Chàng Tom tại đây nhé:</p>--%>
+            <%--            <p>► FANPAGE: https://www.facebook.com/ChuyenChangTom/</p>--%>
+            <%--            <p>► GROUP: https://www.facebook.com/groups/Chuye...</p>--%>
+            <%--            <p>► TIKTOK: https://www.tiktok.com/@chuyenchangtom</p>--%>
+            <%--            <p>► INSTAGRAM: https://www.instagram.com/chuyenchang...</p>--%>
+            <%--            <p>==========</p>--%>
+            <%--            <p>➥ Follow Phạm Nguyên Ngọc:</p>--%>
+            <%--            <p>👉Facebook: https://www.facebook.com/phamnguyenngocc</p>--%>
+            <%--            <p>👉Fanpage: https://www.facebook.com/pnn.official</p>--%>
+            <%--            <p>👉Instagram: https://www.instagram.com/pham.nguyen....</p>--%>
+            <%--            <p>👉Group: https://www.facebook.com/groups/bancu...</p>--%>
+            <%--            <p>👉TikTok: https://www.tiktok.com/@pham.nguyenngoc</p>--%>
+            <%--            <p>==========</p>--%>
+            <%--            <p>© Copyright by B Entertainment - Chuyện Chàng Tom 👉 DO NOT REUP</p>--%>
+            <%--            <p>Liên hệ quảng cáo hay thắc mắc, khiếu nại về bản quyền âm nhạc và hình ảnh có trong video xin vui--%>
+            <%--            </p>--%>
+            <%--            <p>lòng liên hệ trực tiếp qua địa chỉ: hi@buithanhbinh.com để được feedback ngay lập tức.</p>--%>
         </div>
     </div>
-    <hr />
+    <hr/>
     <div class="comments">
-<%--        <div class="heading">--%>
-<%--            <span>${video.comments.size()} bình luận</span>--%>
-<%--            <span>--%>
-<%--                <i class="fal fa-sort-amount-up-alt"></i>--%>
-<%--                SẮP XẾP THEO--%>
-<%--            </span>--%>
-<%--        </div>--%>
-<%--        <div class="add-comment">--%>
-<%--            <figure>--%>
-<%--                <img src="<c:url value="/templates/watch/assets/img/avatar.jpg"/>" alt="avatar"/>--%>
-<%--            </figure>--%>
-<%--            <label>--%>
-<%--                <input type="text" placeholder="Bình luận công khai...">--%>
-<%--            </label>--%>
-<%--        </div>--%>
-<%--        <c:forEach var="comment" items="${comments}">--%>
-<%--            <div class="comment">--%>
-<%--                <figure>--%>
-<%--                    <img src="<c:url value="${comment.user.avatarUrl}"/>" alt="avatar">--%>
-<%--                </figure>--%>
-<%--                <div>--%>
-<%--                    <div class="name">--%>
-<%--                        <a href="<c:url value="/channel?id=${comment.user.id}"/>">${comment.user.name}</a>--%>
-<%--                        <span>${comment.time}</span>--%>
-<%--                    </div>--%>
-<%--                    <div class="comment-content">--%>
-<%--                        ${comment.content}--%>
-<%--                        <div class="interaction">--%>
-<%--                        <span>--%>
-<%--                            <i class="fal fa-thumbs-up"></i>--%>
-<%--                            ${comment.likes}--%>
-<%--                        </span>--%>
-<%--                            <span>--%>
-<%--                            <i class="fal fa-thumbs-down"></i>--%>
-<%--                            ${comment.dislikes}--%>
-<%--                        </span>--%>
-<%--                        </div>--%>
-<%--                    </div>--%>
-<%--                </div>--%>
-<%--            </div>--%>
-<%--        </c:forEach>--%>
+        <%--        <div class="heading">--%>
+        <%--            <span>${video.comments.size()} bình luận</span>--%>
+        <%--            <span>--%>
+        <%--                <i class="fal fa-sort-amount-up-alt"></i>--%>
+        <%--                SẮP XẾP THEO--%>
+        <%--            </span>--%>
+        <%--        </div>--%>
+        <%--        <div class="add-comment">--%>
+        <%--            <figure>--%>
+        <%--                <img src="<c:url value="/templates/watch/assets/img/avatar.jpg"/>" alt="avatar"/>--%>
+        <%--            </figure>--%>
+        <%--            <label>--%>
+        <%--                <input type="text" placeholder="Bình luận công khai...">--%>
+        <%--            </label>--%>
+        <%--        </div>--%>
+        <%--        <c:forEach var="comment" items="${comments}">--%>
+        <%--            <div class="comment">--%>
+        <%--                <figure>--%>
+        <%--                    <img src="<c:url value="${comment.user.avatarUrl}"/>" alt="avatar">--%>
+        <%--                </figure>--%>
+        <%--                <div>--%>
+        <%--                    <div class="name">--%>
+        <%--                        <a href="<c:url value="/channel?id=${comment.user.id}"/>">${comment.user.name}</a>--%>
+        <%--                        <span>${comment.time}</span>--%>
+        <%--                    </div>--%>
+        <%--                    <div class="comment-content">--%>
+        <%--                        ${comment.content}--%>
+        <%--                        <div class="interaction">--%>
+        <%--                        <span>--%>
+        <%--                            <i class="fal fa-thumbs-up"></i>--%>
+        <%--                            ${comment.likes}--%>
+        <%--                        </span>--%>
+        <%--                            <span>--%>
+        <%--                            <i class="fal fa-thumbs-down"></i>--%>
+        <%--                            ${comment.dislikes}--%>
+        <%--                        </span>--%>
+        <%--                        </div>--%>
+        <%--                    </div>--%>
+        <%--                </div>--%>
+        <%--            </div>--%>
+        <%--        </c:forEach>--%>
         <div class="heading">
             <span>289 bình luận</span>
             <span>
@@ -142,7 +136,7 @@
         </div>
         <div class="add-comment">
             <figure>
-                <img src="<c:url value="/templates/watch/assets/img/avatar.jpg"/>" alt="avatar" />
+                <img src="<c:url value="/templates/watch/assets/img/avatar.jpg"/>" alt="avatar"/>
             </figure>
             <label>
                 <input type="text" placeholder="Bình luận công khai...">
@@ -256,7 +250,7 @@
                 </div>
                 <div class="comment-content">
                     trời ơii bt mà nghe giọng anh muốn tan nát cõi lòng luôn ấy, nổi cả da gà khi tới bài "Bài
-                    này buồn lắm", huhu như muốn khóc tới nơi, nghẹn cả cổ :)))))) <br />
+                    này buồn lắm", huhu như muốn khóc tới nơi, nghẹn cả cổ :)))))) <br/>
                     N a y ở t ô i đ a n g m ư a ! ! !
                     <div class="interaction">
                         <span>
@@ -334,7 +328,8 @@
             <div>
                 <p class="name">${commonService.cutString(video.name)}</p>
                 <p class="user">${video.user.name}</p>
-                <p class="info">${commonService.convertNumberToString(video.views) != null ? commonService.convertNumberToString(video.views) : 0} lượt xem • ${commonService.distanceOfDateToNow(video.postingTime)}</p>
+                <p class="info">${commonService.convertNumberToString(video.views) != null ? commonService.convertNumberToString(video.views) : 0}
+                    lượt xem • ${commonService.distanceOfDateToNow(video.postingTime)}</p>
             </div>
             <i class="fal fa-ellipsis-v"></i>
         </a>

@@ -1,9 +1,8 @@
 package com.youtube.controllers.dashboard.watch;
 
 import com.youtube.services.*;
-import com.youtube.services.impls.CommonService;
-import com.youtube.services.impls.VideoService;
 
+import javax.inject.Inject;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,11 +14,16 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/watch"})
 public class WatchController extends HttpServlet {
 
+    @Inject
+    ICommonService commonService;
+
+    @Inject
+    IVideoService videoService;
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // do get
-        IVideoService videoService = new VideoService();
-        request.setAttribute("commonService", new CommonService());
+
+        request.setAttribute("commonService", commonService);
 
         // get video id
         String id = request.getParameter("v");
