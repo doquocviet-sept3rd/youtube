@@ -15,7 +15,7 @@
         <javax.servlet.version>4.0.1</javax.servlet.version>
         <hibernate.core.version>5.5.7.final</hibernate.core.version>
         <mysql.connect.version>8.0.26</mysql.connect.version>
-        <hibernate.c3p0.version>5.4.32.Final</hibernate.c3p0.version>
+        <hibernate.c3p0.version>5.5.7.Final</hibernate.c3p0.version>
         <hibernate.entitymanager.version>5.5.7.Final</hibernate.entitymanager.version>
         <jstl.version>1.2</jstl.version>
         <sitemesh.version>2.4.2</sitemesh.version>
@@ -24,7 +24,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.target>1.8</maven.compiler.target>
         <maven.compiler.source>1.8</maven.compiler.source>
-        <junit.version>5.8.0</junit.version>
+        <junit.version>5.8.1</junit.version>
 
     </properties>
 
