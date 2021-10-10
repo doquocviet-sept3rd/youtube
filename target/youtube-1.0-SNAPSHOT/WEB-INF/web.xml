@@ -29,11 +29,6 @@
         <location>/views/notfound/notfound.jsp</location>
     </error-page>
 
-<!--    <error-page>-->
-<!--        <error-code>java.</error-code>-->
-<!--        <location>/views/notfound/notfound.jsp</location>-->
-<!--    </error-page>-->
-
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list></web-app>

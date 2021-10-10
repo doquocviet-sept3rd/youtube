@@ -29,7 +29,6 @@ public class WatchController extends HttpServlet {
 
 //        request.setAttribute("comments", null);
 
-
         RequestDispatcher rd = request.getRequestDispatcher("/views/dashboard/watch.jsp");
         rd.forward(request, response);
     }
