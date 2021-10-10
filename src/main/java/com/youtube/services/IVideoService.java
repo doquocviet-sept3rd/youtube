@@ -10,7 +10,4 @@ public interface IVideoService {
 
     List<Video> findAll();
 
-    String converNumberToString(long number);
-
-    String converNumberToHaveDot(long number);
 }

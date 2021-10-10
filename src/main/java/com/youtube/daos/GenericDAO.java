@@ -8,5 +8,4 @@ public interface GenericDAO<Entity> {
     boolean update(Entity entity);
     boolean delete(Entity entity);
     Entity findOne(String className, Object... params);
-    String converNumberToString(long number);
 }

@@ -1,7 +1,3 @@
-<jsp:useBean id="videoService" scope="request" type="com.youtube.services.impls.VideoService"/>
-<jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
-<jsp:useBean id="videos" scope="request" type="java.util.List"/>
-<%--<jsp:useBean id="comments" scope="request" type="java.util.List"/>--%>
 <%--
   Created by IntelliJ IDEA.
   User: kitsu
@@ -9,6 +5,9 @@
   Time: 10:00 PM
   To change this template use File | Settings | File Templates.
 --%>
+<jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
+<jsp:useBean id="videos" scope="request" type="java.util.List"/>
+<jsp:useBean id="commonService" scope="request" type="com.youtube.services.ICommonService"/>
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 <!DOCTYPE html>
@@ -33,13 +32,13 @@
             ${video.name}
         </p>
         <p class="views-time">
-            <c:out value="${video.views} lượt xem • ${video.postingTime.day} thg ${video.postingTime.month}, ${video.postingTime.year}"/>
+            <c:out value="${commonService.convertNumberToDot(video.views) != null ? commonService.convertNumberToDot(video.views) : 0} lượt xem • ${commonService.convertTimestampToString(video.postingTime)}"/>
         </p>
         <div class="interaction">
             <i class="fal fa-thumbs-up active"></i>
-            <span>${videoService.converNumberToString(video.likes)}</span>
+            <span>${commonService.convertNumberToString(video.likes) != null ? commonService.convertNumberToString(video.likes) : 0}</span>
             <i class="fal fa-thumbs-down"></i>
-            <span>${videoService.converNumberToString(video.dislikes)}</span>
+            <span>${commonService.convertNumberToString(video.dislikes) != null ? commonService.convertNumberToString(video.dislikes) : 0}</span>
             <i class="fal fa-share"></i>
             <span>SHARE</span>
             <i class="fal fa-save"></i>
@@ -56,7 +55,7 @@
                 </figure>
                 <div>
                     <p>${video.user.name}</p>
-                    <span>${video.user.subscribe} người đăng ký</span>
+                    <span>${commonService.convertNumberToString(video.user.subscribe) != null ? commonService.convertNumberToString(video.user.subscribe) : 0} người đăng ký</span>
                 </div>
             </div>
             <input type="submit" value="ĐĂNG KÝ" />
@@ -333,9 +332,9 @@
                 <img src="${video.avatarUrl}" alt="">
             </figure>
             <div>
-                <p class="name">${video.name}</p>
+                <p class="name">${commonService.cutString(video.name)}</p>
                 <p class="user">${video.user.name}</p>
-                <p class="info">${video.views} lượt xem • ${video.postingTime}</p>
+                <p class="info">${commonService.convertNumberToString(video.views) != null ? commonService.convertNumberToString(video.views) : 0} lượt xem • ${commonService.distanceOfDateToNow(video.postingTime)}</p>
             </div>
             <i class="fal fa-ellipsis-v"></i>
         </a>
