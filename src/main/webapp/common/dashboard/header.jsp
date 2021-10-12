@@ -32,6 +32,12 @@
     <!-- begin: menu bar behavior -->
     <div id="menu-behavior">
         <div class="session">
+            <a href="<c:url value='https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/youtube_war_exploded/login-google&response_type=code
+    &client_id=405005216042-agfg4sovu79svdpqoimekpi1gn635ei6.apps.googleusercontent.com&approval_prompt=force'/>"
+               class="active">
+                <i class="fal fa-home-lg-alt"></i>
+                <span>Login with google</span>
+            </a>
             <a href="<c:url value='/#'/>" class="active">
                 <i class="fal fa-home-lg-alt"></i>
                 <span>Trang chủ</span>
