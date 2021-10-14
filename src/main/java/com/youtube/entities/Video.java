@@ -22,15 +22,19 @@ public class Video {
     private long dislikes;
     private String avatarUrl;
     private double timeLimit;
+
     private long userId;
     private long categoryId;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private Collection<Comment> comments;
     private Collection<History> histories;
     private Collection<VidInteract> vidInteracts;
+
     private User user;
     private Category category;
 
@@ -54,7 +58,7 @@ public class Video {
         this.categoryId = categoryId;
     }
 
-    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId) {
+    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId, Timestamp modifiedOn, Long modifiedBy) {
         this.name = name;
         this.src = src;
         this.views = views;
@@ -67,6 +71,27 @@ public class Video {
         this.timeLimit = timeLimit;
         this.userId = userId;
         this.categoryId = categoryId;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.name = name;
+        this.src = src;
+        this.views = views;
+        this.postingTime = postingTime;
+        this.hashtag = hashtag;
+        this.content = content;
+        this.likes = likes;
+        this.dislikes = dislikes;
+        this.avatarUrl = avatarUrl;
+        this.timeLimit = timeLimit;
+        this.userId = userId;
+        this.categoryId = categoryId;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
     }
 
     @Id

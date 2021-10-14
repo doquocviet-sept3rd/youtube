@@ -10,12 +10,15 @@ import java.util.Objects;
 public class VidInteract {
 
     private boolean isLike;
+
     private long userId;
     private long videoId;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private User user;
     private Video video;
 
@@ -28,6 +31,29 @@ public class VidInteract {
         this.userId = userId;
         this.videoId = videoId;
     }
+
+    public VidInteract(boolean isLike) {
+        this.isLike = isLike;
+    }
+
+    public VidInteract(boolean isLike, long userId, long videoId, Timestamp modifiedOn, Long modifiedBy) {
+        this.isLike = isLike;
+        this.userId = userId;
+        this.videoId = videoId;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public VidInteract(boolean isLike, long userId, long videoId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.isLike = isLike;
+        this.userId = userId;
+        this.videoId = videoId;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
 
     @Basic
     @Column(name = "isLike", nullable = false)
@@ -117,7 +143,7 @@ public class VidInteract {
 
     @Override
     public int hashCode() {
-        int result =  isLike ? 1 : 0;
+        int result = isLike ? 1 : 0;
         result = 31 * result + (int) (userId ^ (userId >>> 32));
         result = 31 * result + (int) (videoId ^ (videoId >>> 32));
         result = 31 * result + (createdOn != null ? createdOn.hashCode() : 0);

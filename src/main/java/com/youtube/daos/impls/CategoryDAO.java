@@ -3,6 +3,8 @@ package com.youtube.daos.impls;
 import com.youtube.daos.ICategoryDAO;
 import com.youtube.entities.Category;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 public class CategoryDAO extends AbstractDAO<Category> implements ICategoryDAO {
@@ -16,11 +18,14 @@ public class CategoryDAO extends AbstractDAO<Category> implements ICategoryDAO {
 
     @Override
     public Long insert(Category category) {
+        category.setCreatedOn(Timestamp.from(Instant.now()));
+        category.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(category);
     }
 
     @Override
     public boolean update(Category category) {
+        category.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(category);
     }
 

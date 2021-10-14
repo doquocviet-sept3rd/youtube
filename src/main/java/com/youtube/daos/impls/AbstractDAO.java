@@ -47,7 +47,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
             // Close transaction
             // factory.close();
-             session.close();
+            session.close();
 
         }
         return null;
@@ -220,7 +220,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
             // Close transaction
             // factory.close();
-             session.close();
+            session.close();
 
         }
         // Return null if error or not found

@@ -1,17 +1,12 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kitsu
-  Date: 10/2/2021
-  Time: 11:32 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <title><dec:title default="home"/></title>
+    <title></title>
+    <meta name="google-signin-client_id"
+          content="405005216042-agfg4sovu79svdpqoimekpi1gn635ei6.apps.googleusercontent.com">
 </head>
 
 <body>
@@ -32,12 +27,7 @@
     <!-- begin: menu bar behavior -->
     <div id="menu-behavior">
         <div class="session">
-            <a href="<c:url value='https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/youtube_war_exploded/login-google&response_type=code
-    &client_id=405005216042-agfg4sovu79svdpqoimekpi1gn635ei6.apps.googleusercontent.com&approval_prompt=force'/>"
-               class="active">
-                <i class="fal fa-home-lg-alt"></i>
-                <span>Login with google</span>
-            </a>
+            <p>${user}</p>
             <a href="<c:url value='/#'/>" class="active">
                 <i class="fal fa-home-lg-alt"></i>
                 <span>Trang chủ</span>
@@ -164,6 +154,8 @@
         <i class="fal fa-video-plus text-center"></i>
         <i class="fal fa-tv-alt text-center"></i>
         <i class="fal fa-bell text-center"></i>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        <a href="#" onclick="signOut();">Sign out</a>
         <img src="<c:url value="/templates/header/assets/img/avatar.jpg"/>" alt="avatar" id="avatar">
     </div>
     <!-- end: end -->
@@ -252,6 +244,27 @@
 
 </header>
 
+<script src="<c:url value='https://apis.google.com/js/platform.js'/>" async defer>
+</script>
+<script>
+    // function onSignIn(googleUser) {
+    //     const profile = googleUser.getBasicProfile();
+    //     const xhr = new XMLHttpRequest();
+    //     xhr.open("POST", 'http://localhost:8080/youtube_war_exploded/api-user', true);
+    //     xhr.setRequestHeader('Content-Type', 'application/json');
+    //     xhr.send(JSON.stringify({
+    //         name: profile.getName(0),
+    //         email: profile.getEmail(0),
+    //         avatarUrl: profile.getImageUrl(0)
+    //     }));
+    // }
+    // function signOut() {
+    //     const auth2 = gapi.auth2.getAuthInstance();
+    //     auth2.signOut().then(function () {
+    //         console.log('User signed out.');
+    //     });
+    // }
+</script>
 </body>
 
 </html>

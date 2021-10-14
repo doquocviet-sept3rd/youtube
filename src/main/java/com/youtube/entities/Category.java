@@ -13,10 +13,12 @@ public class Category {
 
     private long id;
     private String name;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private Collection<Video> videos;
 
     public Category() {
@@ -26,6 +28,24 @@ public class Category {
     public Category(long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Category(String name) {
+        this.name = name;
+    }
+
+    public Category(String name, Timestamp modifiedOn, Long modifiedBy) {
+        this.name = name;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public Category(String name, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.name = name;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
     }
 
     @Id

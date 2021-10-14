@@ -3,6 +3,8 @@ package com.youtube.daos.impls;
 import com.youtube.daos.IUserDAO;
 import com.youtube.entities.User;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 public class UserDAO extends AbstractDAO<User> implements IUserDAO {
@@ -16,11 +18,14 @@ public class UserDAO extends AbstractDAO<User> implements IUserDAO {
 
     @Override
     public Long insert(User user) {
+        user.setCreatedOn(Timestamp.from(Instant.now()));
+        user.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(user);
     }
 
     @Override
     public boolean update(User user) {
+        user.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(user);
     }
 

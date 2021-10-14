@@ -10,12 +10,15 @@ import java.util.Objects;
 public class ComInteract {
 
     private boolean isLike;
+
     private long userId;
     private long commentId;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private User user;
     private Comment comment;
 
@@ -27,6 +30,28 @@ public class ComInteract {
         this.isLike = isLike;
         this.userId = userId;
         this.commentId = commentId;
+    }
+
+    public ComInteract(boolean isLike) {
+        this.isLike = isLike;
+    }
+
+    public ComInteract(boolean isLike, long userId, long commentId, Timestamp modifiedOn, Long modifiedBy) {
+        this.isLike = isLike;
+        this.userId = userId;
+        this.commentId = commentId;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public ComInteract(boolean isLike, long userId, long commentId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.isLike = isLike;
+        this.userId = userId;
+        this.commentId = commentId;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
     }
 
     @Basic

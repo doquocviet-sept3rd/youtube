@@ -3,6 +3,8 @@ package com.youtube.daos.impls;
 import com.youtube.daos.IVidInteractDAO;
 import com.youtube.entities.VidInteract;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 public class VidInteractDAO extends AbstractDAO<VidInteract> implements IVidInteractDAO {
@@ -16,11 +18,14 @@ public class VidInteractDAO extends AbstractDAO<VidInteract> implements IVidInte
 
     @Override
     public Long insert(VidInteract vidInteract) {
+        vidInteract.setCreatedOn(Timestamp.from(Instant.now()));
+        vidInteract.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(vidInteract);
     }
 
     @Override
     public boolean update(VidInteract vidInteract) {
+        vidInteract.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(vidInteract);
     }
 

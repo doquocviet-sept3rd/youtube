@@ -3,6 +3,8 @@ package com.youtube.daos.impls;
 import com.youtube.daos.IHistoryDAO;
 import com.youtube.entities.History;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 public class HistoryDAO extends AbstractDAO<History> implements IHistoryDAO {
@@ -16,11 +18,14 @@ public class HistoryDAO extends AbstractDAO<History> implements IHistoryDAO {
 
     @Override
     public Long insert(History history) {
+        history.setCreatedOn(Timestamp.from(Instant.now()));
+        history.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(history);
     }
 
     @Override
     public boolean update(History history) {
+        history.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(history);
     }
 

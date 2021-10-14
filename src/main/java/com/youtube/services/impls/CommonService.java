@@ -1,6 +1,7 @@
 package com.youtube.services.impls;
 
 import com.youtube.services.ICommonService;
+
 import java.lang.*;
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -9,11 +10,7 @@ import java.util.Calendar;
 public class CommonService implements ICommonService {
 
     @Override
-    public String convertNumberToString(long number) {
-
-        if (number == 0) {
-            return null;
-        }
+    public String formatNumber(long number) {
 
         StringBuilder result = new StringBuilder();
         if (number > 1000000) {
@@ -25,7 +22,7 @@ public class CommonService implements ICommonService {
     }
 
     @Override
-    public String convertNumberToDot(long number) {
+    public String addFPoint(long number) {
         String src = String.valueOf(number);
         StringBuilder result = new StringBuilder();
         for (int i = src.length() - 1, j = 1; i >= 0; i--, j++) {
@@ -43,7 +40,7 @@ public class CommonService implements ICommonService {
     }
 
     @Override
-    public String convertTimestampToString(Timestamp timestamp) {
+    public String formatTime(Timestamp timestamp) {
         long time = timestamp.getTime();
         Calendar cal = Calendar.getInstance();
         cal.setTimeInMillis(time);
@@ -51,7 +48,7 @@ public class CommonService implements ICommonService {
     }
 
     @Override
-    public String distanceOfDateToNow(Timestamp timestamp) {
+    public String distanceTime(Timestamp timestamp) {
         Timestamp now = Timestamp.from(Instant.now());
         long getDiff = now.getTime() - timestamp.getTime();
 
@@ -79,7 +76,7 @@ public class CommonService implements ICommonService {
     }
 
     @Override
-    public String cutString(String src) {
+    public String formatString(String src) {
         StringBuilder result = new StringBuilder(src);
         if (result.length() > 55) {
             result.replace(55, result.length(), "");

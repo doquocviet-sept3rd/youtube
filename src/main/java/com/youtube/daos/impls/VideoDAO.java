@@ -3,6 +3,8 @@ package com.youtube.daos.impls;
 import com.youtube.daos.IVideoDAO;
 import com.youtube.entities.Video;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
@@ -16,11 +18,14 @@ public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
 
     @Override
     public Long insert(Video video) {
+        video.setCreatedOn(Timestamp.from(Instant.now()));
+        video.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(video);
     }
 
     @Override
     public boolean update(Video video) {
+        video.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(video);
     }
 

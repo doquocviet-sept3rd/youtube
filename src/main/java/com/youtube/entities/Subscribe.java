@@ -11,10 +11,12 @@ public class Subscribe {
 
     private long userId;
     private long userIdSub;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private User user;
     private User userSub;
 
@@ -25,6 +27,22 @@ public class Subscribe {
     public Subscribe(long userId, long userIdSub) {
         this.userId = userId;
         this.userIdSub = userIdSub;
+    }
+
+    public Subscribe(long userId, long userIdSub, Timestamp modifiedOn, Long modifiedBy) {
+        this.userId = userId;
+        this.userIdSub = userIdSub;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public Subscribe(long userId, long userIdSub, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.userId = userId;
+        this.userIdSub = userIdSub;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
     }
 
     @Id

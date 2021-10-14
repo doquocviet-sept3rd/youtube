@@ -4,13 +4,13 @@ import java.sql.Timestamp;
 
 public interface ICommonService {
 
-    String convertNumberToString(long number);
+    String formatNumber(long number);
 
-    String convertNumberToDot(long number);
+    String addFPoint(long number);
 
-    String convertTimestampToString(Timestamp timestamp);
+    String formatTime(Timestamp timestamp);
 
-    String distanceOfDateToNow(Timestamp timestamp);
+    String distanceTime(Timestamp timestamp);
 
-    String cutString(String src);
+    String formatString(String src);
 }

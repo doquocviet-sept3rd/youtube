@@ -3,6 +3,8 @@ package com.youtube.daos.impls;
 import com.youtube.daos.IComInteractDAO;
 import com.youtube.entities.ComInteract;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
 public class ComInteractDAO extends AbstractDAO<ComInteract> implements IComInteractDAO {
@@ -16,11 +18,14 @@ public class ComInteractDAO extends AbstractDAO<ComInteract> implements IComInte
 
     @Override
     public Long insert(ComInteract comInteract) {
+        comInteract.setCreatedOn(Timestamp.from(Instant.now()));
+        comInteract.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(comInteract);
     }
 
     @Override
     public boolean update(ComInteract comInteract) {
+        comInteract.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(comInteract);
     }
 

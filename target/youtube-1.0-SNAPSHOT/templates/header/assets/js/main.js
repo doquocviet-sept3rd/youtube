@@ -5,15 +5,12 @@ const $ = document.querySelector.bind(document);
 const toggleMenuBar = function (isDisplay) {
     const menuBar = $('#menu-bar');
     const menuBehavior = $('#menu-behavior');
-    const container = $('#container');
 
     menuBar.onclick = () => {
         if (!isDisplay) {
             menuBehavior.style.display = 'block';
-            container.classList.add('blur');
         } else {
             menuBehavior.style.display = 'none';
-            container.classList.remove('blur');
         }
         isDisplay = !isDisplay;
     }
@@ -46,7 +43,6 @@ const disableItems = function() {
         profile.style.display = 'none';
         toggleProfile(false);
     }
-    container.classList.remove('blur');
 };
 
 // hide menu bar and more if container onlick

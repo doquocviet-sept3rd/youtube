@@ -1,17 +1,24 @@
 package com.youtube;
 
-import java.sql.Timestamp;
-import java.time.Instant;
+import com.youtube.daos.IUserDAO;
+import com.youtube.daos.impls.UserDAO;
+import com.youtube.entities.User;
+
 
 public class TestFunciton {
+
+
     public static void main(String[] args) {
 
-        StringBuilder src = new StringBuilder("09-Oct-2021 15:46:44.523 INFO [main] org.apache.coyote.AbstractProtocol.stop Stopping ProtocolHandler [\"http-nio-8080\"]" +
-                "09-Oct-2021 15:46:44.527 INFO [main] org.apache.coyote.AbstractProtocol.destroy Destroying ProtocolHandler [\"http-nio-8080\"]");
-        if (src.length() > 48) {
-            src.replace(48, src.length() - 1, "");
-            src.append("...");
-        }
-        System.out.println(src);
+        UserDAO userDAO = new UserDAO();
+
+        User user = new User();
+        user.setName("Việt Đỗ Quốc - test");
+        user.setAvatarUrl("Avatar url - test");
+        user.setEmail("1223@gmail.com");
+
+        Long id = userDAO.insert(user);
+        System.out.println(id);
+
     }
 }

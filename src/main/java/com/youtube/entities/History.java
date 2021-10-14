@@ -10,12 +10,15 @@ public class History {
 
     private long id;
     private Timestamp time;
+
     private long userId;
     private long videoId;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private User user;
     private Video video;
 
@@ -28,6 +31,30 @@ public class History {
         this.time = time;
         this.userId = userId;
         this.videoId = videoId;
+    }
+
+    public History(Timestamp time, long userId, long videoId) {
+        this.time = time;
+        this.userId = userId;
+        this.videoId = videoId;
+    }
+
+    public History(Timestamp time, long userId, long videoId, Timestamp modifiedOn, Long modifiedBy) {
+        this.time = time;
+        this.userId = userId;
+        this.videoId = videoId;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public History(Timestamp time, long userId, long videoId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.time = time;
+        this.userId = userId;
+        this.videoId = videoId;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
     }
 
     @Id

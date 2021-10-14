@@ -3,9 +3,11 @@ package com.youtube.daos.impls;
 import com.youtube.daos.ICommentDAO;
 import com.youtube.entities.Comment;
 
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.List;
 
-public class CommentDAO extends AbstractDAO<Comment> implements ICommentDAO{
+public class CommentDAO extends AbstractDAO<Comment> implements ICommentDAO {
 
     private final String className = "Comment";
 
@@ -16,11 +18,14 @@ public class CommentDAO extends AbstractDAO<Comment> implements ICommentDAO{
 
     @Override
     public Long insert(Comment comment) {
+        comment.setCreatedOn(Timestamp.from(Instant.now()));
+        comment.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(comment);
     }
 
     @Override
     public boolean update(Comment comment) {
+        comment.setModifiedOn(Timestamp.from(Instant.now()));
         return super.update(comment);
     }
 

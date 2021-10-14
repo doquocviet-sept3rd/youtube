@@ -13,24 +13,66 @@ public class User {
 
     private long id;
     private String email;
-    private String password;
     private String name;
     private String avatarUrl;
     private long subscribe;
     private String nameChannel;
     private String avatarChannelUrl;
     private String coverChannelUrl;
+
     private Timestamp createdOn;
     private Long createdBy;
     private Timestamp modifiedOn;
     private Long modifiedBy;
+
     private Collection<ComInteract> comInteracts;
     private Collection<Comment> comments;
     private Collection<History> histories;
-    private Collection<Subscribe> subscribers;
-    private Collection<Subscribe> subscribes;
+    private Collection<Subscribe> subscribers;  // subscribed
+    private Collection<Subscribe> subscribes;   // subscribe
     private Collection<VidInteract> vidInteracts;
     private Collection<Video> videos;
+
+    public User() {
+
+    }
+
+    public User(Long id, String email, String name, String avatarUrl, long subscribe, String nameChannel, String avatarChannelUrl, String coverChannelUrl) {
+        this.id = id;
+        this.email = email;
+        this.name = name;
+        this.avatarUrl = avatarUrl;
+        this.subscribe = subscribe;
+        this.nameChannel = nameChannel;
+        this.avatarChannelUrl = avatarChannelUrl;
+        this.coverChannelUrl = coverChannelUrl;
+    }
+
+    public User(String email, String name, String avatarUrl, long subscribe, String nameChannel, String avatarChannelUrl, String coverChannelUrl, Timestamp modifiedOn, Long modifiedBy) {
+        this.email = email;
+        this.name = name;
+        this.avatarUrl = avatarUrl;
+        this.subscribe = subscribe;
+        this.nameChannel = nameChannel;
+        this.avatarChannelUrl = avatarChannelUrl;
+        this.coverChannelUrl = coverChannelUrl;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
+
+    public User(String email, String name, String avatarUrl, long subscribe, String nameChannel, String avatarChannelUrl, String coverChannelUrl, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.email = email;
+        this.name = name;
+        this.avatarUrl = avatarUrl;
+        this.subscribe = subscribe;
+        this.nameChannel = nameChannel;
+        this.avatarChannelUrl = avatarChannelUrl;
+        this.coverChannelUrl = coverChannelUrl;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
 
     @Id
     @Column(name = "id", nullable = false)
@@ -44,23 +86,13 @@ public class User {
     }
 
     @Basic
-    @Column(name = "email", nullable = false)
+    @Column(name = "email", nullable = false, unique = true)
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    @Basic
-    @Column(name = "password", nullable = false)
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
     }
 
     @Basic
@@ -175,7 +207,6 @@ public class User {
         if (id != user.id) return false;
         if (subscribe != user.subscribe) return false;
         if (!Objects.equals(email, user.email)) return false;
-        if (!Objects.equals(password, user.password)) return false;
         if (!Objects.equals(name, user.name)) return false;
         if (!Objects.equals(avatarUrl, user.avatarUrl)) return false;
         if (!Objects.equals(nameChannel, user.nameChannel)) return false;
@@ -191,7 +222,6 @@ public class User {
     public int hashCode() {
         int result = (int) (id ^ (id >>> 32));
         result = 31 * result + (email != null ? email.hashCode() : 0);
-        result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (avatarUrl != null ? avatarUrl.hashCode() : 0);
         result = 31 * result + (int) (subscribe ^ (subscribe >>> 32));

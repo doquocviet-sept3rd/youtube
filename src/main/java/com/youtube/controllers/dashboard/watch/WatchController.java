@@ -20,35 +20,36 @@ public class WatchController extends HttpServlet {
     @Inject
     IVideoService videoService;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-
-        request.setAttribute("commonService", commonService);
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setAttribute("cs", commonService);
 
         // get video id
-        String id = request.getParameter("v");
-        request.setAttribute("video", videoService.findOne(Long.parseLong(id)));
+        String id = req.getParameter("v");
+        req.setAttribute("video", videoService.findOne(Long.parseLong(id)));
 
-        request.setAttribute("videos", videoService.findAll());
+        req.setAttribute("videos", videoService.findAll());
 
-//        request.setAttribute("comments", null);
+        if (req.getParameter("user") != null) {
+            req.setAttribute("user", req.getParameter("user"));
+        }
 
-        RequestDispatcher rd = request.getRequestDispatcher("/views/dashboard/watch.jsp");
-        rd.forward(request, response);
+        RequestDispatcher rd = req.getRequestDispatcher("/views/dashboard/watch.jsp");
+        rd.forward(req, resp);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do post
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 
-    protected void doPut(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do put
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do delete
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
     }
 }
