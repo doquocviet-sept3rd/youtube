@@ -6,4 +6,9 @@ public interface IUserService {
 
     Long insert(User user);
 
+    User findOne(Long id);
+
+    boolean isExistEmail(String email);
+
+    User findOneByEmail(String email);
 }

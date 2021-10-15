@@ -6,7 +6,7 @@ public class SessionUtil {
 
     private static SessionUtil sessionUtil = null;
 
-    private static SessionUtil getInstance() {
+    public static SessionUtil getInstance() {
         if (sessionUtil == null) {
             sessionUtil = new SessionUtil();
         }

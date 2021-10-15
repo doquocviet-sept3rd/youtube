@@ -22,14 +22,17 @@ public class WatchController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         req.setAttribute("cs", commonService);
 
-        // get video id
+        // get video
         String id = req.getParameter("v");
         req.setAttribute("video", videoService.findOne(Long.parseLong(id)));
 
+        // get videos
         req.setAttribute("videos", videoService.findAll());
 
+        // get user
         if (req.getParameter("user") != null) {
             req.setAttribute("user", req.getParameter("user"));
         }

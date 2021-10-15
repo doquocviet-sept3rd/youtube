@@ -38,4 +38,26 @@ public class UserDAO extends AbstractDAO<User> implements IUserDAO {
     public User findOne(Object... params) {
         return super.findOne(className, params);
     }
+
+    @Override
+    public boolean isExixtEmail(String email) {
+        List<User> users = this.findAll();
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
+    public User findOneByEmail(String email) {
+        List<User> users = this.findAll();
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
+        return null;
+    }
 }

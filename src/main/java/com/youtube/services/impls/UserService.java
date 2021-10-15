@@ -15,4 +15,19 @@ public class UserService implements IUserService {
     public Long insert(User user) {
         return userDAO.insert(user);
     }
+
+    @Override
+    public User findOne(Long id) {
+        return userDAO.findOne(id);
+    }
+
+    @Override
+    public boolean isExistEmail(String email) {
+        return userDAO.isExixtEmail(email);
+    }
+
+    @Override
+    public User findOneByEmail(String email) {
+        return userDAO.findOneByEmail(email);
+    }
 }

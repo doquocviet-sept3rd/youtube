@@ -1,3 +1,4 @@
+<%--@elvariable id="user" type="com.youtube.entities.User"--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 <!DOCTYPE html>
@@ -10,10 +11,11 @@
 </head>
 
 <body>
-<!-- Begin: header -->
+
+<%-- Begin: header --%>
 <header>
 
-    <!-- begin: start -->
+    <%-- begin: start --%>
     <div id="start">
         <div id="menu-bar" class="text-center">
             <i class="fal fa-bars"></i>
@@ -27,8 +29,7 @@
     <!-- begin: menu bar behavior -->
     <div id="menu-behavior">
         <div class="session">
-            <p>${user}</p>
-            <a href="<c:url value='/#'/>" class="active">
+            <a href="<c:url value='/#'/>" class="active" onclick="signOut();">
                 <i class="fal fa-home-lg-alt"></i>
                 <span>Trang chủ</span>
             </a>
@@ -154,116 +155,124 @@
         <i class="fal fa-video-plus text-center"></i>
         <i class="fal fa-tv-alt text-center"></i>
         <i class="fal fa-bell text-center"></i>
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <a href="#" onclick="signOut();">Sign out</a>
-        <img src="<c:url value="/templates/header/assets/img/avatar.jpg"/>" alt="avatar" id="avatar">
+        <c:if test='${user == null}'>
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        </c:if>
+        <c:if test='${user != null}'>
+            <img src="<c:url value='${user.avatarUrl}'/>" alt="avatar" id="avatar">
+        </c:if>
     </div>
     <!-- end: end -->
 
     <!-- profile -->
-    <div id="profile">
-        <div class="session session-info">
-            <figure>
-                <img src="<c:url value="/templates/header/assets/img/avatar.jpg"/>" alt="">
-            </figure>
-            <div>
-                <p class="name">Viet Do Quoc</p>
-                <a href="<c:url value='/#'/>">Quản lý tài khoản Google của ...</a>
+    <c:if test='${user != null}'>
+        <div id="profile">
+            <div class="session session-info">
+                <figure>
+                    <img src="<c:url value='${user.avatarUrl}'/>" alt="">
+                </figure>
+                <div>
+                    <p class="name">
+                        <c:out value='${user.name}'/>
+                    </p>
+                    <a href="<c:url value='/#'/>">Quản lý tài khoản Google của ...</a>
+                </div>
+            </div>
+            <hr/>
+            <div class="session">
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-user-circle"></i>
+                    <span>Kênh của bạn</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-donate"></i>
+                    <span>Giao dịch mua và gói thành viên</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-cog"></i>
+                    <span>YouTube Studio</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-user-plus"></i>
+                    <span>Chuyển đổi tài khoản</span>
+                    <i class="fal fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="<c:url value='/#'/>" onclick="signOut();">
+                    <i class="fal fa-arrow-to-right"></i>
+                    <span>Đăng xuất</span>
+                </a>
+            </div>
+            <hr/>
+            <div class="session">
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-moon"></i>
+                    <span>Giao diện: giao diện thiết bị</span>
+                    <i class="fal fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-language"></i>
+                    <span>Ngôn ngữ: Tiếng Việt</span>
+                    <i class="fal fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-globe-africa"></i>
+                    <span>Địa điểm: Việt Nam</span>
+                    <i class="fal fa-chevron-right arrow-right"></i>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-cogs"></i>
+                    <span>Cài đặt</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-shield-check"></i>
+                    <span>Dữ liệu của bạn trong YouTube</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-question-circle"></i>
+                    <span>Trợ giúp</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-exclamation-square"></i>
+                    <span>Gửi phản hồi</span>
+                </a>
+                <a href="<c:url value='/#'/>">
+                    <i class="fal fa-keyboard"></i>
+                    <span>Phím tắt</span>
+                </a>
+            </div>
+            <hr/>
+            <div class="session">
+                <a href="<c:url value='/#'/>">
+                    <span>Chế độ hạn chế: Đã tắt</span>
+                    <i class="fal fa-chevron-right arrow-right"></i>
+                </a>
             </div>
         </div>
-        <hr/>
-        <div class="session">
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-user-circle"></i>
-                <span>Kênh của bạn</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-donate"></i>
-                <span>Giao dịch mua và gói thành viên</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-cog"></i>
-                <span>YouTube Studio</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-user-plus"></i>
-                <span>Chuyển đổi tài khoản</span>
-                <i class="fal fa-chevron-right arrow-right"></i>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-arrow-to-right"></i>
-                <span>Đăng xuất</span>
-            </a>
-        </div>
-        <hr/>
-        <div class="session">
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-moon"></i>
-                <span>Giao diện: giao diện thiết bị</span>
-                <i class="fal fa-chevron-right arrow-right"></i>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-language"></i>
-                <span>Ngôn ngữ: Tiếng Việt</span>
-                <i class="fal fa-chevron-right arrow-right"></i>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-globe-africa"></i>
-                <span>Địa điểm: Việt Nam</span>
-                <i class="fal fa-chevron-right arrow-right"></i>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-cogs"></i>
-                <span>Cài đặt</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-shield-check"></i>
-                <span>Dữ liệu của bạn trong YouTube</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-question-circle"></i>
-                <span>Trợ giúp</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-exclamation-square"></i>
-                <span>Gửi phản hồi</span>
-            </a>
-            <a href="<c:url value='/#'/>">
-                <i class="fal fa-keyboard"></i>
-                <span>Phím tắt</span>
-            </a>
-        </div>
-        <hr/>
-        <div class="session">
-            <a href="<c:url value='/#'/>">
-                <span>Chế độ hạn chế: Đã tắt</span>
-                <i class="fal fa-chevron-right arrow-right"></i>
-            </a>
-        </div>
-    </div>
+    </c:if>
 
 </header>
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<script type='text/javascript'>
+    function onSignIn(googleUser) {
+        let profile = googleUser.getBasicProfile();
+        let xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("POST", 'http://localhost:8080/youtube_war_exploded/api-user', true);
+        xmlHttp.send(JSON.stringify({
+            email: profile.getEmail(0),
+            name: profile.getName(0),
+            avatarUrl: profile.getImageUrl(0)
+        }));
+    };
 
-<script src="<c:url value='https://apis.google.com/js/platform.js'/>" async defer>
-</script>
-<script>
-    // function onSignIn(googleUser) {
-    //     const profile = googleUser.getBasicProfile();
-    //     const xhr = new XMLHttpRequest();
-    //     xhr.open("POST", 'http://localhost:8080/youtube_war_exploded/api-user', true);
-    //     xhr.setRequestHeader('Content-Type', 'application/json');
-    //     xhr.send(JSON.stringify({
-    //         name: profile.getName(0),
-    //         email: profile.getEmail(0),
-    //         avatarUrl: profile.getImageUrl(0)
-    //     }));
-    // }
-    // function signOut() {
-    //     const auth2 = gapi.auth2.getAuthInstance();
-    //     auth2.signOut().then(function () {
-    //         console.log('User signed out.');
-    //     });
-    // }
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+            let xmlHttp = new XMLHttpRequest();
+            xmlHttp.open("PUT", 'http://localhost:8080/youtube_war_exploded/api-user', true);
+            xmlHttp.send(null);
+        });
+    }
 </script>
 </body>
 
