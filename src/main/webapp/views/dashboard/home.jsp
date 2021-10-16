@@ -32,8 +32,8 @@
                     <p class="info">
                         <c:out value='${cs.distanceTime(video.postingTime)}'/>
                     </p>
+                </a>
             </div>
-            </a>
         </c:forEach>
     </div>
 </div>
