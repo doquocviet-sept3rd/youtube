@@ -4,12 +4,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <title></title>
-    <meta name="google-signin-client_id"
-          content="405005216042-agfg4sovu79svdpqoimekpi1gn635ei6.apps.googleusercontent.com">
-</head>
-
 <body>
 
 <%-- Begin: header --%>
@@ -29,7 +23,7 @@
     <!-- begin: menu bar behavior -->
     <div id="menu-behavior">
         <div class="session">
-            <a href="<c:url value='/#'/>" class="active" onclick="signOut();">
+            <a href="<c:url value="/#"/>" class="active">
                 <i class="fal fa-home-lg-alt"></i>
                 <span>Trang chủ</span>
             </a>
@@ -156,7 +150,9 @@
         <i class="fal fa-tv-alt text-center"></i>
         <i class="fal fa-bell text-center"></i>
         <c:if test='${user == null}'>
-            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            <a href="<c:url value="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:8080/youtube_war_exploded/login-google&response_type=code
+    &client_id=405005216042-agfg4sovu79svdpqoimekpi1gn635ei6.apps.googleusercontent.com&approval_prompt=force"/>"
+               class="login">Đăng nhập</a>
         </c:if>
         <c:if test='${user != null}'>
             <img src="<c:url value='${user.avatarUrl}'/>" alt="avatar" id="avatar">
@@ -197,7 +193,7 @@
                     <span>Chuyển đổi tài khoản</span>
                     <i class="fal fa-chevron-right arrow-right"></i>
                 </a>
-                <a href="<c:url value='/#'/>" onclick="signOut();">
+                <a href="<c:url value='/login-google?action=logout'/>">
                     <i class="fal fa-arrow-to-right"></i>
                     <span>Đăng xuất</span>
                 </a>
@@ -251,29 +247,6 @@
     </c:if>
 
 </header>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<script type='text/javascript'>
-    function onSignIn(googleUser) {
-        let profile = googleUser.getBasicProfile();
-        let xmlHttp = new XMLHttpRequest();
-        xmlHttp.open("POST", 'http://localhost:8080/youtube_war_exploded/api-user', true);
-        xmlHttp.send(JSON.stringify({
-            email: profile.getEmail(0),
-            name: profile.getName(0),
-            avatarUrl: profile.getImageUrl(0)
-        }));
-    }
-
-    function signOut() {
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-            console.log('User signed out.');
-            let xmlHttp = new XMLHttpRequest();
-            xmlHttp.open("PUT", 'http://localhost:8080/youtube_war_exploded/api-user', true);
-            xmlHttp.send(null);
-        });
-    }
-</script>
 </body>
 
 </html>

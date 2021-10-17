@@ -1,7 +1,7 @@
 <jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <jsp:useBean id="cs" scope="request" type="com.youtube.services.ICommonService"/>
-<jsp:useBean id="user" scope="application" type="com.youtube.entities.User"/>
+<%--@elvariable id="user" type="com.youtube.entities.User"--%>
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 <!DOCTYPE html>
@@ -22,13 +22,7 @@
     <div class="video">
         <c:out value='${video.src}' escapeXml='false'/>
         <p class="hashtag">
-            <c:out value='${user.email}'/>
-            <c:out value='${user.name}'/>
-            <c:out value='${user.subscribe}'/>
-            <c:out value='${user.avatarUrl}'/>
-            <c:out value='${user.hashCode()}'/>
-            <c:out value='${user.createdOn}'/>
-            <c:out value='${video.modifiedOn}'/>
+            <c:out value='${video.hashtag}'/>
         </p>
         <p class="name">
             <c:out value='${video.name}'/>
@@ -84,18 +78,22 @@
                 SẮP XẾP THEO
             </span>
         </div>
-        <div class="add-comment">
-            <figure>
-                <img src="<c:url value='/templates/watch/assets/img/avatar.jpg'/>" alt="avatar"/>
-            </figure>
-            <label>
-                <input type="text" placeholder="Bình luận công khai...">
-            </label>
-        </div>
-        <div class="save-comment">
-            <button class="cancel">HỦY</button>
-            <button class="save">BÌNH LUẬN</button>
-        </div>
+        <c:if test='${user != null}'>
+            <form method="POST">
+                <div class="add-comment">
+                    <figure>
+                        <img src="<c:url value='/templates/watch/assets/img/avatar.jpg'/>" alt="avatar"/>
+                    </figure>
+                    <label>
+                        <input name="comment_content" type="text" placeholder="Bình luận công khai...">
+                    </label>
+                </div>
+                <div class="save-comment">
+                    <button class="cancel">HỦY</button>
+                    <button type="submit" class="save">BÌNH LUẬN</button>
+                </div>
+            </form>
+        </c:if>
         <div class="comment">
             <figure>
                 <img src="<c:url value='/templates/watch/assets/img/avatar.jpg'/>" alt="avatar">

@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kitsu
-  Date: 10/2/2021
-  Time: 11:50 PM
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="JAVA" %>
 <%@ include file="/common/taglibs.jsp" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -39,9 +32,7 @@
     <%-- container --%>
 
 </div>
-
 <script src="<c:url value="/templates/header/assets/js/main.js"/>" type="text/javascript"></script>
 <script src="<c:url value="/templates/watch/assets/js/main.js"/>" type="text/javascript"></script>
-
 </body>
 </html>
