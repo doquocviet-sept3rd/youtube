@@ -10,4 +10,8 @@ public interface IVideoService {
 
     List<Video> findAll();
 
+    boolean isLikedByUser(long videoId, long userId);
+
+    boolean isDislikedByUser(long videoId, long userId);
+
 }

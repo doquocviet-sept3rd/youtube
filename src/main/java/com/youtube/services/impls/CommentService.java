@@ -23,6 +23,6 @@ public class CommentService implements ICommentService {
 
     @Override
     public boolean delete(Comment comment) {
-        return commentDAO.delete(comment);
+        return commentDAO.delete(commentDAO.findOne(comment.getId()));
     }
 }

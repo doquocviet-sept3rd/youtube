@@ -24,6 +24,7 @@ public class WatchController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setAttribute("cs", commonService);
+        req.setAttribute("vService", videoService);
 
         // get video
         String id = req.getParameter("v");
@@ -38,17 +39,7 @@ public class WatchController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-//        System.out.println(req.getParameter("comment_content"));
-//        Comment comment = new Comment();
-//        comment.setContent(req.getParameter("comment_content"));
-//        comment.setUserId(((User) ApplicationUtil.getInstance().getValue(req, "user")).getId());
-//        comment.setVideoId(videoId);
-//        commentService.insert(comment);
-//
-//
-//
-//        RequestDispatcher rd = req.getRequestDispatcher("/views/dashboard/watch.jsp");
-//        rd.forward(req, resp);
+
     }
 
     @Override

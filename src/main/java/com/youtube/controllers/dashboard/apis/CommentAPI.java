@@ -1,7 +1,7 @@
 package com.youtube.controllers.dashboard.apis;
 
-import com.youtube.entities.VidInteract;
-import com.youtube.services.IVidInteractService;
+import com.youtube.entities.Comment;
+import com.youtube.services.ICommentService;
 import com.youtube.utils.HttpUtil;
 
 import javax.inject.Inject;
@@ -12,30 +12,30 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"api-vid-interact"})
-public class VidInteractAPI extends HttpServlet {
+@WebServlet(urlPatterns = {"api-comment"})
+public class CommentAPI extends HttpServlet {
 
     @Inject
-    IVidInteractService vidInteractService;
+    ICommentService commentService;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
-        VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
-        VidInteract vidInteractDB = vidInteractService.findOne(vidInteract.getUserId(), vidInteract.getVideoId());
-        if (vidInteractDB != null) {
-            vidInteractDB.setIsLike(vidInteract.getIsLike());
-        } else {
-            vidInteractService.insert(vidInteract);
-        }
+        Comment comment = HttpUtil.of(req.getReader()).toModel(Comment.class);
+        commentService.insert(comment);
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPut(req, resp);
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
-        VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
-        vidInteractService.delete(vidInteract);
+        Comment comment = HttpUtil.of(req.getReader()).toModel(Comment.class);
+        commentService.delete(comment);
     }
 }
