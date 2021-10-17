@@ -15,11 +15,13 @@
 </head>
 <body>
 
-<div class="container">
+<div class="content">
     <div class="row">
         <c:forEach var='video' items="${videos.findAll()}" varStatus="status" >
+
             <div class="col-sm-6 col-md-4 col-lg-3 " style="width: 250px; height: 300px; margin-right: 10px">
-                <c:out value='${video.src}'  escapeXml='false' />
+                <a href="<c:url value='/watch?v=${video.id}'/>" class="session">
+                        <c:out value='${video.src}'  escapeXml='false' />
                     <p class="name">
                         <c:out value='${cs.formatString(video.name)}'/>
                     </p>
@@ -30,6 +32,7 @@
                     <p class="info">
                         <c:out value='${cs.distanceTime(video.postingTime)}'/>
                     </p>
+                </a>
             </div>
         </c:forEach>
     </div>
