@@ -23,12 +23,15 @@ public class VidInteractAPI extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
         VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
+        vidInteractService.insert(vidInteract);
+    }
+
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
         VidInteract vidInteractDB = vidInteractService.findOne(vidInteract.getUserId(), vidInteract.getVideoId());
-        if (vidInteractDB != null) {
-            vidInteractDB.setIsLike(vidInteract.getIsLike());
-        } else {
-            vidInteractService.insert(vidInteract);
-        }
+        vidInteractDB.setIsLike(vidInteract.getIsLike());
+        vidInteractService.update(vidInteractDB);
     }
 
     @Override

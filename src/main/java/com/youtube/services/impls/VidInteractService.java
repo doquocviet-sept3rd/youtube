@@ -25,4 +25,9 @@ public class VidInteractService implements IVidInteractService {
     public boolean delete(VidInteract vidInteract) {
         return vidInteractDAO.delete(vidInteractDAO.findOne(vidInteract.getUserId(), vidInteract.getVideoId()));
     }
+
+    @Override
+    public boolean update(VidInteract vidInteract) {
+        return vidInteractDAO.update(vidInteract);
+    }
 }

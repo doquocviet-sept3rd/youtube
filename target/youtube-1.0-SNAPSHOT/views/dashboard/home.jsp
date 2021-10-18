@@ -7,14 +7,36 @@
 <html>
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/base.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/style.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/assets/css/responsive.css'/>" type="text/css"
+    <link rel="stylesheet" href="<c:url value='/templates/home/assets/css/base.css'/>" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/home/assets/css/style.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/home/assets/css/responsive.css'/>" type="text/css"
           media="all">
     <title>Home</title>
 </head>
 <body>
-
+<div id="wrapper">
+<!-- Sidebar -->
+<div id="sidebar-wrapper">
+    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
+        <li >
+            <a href="#section1"><i class="fal fa-home-lg-alt"></i><span>Trang chủ</span></a>
+        </li>
+        <li>
+            <a href="#section2"><i class="fal fa-compass"></i></span>Khám phá</a>
+        </li>
+        <li>
+            <a href="#section3"><i class="fal fa-list-alt"></i></span>Đăng ký</a>
+        </li>
+        <li>
+            <a href="#section4"><i class="fal fa-photo-video"></i></span>Thư viện</a>
+        </li>
+        <li>
+            <a href="#section5"><i class="fal fa-history"></i></span>Video đã xem</a>
+        </li>
+    </ul>
+</div>
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
 <div class="content">
     <div class="row">
         <c:forEach var='video' items="${videos.findAll()}" varStatus="status" >
@@ -32,10 +54,12 @@
                     <p class="info">
                         <c:out value='${cs.distanceTime(video.postingTime)}'/>
                     </p>
-                </a>
             </div>
+            </a>
         </c:forEach>
     </div>
+</div>
+</div>
 </div>
 </body>
 </html>

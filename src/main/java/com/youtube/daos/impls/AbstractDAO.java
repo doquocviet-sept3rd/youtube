@@ -78,7 +78,11 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             System.out.println("Inserted Successfully");
 
             // Return Entity's id after inserted successfully
-            return (Long) id;
+            try {
+                return (Long) id;
+            } catch (Exception e) {
+                return null;
+            }
 
         } catch (Exception e) {
 

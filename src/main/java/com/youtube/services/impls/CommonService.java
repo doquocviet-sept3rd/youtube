@@ -17,6 +17,8 @@ public class CommonService implements ICommonService {
             result.append(number / 1000000).append(" Tr");
         } else if (number > 1000) {
             result.append(number / 1000).append(" N");
+        } else {
+            result.append(number);
         }
         return result.toString();
     }

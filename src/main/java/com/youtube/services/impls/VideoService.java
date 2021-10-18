@@ -55,4 +55,9 @@ public class VideoService implements IVideoService {
         }
         return false;
     }
+
+    @Override
+    public boolean update(Video video) {
+        return videoDAO.update(video);
+    }
 }

@@ -63,6 +63,10 @@
     text-align: right;
 }
 
+#primary .video .interaction::selection {
+    background-color: transparent;
+}
+
 #primary .video .interaction i {
     font-size: 18px;
     padding: 0 10px;

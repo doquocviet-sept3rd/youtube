@@ -10,4 +10,5 @@ public interface IVidInteractService {
 
     boolean delete(VidInteract vidInteract);
 
+    boolean update(VidInteract vidInteract);
 }
