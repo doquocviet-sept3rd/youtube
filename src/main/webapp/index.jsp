@@ -1,2 +1,2 @@
 <%@include file="/common/taglibs.jsp"%>
-<c:redirect url="/home"/>
+<c:redirect url="/watch?v=1"/>

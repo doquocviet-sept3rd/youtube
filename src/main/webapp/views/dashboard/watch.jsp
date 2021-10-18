@@ -1,7 +1,7 @@
-<jsp:useBean id="vService" scope="request" type="com.youtube.services.IVideoService"/>
 <jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <jsp:useBean id="cs" scope="request" type="com.youtube.services.ICommonService"/>
+<jsp:useBean id="vService" scope="request" type="com.youtube.services.IVideoService"/>
 <%--@elvariable id="user" type="com.youtube.entities.User"--%>
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
@@ -34,11 +34,13 @@
             <c:out value='${cs.formatTime(video.postingTime)}'/>
         </p>
         <div class="interaction">
-            <i id="btn-like-video" class="fal fa-thumbs-up ${vService.isLikedByUser(video.id, user.id) ? 'active' : ''}"></i>
+            <i id="btn-like-video"
+               class="fal fa-thumbs-up ${vService.isLikedByUser(video.id, user.id) ? 'active' : ''}"></i>
             <span id="quantity-like-video">
                 <c:out value='${video.likes == 0 ? 0 : cs.formatNumber(video.likes)}'/>
             </span>
-            <i id="btn-dislike-video" class="fal fa-thumbs-down ${vService.isDislikedByUser(video.id, user.id) ? 'active' : ''}"></i>
+            <i id="btn-dislike-video"
+               class="fal fa-thumbs-down ${vService.isDislikedByUser(video.id, user.id) ? 'active' : ''}"></i>
             <span id="quantity-dislike-video">
                 <c:out value='${video.dislikes == 0 ? 0 : cs.formatNumber(video.dislikes)}'/>
             </span>
@@ -166,27 +168,86 @@
 
     const btnLikeVideo = document.querySelector("#btn-like-video");
     const btnDislikedVideo = document.querySelector("#btn-dislike-video");
-    btnLikeVideo.onclick = function() {
-        if (btnLikeVideo.classList.contains("active")) {
-            // send api delete vidInteract
-            console.log("send api delete vidInteract");
+    btnLikeVideo.onclick = function () {
+        if (${user != null}) {
+
+            let quantityLikeVideo = document.querySelector("#quantity-like-video");
+            let quantityDislikedVideo = document.querySelector("#quantity-dislike-video");
+            let likes = quantityLikeVideo.innerHTML;
+            let dislikes = quantityDislikedVideo.innerHTML;
+
+            if (btnLikeVideo.classList.contains("active")) {
+                btnLikeVideo.classList.remove("active");
+
+                likes--;
+
+                console.log("send api delete vidInteract");
+                // send api delete vidInteract
+            } else if (!btnLikeVideo.classList.contains("active") && !btnDislikedVideo.classList.contains("active")) {
+                btnLikeVideo.classList.add("active");
+                // send api insert video interaction
+                likes++;
+
+            } else {
+                {
+                    btnLikeVideo.classList.add("active");
+                    console.log("send api edit -> dislike -> like or insert video interaction");
+                    // send api edit -> dislike -> like
+                    btnDislikedVideo.classList.remove("active");
+                    likes++;
+                    dislikes--;
+                }
+            }
+
+            quantityLikeVideo.innerHTML = likes;
+            quantityDislikedVideo.innerHTML = dislikes;
+
         } else {
-            btnLikeVideo.classList.add("active");
-            console.log("send api edit -> dislike -> like or insert video interaction");
-            // send api edit -> dislike -> like or insert video interaction
-            btnDislikedVideo.classList.remove("active");
+            alert("User null");
         }
     }
-    btnDislikedVideo.onclick = function() {
-        if (btnDislikedVideo.classList.contains("active")) {
-            // send api delete vidIteract
-            console.log("send api delete vidInteract");
+    btnDislikedVideo.onclick = function () {
+        if (${user != null}) {
+
+            let quantityLikeVideo = document.querySelector("#quantity-like-video");
+            let quantityDislikedVideo = document.querySelector("#quantity-dislike-video");
+            let likes = quantityLikeVideo.innerHTML;
+            let dislikes = quantityDislikedVideo.innerHTML;
+
+            if (btnDislikedVideo.classList.contains("active")) {
+                // send api delete vidIteract
+                console.log("send api delete vidInteract");
+                btnDislikedVideo.classList.remove("active");
+
+                dislikes--;
+
+            } else if (!btnLikeVideo.classList.contains("active") && !btnDislikedVideo.classList.contains("active")) {
+                btnDislikedVideo.classList.add("active");
+                // send api insert video interaction
+                dislikes++;
+
+            } else {
+                btnDislikedVideo.classList.add("active");
+                // send api edit -> like -> dislike or insert video interaction
+                console.log("send api edit -> dislike -> like or insert video interaction");
+                btnLikeVideo.classList.remove("active");
+                dislikes++;
+                likes--;
+            }
+
+            quantityLikeVideo.innerHTML = likes;
+            quantityDislikedVideo.innerHTML = dislikes;
+
         } else {
-            btnDislikedVideo.classList.add("active");
-            // send api edit -> like -> dislike or insert video interaction
-            console.log("send api edit -> dislike -> like or insert video interaction");
-            btnLikeVideo.classList.remove("active");
+            alert("User null");
         }
+    }
+
+    const requestAPI = function (uri, options) {
+        fetch(uri, options)
+            .then(() => {
+                console.log("success");
+            })
     }
 
 </script>

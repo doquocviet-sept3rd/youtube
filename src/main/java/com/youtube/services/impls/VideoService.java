@@ -1,7 +1,6 @@
 package com.youtube.services.impls;
 
 import com.youtube.daos.IVideoDAO;
-import com.youtube.daos.impls.VideoDAO;
 import com.youtube.entities.VidInteract;
 import com.youtube.entities.Video;
 import com.youtube.services.IVideoService;
@@ -29,10 +28,12 @@ public class VideoService implements IVideoService {
     public boolean isLikedByUser(long videoId, long userId) {
         Video video = videoDAO.findOne(videoId);
         Collection<VidInteract> vidInteracts = video.getVidInteracts();
-        for (VidInteract vidInteract : vidInteracts) {
-            if (vidInteract.getUserId() == userId) {
-                if (vidInteract.getIsLike()) {
-                    return true;
+        if (vidInteracts != null) {
+            for (VidInteract vidInteract : vidInteracts) {
+                if (vidInteract.getUserId() == userId) {
+                    if (vidInteract.getIsLike()) {
+                        return true;
+                    }
                 }
             }
         }
@@ -43,10 +44,12 @@ public class VideoService implements IVideoService {
     public boolean isDislikedByUser(long videoId, long userId) {
         Video video = videoDAO.findOne(videoId);
         Collection<VidInteract> vidInteracts = video.getVidInteracts();
-        for (VidInteract vidInteract : vidInteracts) {
-            if (vidInteract.getUserId() == userId) {
-                if (!vidInteract.getIsLike()) {
-                    return true;
+        if (vidInteracts != null) {
+            for (VidInteract vidInteract : vidInteracts) {
+                if (vidInteract.getUserId() == userId) {
+                    if (!vidInteract.getIsLike()) {
+                        return true;
+                    }
                 }
             }
         }

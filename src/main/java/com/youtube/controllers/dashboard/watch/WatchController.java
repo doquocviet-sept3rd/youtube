@@ -24,7 +24,6 @@ public class WatchController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setAttribute("cs", commonService);
-        req.setAttribute("vService", videoService);
 
         // get video
         String id = req.getParameter("v");
@@ -32,6 +31,8 @@ public class WatchController extends HttpServlet {
 
         // get videos
         req.setAttribute("videos", videoService.findAll());
+
+        req.setAttribute("vService", videoService);
 
         RequestDispatcher rd = req.getRequestDispatcher("/views/dashboard/watch.jsp");
         rd.forward(req, resp);

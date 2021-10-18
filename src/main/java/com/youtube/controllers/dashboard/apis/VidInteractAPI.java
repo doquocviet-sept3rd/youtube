@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"api-vid-interact"})
+@WebServlet(urlPatterns = {"/api-vid-interact"})
 public class VidInteractAPI extends HttpServlet {
 
     @Inject

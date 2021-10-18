@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(urlPatterns = {"api-com-interact"})
+@WebServlet(urlPatterns = {"/api-com-interact"})
 public class ComInteractAPI extends HttpServlet {
 
     @Inject
