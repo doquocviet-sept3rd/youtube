@@ -15,6 +15,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/api-comment"})
 public class CommentAPI extends HttpServlet {
 
+    private static final Long serialVersionUID = 1L;
+
     @Inject
     ICommentService commentService;
 
@@ -36,6 +38,6 @@ public class CommentAPI extends HttpServlet {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
         Comment comment = HttpUtil.of(req.getReader()).toModel(Comment.class);
-        commentService.delete(comment);
+        commentService.delete(commentService.findOne(comment.getId()));
     }
 }

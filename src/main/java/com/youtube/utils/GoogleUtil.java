@@ -26,12 +26,12 @@ public class GoogleUtil {
                 .build();
 
         String resp = getResponse(GoogleConstant.GOOGLE_LINK_GET_TOKEN, requestBody);
-        System.out.println(resp);
         return getAttributeFromJson(resp, "access_token");
     }
 
     public static User getUserInfo(final String access_token) {
         String url = GoogleConstant.GOOGLE_LINK_GET_USER_INFO + access_token;
+
         String resp = getResponse(url, null);
 
         User user = new User();
@@ -72,6 +72,4 @@ public class GoogleUtil {
         JsonObject jobj = new Gson().fromJson(json, JsonObject.class);
         return jobj.get(attributeName).toString().replace("\"", "");
     }
-
-
 }

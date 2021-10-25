@@ -11,6 +11,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/home"})
 public class HomeController extends HttpServlet {
 
+    private static final Long serialVersionUID = 1L;
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // do get

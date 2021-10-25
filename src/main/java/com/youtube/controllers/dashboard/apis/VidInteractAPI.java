@@ -11,9 +11,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = {"/api-vid-interact"})
 public class VidInteractAPI extends HttpServlet {
+
+    private static final Long serialVersionUID = 1L;
 
     @Inject
     IVidInteractService vidInteractService;
@@ -40,5 +43,8 @@ public class VidInteractAPI extends HttpServlet {
         resp.setContentType("application/json");
         VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
         vidInteractService.delete(vidInteract);
+        PrintWriter out = resp.getWriter();
+        out.println(true);
+        out.flush();
     }
 }

@@ -1,5 +1,6 @@
 package com.youtube.controllers.dashboard.apis;
 
+import com.google.gson.Gson;
 import com.youtube.entities.ComInteract;
 import com.youtube.services.IComInteractService;
 import com.youtube.utils.HttpUtil;
@@ -14,6 +15,8 @@ import java.io.IOException;
 
 @WebServlet(urlPatterns = {"/api-com-interact"})
 public class ComInteractAPI extends HttpServlet {
+
+    private static final Long serialVersionUID = 1L;
 
     @Inject
     IComInteractService comInteractService;

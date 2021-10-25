@@ -11,11 +11,11 @@ import java.util.List;
 
 public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
+    // Get session factory
+    SessionFactory factory = HibernateUtils.getSessionFactory();
+
     @Override /* Find all entity from database */
     public List<Entity> findAll(String className) {
-
-        // Get session factory
-        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -55,9 +55,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
     @Override /* Insert entity into database */
     public Long insert(Entity entity) {
-
-        // Get session factory
-        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -106,9 +103,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
     @Override /* Update entity in database */
     public boolean update(Entity entity) {
 
-        // Get session factory
-        SessionFactory factory = HibernateUtils.getSessionFactory();
-
         // Get session current
         Session session = factory.getCurrentSession();
 
@@ -147,9 +141,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
     @Override /* Delete entity in database */
     public boolean delete(Entity entity) {
-
-        // Get session factory
-        SessionFactory factory = HibernateUtils.getSessionFactory();
 
         // Get session current
         Session session = factory.getCurrentSession();
@@ -191,9 +182,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
     @Override /* Find entity by primary key */
     public Entity findOne(String className, Object... params) {
 
-        // Get session factory
-        SessionFactory factory = HibernateUtils.getSessionFactory();
-
         // Get session current
         Session session = factory.getCurrentSession();
 
@@ -209,8 +197,10 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             @SuppressWarnings("unchecked")
             Query<Entity> query = session.createQuery(sql);
 
-            // Return entity (single)
-            return query.getSingleResult();
+            if (query != null) {
+                // Return entity (single)
+                return query.getSingleResult();
+            }
 
         } catch (Exception e) {
 

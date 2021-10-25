@@ -10,4 +10,5 @@ public interface ICommentService {
 
     boolean delete(Comment comment);
 
+    Comment findOne(Long id);
 }

@@ -11,4 +11,6 @@ public interface IUserService {
     boolean isExistEmail(String email);
 
     User findOneByEmail(String email);
+
+    boolean update(User user);
 }

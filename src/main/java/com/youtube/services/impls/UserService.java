@@ -1,5 +1,6 @@
 package com.youtube.services.impls;
 
+import com.youtube.daos.ISubscribeDAO;
 import com.youtube.daos.IUserDAO;
 import com.youtube.entities.User;
 import com.youtube.services.IUserService;
@@ -29,5 +30,10 @@ public class UserService implements IUserService {
     @Override
     public User findOneByEmail(String email) {
         return userDAO.findOneByEmail(email);
+    }
+
+    @Override
+    public boolean update(User user) {
+        return userDAO.update(user);
     }
 }

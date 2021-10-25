@@ -25,4 +25,9 @@ public class CommentService implements ICommentService {
     public boolean delete(Comment comment) {
         return commentDAO.delete(commentDAO.findOne(comment.getId()));
     }
+
+    @Override
+    public Comment findOne(Long id) {
+        return commentDAO.findOne(id);
+    }
 }

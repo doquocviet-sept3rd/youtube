@@ -14,6 +14,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/api-video"})
 public class VideoAPI extends HttpServlet {
 
+    private static final Long serialVersionUID = 1L;
+
     @Inject
     IVideoService videoService;
 
@@ -21,7 +23,7 @@ public class VideoAPI extends HttpServlet {
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
-        Video video = videoService.findOne(Long.parseLong(req.getParameter("VideoId")));
+        Video video = videoService.findOne(Long.parseLong(req.getParameter("videoId")));
         String action = req.getParameter("action");
         boolean isLike = Boolean.parseBoolean(req.getParameter("isLike"));
         switch (action) {
@@ -31,7 +33,6 @@ public class VideoAPI extends HttpServlet {
                 } else {
                     video.setDislikes(video.getDislikes() - 1);
                 }
-                System.out.println("delete");
                 break;
             case "add":
                 if (isLike) {
@@ -39,7 +40,6 @@ public class VideoAPI extends HttpServlet {
                 } else {
                     video.setDislikes(video.getDislikes() + 1);
                 }
-                System.out.println("add");
                 break;
             case "update":
                 if (isLike) {
@@ -49,10 +49,8 @@ public class VideoAPI extends HttpServlet {
                     video.setDislikes(video.getDislikes() + 1);
                     video.setLikes(video.getLikes() - 1);
                 }
-                System.out.println("update");
                 break;
         }
-        System.out.println("key");
         videoService.update(video);
     }
 }

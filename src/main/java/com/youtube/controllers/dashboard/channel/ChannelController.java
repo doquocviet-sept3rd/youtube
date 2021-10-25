@@ -10,6 +10,8 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/channel"})
 public class ChannelController extends HttpServlet {
 
+    private static final Long serialVersionUID = 1L;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 

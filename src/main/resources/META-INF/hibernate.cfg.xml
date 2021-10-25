@@ -29,7 +29,7 @@
 
         <property name="hibernate.hbm2ddl.auto">update</property>
 
-        <!--        lazy fix    -->
+        <!-- Lazy fix -->
         <property name="hibernate.enable_lazy_load_no_trans">true</property>
 
         <mapping class="com.youtube.entities.Category"/>

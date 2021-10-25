@@ -14,8 +14,13 @@ import java.io.IOException;
 @WebServlet(urlPatterns = {"/watch"})
 public class WatchController extends HttpServlet {
 
+    private static final Long serialVersionUID = 1L;
+
     @Inject
     ICommonService commonService;
+
+    @Inject
+    ISubscribeService subscribeService;
 
     @Inject
     IVideoService videoService;
@@ -24,11 +29,12 @@ public class WatchController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setAttribute("cs", commonService);
+        req.setAttribute("subscribeService", subscribeService);
 
         // get video
         String id = req.getParameter("v");
         req.setAttribute("video", videoService.findOne(Long.parseLong(id)));
-
+        req.setAttribute("comments", videoService.findOne(Long.parseLong(id)).getComments());
         // get videos
         req.setAttribute("videos", videoService.findAll());
 
