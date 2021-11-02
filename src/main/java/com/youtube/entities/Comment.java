@@ -1,5 +1,6 @@
 package com.youtube.entities;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -217,6 +218,7 @@ public class Comment {
     }
 
     @OneToMany(mappedBy = "comment")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<ComInteract> getComInteracts() {
         return comInteracts;
     }

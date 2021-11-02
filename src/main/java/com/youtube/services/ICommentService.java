@@ -11,4 +11,8 @@ public interface ICommentService {
     boolean delete(Comment comment);
 
     Comment findOne(Long id);
+
+    boolean isLikedByUser(long commentId, long userId);
+
+    boolean isDislikedByUser(long commentId, long userId);
 }

@@ -162,7 +162,7 @@
 }
 
 #primary .comments .save-comment > button {
-    padding: 10px 20px;
+    padding: 0 20px;
     outline: none;
     border: none;
     letter-spacing: 1px;
@@ -171,7 +171,7 @@
 }
 
 #primary .comments .save-comment .save {
-    background-color: #c00;
+    background-color: #0058ff;
 }
 
 #primary .comments .save-comment .cancel {
@@ -216,7 +216,7 @@
     cursor: pointer;
 }
 
-#primary .comments .interaction .active {
+#primary .comments .interaction .active i {
     font-weight: 600;
 }
 
@@ -233,8 +233,9 @@
 
 #primary .comments .comment-edit-delete {
     position: absolute;
+    z-index: 1;
     right: 0;
-    top: -20px;
+    top: 20px;
     box-shadow: 0 0 10px rgba(177, 177, 177, 0.5);
     overflow: hidden;
     display: none;
@@ -245,12 +246,12 @@
     padding: 15px 20px;
 }
 
-#primary .comments .comment-edit-delete > a::selection,
-#primary .comments .comment-edit-delete > a span::selection {
+#primary .comments .comment-edit-delete > div::selection,
+#primary .comments .comment-edit-delete > div span::selection {
     background-color: transparent;
 }
 
-#primary .comments .comment-edit-delete > a:hover {
+#primary .comments .comment-edit-delete > div:hover {
     background-color: #d3d3d3;
 }
 

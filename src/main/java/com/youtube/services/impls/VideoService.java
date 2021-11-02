@@ -6,13 +6,14 @@ import com.youtube.entities.Video;
 import com.youtube.services.IVideoService;
 
 import javax.inject.Inject;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
 public class VideoService implements IVideoService {
 
     @Inject
-    IVideoDAO videoDAO;
+    private IVideoDAO videoDAO;
 
     @Override
     public Video findOne(long id) {
@@ -59,5 +60,10 @@ public class VideoService implements IVideoService {
     @Override
     public boolean update(Video video) {
         return videoDAO.update(video);
+    }
+
+    @Override
+    public List<String> formatXML(String content) {
+        return Arrays.asList(content.split("`"));
     }
 }

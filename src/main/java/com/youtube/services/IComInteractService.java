@@ -10,4 +10,6 @@ public interface IComInteractService {
 
     boolean delete(ComInteract comInteract);
 
+    boolean update(ComInteract comInteract);
+
 }

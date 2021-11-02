@@ -9,7 +9,7 @@ import javax.inject.Inject;
 public class SubscribeService implements ISubscribeService {
 
     @Inject
-    ISubscribeDAO subscribeDAO;
+    private ISubscribeDAO subscribeDAO;
 
     @Override
     public Long insert(Subscribe subscribe) {

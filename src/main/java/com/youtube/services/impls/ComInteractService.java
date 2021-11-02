@@ -9,7 +9,7 @@ import javax.inject.Inject;
 public class ComInteractService implements IComInteractService {
 
     @Inject
-    IComInteractDAO comInteractDAO;
+    private IComInteractDAO comInteractDAO;
 
     @Override
     public ComInteract findOne(Long userId, Long commentId) {
@@ -24,5 +24,10 @@ public class ComInteractService implements IComInteractService {
     @Override
     public boolean delete(ComInteract comInteract) {
         return comInteractDAO.delete(comInteractDAO.findOne(comInteract.getUserId(), comInteract.getCommentId()));
+    }
+
+    @Override
+    public boolean update(ComInteract comInteract) {
+        return comInteractDAO.update(comInteract);
     }
 }

@@ -1,5 +1,6 @@
 package com.youtube.entities;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -318,6 +319,7 @@ public class Video {
     }
 
     @OneToMany(mappedBy = "video")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<Comment> getComments() {
         return comments;
     }
@@ -327,6 +329,7 @@ public class Video {
     }
 
     @OneToMany(mappedBy = "video")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<History> getHistories() {
         return histories;
     }
@@ -336,6 +339,7 @@ public class Video {
     }
 
     @OneToMany(mappedBy = "video")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<VidInteract> getVidInteracts() {
         return vidInteracts;
     }

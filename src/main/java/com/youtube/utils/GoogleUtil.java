@@ -11,7 +11,6 @@ import okhttp3.Response;
 
 import java.io.IOException;
 import java.util.Objects;
-import java.util.Random;
 
 public class GoogleUtil {
 
@@ -37,8 +36,9 @@ public class GoogleUtil {
         User user = new User();
 
         user.setAvatarUrl(getAttributeFromJson(resp, "picture"));
-        user.setEmail(getAttributeFromJson(resp, "email"));
-        user.setName("User" + new Random().nextInt());
+        StringBuilder email = new StringBuilder(getAttributeFromJson(resp, "email"));
+        user.setEmail(email.toString());
+        user.setName(email.replace(email.indexOf("@"), email.length(), "").toString());
 
         return user;
     }

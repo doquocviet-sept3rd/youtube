@@ -25,7 +25,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             // Begin transaction
             session.getTransaction().begin();
 
-            // Query
             @SuppressWarnings("unchecked")
             Query<Entity> query = session.createQuery("select e from " + className + " e");
 
@@ -34,7 +33,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             System.out.println("Found All Successfully");
 
             return query.list();
-
         } catch (Exception e) {
 
             // Log error
@@ -42,7 +40,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
             // Rollback if error
             session.getTransaction().rollback();
-
         } finally {
 
             // Close transaction
@@ -193,13 +190,16 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             // Init string query
             String sql = getSqlParameter(className, params);
 
-            // Create query
-            @SuppressWarnings("unchecked")
-            Query<Entity> query = session.createQuery(sql);
+            try {
+                // Create query
+                @SuppressWarnings("unchecked")
+                Query<Entity> query = session.createQuery(sql);
 
-            if (query != null) {
                 // Return entity (single)
                 return query.getSingleResult();
+
+            } catch (Exception e) {
+                return null;
             }
 
         } catch (Exception e) {

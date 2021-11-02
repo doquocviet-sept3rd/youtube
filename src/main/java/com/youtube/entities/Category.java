@@ -1,5 +1,6 @@
 package com.youtube.entities;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -137,6 +138,7 @@ public class Category {
     }
 
     @OneToMany(mappedBy = "category")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<Video> getVideos() {
         return videos;
     }

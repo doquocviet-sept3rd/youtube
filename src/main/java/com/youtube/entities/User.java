@@ -1,5 +1,6 @@
 package com.youtube.entities;
 
+import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.Nationalized;
 
 import javax.persistence.*;
@@ -236,6 +237,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<ComInteract> getComInteracts() {
         return comInteracts;
     }
@@ -245,6 +247,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<Comment> getComments() {
         return comments;
     }
@@ -254,6 +257,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<History> getHistories() {
         return histories;
     }
@@ -263,6 +267,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<Subscribe> getSubscribers() {
         return subscribers;
     }
@@ -272,6 +277,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "userSub")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<Subscribe> getSubscribes() {
         return subscribes;
     }
@@ -281,6 +287,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<VidInteract> getVidInteracts() {
         return vidInteracts;
     }
@@ -290,6 +297,7 @@ public class User {
     }
 
     @OneToMany(mappedBy = "user")
+    @Cascade(value = {org.hibernate.annotations.CascadeType.ALL})
     public Collection<Video> getVideos() {
         return videos;
     }

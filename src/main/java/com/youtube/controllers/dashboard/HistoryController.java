@@ -1,4 +1,4 @@
-package com.youtube.controllers.dashboard.history;
+package com.youtube.controllers.dashboard;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

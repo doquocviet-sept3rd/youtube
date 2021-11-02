@@ -52,28 +52,23 @@
                 <span>Video đã thích</span>
             </a>
         </div>
-        <hr class="m-0">
-        <div class="session session-channel">
-            <p>KÊNH ĐĂNG KÝ</p>
-            <a href="<c:url value='/#'/>" class="h-40px d-block lh-40px">
-                <figure class="d-inline-block w-40px">
-                    <img class="rounded-circle" src="<c:url value='/templates/header/img/avatar.jpg'/>" alt="">
-                </figure>
-                <span>Vie Channel - HTV2</span>
-            </a>
-            <a href="<c:url value='/#'/>" class="h-40px d-block lh-40px">
-                <figure class="d-inline-block w-40px">
-                    <img class="rounded-circle" src="<c:url value='/templates/header/img/avatar.jpg'/>" alt="">
-                </figure>
-                <span>Vie Channel - HTV2</span>
-            </a>
-            <a href="<c:url value='/#'/>" class="h-40px d-block lh-40px">
-                <figure class="d-inline-block w-40px">
-                    <img class="rounded-circle" src="<c:url value='/templates/header/img/avatar.jpg'/>" alt="">
-                </figure>
-                <span>Vie Channel - HTV2</span>
-            </a>
-        </div>
+        <c:if test="${user.subscribes != null}">
+            <hr class="m-0">
+            <div class="session session-channel">
+                <p>KÊNH ĐĂNG KÝ</p>
+                <c:forEach var='subscribe' items='${user.subscribes.size() < 3 ? user.subscribes : [user.subscribes[0], user.subscribes[1], user.subscribes[2]]}'>
+                    <c:if test='${subscribe != null}'>
+                        <a href="<c:url value='/channel?id=${subscribe.userId}'/>" class="h-40px d-block lh-40px">
+                            <figure class="d-inline-block w-40px">
+                                <img class="rounded-circle" src="<c:url value='${subscribe.user.avatarChannelUrl}'/>"
+                                     alt="">
+                            </figure>
+                            <span><c:out value='${subscribe.user.nameChannel}'/></span>
+                        </a>
+                    </c:if>
+                </c:forEach>
+            </div>
+        </c:if>
         <hr class="m-0">
         <div class="session">
             <p>DỊCH VỤ KHÁC CỦA YOUTUBE</p>
@@ -164,7 +159,7 @@
         <div id="profile" class="position-absolute bg-white">
             <div class="session session-info">
                 <figure>
-                    <img src="<c:url value='/templates/header/img/avatar.jpg'/>" class="w-40px rounded-circle" alt="">
+                    <img src="<c:url value='${user.avatarUrl}'/>" class="w-40px rounded-circle" alt="">
                 </figure>
                 <div>
                     <p class="name">Viet Do Quoc</p>

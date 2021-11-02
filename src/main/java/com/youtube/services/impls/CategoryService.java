@@ -8,6 +8,6 @@ import javax.inject.Inject;
 public class CategoryService implements ICategoryService {
 
     @Inject
-    ICategoryDAO categoryDAO;
+    private ICategoryDAO categoryDAO;
 
 }

@@ -1,4 +1,4 @@
-package com.youtube.controllers.dashboard.home;
+package com.youtube.controllers.dashboard;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

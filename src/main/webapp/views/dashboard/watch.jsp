@@ -3,13 +3,14 @@
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <jsp:useBean id="cs" scope="request" type="com.youtube.services.ICommonService"/>
 <jsp:useBean id="vService" scope="request" type="com.youtube.services.IVideoService"/>
+<jsp:useBean id="cService" scope="request" type="com.youtube.services.ICommentService"/>
 <%--@elvariable id="user" type="com.youtube.entities.User"--%>
 <jsp:useBean id="comments" scope="request" type="java.util.List"/>
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 
 <head>
     <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch.css'/>" type="text/css">
@@ -59,7 +60,7 @@
         <div class="info d-flex">
             <a href="<c:url value='/#'/>" class="profile d-flex">
                 <figure>
-                    <img class="rounded-circle" src="<c:url value='${video.user.avatarUrl}'/>" alt="avatar"/>
+                    <img class="rounded-circle" src="<c:url value='${video.user.avatarChannelUrl}'/>" alt="avatar"/>
                 </figure>
                 <div class="fw-600">
                     <p class="m-0"><c:out value='${video.user.name}'/></p>
@@ -70,13 +71,14 @@
                 </div>
             </a>
             <div id="btn-subscribe"
-                 class="${subscribeService.isSubscribed(video.userId, user.id) ? 'btn-sub h-40px rounded cursor-p lh-40px subscribeb' : 'btn-sub h-40px rounded cursor-p lh-40px'}"
-                 onclick="btnSubscribeClick();">
+                 class="${subscribeService.isSubscribed(video.userId, user.id) ? 'btn-sub h-40px rounded cursor-p lh-40px subscribeb' : 'btn-sub h-40px rounded cursor-p lh-40px'}">
                 ${subscribeService.isSubscribed(video.userId, user.id) ? 'ĐÃ ĐĂNG KÝ' : 'ĐĂNG KÝ'}
             </div>
         </div>
         <div class="expander">
-            <c:out value='${video.content}'/>
+            <c:forEach var="content" items="${vService.formatXML(video.content)}">
+                <p><c:out value='${content}'/></p>
+            </c:forEach>
         </div>
     </div>
     <hr/>
@@ -91,7 +93,7 @@
         <c:if test='${user != null}'>
             <div class="add-comment">
                 <figure>
-                    <img src="<c:url value='/templates/header/img/avatar.jpg'/>" alt="avatar"/>
+                    <img src="<c:url value='${user.avatarUrl}'/>" alt="avatar"/>
                 </figure>
                 <label>
                     <input class="w-100" name="comment_content" type="text" placeholder="Bình luận công khai...">
@@ -99,7 +101,9 @@
             </div>
             <div class="save-comment">
                 <button class="cancel cursor-p">HỦY</button>
-                <button id="btn-add-comment" type="submit" class="save cursor-p text-white rounded">BÌNH LUẬN</button>
+                <button id="btn-add-comment" type="submit" class="save cursor-p text-white rounded h-40px lh-40px">BÌNH
+                    LUẬN
+                </button>
             </div>
         </c:if>
         <c:if test='${comments != null}'>
@@ -116,24 +120,28 @@
                             </div>
                             <div class="comment-content">
                                     ${comment.content}
-                                <div class="interaction">
-                                    <span>
+                                <div class="interaction" data-id="${comment.id}">
+                                    <span class="${cService.isLikedByUser(comment.id, user.id) ? 'btn__likecomment active' : 'btn__likecomment'}"
+                                          data-isLike="${cService.isLikedByUser(comment.id, user.id) ? true : false}"
+                                          data-likes="${comment.likes}">
                                         <i class="fal fa-thumbs-up"></i>
-                                            ${comment.likes}
+                                        <span class="quantity--like">${cs.formatNumber(comment.likes)}</span>
                                     </span>
-                                    <span>
+                                    <span class="${cService.isDislikedByUser(comment.id, user.id) ? 'btn__dislikecomment active' : 'btn__dislikecomment'}"
+                                          data-isDislike="${cService.isDislikedByUser(comment.id, user.id) ? true : false}"
+                                          data-dislikes="${comment.dislikes}">
                                         <i class="fal fa-thumbs-down"></i>
-                                            ${comment.dislikes}
+                                        <span class="quantity--dislike">${cs.formatNumber(comment.dislikes)}</span>
                                     </span>
                                     <c:if test='${comment.userId == user.id}'>
-                                        <span>
+                                        <span class="comment--crud">
                                             <i class="fal fa-ellipsis-v options w-40px h-40px lh-40px text-center rounded-circle"></i>
                                             <div class="comment-edit-delete bg-white rounded">
-                                                <div class="cursor-p">
+                                                <div class="cursor-p edit-comment" data-id="${comment.id}">
                                                     <i class="fal fa-edit"></i>
                                                     <span>Chỉnh sửa</span>
                                                 </div>
-                                                <div class=" d-block">
+                                                <div class="cursor-p delete-comment" data-id="${comment.id}">
                                                     <i class="fal fa-trash-alt"></i>
                                                     <span>Xóa</span>
                                                 </div>
@@ -177,272 +185,569 @@
 <!-- end: secondary -->
 
 <script src="<c:url value='/templates/common/js/common.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/templates/watch/css/watch.js'/>"></script>
+<script src="<c:url value='/templates/watch/js/watch.js'/>"></script>
 <script>
 
-    <%-- Url API --%>
-    const urlVidInterationAPI = 'http://localhost:8080/api-vid-interact';
-    const urlVideoAPI = 'http://localhost:8080/api-video';
-    const urlSubscribeAPI = 'http://localhost:8080/api-subscribe';
-    const urlUserAPI = 'http://localhost:8080/api-user';
-    const urlCommentAPI = 'http://localhost:8080/api-comment';
-
-    <%-- Video interaction --%>
-    const btnLikeVideo = $('#btn-like-video');
-    const btnDislikedVideo = $('#btn-dislike-video');
-    let videoLikes = ${video.likes};
-    let videoDislikes = ${video.dislikes};
-    btnLikeVideo.onclick = function () {
-        toggleVideoInteraction(true, this);
-    }
-    btnDislikedVideo.onclick = function () {
-        toggleVideoInteraction(false, this);
+    // Url of API
+    const urlAPI = {
+        User: 'http://localhost:8080/api-user',
+        Video: 'http://localhost:8080/api-video',
+        Comment: 'http://localhost:8080/api-comment',
+        Subscribe: 'http://localhost:8080/api-subscribe',
+        ComInteract: 'http://localhost:8080/api-com-interact',
+        VidInteract: 'http://localhost:8080/api-vid-interact'
     }
 
-    const toggleVideoInteraction = function (isLike, btnInteraction) {
-        if (${user != null}) {
-            const bodyVidInteration = JSON.stringify({
-                isLike: isLike,
-                userId: ${user.id},
-                videoId: ${video.id}
-            });
-            if (btnInteraction.classList.contains('active')) {
-                btnInteraction.classList.remove('active');
-                if (isLike) {
-                    videoLikes--;
-                } else {
-                    videoDislikes--;
+    // Constructor of video
+    const video = {
+        id: ${video.id},
+        name: `${video.name}`,
+        src: `${video.src}`,
+        views: ${video.views},
+        postingTime: `${video.postingTime}`,
+        likes: ${video.likes},
+        dislikes: ${video.dislikes},
+        avatarUrl: `${video.avatarUrl}`,
+        timeLimit: ${video.timeLimit},
+        userId: ${video.userId}
+    }
+
+    // Interaction of video
+    const videoInteraction = function () {
+
+        // Check user like or dislike or undefine
+        let interaction = 0;
+        if (${vService.isLikedByUser(video.id, user.id)}) {
+            interaction = 1;
+        }
+        if (${vService.isDislikedByUser(video.id, user.id)}) {
+            interaction = -1;
+        }
+
+        const btnLike = $('#btn-like-video');
+        const btnDislike = $('#btn-dislike-video');
+
+        btnLike.onclick = function () {
+            btnInteractionClick(true);
+        };
+
+        btnDislike.onclick = function () {
+            btnInteractionClick(false);
+        };
+
+        const btnInteractionClick = function (isBtnLike) {
+
+            // Check user of scope not null
+            if (${user != null}) {
+
+                // Body of api
+                const bodyAPI = JSON.stringify({
+                    isLike: isBtnLike,
+                    videoId: video.id
+                });
+
+                // Interaction is define
+                let defineInteraction = function (isBtnLike) {
+
+                    // is mode dislike
+                    if ((interaction === -1 && isBtnLike) || (interaction === 1 && isBtnLike === false)) {
+
+                        Promise.all([callAPI(urlAPI.VidInteract, {
+                            method: 'PUT',
+                            body: bodyAPI
+
+                        }), callAPI(urlAPI.Video + `?src=interaction&action=update&id=` + video.id + `&isLike=` + isBtnLike, {
+                            method: 'PUT'
+
+                        })]).then(([isUpdateVidInteractionSuccess, isUpdateInteractionOfVideoSuccess]) => {
+                            if (!(isUpdateVidInteractionSuccess && isUpdateInteractionOfVideoSuccess)) {
+                                return false;
+                            }
+                        });
+
+                    } else {
+
+                        Promise.all([callAPI(urlAPI.VidInteract + `?id=` + video.id, {
+                            method: 'DELETE'
+
+                        }), callAPI(urlAPI.Video + `?src=interaction&action=delete&id=` + video.id + `&isLike=` + isBtnLike, {
+                            method: 'PUT'
+
+                        })]).then(([isDeleteVidInteractionSuccess, isUpdateInteractionOfVideoSuccess]) => {
+                            if (!(isDeleteVidInteractionSuccess && isUpdateInteractionOfVideoSuccess)) {
+                                return false;
+                            }
+                        });
+                    }
+                    return true;
                 }
-                // send api delete vidInteract
-                callAPI(urlVidInterationAPI, {
-                    method: 'DELETE',
-                    body: bodyVidInteration
-                })
-                callAPI(urlVideoAPI + `?action=delete&videoId=${video.id}&isLike=` + isLike, {
-                    method: 'PUT',
-                    body: null
-                });
-            } else if (!btnLikeVideo.classList.contains('active') && !btnDislikedVideo.classList.contains('active')) {
-                btnInteraction.classList.add('active');
-                // send api insert video interaction
-                if (isLike) {
-                    videoLikes++;
-                } else {
-                    videoDislikes++;
+
+                // Interaction is undefine
+                let undefineInteraction = function (isBtnLike) {
+
+                    Promise.all([callAPI(urlAPI.VidInteract, {
+                        method: 'POST',
+                        body: bodyAPI
+
+                    }), callAPI(urlAPI.Video + `?src=interaction&action=add&id=` + video.id + `&isLike=` + isBtnLike, {
+                        method: 'PUT'
+
+                    })]).then(([isAddVidInteractionSuccess, isUpdateInteractionOfVideoSuccess]) => {
+                        if (isAddVidInteractionSuccess && isUpdateInteractionOfVideoSuccess) {
+                            return false;
+                        }
+                    });
+                    return true;
+                };
+
+                switch (interaction) {
+                    case -1: {
+                        if (defineInteraction(isBtnLike)) {
+                            if (isBtnLike) {
+                                btnDislike.classList.remove('active');
+                                btnLike.classList.add('active');
+                                video.likes++;
+                                video.dislikes--;
+                                interaction = 1;
+                            } else {
+                                btnDislike.classList.remove('active');
+                                video.dislikes--;
+                                interaction = 0;
+                            }
+                        }
+                        break;
+                    }
+                    case 0: {
+                        if (undefineInteraction(isBtnLike)) {
+                            if (isBtnLike) {
+                                btnLike.classList.add('active');
+                                video.likes++;
+                                interaction = 1;
+                            } else {
+                                btnDislike.classList.add('active');
+                                video.dislikes++;
+                                interaction = -1;
+                            }
+                        }
+
+                        break;
+                    }
+                    case 1: {
+                        if (defineInteraction(isBtnLike)) {
+                            if (isBtnLike) {
+                                btnLike.classList.remove('active');
+                                video.likes--;
+                                interaction = 0;
+                            } else {
+                                btnLike.classList.remove('active');
+                                btnDislike.classList.add('active');
+                                video.likes--;
+                                video.dislikes++;
+                                interaction = -1;
+                            }
+                        }
+                        break;
+                    }
                 }
-                callAPI(urlVidInterationAPI, {
-                    method: 'POST',
-                    body: bodyVidInteration
-                });
-                callAPI(urlVideoAPI + '?action=add&videoId=${video.id}&isLike=' + isLike, {
-                    method: 'PUT',
-                    body: null
-                });
+
+                $('#quantity-like-video').innerHTML = formatNumber(video.likes);
+                $('#quantity-dislike-video').innerHTML = formatNumber(video.dislikes);
             } else {
-                btnInteraction.classList.add('active');
-                // send api edit -> dislike -> like
-                if (isLike) {
-                    btnDislikedVideo.classList.remove('active');
-                    videoLikes++;
-                    videoDislikes--;
-                } else {
-                    btnLikeVideo.classList.remove('active');
-                    videoLikes--;
-                    videoDislikes++;
-                }
-                callAPI(urlVidInterationAPI, {
-                    method: 'PUT',
-                    body: bodyVidInteration
-                });
-                callAPI(urlVideoAPI + `?action=update&videoId=${video.id}&isLike=` + isLike, {
-                    method: 'PUT',
-                    body: null
-                });
+                window.alert("Bạn chưa đăng nhập!");
             }
-            $('#quantity-like-video').innerHTML = formatNumber(videoLikes);
-            $('#quantity-dislike-video').innerHTML = formatNumber(videoDislikes);
-        } else {
-            window.alert("Bạn chưa đăng nhập!");
+        };
+    };
+
+    // Subscribe
+    const subscribeChannel = function () {
+
+        let isSub = ${subscribeService.isSubscribed(video.userId, user.id)};
+        console.log('Begin: ' + isSub);
+
+        // Quantity subscribe
+        let subscribes = ${video.user.subscribe};
+
+        const btnSubscribe = $('#btn-subscribe');
+
+        btnSubscribe.onclick = function () {
+
+            if (${user != null}) {
+
+                if (isSub) {
+
+                    // subscribed
+                    Promise.all([callAPI(urlAPI.Subscribe + '?userId=' + video.userId, {
+                        method: 'DELETE'
+
+                    }), callAPI(urlAPI.User + '?src=subscribe&action=delete&userId=' + video.userId, {
+                        method: 'PUT'
+
+                    })]).then(function ([isDeleteSubscribeSuccess, isUpdateSubscribeOfUserSuccess]) {
+                        if (!(isDeleteSubscribeSuccess && isUpdateSubscribeOfUserSuccess)) {
+                            return false;
+                        }
+                    })
+                    btnSubscribe.innerHTML = 'ĐĂNG KÝ';
+                    subscribes--;
+
+                } else {
+
+                    // subscribe
+                    Promise.all([callAPI(urlAPI.Subscribe + '?userId=' + video.userId, {
+                        method: 'POST'
+
+                    }), callAPI(urlAPI.User + '?src=subscribe&action=add&userId=' + video.userId, {
+                        method: 'PUT'
+
+                    })]).then(function ([isAddSubscribeSuccess, isUpdateSubscribeOfUserSuccess]) {
+                        if (!(isAddSubscribeSuccess && isUpdateSubscribeOfUserSuccess)) {
+                            return null;
+                        }
+                    })
+                    btnSubscribe.innerHTML = 'ĐÃ ĐĂNG KÝ';
+                    subscribes++;
+                }
+
+                btnSubscribe.classList.toggle('subscribeb');
+                $('#primary .content .info a span').innerHTML = formatNumber(subscribes) + ' người đăng ký';
+                isSub = !isSub;
+            } else {
+                window.alert('Bạn chưa đăng nhập!');
+            }
         }
     }
 
-    <%-- Subscribe --%>
+    // Add a comment
+    const addComment = function () {
 
-    let isSub = ${video.user.subscribers.contains(user) ? true : false};
-    let subscribes = ${video.user.subscribe};
-
-    function btnSubscribeClick() {
-        let btnSubscribe = $('#btn-subscribe');
-        if (${user != null}) {
-            if (isSub) {
-                // subscribed
-                // send api delete
-                callAPI(urlSubscribeAPI, {
-                    method: 'DELETE',
-                    body: JSON.stringify({
-                        userId: ${video.user.id},
-                        userIdSub: ${user.id}
-                    })
-                });
-                callAPI(urlUserAPI + '?action=delete&userId=' + ${video.userId}, {
-                    method: 'PUT',
-                    body: null
-                });
-                btnSubscribe.innerHTML = 'ĐĂNG KÝ';
-                subscribes--;
-            } else {
-                // subscribe
-                // send api insert
-                callAPI(urlSubscribeAPI, {
-                    method: 'POST',
-                    body: JSON.stringify({
-                        userId: ${video.user.id},
-                        userIdSub: ${user.id}
-                    })
-                });
-                callAPI(urlUserAPI + '?action=add&userId=' + ${video.userId}, {
-                    method: 'PUT',
-                    body: null
-                });
-                btnSubscribe.innerHTML = 'ĐÃ ĐĂNG KÝ';
-                subscribes++;
-            }
-            btnSubscribe.classList.toggle('subscribeb');
-            $('#primary .content .info a span').innerHTML = formatNumber(subscribes) + ' người đăng ký';
-            isSub = !isSub;
-        } else {
-            window.alert('Bạn chưa đăng nhập!');
-        }
-    }
-
-    const commentInteraction = () => {
-        let input = $('#primary .add-comment input');
-        const interaction = $('#primary .comments .save-comment');
+        const input = $('#primary .add-comment input');
+        const fromAction = $('#primary .comments .save-comment');
         const btnCancel = $('#primary .comments .save-comment .cancel');
         const btnAddComment = $('#primary #btn-add-comment');
 
         let isDisplayAddComment = false;
+
+        // Toggle input
         if (input != null) {
             input.onclick = () => {
                 if (!isDisplayAddComment) {
-                    interaction.style.display = 'block';
+                    fromAction.style.display = 'block';
                     isDisplayAddComment = true;
                 }
             }
         }
 
+        // Toggle input
         if (btnCancel != null) {
             btnCancel.onclick = () => {
                 if (isDisplayAddComment) {
-                    interaction.style.display = 'none';
+                    fromAction.style.display = 'none';
                     isDisplayAddComment = false;
                     input.value = '';
                 }
             }
         }
 
+        // Add a comment
         if (btnAddComment != null) {
             btnAddComment.onclick = () => {
                 let commentContent = input.value;
+                if (commentContent === "") {
+                    return false;
+                }
 
                 // Insert into database
-                callAPI(urlCommentAPI, {
+                callAPI(urlAPI.Comment + "?src=crud", {
                     method: 'POST',
                     body: JSON.stringify({
                         content: commentContent,
-                        userId: ${user.id},
-                        videoId: ${video.id}
+                        videoId: video.id
                     })
-                })
-
-                // render page
-                let renderComment = $('#render-comment');
-                renderComment.innerHTML = `
-                <div class="comment" data-id=${0}>
-                    <figure>
-                        <img src="<c:url value='${user.avatarUrl}'/>" alt="avatar">
-                    </figure>
-                    <div>
-                        <div class="name">
-                            <a href="<c:url value='/channel?id=${user.id}'/>">${user.name}</a>
-                            <span>0 giây trước</span>
-                        </div>
-                        <div class="comment-content">
-                            ` + commentContent + `
-                            <div class="interaction">
-                                <span>
-                                    <i class="fal fa-thumbs-up"></i>
-                                    0
-                                </span>
-                                <span>
-                                    <i class="fal fa-thumbs-down"></i>
-                                    0
-                                </span>
-                                <span>
-                                    <i class="fal fa-ellipsis-v options w-40px h-40px lh-40px text-center rounded-circle"></i>
-                                    <div class="comment-edit-delete bg-white rounded">
-                                        <div class="cursor-p">
-                                            <i class="fal fa-edit"></i>
-                                            <span>Chỉnh sửa</span>
-                                        </div>
-                                        <div class="cursor-p">
-                                            <i class="fal fa-trash-alt"></i>
-                                            <span>Xóa</span>
-                                        </div>
+                }).then((id) => {
+                    // render page
+                    let renderComment = $('#render-comment');
+                    renderComment.innerHTML = `
+                        <div class="comment" data-id="` + id + `">
+                            <figure>
+                                <img src="<c:url value='${user.avatarUrl}'/>" alt="avatar">
+                            </figure>
+                            <div>
+                                <div class="name">
+                                    <a href="<c:url value='/channel?id=${user.id}'/>">${user.name}</a>
+                                    <span>0 giây trước</span>
+                                </div>
+                                <div class="comment-content">
+                                    ` + commentContent + `
+                                    <div class="interaction" data-id="` + id + `">
+                                        <span class="btn__likecomment" data-isLike="false" data-likes="0">
+                                            <i class="fal fa-thumbs-up"></i>
+                                            <span class="quantity--like">0</span>
+                                        </span>
+                                        <span class="btn__dislikecomment" data-isDislike="false" data-dislikes="0">
+                                            <i class="fal fa-thumbs-down"></i>
+                                            <span class="quantity--dislike">0</span>
+                                        </span>
+                                        <span class="comment--crud">
+                                            <i class="fal fa-ellipsis-v options w-40px h-40px lh-40px text-center rounded-circle"></i>
+                                            <div class="comment-edit-delete bg-white rounded">
+                                                <div class="cursor-p edit-comment" data-id=` + id + `>
+                                                    <i class="fal fa-edit"></i>
+                                                    <span>Chỉnh sửa</span>
+                                                </div>
+                                                <div class="cursor-p delete-comment" data-id=` + id + `>
+                                                    <i class="fal fa-trash-alt"></i>
+                                                    <span>Xóa</span>
+                                                </div>
+                                            </div>
+                                        </span>
                                     </div>
-                                </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                ` + renderComment.innerHTML;
-                interaction.style.display = 'none';
-                input.value = '';
-                // callAPI()
-                isDisplayAddComment = false;
+                    ` + renderComment.innerHTML;
+                    fromAction.style.display = 'none';
+                    input.value = '';
+                    isDisplayAddComment = false;
+                    editOrDeleteComment();
+                    commentInteraction();
+                })
             }
         }
     }
 
-    // edit comment
-    const editComment = function () {
-        const options = $$('#primary .comments .comment-content .options');
-        const btnEdit = $('#primary .comments .comment-content .comment-edit-delete');
-        let isDisplay = false;
-        if (options != null) {
-            options.onclick = () => {
-                if (!isDisplay) {
-                    btnEdit.style.display = 'block';
+    // Edit or delete comment
+    const editOrDeleteComment = function () {
+
+        const options = $$('#primary .comments .options');
+        const formActions = $$('#primary .comments .comment-edit-delete');
+        const commentCruds = $$('#primary .comments .comment--crud');
+
+        options.forEach((option, index) => {
+            option.onclick = () => {
+                if (formActions[index].style.display === 'block') {
+                    formActions[index].style.display = 'none';
                 } else {
-                    btnEdit.style.display = 'none';
+                    formActions[index].style.display = 'block';
                 }
-                isDisplay = !isDisplay;
             }
-        }
+        });
+
+        commentCruds.forEach((commentCrud) => {
+
+            let btnEdit = commentCrud.querySelector('.edit-comment');
+            let btnDelete = commentCrud.querySelector('.delete-comment');
+            let id = btnDelete.getAttribute('data-id');
+
+            btnEdit.onclick = () => {
+
+            }
+
+            btnDelete.onclick = () => {
+                callAPI(urlAPI.Comment + '?src=crud&id=' + id, {
+                    method: 'DELETE'
+
+                }).then((isDeleteCommentSuccess) => {
+                    if (!isDeleteCommentSuccess) {
+                        return false;
+                    }
+                });
+
+                const comments = $$('.comment');
+                comments.forEach((comment) => {
+                    if (comment.getAttribute('data-id') === id) {
+                        comment.innerHTML = ``;
+                    }
+                });
+            }
+        });
     }
 
-    commentInteraction();
+    // Interaction of comment
+    const commentInteraction = function () {
+
+        const interactionComments = $$('#primary .comment .interaction');
+
+        interactionComments.forEach((interactionComment) => {
+
+            const id = interactionComment.getAttribute("data-id");
+            const btnLike = interactionComment.querySelector('.btn__likecomment');
+            const btnDislike = interactionComment.querySelector('.btn__dislikecomment');
+
+            // Check user like or dislike or undefine
+            let interaction = 0;
+            if (btnLike.getAttribute('data-isLike') === 'true') {
+                interaction = 1;
+            }
+            if (btnDislike.getAttribute('data-isDislike') === 'true') {
+                interaction = -1;
+            }
+
+            let likes = parseFloat(btnLike.getAttribute('data-likes'));
+            let dislikes = parseFloat(btnDislike.getAttribute('data-dislikes'));
+
+            btnLike.onclick = function () {
+                btnInteractionClick(true);
+            }
+            btnDislike.onclick = function () {
+                btnInteractionClick(false);
+            }
+
+            let btnInteractionClick = function (isBtnLike) {
+
+                if (${user != null}) {
+
+                    // Body of api
+                    const bodyAPI = JSON.stringify({
+                        isLike: isBtnLike,
+                        commentId: id
+                    });
+
+                    // Interaction is define
+                    let defineInteraction = function (isBtnLike) {
+
+                        // is mode dislike
+                        if ((interaction === -1 && isBtnLike) || (interaction === 1 && isBtnLike === false)) {
+
+                            Promise.all([callAPI(urlAPI.ComInteract, {
+                                method: 'PUT',
+                                body: bodyAPI
+
+                            }), callAPI(urlAPI.Comment + `?src=interaction&action=update&id=` + id + `&isLike=` + isBtnLike, {
+                                method: 'PUT'
+
+                            })]).then(([isUpdateComInteractionSuccess, isUpdateInteractionOfCommentSuccess]) => {
+                                if (!(isUpdateComInteractionSuccess && isUpdateInteractionOfCommentSuccess)) {
+                                    return false;
+                                }
+                            });
+
+                        } else {
+
+                            Promise.all([callAPI(urlAPI.ComInteract + `?id=` + id, {
+                                method: 'DELETE'
+
+                            }), callAPI(urlAPI.Comment + `?src=interaction&action=delete&id=` + id + `&isLike=` + isBtnLike, {
+                                method: 'PUT'
+
+                            })]).then(([isDeleteComInteractionSuccess, isUpdateInteractionOfCommentSuccess]) => {
+                                if (!(isDeleteComInteractionSuccess && isUpdateInteractionOfCommentSuccess)) {
+                                    return false;
+                                }
+                            });
+                        }
+                        return true;
+                    }
+
+                    // Interaction is undefine
+                    let undefineInteraction = function (isBtnLike) {
+
+                        Promise.all([callAPI(urlAPI.ComInteract, {
+                            method: 'POST',
+                            body: bodyAPI
+
+                        }), callAPI(urlAPI.Comment + `?src=interaction&action=add&id=` + id + `&isLike=` + isBtnLike, {
+                            method: 'PUT'
+
+                        })]).then(([isAddComInteractionSuccess, isUpdateInteractionOfCommentSuccess]) => {
+                            if (isAddComInteractionSuccess && isUpdateInteractionOfCommentSuccess) {
+                                return false;
+                            }
+                        });
+                        return true;
+                    };
+
+                    switch (interaction) {
+                        case -1: {
+                            if (defineInteraction(isBtnLike)) {
+                                if (isBtnLike) {
+                                    btnDislike.classList.remove('active');
+                                    btnLike.classList.add('active');
+                                    likes++;
+                                    dislikes--;
+                                    interaction = 1;
+                                } else {
+                                    btnDislike.classList.remove('active');
+                                    dislikes--;
+                                    interaction = 0;
+                                }
+                            }
+                            break;
+                        }
+                        case 0: {
+                            if (undefineInteraction(isBtnLike)) {
+                                if (isBtnLike) {
+                                    btnLike.classList.add('active');
+                                    likes++;
+                                    interaction = 1;
+                                } else {
+                                    btnDislike.classList.add('active');
+                                    dislikes++;
+                                    interaction = -1;
+                                }
+                            }
+                            break;
+                        }
+                        case 1: {
+                            if (defineInteraction(isBtnLike)) {
+                                if (isBtnLike) {
+                                    btnLike.classList.remove('active');
+                                    likes--;
+                                    interaction = 0;
+                                } else {
+                                    btnLike.classList.remove('active');
+                                    btnDislike.classList.add('active');
+                                    likes--;
+                                    dislikes++;
+                                    interaction = -1;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                    btnLike.querySelector('.quantity--like').innerHTML = formatNumber(likes);
+                    btnDislike.querySelector('.quantity--dislike').innerHTML = formatNumber(dislikes);
+                } else {
+                    window.alert("Bạn chưa đăng nhập!");
+                }
+            }
+        })
+    }
 
     const callAPI = function (url, options) {
-        fetch(url, options)
+        return fetch(url, options)
             .then((resp) => {
                 console.log(resp);
+                return resp.json();
             })
+            .then((valueOfResponse) => {
+                console.log(valueOfResponse);
+                return valueOfResponse;
+            })
+        // .catch((err) => {
+        //     window.alert(err);
+        // })
     }
 
     const formatNumber = function (number) {
         let result;
         if (number > 1000000) {
-            let coefficient = Math.floor(number / 1000000);
-            result = coefficient + ' Tr';
+            let coefficient = number / 1000000;
+            result = coefficient.toFixed(1) + ' Tr';
         } else if (number > 1000) {
-            let coefficient = Math.floor(number / 1000);
-            result = coefficient + ' N';
+            let coefficient = number / 1000;
+            result = coefficient.toFixed(1) + ' N';
         } else {
             result = number;
         }
         return result;
     }
+
+    videoInteraction();
+    subscribeChannel();
+    addComment();
+    editOrDeleteComment();
+    commentInteraction();
+
 </script>
 
 </body>

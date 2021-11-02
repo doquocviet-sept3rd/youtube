@@ -3,7 +3,8 @@ package com.youtube.controllers.dashboard.apis;
 import com.youtube.entities.Subscribe;
 import com.youtube.entities.User;
 import com.youtube.services.ISubscribeService;
-import com.youtube.utils.HttpUtil;
+import com.youtube.utils.ApplicationUtil;
+import com.youtube.utils.PrintWriterUtil;
 
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -19,31 +20,38 @@ public class SubscribeAPI extends HttpServlet {
     private static final Long serialVersionUID = 1L;
 
     @Inject
-    ISubscribeService subscribeService;
+    private ISubscribeService subscribeService;
 
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doGet(req, resp);
-    }
+    @Inject
+    private PrintWriterUtil printWriterUtil;
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
-        Subscribe subscribe = HttpUtil.of(req.getReader()).toModel(Subscribe.class);
-        subscribeService.insert(subscribe);
-    }
-
-    @Override
-    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPut(req, resp);
+        printWriterUtil.getInstance(resp);
+        try {
+            User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
+            Subscribe subscribe = new Subscribe(Long.parseLong(req.getParameter("userId")), userCurrent.getId());
+            subscribeService.insert(subscribe);
+            printWriterUtil.println(true);
+        } catch (Exception e) {
+            printWriterUtil.println(false);
+        }
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
         resp.setContentType("application/json");
-        Subscribe subscribe = HttpUtil.of(req.getReader()).toModel(Subscribe.class);
-        subscribeService.delete(subscribeService.findOne(subscribe.getUserId(), subscribe.getUserIdSub()));
+        printWriterUtil.getInstance(resp);
+        try {
+            long userId = Long.parseLong(req.getParameter("userId"));
+            User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
+            subscribeService.delete(subscribeService.findOne(userId, userCurrent.getId()));
+            printWriterUtil.println(true);
+        } catch (Exception e) {
+            printWriterUtil.println(false);
+        }
     }
 }

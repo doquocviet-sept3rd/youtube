@@ -9,7 +9,7 @@ import javax.inject.Inject;
 public class VidInteractService implements IVidInteractService {
 
     @Inject
-    IVidInteractDAO vidInteractDAO;
+    private IVidInteractDAO vidInteractDAO;
 
     @Override
     public VidInteract findOne(Long userId, Long videoId) {
