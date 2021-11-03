@@ -34,6 +34,6 @@
 </div>
 <script src="<c:url value='/templates/common/vendor/jquery/jquery.min.js'/>" type="text/javascript"></script>
 <script src="<c:url value='/templates/common/vendor/bootstrap/js/bootstrap.min.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/templates/header/header.js'/>" type="text/javascript"></script>
+<script src="<c:url value='/templates/header/js/header.js'/>" type="text/javascript"></script>
 </body>
 </html>

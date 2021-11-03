@@ -5,6 +5,7 @@ import com.youtube.entities.User;
 import com.youtube.services.IUserService;
 
 import javax.inject.Inject;
+import java.util.List;
 
 public class UserService implements IUserService {
 
@@ -23,12 +24,24 @@ public class UserService implements IUserService {
 
     @Override
     public boolean isExistEmail(String email) {
-        return userDAO.isExixtEmail(email);
+        List<User> users = userDAO.findAll();
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return true;
+            }
+        }
+        return false;
     }
 
     @Override
     public User findOneByEmail(String email) {
-        return userDAO.findOneByEmail(email);
+        List<User> users = userDAO.findAll();
+        for (User user : users) {
+            if (user.getEmail().equals(email)) {
+                return user;
+            }
+        }
+        return null;
     }
 
     @Override

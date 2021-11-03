@@ -1,4 +1,4 @@
-<jsp:useBean id="subscribeService" scope="request" type="com.youtube.services.ISubscribeService"/>
+<jsp:useBean id="sService" scope="request" type="com.youtube.services.ISubscribeService"/>
 <jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <jsp:useBean id="cs" scope="request" type="com.youtube.services.ICommonService"/>
@@ -13,7 +13,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="<c:url value='/templates/watch/watch.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch_responsive.css'/>" type="text/css">
     <title><c:out value='${video.name}'/></title>
 </head>
@@ -60,7 +60,8 @@
         <div class="info d-flex">
             <a href="<c:url value='/#'/>" class="profile d-flex">
                 <figure>
-                    <img class="rounded-circle" src="<c:url value='${video.user.avatarChannelUrl}'/>" alt="avatar"/>
+                    <img class="rounded-circle" src="<c:url value='${video.user.avatarChannelUrl}'/>"
+                         alt="avatar"/>
                 </figure>
                 <div class="fw-600">
                     <p class="m-0"><c:out value='${video.user.name}'/></p>
@@ -71,8 +72,8 @@
                 </div>
             </a>
             <div id="btn-subscribe"
-                 class="${subscribeService.isSubscribed(video.userId, user.id) ? 'btn-sub h-40px rounded cursor-p lh-40px subscribeb' : 'btn-sub h-40px rounded cursor-p lh-40px'}">
-                ${subscribeService.isSubscribed(video.userId, user.id) ? 'ĐÃ ĐĂNG KÝ' : 'ĐĂNG KÝ'}
+                 class="${sService.isSubscribed(video.userId, user.id) ? 'btn-sub h-40px rounded cursor-p lh-40px subscribeb' : 'btn-sub h-40px rounded cursor-p lh-40px'}">
+                <c:out value='${sService.isSubscribed(video.userId, user.id) ? \'ĐÃ ĐĂNG KÝ\' : \'ĐĂNG KÝ\'}'/>
             </div>
         </div>
         <div class="expander">
@@ -84,7 +85,7 @@
     <hr/>
     <div class="comments">
         <div class="heading fw-600">
-            <span>${comments.size() == 0 ? 0 : cs.formatNumber(comments.size())} bình luận</span>
+            <span><c:out value='${comments.size() == 0 ? 0 : cs.formatNumber(comments.size())} bình luận'/></span>
             <span>
                 <i class="fal fa-sort-amount-up-alt"></i>
                 SẮP XẾP THEO
@@ -101,8 +102,8 @@
             </div>
             <div class="save-comment">
                 <button class="cancel cursor-p">HỦY</button>
-                <button id="btn-add-comment" type="submit" class="save cursor-p text-white rounded h-40px lh-40px">BÌNH
-                    LUẬN
+                <button id="btn-add-comment" type="submit" class="save cursor-p text-white rounded h-40px lh-40px">
+                    BÌNH LUẬN
                 </button>
             </div>
         </c:if>
@@ -115,11 +116,12 @@
                         </figure>
                         <div>
                             <div class="name">
-                                <a href="<c:url value='/channel?id=${comment.userId}'/>">${comment.user.name}</a>
-                                <span>${cs.distanceTime(comment.time)}</span>
+                                <a href="<c:url value='/channel?id=${comment.userId}'/>"><c:out
+                                        value='${comment.user.name}'/></a>
+                                <span><c:out value='${cs.distanceTime(comment.time)}'/></span>
                             </div>
                             <div class="comment-content">
-                                    ${comment.content}
+                                <c:out value='${comment.content}'/>
                                 <div class="interaction" data-id="${comment.id}">
                                     <span class="${cService.isLikedByUser(comment.id, user.id) ? 'btn__likecomment active' : 'btn__likecomment'}"
                                           data-isLike="${cService.isLikedByUser(comment.id, user.id) ? true : false}"
@@ -164,7 +166,7 @@
     <c:forEach var='video' items='${videos}'>
         <a href="<c:url value='/watch?v=${video.id}'/>" class="session">
             <figure>
-                <img src="${video.avatarUrl}" alt="">
+                <img src="<c:url value='${video.avatarUrl}'/>" alt="${video.avatarUrl}">
             </figure>
             <div>
                 <p class="name">
@@ -185,7 +187,7 @@
 <!-- end: secondary -->
 
 <script src="<c:url value='/templates/common/js/common.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/templates/watch/js/watch.js'/>"></script>
+<script src="<c:url value='/templates/watch/js/watch.js'/>" type="text/javascript"></script>
 <script>
 
     // Url of API
@@ -361,7 +363,7 @@
     // Subscribe
     const subscribeChannel = function () {
 
-        let isSub = ${subscribeService.isSubscribed(video.userId, user.id)};
+        let isSub = ${sService.isSubscribed(video.userId, user.id)};
         console.log('Begin: ' + isSub);
 
         // Quantity subscribe

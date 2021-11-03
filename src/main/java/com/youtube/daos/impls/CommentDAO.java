@@ -19,7 +19,6 @@ public class CommentDAO extends AbstractDAO<Comment> implements ICommentDAO {
 
     @Override
     public Long insert(Comment comment) {
-        comment.setTime(Timestamp.from(Instant.now()));
         comment.setCreatedOn(Timestamp.from(Instant.now()));
         comment.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(comment);

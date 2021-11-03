@@ -13,25 +13,24 @@ public class HomeController extends HttpServlet {
 
     private static final Long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do get
-        RequestDispatcher rd = request.getRequestDispatcher("/views/dashboard/home.jsp");
-        rd.forward(request, response);
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher rd = req.getRequestDispatcher("/views/dashboard/home.jsp");
+        rd.forward(req, resp);
     }
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do post
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPost(req, resp);
     }
 
-    protected void doPut(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do put
+    @Override
+    protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doPut(req, resp);
     }
 
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        // do delete
+    @Override
+    protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        super.doDelete(req, resp);
     }
 }

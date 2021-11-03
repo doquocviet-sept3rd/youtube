@@ -13,10 +13,10 @@
     <properties>
 
         <javax.servlet.version>4.0.1</javax.servlet.version>
-        <hibernate.core.version>5.5.7.final</hibernate.core.version>
+        <hibernate.core.version>5.5.8.Final</hibernate.core.version>
         <mysql.connect.version>8.0.26</mysql.connect.version>
-        <hibernate.c3p0.version>5.5.7.Final</hibernate.c3p0.version>
-        <hibernate.entitymanager.version>5.5.7.Final</hibernate.entitymanager.version>
+        <hibernate.c3p0.version>5.5.8.Final</hibernate.c3p0.version>
+        <hibernate.entitymanager.version>5.5.8.Final</hibernate.entitymanager.version>
         <jstl.version>1.2</jstl.version>
         <sitemesh.version>2.4.2</sitemesh.version>
         <inject.version>1</inject.version>

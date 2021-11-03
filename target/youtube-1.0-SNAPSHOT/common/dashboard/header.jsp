@@ -56,7 +56,7 @@
             <hr class="m-0">
             <div class="session session-channel">
                 <p>KÊNH ĐĂNG KÝ</p>
-                <c:forEach var='subscribe' items='${user.subscribes.size() < 3 ? user.subscribes : [user.subscribes[0], user.subscribes[1], user.subscribes[2]]}'>
+                <c:forEach var='subscribe' items='${user.subscribes}'>
                     <c:if test='${subscribe != null}'>
                         <a href="<c:url value='/channel?id=${subscribe.userId}'/>" class="h-40px d-block lh-40px">
                             <figure class="d-inline-block w-40px">
@@ -159,7 +159,7 @@
         <div id="profile" class="position-absolute bg-white">
             <div class="session session-info">
                 <figure>
-                    <img src="<c:url value='${user.avatarUrl}'/>" class="w-40px rounded-circle" alt="">
+                    <img src="<c:url value='${user.avatarUrl}'/>" class="w-40px rounded-circle" alt="avatar">
                 </figure>
                 <div>
                     <p class="name">Viet Do Quoc</p>

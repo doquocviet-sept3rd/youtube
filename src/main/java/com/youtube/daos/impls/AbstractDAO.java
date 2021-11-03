@@ -45,7 +45,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             // Close transaction
             // factory.close();
             session.close();
-
         }
         return null;
     }
@@ -91,7 +90,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             // Close transaction
             // factory.close();
             session.close();
-
         }
         // Return null if error
         return null;
@@ -170,7 +168,6 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             // Close transaction
             // factory.close();
             session.close();
-
         }
         // Return false if delete error
         return false;
@@ -188,7 +185,7 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             session.getTransaction().begin();
 
             // Init string query
-            String sql = getSqlParameter(className, params);
+            String sql = initQueryString(className, params);
 
             try {
                 // Create query
@@ -215,14 +212,13 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             // Close transaction
             // factory.close();
             session.close();
-
         }
         // Return null if error or not found
         return null;
     }
 
     /* Init string sql */
-    public String getSqlParameter(String className, Object... params) {
+    public String initQueryString(String className, Object... params) {
 
         StringBuilder sql = new StringBuilder("select entity from " + className + " entity where ");
 
@@ -253,8 +249,15 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
             }
         }
 
-        sql.append("entity.").append(keys[0]).append(" = ").append(params[0]).append(" and ")
-                .append("entity.").append(keys[1]).append(" = ").append(params[1]);
+        sql.append("entity.")
+                .append(keys[0])
+                .append(" = ")
+                .append(params[0])
+                .append(" and ")
+                .append("entity.")
+                .append(keys[1])
+                .append(" = ")
+                .append(params[1]);
 
         return sql.toString();
     }

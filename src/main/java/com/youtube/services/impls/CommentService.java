@@ -8,6 +8,8 @@ import com.youtube.entities.Video;
 import com.youtube.services.ICommentService;
 
 import javax.inject.Inject;
+import java.sql.Timestamp;
+import java.time.Instant;
 import java.util.Collection;
 
 public class CommentService implements ICommentService {
@@ -17,6 +19,7 @@ public class CommentService implements ICommentService {
 
     @Override
     public Long insert(Comment comment) {
+        comment.setTime(Timestamp.from(Instant.now()));
         return commentDAO.insert(comment);
     }
 

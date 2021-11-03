@@ -44,22 +44,28 @@ public class WatchController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         req.setAttribute("cs", commonService);
-        req.setAttribute("subscribeService", subscribeService);
+        req.setAttribute("sService", subscribeService);
         req.setAttribute("vService", videoService);
         req.setAttribute("cService", commentService);
 
         // get video
-        String id = req.getParameter("v");
+        String id;
+        try {
+            id = req.getParameter("v");
+        } catch (Exception e) {
+            id = "1";
+        }
         req.setAttribute("video", videoService.findOne(parseLong(id)));
 
+        // Get comments
         List<Comment> comments = new ArrayList<>(videoService.findOne(Long.parseLong(id)).getComments());
         Collections.reverse(comments);
         req.setAttribute("comments", comments);
 
-        // get videos
+        // Get videos
         req.setAttribute("videos", videoService.findAll());
 
-        // add history
+        // Add history
         User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
         if (userCurrent != null) {
             historyService.insert(new History(Timestamp.from(Instant.now()), userCurrent.getId(), parseLong(id)));

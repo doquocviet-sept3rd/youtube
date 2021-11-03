@@ -19,7 +19,4 @@ public interface IUserDAO extends GenericDAO<User> {
 
     User findOne(Object... params);
 
-    boolean isExixtEmail(String email);
-
-    User findOneByEmail(String email);
 }

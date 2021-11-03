@@ -43,7 +43,6 @@ public class CommentAPI extends HttpServlet {
         if (req.getParameter("src").equals("crud")) {
             try {
                 Comment comment = HttpUtil.of(req.getReader()).toModel(Comment.class);
-                comment.setTime(Timestamp.from(Instant.now()));
                 User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
                 comment.setUserId(userCurrent.getId());
                 Long id = commentService.insert(comment);
