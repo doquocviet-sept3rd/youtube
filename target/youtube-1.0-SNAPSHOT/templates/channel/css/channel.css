@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+/* Begin: userchannel */
+
+#userchannel {
+    /* display: block; */
+    background-color: #f9f9f9;
+    padding: 24px 100px 0 100px;
+}
+
+#userchannel #chanelcoverimage{
+    /* display: block; */
+    width: 1160px;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+/* begin aboutchanel */
+#aboutchanel {
+    display: flex;
+    width: 1160px;
+    height: 100px;
+    padding: 15px;
+    background-color: #e2e2e2;
+    justify-content: space-between;
+}
+#userchannel #avtmychanel{
+    display: flex;
+    top: auto;
+    width: 65px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+#aboutchanel div p{
+
+    margin-left: 100px;
+    margin-top: -60px;
+    font-size: 160%;
+    font-weight: bold;
+
+}
+#aboutchanel div span{
+
+    font-size: 90%;
+    margin-left: 100px;
+    margin-top: -50px;
+}
+#aboutchanel #subscribeb{
+    margin-right: 50px;
+    margin-top: 10px;
+    background-color: #cc0000;
+    border: none;
+    color: #fff;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+/* end aboutchanel */
+
+/* <!-- begin videochanel --> */
+#videochanel{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between ;
+
+}
+#videochanel .session {
+
+    display:flex;
+    text-decoration: none;
+    flex-basis: 15%;
+
+}
+#videochanel .session figure{
+    flex: 15%;
+}
+#videochanel .session figure img{
+
+    margin-top: 20px;
+    width: 220px;
+    height: 150px;
+}
+#videochanel .session .name{
+
+    color: #030303;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+#videochanel .session  .user,
+#videochanel .session .info {
+    display: flex;
+    color: #606060;
+    font-size: 12px;
+    padding-top: 5px;
+    font-weight: 600;
+}
+#videochanel .session .info {
+    padding-bottom: 20px;
+}
+/* <!-- end videochanel --> */
+/* <!-- begin introducechanel --> */
+#introducechanel {
+    display: block;
+    padding: 20px;
+    background-color: #dbd8d8;
+    border-radius: 3%;
+}
+#introducechanel p{
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100%;
+}
+#introducechanel p #namechanel{
+
+    font-weight: bold;
+}
+/* <!-- end introducechanel --> */
+/* End: userchannel */

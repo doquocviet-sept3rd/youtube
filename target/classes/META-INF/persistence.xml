@@ -13,7 +13,7 @@
         <class>com.youtube.entities.VidInteract</class>
         <class>com.youtube.entities.Video</class>
         <properties>
-            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/youtube"/>
+            <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/youtobe"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
         </properties>
     </persistence-unit>
