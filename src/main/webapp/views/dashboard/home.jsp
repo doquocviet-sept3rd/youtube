@@ -1,6 +1,10 @@
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<jsp:useBean id="cs" class="com.youtube.services.impls.CommonService" scope="request" type="com.youtube.services.ICommonService"/>
+<jsp:useBean id="video" class="com.youtube.entities.Video" scope="request" type="com.youtube.entities.Video"/>
+<jsp:useBean id="videos" class="com.youtube.daos.impls.VideoDAO" type="com.youtube.daos.impls.VideoDAO" scope="application"></jsp:useBean>
 <html>
 
 <head>
@@ -10,251 +14,32 @@
 </head>
 
 <body>
-
 <hr>
 <div class="d-flex fw-600" id="main">
-    <a href="<c:url value="/watch?v=id"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
+    <c:forEach var='video' items="${videos.findAll()}" varStatus="status">
+        <a href="<c:url value="/watch?v=${video.id}"/>"><img
+                src="${video.avatarUrl}"
+                alt="">
+            <div class="info d-flex">
+                <figure>
+                    <img class="rounded-circle"
+                         src="${video.user.avatarChannelUrl}"
+                         alt="${video.user.name}">
+                </figure>
+                <div>
+                    <p class="name m-0">
+                        <c:out value='${cs.formatString(video.name)}'/>
+                    </p>
+                    <p class="username m-0">
+                        <c:out value='${cs.formatString(video.user.name)}'/>
+                    </p>
+                    <p class="more--info m-0">
+                        <c:out value='${cs.formatNumber(video.views)}'/> lượt xem &#183; <c:out value='${cs.distanceTime(video.postingTime)}'/>
+                    </p>
+                </div>
             </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
-    <a href="<c:url value="/#"/>"><img
-            src="https://i.ytimg.com/an_webp/MYZYny52vZ8/mqdefault_6s.webp?du=3000&sqp=CPuRgowG&rs=AOn4CLCMcnQHguoXhJI92HaTux4l1Npukg"
-            alt="">
-        <div class="info d-flex">
-            <figure>
-                <img class="rounded-circle"
-                     src="https://yt3.ggpht.com/-pt6n_caqB553aON-gwPBY_ToaJ3BicldFvsPp8nG56kpoupAM9YwO70EIxCU1WZOkOj14i2ew=s68-c-k-c0x00ffffff-no-rj"
-                     alt="">
-            </figure>
-            <div>
-                <p class="name m-0">
-                    Radio Cuộc Sống - NGHE MÀ THẤM TỪNG CÂU CHỮ #1 - Tiktok VN
-                </p>
-                <p class="username m-0">
-                    MÍT TIKTOK
-                </p>
-                <p class="more--info m-0">
-                    59N lượt xem &#183; 1 năm trước
-                </p>
-            </div>
-        </div>
-    </a>
+        </a>
+    </c:forEach>
 </div>
 
 <script src="<c:url value='/templates/common/js/common.js'/>" type="text/javascript"></script>
