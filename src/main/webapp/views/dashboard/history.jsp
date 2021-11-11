@@ -45,15 +45,16 @@
         <c:forEach var='history' items="${historyDao.findAll()}" varStatus="status">
             <a href="<c:url value='/watch?v=${history.id}'/>" class="session">
                 <figure>
-                    <img src="${history.video.avatarUrl}" alt="" width="330px" height="200px" >
+                    <img src="${history.video.avatarUrl}" alt="" width="360px" height="200px" >
                 </figure>
                 <div>
                     <p class="name m-0">
                         <c:out value='${cs.formatString(history.video.name)}'/>
                     </p>
                     <p class="username">
-                        <img src="${history.user.avatarUrl}" alt="" height="20px" width="20px">
-                        <c:out value='${history.user.name}'/>
+                        <c:out value='${history.user.name}'/> •
+                        <c:out value='${history.video.views == 0 ? 0 : cs.formatNumber(history.video.views)}'/>
+                        &nbsp;lượt xem
                     </p>
                     <p class="more--info">
                         <c:out value='${cs.distanceTime(history.video.postingTime)}'/>
