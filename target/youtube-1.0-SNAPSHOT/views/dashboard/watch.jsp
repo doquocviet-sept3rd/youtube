@@ -13,7 +13,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="<c:url value='/templates/watch/watch.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch_responsive.css'/>" type="text/css">
     <title><c:out value='${video.name}'/></title>
 </head>
@@ -162,7 +162,7 @@
 <!-- begin: secondary -->
 <div id="secondary">
     <c:forEach var='video' items='${videos}'>
-        <a href="<c:url value='/watch?v=${video.id}'/>" class="session">
+        <a href="<c:url value='/a${video.id}'/>" class="session">
             <figure>
                 <img src="${video.avatarUrl}" alt="">
             </figure>

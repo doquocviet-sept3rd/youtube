@@ -12,8 +12,7 @@ public class HistoryDAO extends AbstractDAO<History> implements IHistoryDAO {
     private final String className = "History";
 
     @Override
-    public List<History> findAll() {
-        return super.findAll(className);
+    public List<History> findAll() {return super.findAll(className);
     }
 
     @Override

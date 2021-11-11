@@ -162,7 +162,7 @@
 <!-- begin: secondary -->
 <div id="secondary">
     <c:forEach var='video' items='${videos}'>
-        <a href="<c:url value='/watch?v=${video.id}'/>" class="session">
+        <a href="<c:url value='/a${video.id}'/>" class="session">
             <figure>
                 <img src="${video.avatarUrl}" alt="">
             </figure>

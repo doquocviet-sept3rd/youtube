@@ -6,35 +6,39 @@
 <jsp:useBean id="videos" class="com.youtube.daos.impls.VideoDAO" type="com.youtube.daos.impls.VideoDAO" scope="application"></jsp:useBean>
 <html>
 <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<c:url value='/templates/home/assets/css/base.css'/>" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/home/assets/css/style.css'/>" type="text/css" media="all">
-    <link rel="stylesheet" href="<c:url value='/templates/home/assets/css/responsive.css'/>" type="text/css"
-          media="all">
     <title>Home</title>
+    <link rel="stylesheet" href="<c:url value='/templates/common/font/awesome/css/all.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/common/font/roboto'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/common/vendor/bootstrap/css/bootstrap.min.css'/>" type="text/css" media="all">
+    <link rel="shortcut icon" href="https://www.youtube.com/s/desktop/0ac1422e/img/favicon_96x96.png">
+    <link rel="stylesheet" href="<c:url value='/templates/common/css/common.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/header/css/header.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/header/css/header_responsive.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/templates/home/css/home.css'/>" type="text/css" media="all">
+    <link rel="stylesheet" href="<c:url value='/templates/home/css/home_responsive.css'/>" type="text/css">
 </head>
 <body>
-<div id="wrapper">
-<!-- Sidebar -->
-<div id="sidebar-wrapper">
-    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">
-        <li >
-            <a href="#section1"><i class="fal fa-home-lg-alt"></i><span>Trang chủ</span></a>
-        </li>
-        <li>
-            <a href="#section2"><i class="fal fa-compass"></i></span>Khám phá</a>
-        </li>
-        <li>
-            <a href="#section3"><i class="fal fa-list-alt"></i></span>Đăng ký</a>
-        </li>
-        <li>
-            <a href="#section4"><i class="fal fa-photo-video"></i></span>Thư viện</a>
-        </li>
-        <li>
-            <a href="#section5"><i class="fal fa-history"></i></span>Video đã xem</a>
-        </li>
-    </ul>
-</div>
+<%--<div id="wrapper">--%>
+<%--<!-- Sidebar -->--%>
+<%--<div id="sidebar-wrapper">--%>
+<%--    <ul class="sidebar-nav nav-pills nav-stacked" id="menu">--%>
+<%--        <li >--%>
+<%--            <a href="#section1"><i class="fal fa-home-lg-alt"></i><span>Trang chủ</span></a>--%>
+<%--        </li>--%>
+<%--        <li>--%>
+<%--            <a href="#section2"><i class="fal fa-compass"></i></span>Khám phá</a>--%>
+<%--        </li>--%>
+<%--        <li>--%>
+<%--            <a href="#section3"><i class="fal fa-list-alt"></i></span>Đăng ký</a>--%>
+<%--        </li>--%>
+<%--        <li>--%>
+<%--            <a href="#section4"><i class="fal fa-photo-video"></i></span>Thư viện</a>--%>
+<%--        </li>--%>
+<%--        <li>--%>
+<%--            <a href="#section5"><i class="fal fa-history"></i></span>Video đã xem</a>--%>
+<%--        </li>--%>
+<%--    </ul>--%>
+<%--</div>--%>
     <!-- Page Content -->
     <div id="page-content-wrapper">
 <div class="content">

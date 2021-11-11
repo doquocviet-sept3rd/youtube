@@ -6,7 +6,6 @@
         <exploded>true</exploded>
         <module>youtube</module>
         <packaging>war</packaging>
-        <unpackNestedArchives>false</unpackNestedArchives>
       </options>
     </properties>
     <root id="root">
@@ -34,13 +33,23 @@
           <element id="library" level="project" name="Maven: com.sun.xml.fastinfoset:FastInfoset:1.2.15" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.26" />
           <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
-          <element id="library" level="project" name="Maven: org.hibernate:hibernate-c3p0:5.4.32.Final" />
+          <element id="library" level="project" name="Maven: org.hibernate:hibernate-c3p0:5.5.7.Final" />
           <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.5" />
           <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.19" />
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-entitymanager:5.5.7.Final" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
           <element id="library" level="project" name="Maven: opensymphony:sitemesh:2.4.2" />
           <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.jboss.weld.servlet:weld-servlet:2.4.8.Final" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.13.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.13.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.13.0" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.8" />
+          <element id="library" level="project" name="Maven: com.squareup.okhttp3:okhttp:4.9.2" />
+          <element id="library" level="project" name="Maven: com.squareup.okio:okio:2.8.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib-common:1.4.0" />
+          <element id="library" level="project" name="Maven: org.jetbrains.kotlin:kotlin-stdlib:1.4.10" />
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:13.0" />
         </element>
       </element>
       <element id="directory" name="META-INF">
