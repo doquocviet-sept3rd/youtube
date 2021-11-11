@@ -31,7 +31,12 @@
 }
 
 #main .info .name {
-    color: #333;
+    color: #000000;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+
 }
 
 #main .info .username,
