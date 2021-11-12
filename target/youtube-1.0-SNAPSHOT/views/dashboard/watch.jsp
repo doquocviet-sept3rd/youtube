@@ -13,7 +13,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/watch/watch.css'/>">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/watch/css/watch.css'/>">
     <link rel="stylesheet" type="text/css" href="<c:url value='/templates/watch/css/watch_responsive.css'/>">
     <title><c:out value='${video.name}'/></title>
 </head>
@@ -714,6 +714,13 @@
         })
     }
 
+    const nextVideo = function () {
+        setInterval(function () {
+            let iframe = $('#primary iframe');
+            console.log(!iframe.getCurrentTime ? 0.0 : iframe.getCurrentTime());
+        }, 1000);
+    }
+
     const callAPI = function (url, options) {
         return fetch(url, options)
             .then((resp) => {
@@ -748,6 +755,7 @@
     addComment();
     editOrDeleteComment();
     commentInteraction();
+    nextVideo();
 
 </script>
 

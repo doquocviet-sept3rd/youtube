@@ -129,10 +129,12 @@
     <%-- end: menu bar behavior--%>
     <%-- begin: center --%>
     <div id="center" class="d-flex my-auto">
-        <label>
-            <input type="text" placeholder="Tìm kiếm" class="rounded-left lh-40px"/>
-        </label>
-        <i class="fal fa-search btn-search text-center lh-40px cursor-p rounded-right"></i>
+        <form action="<c:url value="/search"/>" method="GET">
+            <label>
+                <input name="key" type="text" placeholder="Tìm kiếm" class="rounded-left lh-40px"/>
+            </label>
+        </form>
+        <i id="btn-search" class="fal fa-search btn-search text-center lh-40px cursor-p rounded-right"></i>
         <i class="fal fa-microphone btn-voice text-center lh-40px cursor-p w-40px rounded-circle"></i>
     </div>
     <%-- end: center --%>

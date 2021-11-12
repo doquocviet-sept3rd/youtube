@@ -8,7 +8,7 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/history/history.css'/>">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/history/css/history.css'/>">
     <link rel="stylesheet" type="text/css" href="<c:url value='/templates/history/css/history_responsive.css'/>">
     <title>History</title>
 </head>

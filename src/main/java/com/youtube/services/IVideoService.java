@@ -15,4 +15,6 @@ public interface IVideoService {
     boolean isDislikedByUser(long videoId, long userId);
 
     boolean update(Video video);
+
+    List<Video> findAllByKey(String key);
 }

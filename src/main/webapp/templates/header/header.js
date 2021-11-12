@@ -53,6 +53,17 @@ const hideItem = function () {
     }
 }
 
+//
+const btnSearchOnlick = function () {
+    let btnSearch = $('#btn-search');
+    btnSearch.onclick = function () {
+        let form = $('#center form');
+        form.submit();
+        console.log('submited')
+    }
+}
+
 toggleMenuBar(false);
 toggleProfile(false);
 hideItem();
+btnSearchOnlick();
