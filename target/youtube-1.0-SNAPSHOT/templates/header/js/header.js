@@ -17,7 +17,7 @@ const toggleMenuBar = function (isDisplay) {
 const toggleProfile = function (isDisplay) {
     const avatar = $('#avatar');
     const profile = $('#profile');
-    if (avatar != null) {
+    if (avatar && profile) {
         avatar.onclick = () => {
             if (!isDisplay) {
                 profile.style.display = 'block';
@@ -32,11 +32,11 @@ const toggleProfile = function (isDisplay) {
 const disableItems = function () {
     const menuBehavior = $('#menu-behavior');
     const profile = $('#profile');
-    if (menuBehavior.style.display === 'block') {
+    if (menuBehavior.style.display === 'block' && menuBehavior) {
         menuBehavior.style.display = 'none';
         toggleMenuBar(false);
     }
-    if (profile.style.display === 'block') {
+    if (profile.style.display === 'block' && profile) {
         profile.style.display = 'none';
         toggleProfile(false);
     }

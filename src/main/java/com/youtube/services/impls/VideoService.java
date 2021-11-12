@@ -62,8 +62,4 @@ public class VideoService implements IVideoService {
         return videoDAO.update(video);
     }
 
-    @Override
-    public List<String> formatXML(String content) {
-        return Arrays.asList(content.split("`"));
-    }
 }

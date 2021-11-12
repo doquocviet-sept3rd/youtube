@@ -49,12 +49,7 @@ public class WatchController extends HttpServlet {
         req.setAttribute("cService", commentService);
 
         // get video
-        String id;
-        try {
-            id = req.getParameter("v");
-        } catch (Exception e) {
-            id = "1";
-        }
+        String id = req.getParameter("v");
         req.setAttribute("video", videoService.findOne(parseLong(id)));
 
         // Get comments
@@ -77,16 +72,16 @@ public class WatchController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        super.doPost(req, resp);
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        super.doPut(req, resp);
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        super.doDelete(req, resp);
     }
 }

@@ -3,6 +3,7 @@ package com.youtube.daos;
 import java.util.List;
 
 public interface GenericDAO<Entity> {
+
     List<Entity> findAll(String className);
 
     Long insert(Entity entity);

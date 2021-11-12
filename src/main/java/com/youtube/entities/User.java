@@ -62,6 +62,7 @@ public class User {
     }
 
     public User(String email, String name, String avatarUrl, long subscribe, String nameChannel, String avatarChannelUrl, String coverChannelUrl, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+
         this.email = email;
         this.name = name;
         this.avatarUrl = avatarUrl;

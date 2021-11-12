@@ -13,8 +13,8 @@
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch.css'/>" type="text/css">
-    <link rel="stylesheet" href="<c:url value='/templates/watch/css/watch_responsive.css'/>" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/watch/watch.css'/>">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/watch/css/watch_responsive.css'/>">
     <title><c:out value='${video.name}'/></title>
 </head>
 
@@ -77,8 +77,8 @@
             </div>
         </div>
         <div class="expander">
-            <c:forEach var="content" items="${vService.formatXML(video.content)}">
-                <p><c:out value='${content}'/></p>
+            <c:forEach var="content" items="${cs.formatXML(video.content)}">
+                <p class="fw-600"><c:out value='${content}' escapeXml="false"/></p>
             </c:forEach>
         </div>
     </div>
@@ -170,7 +170,7 @@
             </figure>
             <div>
                 <p class="name">
-                    <c:out value='${cs.formatString(video.name)}'/>
+                    <c:out value='${video.name}'/>
                 </p>
                 <p class="user">
                     <c:out value='${video.user.name}'/>
@@ -186,8 +186,8 @@
 </div>
 <!-- end: secondary -->
 
-<script src="<c:url value='/templates/common/js/common.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/templates/watch/js/watch.js'/>" type="text/javascript"></script>
+<script type="text/javascript" src="<c:url value='/templates/common/js/common.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/templates/watch/js/watch.js'/>"></script>
 <script>
 
     // Url of API
@@ -210,7 +210,6 @@
         likes: ${video.likes},
         dislikes: ${video.dislikes},
         avatarUrl: `${video.avatarUrl}`,
-        timeLimit: ${video.timeLimit},
         userId: ${video.userId}
     }
 

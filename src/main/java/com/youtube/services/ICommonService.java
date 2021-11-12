@@ -1,6 +1,7 @@
 package com.youtube.services;
 
 import java.sql.Timestamp;
+import java.util.List;
 
 public interface ICommonService {
 
@@ -13,4 +14,6 @@ public interface ICommonService {
     String distanceTime(Timestamp timestamp);
 
     String formatString(String src);
+
+    List<String> formatXML(String content);
 }

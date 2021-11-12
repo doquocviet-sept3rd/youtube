@@ -31,6 +31,10 @@ header {
     z-index: 1;
 }
 
+#profile {
+    z-index: 1;
+}
+
 #profile hr,
 #menu-behavior hr {
     opacity: 0.3;

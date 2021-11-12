@@ -4,8 +4,8 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="<c:url value='/templates/home/css/home.css'/>" type="text/css">
-    <link rel="stylesheet" href="<c:url value='/templates/home/css/home_responsive.css'/>" type="text/css">
+    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/home/css/home.css'/>" >
+    <link rel="stylesheet" type="text/css" href="<c:url value='/templates/home/css/home_responsive.css'/>">
     <title>Home</title>
 </head>
 
@@ -257,8 +257,8 @@
     </a>
 </div>
 
-<script src="<c:url value='/templates/common/js/common.js'/>" type="text/javascript"></script>
-<script src="<c:url value='/templates/home/js/home.js'/>" type="text/javascript"></script>
+<script type="text/javascript" src="<c:url value='/templates/common/js/common.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/templates/home/js/home.js'/>"></script>
 </body>
 
 </html>

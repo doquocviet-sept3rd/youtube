@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: kitsu
-  Date: 10/2/2021
-  Time: 10:00 PM
-  To change this template use File | Settings | File Templates.
---%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
+<%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ include file="/common/taglibs.jsp" %>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <title>Title</title>
+    <title>Channel</title>
 </head>
+
 <body>
 <h1>url: /channel/userId</h1>
 </body>
+
 </html>
