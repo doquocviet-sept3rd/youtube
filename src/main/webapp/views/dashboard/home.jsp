@@ -4,7 +4,8 @@
 <jsp:useBean id="videos" scope="request" type="java.util.List"/>
 <jsp:useBean id="cs" scope="request" type="com.youtube.services.ICommonService"/>
 
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="<c:url value='/templates/home/home.css'/>" >

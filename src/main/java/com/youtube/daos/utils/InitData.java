@@ -793,33 +793,33 @@ public class InitData {
                 Timestamp.valueOf("2021-10-27 23:00:00.00"),
                 "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
                 "Ngọa Hổ Tàng Long [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Gây Cấn Hay Nhất 2021\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "⭐Chào mừng các bạn đến với Lạ Phim.\n" +
                         "⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\n" +
                         "\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:\n" +
                         "https://www.youtube.com/channel/UCCZR...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACUni Movie - Kho Phim Của Mọi Nhà:\n" +
                         "https://www.youtube.com/channel/UCzZV...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Kiếm Hiệp Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCPp9...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Drama, Ngôn Tình Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCSZt...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Cổ Trang Hoa Ngữ Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCTqL...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Hành Động Chiếu Rạp Mỹ:\n" +
                         "https://www.youtube.com/channel/UCvTf...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Võ Thuật Chiếu Rạp Mỹ:\n" +
                         "https://www.youtube.com/channel/UCV9c....\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "© Bản quyền phim thuộc về Lạ Phim.\n" +
                         "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimvothuat #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
                 2401,
                 335,
@@ -835,36 +835,36 @@ public class InitData {
                 "Ngũ Hổ Quảng Đông [Thuyết Minh] | Phim Hành Động Võ Thuật Đỉnh Cao Gây Cấn Kịch Tính Hay Nhất 2021",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zWiass4WloY?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 450927,
-                Timestamp.valueOf("2021-11-1 18:00:00.00"),
+                Timestamp.valueOf("2021-11-01 18:00:00.00"),
                 "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
                 "Ngũ Hổ Quảng Đông [Thuyết Minh] | Phim Hành Động Võ Thuật Đỉnh Cao Gây Cấn Kịch Tính Hay Nhất 2021\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "⭐Chào mừng các bạn đến với Lạ Phim.\n" +
                         "⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\n" +
                         "\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:\n" +
                         "https://www.youtube.com/channel/UCCZR...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACUni Movie - Kho Phim Của Mọi Nhà:\n" +
                         "https://www.youtube.com/channel/UCzZV...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Kiếm Hiệp Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCPp9...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Drama, Ngôn Tình Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCSZt...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Cổ Trang Hoa Ngữ Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCTqL...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Hành Động Chiếu Rạp Mỹ:\n" +
                         "https://www.youtube.com/channel/UCvTf...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Võ Thuật Chiếu Rạp Mỹ:\n" +
                         "https://www.youtube.com/channel/UCV9c....\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "© Bản quyền phim thuộc về Lạ Phim.\n" +
                         "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimvothuat #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
                 1920,
                 241,
@@ -880,36 +880,36 @@ public class InitData {
                 "Cuộc Chiến Bến Thượng Hải [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Mới 2021",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ioQWPpPR5aw?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 159466,
-                Timestamp.valueOf("2021-11-1 20:00:00.00"),
+                Timestamp.valueOf("2021-11-01 20:00:00.00"),
                 "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
                 "Cuộc Chiến Bến Thượng Hải [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Mới 2021\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "⭐Chào mừng các bạn đến với Lạ Phim.\n" +
                         "⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\n" +
                         "\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:\n" +
                         "https://www.youtube.com/channel/UCCZR...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACUni Movie - Kho Phim Của Mọi Nhà:\n" +
                         "https://www.youtube.com/channel/UCzZV...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Kiếm Hiệp Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCPp9...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Drama, Ngôn Tình Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCSZt...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Cổ Trang Hoa Ngữ Mới Hay Nhất:\n" +
                         "https://www.youtube.com/channel/UCTqL...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Hành Động Chiếu Rạp Mỹ:\n" +
                         "https://www.youtube.com/channel/UCvTf...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFACPhim Võ Thuật Chiếu Rạp Mỹ:\n" +
                         "https://www.youtube.com/channel/UCV9c....\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "© Bản quyền phim thuộc về Lạ Phim.\n" +
                         "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimvothuat #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
                 561,
                 70,
@@ -925,7 +925,7 @@ public class InitData {
                 "Anh Hùng Cứu Thế [Thuyết Minh] | Phim Hành Động Võ Thuật Gây Cấn Kịch Tính Hay Nhất",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xxACrkCqRPE?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 388608,
-                Timestamp.valueOf("2021-10-8 21:30:00.00"),
+                Timestamp.valueOf("2021-10-08 21:30:00.00"),
                 "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
                 "Anh Hùng Cứu Thế [Thuyết Minh] | Phim Hành Động Võ Thuật Gây Cấn Kịch Tính Hay Nhất\n" +
                         "<br/> \n" +
@@ -1069,7 +1069,7 @@ public class InitData {
                 "PHIM MỚI 2021 | PHI VỤ TIỀN GIẢ | Châu Nhuận Phát | Phim Hành Động Võ Thuật Chiếu Rạp Thuyết Minh",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_fZzEssjPBc?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 4616402,
-                Timestamp.valueOf("2020-19-4 7:00:00.00"),
+                Timestamp.valueOf("2020-19-04 07:00:00.00"),
                 "#phimhanhdong #phimthuyetminh #phimvothuat",
                 "Phi Vụ Tiền Giả - Châu Nhuận Phát - Quách Phú Thành là phim hành động võ thuật, phim hay 2019 thuyết minh, phim chiếu rạp, phim hay 2020 thuyết minh.\n" +
                         "Nội dung chính:\n" +
@@ -1098,40 +1098,40 @@ public class InitData {
                         "<br/> \n" +
                         "\uD83C\uDFAC BIỆT KÍCH NGẦM | Phim Hành Động Võ Thuật Chiếu Rạp Mỹ Thuyết Minh Mới Hay Nhất:\n" +
                         "https://www.youtube.com/watch?v=vO5fq...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC CUỒNG NỘ - FURY | Brad Pitt | Phim Hành Động Chiến Tranh Chiếu Rạp Mỹ 2019 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=0Bfv2...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC SÁT THỦ CHUYÊN NGHIỆP - Jason Statham | Phim Hành Động Võ Thuật Chiếu Rạp Mỹ 2019 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=dbCBh...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC ĐIỆP VỤ TAM GIÁC VÀNG | Phim Hành Động Võ Thuật Chiếu Rạp Trung Quốc 2019 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=aphxJ...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC NGƯỜI TÙ KHỔ SAI | Phim Hành Động Hình Sự Chiếu Rạp Mỹ 2020 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=68E1O...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC TRỢ LÝ HẾT Ý - The UPSIDE - Phim Hành Động Hài Âu Mỹ Chiếu Rạp Hay Nhất 2020 - Uni Movie:\n" +
                         "https://www.youtube.com/watch?v=-AsU2...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC KHÔNG GIAN MÊ HOẶC - ATTRACTION - Phim Hành Động Chiếu Rạp Khoa Học Viễn Tưởng Hay Nhất 2020:\n" +
                         "https://www.youtube.com/watch?v=C63Ze...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC CHIẾN BINH FRANKENSTEIN - Phim Hành Động Khoa Học Viễn Tưởng Chiếu Rạp Mỹ Vietsub Mới Hay Nhất 2020:\n" +
                         "https://www.youtube.com/watch?v=QM4H7...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC NHỌ GẶP HÊN - Phim Hài Hành Động Chiếu Rạp Mỹ Mới Hay Nhất 2020:\n" +
                         "https://youtu.be/IUIZBrJEeiw\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC CHIẾN BINH MEXICO - Phim Bom Tấn Hành Động Mỹ Chiếu Rạp Mới Hay Nhất 2020:\n" +
                         "https://www.youtube.com/watch?v=65eYb...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC SÓNG DỮ | Lưu Đức Hoa, Ngô Trác Hy | Phim Hành Động Chiếu Rạp 2020 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=3CDjr...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC ĐIỆP VỤ TỐI MẬT | Phim Hành Động Võ Thuật Hình Sự Chiếu Rạp Trung Quốc 2020 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=4EBpf...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDFAC THANH TRỪNG - Phim Hành Động Võ Thuật Chiếu Rạp Trung Quốc 2020 Thuyết Minh:\n" +
                         "https://www.youtube.com/watch?v=BKexG...\n" +
                         "----------❤️---------- \n" +
@@ -1155,7 +1155,7 @@ public class InitData {
                 "Cách Dễ Nhất Để Học Giỏi (Dù cho bận rộn)",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vIk5zZ3YA38?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 213207,
-                Timestamp.valueOf("2021-10-0 18:00:00.00"),
+                Timestamp.valueOf("2021-10-01 18:00:00.00"),
                 "#web5ngay #bhth #baihoctamhuyet",
                 "Lịch phát sóng:\n" +
                         "\uD83D\uDFE1 7h tối thứ 7️⃣: Bài học tâm huyết.\n" +
@@ -1178,7 +1178,7 @@ public class InitData {
                 "5 Bài Học Vô Giá Đã Cứu Sống Đời Tôi | Web5ngay",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/LSFpJOFHw1A?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 469912,
-                Timestamp.valueOf("2021-6-26 18:00:00.00"),
+                Timestamp.valueOf("2021-06-26 18:00:00.00"),
                 "#web5ngay #bhth #baihoctamhuyet",
                 "\uD83D\uDFE1 Trở thành fanVIP: https://www.youtube.com/channel/UCkgjUHB8sdWbmdp39swMrTg \n" +
                         "Mến chào tất cả quý vị và các bạn. \n" +
@@ -1190,7 +1190,7 @@ public class InitData {
                         "Những khi buồn, những ngày nghèo khổ, những lúc cự kỳ tuyệt vọng, những lúc bị người khác coi thường, nếu ko có 10 bài học này, thì ko biết đời tôi giờ thế nào luôn đó. \n" +
                         "Xin mạn phép gọi đây là: 5 bài học vô giá đã cứu sống đời tôi. \n" +
                         "Và xin cảm ơn tất cả nhưng cơ duyên, kinh nghiệm, và kiến thức khoa học mà tôi học được, đã giúp nâng cấp đời tôi.\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Bố cục:\n" +
                         "0:00 Yêu các bạn\n" +
                         "1:32 Bài học 1\n" +
@@ -1198,7 +1198,7 @@ public class InitData {
                         "14:10 Bài học 3\n" +
                         "20:22 Bài học 4\n" +
                         "28:03 Bài học 5\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "#bhth #web5ngay #baihoc #kienthuc\n",
                 28667,
                 345,
@@ -1214,7 +1214,7 @@ public class InitData {
                 "Chữa bệnh “Không mục đích, không đam mê, ko biết đời mình về đâu”",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/1kseOrqyeqE?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 745274,
-                Timestamp.valueOf("2021-6-5 18:00:00.00"),
+                Timestamp.valueOf("2021-06-05 18:00:00.00"),
                 "#bhth",
                 "\uD83D\uDFE1 Trở thành fanVIP: https://www.youtube.com/channel/UCkgjUHB8sdWbmdp39swMrTg \n" +
                         "Chữa bệnh “Không mục đích, không đam mê, ko biết đời mình về đâu”\n" +
@@ -1257,81 +1257,81 @@ public class InitData {
                 Timestamp.valueOf("2020-12-13 18:00:00.00"),
                 "#jawonee",
                 "\uD83D\uDCD6 cốc cốc! Cậu có đang ôn thi hong? Nếu đang ôn thi thì hãy vào đây học chung với tớ nha! Mong là video này của mình sẽ giúp cậu học tập trung hơn, hiệu quả hơn nha. Sắp thi rồi, đừng áp lực quá. Mình ở đây và yêu thương cậu\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83D\uDCD6  Một vài món đồ trong video:\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Bàn học: https://jangin.vn/shop/bo-ban-hoc-h-t...\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Đồng hồ đèn LED: https://shp.ee/ewjqisd\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Giá đỡ sách: https://shp.ee/4a7h8dd\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Tập Klong math notebook: https://shp.ee/gbfwfbf\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Đồng hồ bấm giờ: https://shp.ee/hq6peav\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Bút máy: https://shp.ee/kriyx2x\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Tombow dual brush pen: https://shp.ee/rq99q47\n" +
                         " / https://shp.ee/j9tjwp7\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Zebra Mildliner màu Violet: https://shp.ee/2umwh67\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Bút gel Kaco: https://shp.ee/i8hqn57\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "\uD83D\uDCD6 Music/Âm nhạc trong video\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "1) A Quiet Thought | Wayne Jones | https://www.youtube.com/audiolibrary_...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "2) Watercolor Lilies | Aaron Kenny | https://www.youtube.com/audiolibrary_...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "3) Falling Snow | Aakash Gandhi | https://www.youtube.com/audiolibrary_...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "4) Touching Moment | Wayne Jones | https://www.youtube.com/audiolibrary_...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "5) Anton | Dan Bodan | https://www.youtube.com/audiolibrary_...\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "\uD83D\uDCD6 Những điều mà bạn có thể hỏi mình:\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "1. Bạn tên gì? Bao nhiêu tuổi?\n" +
                         "- Mình là Nguyên, bạn cũng có thể gọi mình là Jawon, Mình sinh năm 2004 ^^\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "2. Bạn edit video bằng app gì?\n" +
                         "- Mình edit bằng VLLO, VITA, Inshot, SNOW\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "3. Bạn làm thumbnail bằng app gì?\n" +
                         "- Mình làm thumbnail bằng Sketchbook và Phonto\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "4. Bạn sử dụng dụng cụ gì để quay?\n" +
                         "- Mình dùng Samsung Galaxy Note10 và Tripod YF-3388\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "5. Vì sao bạn lại tạo ra channel này?\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "- Vì mình muốn chia sẻ những kinh nghiệm học tập đồng thời truyền cảm hứng học tập cho mọi người!\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "6. Vì sao bạn không lồng tiếng cho video?\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "- Vì giọng nói không phải là thế mạnh của mình và trên hết đây là phong cách mình muốn theo đuổi, hiện tại mình vẫn rất hài lòng về nó ^^\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83D\uDCD6 Kết nối với mình nhé: \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Instagram: @jawonee._\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Facebook: https://www.facebook.com/Jawonee-5760\n" +
                         "...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "-------\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "study with me study motivation học cùng mình học tập hiệu quả study inspiration học văn cùng mình học tiếng anh cách ôn thi hiệu quả",
                 16333,
                 161,
@@ -1347,66 +1347,66 @@ public class InitData {
                 "HỌC BÀI CÙNG MÌNH // study with me #8 (real time, with piano music) // jawonee",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pITmw14bvpM?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 450927,
-                Timestamp.valueOf("2021-2-17 18:00:00.00"),
+                Timestamp.valueOf("2021-02-17 18:00:00.00"),
                 "#jawonee",
                 "\uD83C\uDF3B Chắc mọi người cũng bắt đầu quay lại học tập rồi nhỉ? Dù là đến trường hay học online thì bọn mình hãy cùng nhau cố gắng nha!!! Mình mong là video này sẽ giúp bạn học tập trung hơn.\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDF3B Thông tin sản phẩm\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Bút Tombow dual brush pen - màu 993: https://shp.ee/jz6bycg\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Bút Kaco pure: https://shp.ee/zdmbtv9 \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Bút Zebra Mildliner - màu Gold: https://shp.ee/ugzi84d\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Bút brush Baoke - ngòi S22: https://shp.ee/gbf92wj\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Mình dùng tập phát thưởng của trường nhé.\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDF3B Âm nhạc trong video\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Piano playist: https://youtu.be/CZuWuAQZd-k\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Awaiting Return - Atlantean Twilight by Kevin MacLeod is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/...)\n" +
                         "Source: https://incompetech.com/music/royalty-...\n" +
                         "Artist: https://incompetech.com/\u200B \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Cylinder Six by Chris Zabriskie is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/...)\n" +
                         "Source: http://chriszabriskie.com/cylinders/\u200B\n" +
                         "Artist: http://chriszabriskie.com/\u200B \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Meditation Impromptu 01 by Kevin MacLeod is licensed under a Creative Commons Attribution license (https://creativecommons.org/licenses/...)\n" +
                         "Source: http://incompetech.com/music/royalty-...\n" +
                         "Artist: http://incompetech.com/\u200B\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDF3B Những điều mà bạn có thể hỏi mình: \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "1. Bạn tên gì? Bao nhiêu tuổi?\n" +
                         "- Mình là Nguyên, bạn cũng có thể gọi mình là Jawon, Mình sinh năm 2004 ^^ \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "2. Bạn edit video bằng app gì?\n" +
                         "- Mình edit bằng VLLO, VITA, Inshot, SNOW \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "3. Bạn làm thumbnail bằng app gì?\n" +
                         "- Mình làm thumbnail bằng Sketchbook và Phonto \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "4. Bạn sử dụng dụng cụ gì để quay?\n" +
                         "- Mình dùng Samsung Galaxy Note10 và Tripod YF-3388 \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "5. Vì sao bạn lại tạo ra channel này? \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "- Vì mình muốn chia sẻ những kinh nghiệm học tập đồng thời truyền cảm hứng học tập cho mọi người! \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "6. Vì sao bạn không lồng tiếng cho video? \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "- Vì giọng nói không phải là thế mạnh của mình và trên hết đây là phong cách mình muốn theo đuổi, hiện tại mình vẫn rất hài lòng về nó ^^ \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "\uD83C\uDF3B Kết nối với mình nhé: \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Instagram: @jawonee._ \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Facebook: https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbGJ1eU5WMExJRUliemY4VHRZekhXOW1JVWpad3xBQ3Jtc0trcnJfVGh6RUJtUDJ6RzlEM0M1RDQ1T0Nhdk15QWVXX2hEdVFySkNaa0h0bkhGVDh6MnZZSjZQN2RMNktMdWdCNlBRN0FUa183M3d2RWdfSkpmdFRMdjBnWHlwTXZHN1ZOVG5zMmhWSzhmaVEzR0w0aw&q=https%3A%2F%2Fwww.facebook.com%2FJawonee-5760 \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Tiktok: https://vt.tiktok.com/ZSJJxpmbr/",
                 1920,
                 241,
@@ -1422,22 +1422,22 @@ public class InitData {
                 "Cách tự học Tiếng Anh ở nhà vẫn tiến bộ nhanh | VyVocab Ep.44 | Khánh Vy",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gvtKHz7MWpo?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 109690,
-                Timestamp.valueOf("2020-11-6 18:00:00.00"),
+                Timestamp.valueOf("2020-11-06 18:00:00.00"),
                 "#khanhvy #tienganh",
                 "Cách học Tiếng Anh nhanh nhất?\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Ui chà chà, cách gì đó ta!?! Nói chứ mình thấy “ If it's important to you, you'll find the way. If not, you'll make excuses - Nếu mà nó thật sự quan trọng với bạn, bạn sẽ tìm cách. Nếu không, bạn sẽ tìm lý do\". Mình hiểu những thời điểm bạn nhận thức được học tiếng Anh là quan trọng nhưng vẫn chưa thể bắt tay thực hiện bền bỉ được. Có thể đó là lúc mục tiêu chưa quá rõ ràng và thật sự quan trọng với bạn. Yên tâm, khi đã có mục tiêu mà mình “sống còn\" cùng nó, thì đào núi lấp bể cũng làm được chứ huống gì là Tiếng Anh nhỉ. \n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Về App MochiMochi tiếng Anh\n" +
                         "- Link đăng kí khoá học và được giảm 30%: https://bom.to/vbEJL7\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "- Trải nghiệm MochiMochi tại: https://learn.mochidemy.com/\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "Nguồn tham khảo:\n" +
                         "Quy tắc 10,000 giờ và 20 giờ:\n" +
                         "https://www.youtube.com/watch?v=5MgBi...\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "TIMESPTAMP:\n" +
                         "0:00 - 1:34 - Cách nhanh nhất\n" +
                         "1:35 - 2:28 - Quy tắc 10,000 giờ và 20 giờ\n" +
@@ -1448,15 +1448,15 @@ public class InitData {
                         "8:27 - 8:56 - Follow những trang này\n" +
                         "8:57 - 9:39 - Mẹo nói Tiếng Anh mượt hơn\n" +
                         "9:40 - 10:12 - Bí kíp luyện nghe\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "✪ Nhấn Đăng kí tại: https://bit.ly/2H6G8cO\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "#khanhvy #tienganh\n" +
                         "➥ Follow me: \n" +
                         "» Fanpage: https://www.facebook.com/khanhvyofficial\n" +
                         ".\n" +
                         "» Instagram: https://www.instagram.com/khanhvyccf\n" +
-                        "\n" +
+                        "<br/> \n" +
                         "Mail:   contact.khanhvy@gmail.com\n" +
                         "--------------------------/---------------------------------------------------\n" +
                         "© Bản quyền thuộc về Khánh Vy OFFICIAL\n" +
@@ -1475,7 +1475,7 @@ public class InitData {
                 "Cách Nhanh Nhất để Học Tiếng Anh | The fastest way to learn English? VyVocab Ep.88",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gvtKHz7MWpo?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 1459118,
-                Timestamp.valueOf("2020-3-13 18:00:00.00"),
+                Timestamp.valueOf("2020-03-13 18:00:00.00"),
                 "",
                 "Cách tự học Tiếng Anh ở nhà mà vẫn hiệu quả và tiến bộ nhanh.\n" +
                         "➥ INSTAGRAM VÀ FACEBOOK CỦA MÌNH ĐÂY:\n" +
@@ -1501,16 +1501,16 @@ public class InitData {
                 "Mất gốc Tiếng Anh, tự học thế nào để giỏi lên? | VyVocab Ep.47 | Khánh Vy",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gvtKHz7MWpo?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 2200221,
-                Timestamp.valueOf("2020-4-11 18:00:00.00"),
+                Timestamp.valueOf("2020-04-11 18:00:00.00"),
                 "#onhacoShopee",
                 "Ở nhà mùa này thật hợp lý để tận dụng học và ôn tiếng anh đó. \n" +
                         "Nếu các bạn cần dụng cụ học tập hay sách vở để học thì cứ lên Shopee nha, vừa có Flash Sale 3 khung giờ, giá bình ổn mà còn freeship từ nay đến 24.04. Đặc biệt ngày 15 và 24 là 2 ngày sale lớn đó: https://bit.ly/2UZ1GgN\n" +
                         "#onhacoShopee\n" +
                         "Cảm ơn Shopee đã đồng hành cùng Vy trong tập này.\n" +
-                        "\n" +
-                        "\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
                         "✪ Nhấn Đăng kí tại: https://bit.ly/2H6G8cO\n" +
-                        "➥ FACEBOOK VÀ INSTAGRAM CỦA TỚ\"\n" +
+                        "➥ FACEBOOK VÀ INSTAGRAM CỦA TỚ\"<br/> \n" +
                         "» Facebook: https://www.facebook.com/khanhvytran218 \n" +
                         "» Fanpage: https://www.facebook.com/khanhvyofficial.\n" +
                         "» IG: @khanhvyccf\n" +
@@ -1680,15 +1680,15 @@ public class InitData {
 
     public void init() {
 
-        Collection<Category> categories = initCategories();
-        for (Category category : categories) {
-            categoryDAO.insert(category);
-        }
-
-        Collection<User> users = initUsers();
-        for (User user : users) {
-            userDAO.insert(user);
-        }
+//        Collection<Category> categories = initCategories();
+//        for (Category category : categories) {
+//            categoryDAO.insert(category);
+//        }
+//
+//        Collection<User> users = initUsers();
+//        for (User user : users) {
+//            userDAO.insert(user);
+//        }
 
         Collection<Video> videos = initVideos();
         for (Video video : videos) {

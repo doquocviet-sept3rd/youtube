@@ -18,6 +18,8 @@ public class SubscribeDAO extends AbstractDAO<Subscribe> implements ISubscribeDA
 
     @Override
     public Long insert(Subscribe subscribe) {
+        subscribe.setCreatedBy(subscribe.getUserIdSub());
+        subscribe.setModifiedBy(subscribe.getUserIdSub());
         subscribe.setCreatedOn(Timestamp.from(Instant.now()));
         subscribe.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(subscribe);

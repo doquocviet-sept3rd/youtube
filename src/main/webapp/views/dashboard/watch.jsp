@@ -715,10 +715,10 @@
     }
 
     const nextVideo = function () {
-        setInterval(function () {
-            let iframe = $('#primary iframe');
-            console.log(!iframe.getCurrentTime ? 0.0 : iframe.getCurrentTime());
-        }, 1000);
+        // setInterval(function () {
+        //     let iframe = $('#primary iframe');
+        //     console.log(!iframe.getCurrentTime ? 0.0 : iframe.getCurrentTime());
+        // }, 1000);
     }
 
     const callAPI = function (url, options) {

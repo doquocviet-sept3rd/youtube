@@ -1,6 +1,9 @@
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
-<html>
+
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
     <link rel="stylesheet" href="<c:url value='/templates/channel/css/channel.css'/>" type="text/css">
     <link rel="stylesheet" href="<c:url value='/templates/channel/css/channel_responsive.css'/>" type="text/css">

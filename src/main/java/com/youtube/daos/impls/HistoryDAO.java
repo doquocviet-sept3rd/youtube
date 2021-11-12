@@ -18,6 +18,8 @@ public class HistoryDAO extends AbstractDAO<History> implements IHistoryDAO {
 
     @Override
     public Long insert(History history) {
+        history.setCreatedBy(history.getUserId());
+        history.setModifiedBy(history.getUserId());
         history.setCreatedOn(Timestamp.from(Instant.now()));
         history.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(history);

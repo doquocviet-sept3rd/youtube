@@ -18,6 +18,8 @@ public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
 
     @Override
     public Long insert(Video video) {
+        video.setCreatedBy(Long.parseLong("0"));
+        video.setModifiedBy(Long.parseLong("0"));
         video.setCreatedOn(Timestamp.from(Instant.now()));
         video.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(video);
