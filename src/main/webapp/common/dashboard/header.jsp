@@ -128,14 +128,23 @@
     </div>
     <%-- end: menu bar behavior--%>
     <%-- begin: center --%>
-    <div id="center" class="d-flex my-auto">
-        <label>
-            <input type="text" placeholder="Tìm kiếm" class="rounded-left lh-40px"/>
-        </label>
-        <i class="fal fa-search btn-search text-center lh-40px cursor-p rounded-right"></i>
-        <i class="fal fa-microphone btn-voice text-center lh-40px cursor-p w-40px rounded-circle"></i>
-    </div>
-    <%-- end: center --%>
+        <div id="center" class="d-flex my-auto">
+        <form action="search" method="post" class="d-flex my-auto">
+            <div class="input-group input-group-sm">
+                <input required name="txt" type="text" placeholder="Tìm kiếm" value="${txtSearch}" class="rounded-left lh-40px"/>
+                <button type="submit" class="fal fa-search btn-search text-center lh-40px cursor-p rounded-right"></button>
+                <i class="fal fa-microphone btn-voice text-center lh-40px cursor-p w-40px rounded-circle"></i>
+            </div>
+        </form>
+        </div>
+        <%-- <div id="center" class="d-flex my-auto">
+            <label>
+                <input type="text" placeholder="Tìm kiếm" class="rounded-left lh-40px"/>
+            </label>
+            <i class="fal fa-search btn-search text-center lh-40px cursor-p rounded-right"></i>
+            <i class="fal fa-microphone btn-voice text-center lh-40px cursor-p w-40px rounded-circle"></i>
+        </div>--%>
+        <%-- end: center --%>
     <%-- begin: end --%>
     <div id="end" class="d-flex my-auto">
         <i class="fal fa-video-plus text-center w-40px h-40px lh-40px cursor-p"></i>

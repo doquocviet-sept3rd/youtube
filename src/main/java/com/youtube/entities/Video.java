@@ -58,7 +58,23 @@ public class Video {
         this.userId = userId;
         this.categoryId = categoryId;
     }
-
+    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, long userId, long categoryId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+        this.name = name;
+        this.src = src;
+        this.views = views;
+        this.postingTime = postingTime;
+        this.hashtag = hashtag;
+        this.content = content;
+        this.likes = likes;
+        this.dislikes = dislikes;
+        this.avatarUrl = avatarUrl;
+        this.userId = userId;
+        this.categoryId = categoryId;
+        this.createdOn = createdOn;
+        this.createdBy = createdBy;
+        this.modifiedOn = modifiedOn;
+        this.modifiedBy = modifiedBy;
+    }
     public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId, Timestamp modifiedOn, Long modifiedBy) {
         this.name = name;
         this.src = src;

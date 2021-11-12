@@ -2,16 +2,26 @@
     #main {
         padding: 24px 20px 0 20px;
     }
+    #search {
+        padding: 24px 20px 0 20px;
+    }
 }
 
 @media only screen and (max-width: 1300px) {
     #main > a {
         flex-basis: 23.6%;
     }
+    #search > a {
+        flex-basis: 23.6%;
+    }
 }
 
 @media only screen and (max-width: 1024px){
     #main > a {
+        flex-basis: 31.9%;
+        margin: 0 0.7% 20px;
+    }
+    #search > a {
         flex-basis: 31.9%;
         margin: 0 0.7% 20px;
     }
@@ -22,10 +32,18 @@
         flex-basis: 48.5%;
         margin: 0 0.7% 20px;
     }
+    #search > a {
+        flex-basis: 48.5%;
+        margin: 0 0.7% 20px;
+    }
 }
 
 @media only screen and (max-width: 520px) {
     #main > a {
+        flex-basis: 99%;
+        margin: 0 0.7% 20px;
+    }
+    #search > a {
         flex-basis: 99%;
         margin: 0 0.7% 20px;
     }
