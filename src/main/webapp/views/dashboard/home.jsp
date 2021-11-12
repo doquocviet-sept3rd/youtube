@@ -2,17 +2,11 @@
 <%@ include file="/common/taglibs.jsp" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<<<<<<< Updated upstream
-<jsp:useBean id="cs" class="com.youtube.services.impls.CommonService" scope="request" type="com.youtube.services.ICommonService"/>
-<jsp:useBean id="video" class="com.youtube.entities.Video" scope="request" type="com.youtube.entities.Video"/>
-<jsp:useBean id="videos" class="com.youtube.daos.impls.VideoDAO" type="com.youtube.daos.impls.VideoDAO" scope="application"></jsp:useBean>
-=======
 <jsp:useBean id="cs" class="com.youtube.services.impls.CommonService" scope="request"
              type="com.youtube.services.ICommonService"/>
 <jsp:useBean id="video" class="com.youtube.entities.Video" scope="request" type="com.youtube.entities.Video"/>
 <jsp:useBean id="videos" class="com.youtube.daos.impls.VideoDAO" type="com.youtube.daos.impls.VideoDAO"
              scope="application"></jsp:useBean>
->>>>>>> Stashed changes
 <html>
 
 <head>
@@ -85,12 +79,8 @@
                         <c:out value='${cs.formatString(video.user.name)}'/>
                     </p>
                     <p class="more--info m-0">
-<<<<<<< Updated upstream
-                        <c:out value='${cs.formatNumber(video.views)}'/> lượt xem &#183; <c:out value='${cs.distanceTime(video.postingTime)}'/>
-=======
                         <c:out value='${cs.formatNumber(video.views)}'/> lượt xem &#183; <c:out
                             value='${cs.distanceTime(video.postingTime)}'/>
->>>>>>> Stashed changes
                     </p>
                 </div>
             </div>
