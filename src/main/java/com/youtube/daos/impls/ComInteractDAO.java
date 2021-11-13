@@ -18,6 +18,8 @@ public class ComInteractDAO extends AbstractDAO<ComInteract> implements IComInte
 
     @Override
     public Long insert(ComInteract comInteract) {
+        comInteract.setCreatedBy(comInteract.getUserId());
+        comInteract.setModifiedBy(comInteract.getUserId());
         comInteract.setCreatedOn(Timestamp.from(Instant.now()));
         comInteract.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(comInteract);

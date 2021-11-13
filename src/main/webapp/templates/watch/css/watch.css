@@ -17,6 +17,7 @@
 
 #primary iframe {
     width: 100%;
+    max-width: 100%;
 }
 
 #primary .video .hashtag {
@@ -109,6 +110,9 @@
 
 #primary .content .expander > p {
     margin: 0;
+    max-width: 1024px;
+    padding-right: 20px;
+    overflow: hidden;
 }
 
 #primary .comments,
@@ -261,8 +265,8 @@
 
 #secondary {
     margin-top: -5px;
-    min-width: 426px;
-    max-width: 450px;
+    min-width: 350px;
+    max-width: 380px;
 }
 
 #secondary .session {
@@ -283,8 +287,12 @@
     font-size: 90%;
     font-weight: 600;
     line-height: 1.3;
-    text-align: justify;
     margin: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 #secondary .session > div .user,

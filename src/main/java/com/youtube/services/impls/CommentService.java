@@ -1,21 +1,22 @@
 package com.youtube.services.impls;
 
+import com.youtube.daos.IComInteractDAO;
 import com.youtube.daos.ICommentDAO;
 import com.youtube.entities.ComInteract;
 import com.youtube.entities.Comment;
-import com.youtube.entities.VidInteract;
-import com.youtube.entities.Video;
 import com.youtube.services.ICommentService;
 
 import javax.inject.Inject;
 import java.sql.Timestamp;
 import java.time.Instant;
-import java.util.Collection;
 
 public class CommentService implements ICommentService {
 
     @Inject
     private ICommentDAO commentDAO;
+
+    @Inject
+    private IComInteractDAO comInteractDAO;
 
     @Override
     public Long insert(Comment comment) {
@@ -40,33 +41,13 @@ public class CommentService implements ICommentService {
 
     @Override
     public boolean isLikedByUser(long commentId, long userId) {
-        Comment comment = commentDAO.findOne(commentId);
-        Collection<ComInteract> comInteracts = comment.getComInteracts();
-        if (comInteracts != null) {
-            for (ComInteract comInteract : comInteracts) {
-                if (comInteract.getUserId() == userId) {
-                    if (comInteract.getIsLike()) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
+        ComInteract comInteract = comInteractDAO.findOne(userId, commentId);
+        return comInteract != null && comInteract.getIsLike();
     }
 
     @Override
     public boolean isDislikedByUser(long commentId, long userId) {
-        Comment comment = commentDAO.findOne(commentId);
-        Collection<ComInteract> comInteracts = comment.getComInteracts();
-        if (comInteracts != null) {
-            for (ComInteract comInteract : comInteracts) {
-                if (comInteract.getUserId() == userId) {
-                    if (!comInteract.getIsLike()) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
+        ComInteract comInteract = comInteractDAO.findOne(userId, commentId);
+        return comInteract != null && !comInteract.getIsLike();
     }
 }

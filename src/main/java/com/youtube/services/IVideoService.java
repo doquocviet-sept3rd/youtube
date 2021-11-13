@@ -16,5 +16,6 @@ public interface IVideoService {
 
     boolean update(Video video);
 
-    List<String> formatXML(String content);
+    List<Video> findAllByKey(String key);
+
 }

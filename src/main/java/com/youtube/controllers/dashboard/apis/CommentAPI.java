@@ -2,7 +2,6 @@ package com.youtube.controllers.dashboard.apis;
 
 import com.youtube.entities.Comment;
 import com.youtube.entities.User;
-import com.youtube.entities.Video;
 import com.youtube.services.ICommentService;
 import com.youtube.utils.ApplicationUtil;
 import com.youtube.utils.HttpUtil;

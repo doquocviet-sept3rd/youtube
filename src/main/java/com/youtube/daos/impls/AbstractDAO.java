@@ -217,6 +217,37 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
         return null;
     }
 
+    @Override
+    public List<Entity> querySelector(String hqlQuery) {
+
+        // Get session current
+        Session session = factory.getCurrentSession();
+
+        try {
+            // Begin transaction
+            session.getTransaction().begin();
+
+            @SuppressWarnings("unchecked")
+            Query<Entity> query = session.createQuery(hqlQuery);
+
+            return query.list();
+
+        } catch (Exception e) {
+
+            // Log error
+            e.printStackTrace();
+
+            // Rollback if error
+            session.getTransaction().rollback();
+        } finally {
+
+            // Close transaction
+            // factory.close();
+            session.close();
+        }
+        return null;
+    }
+
     /* Init string sql */
     public String initQueryString(String className, Object... params) {
 

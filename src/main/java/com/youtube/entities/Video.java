@@ -22,7 +22,6 @@ public class Video {
     private long likes;
     private long dislikes;
     private String avatarUrl;
-    private double timeLimit;
 
     private long userId;
     private long categoryId;
@@ -43,7 +42,7 @@ public class Video {
 
     }
 
-    public Video(long id, String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId) {
+    public Video(long id, String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, long userId, long categoryId) {
         this.id = id;
         this.name = name;
         this.src = src;
@@ -54,12 +53,11 @@ public class Video {
         this.likes = likes;
         this.dislikes = dislikes;
         this.avatarUrl = avatarUrl;
-        this.timeLimit = timeLimit;
         this.userId = userId;
         this.categoryId = categoryId;
     }
 
-    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId, Timestamp modifiedOn, Long modifiedBy) {
+    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, long userId, long categoryId, Timestamp modifiedOn, Long modifiedBy) {
         this.name = name;
         this.src = src;
         this.views = views;
@@ -69,14 +67,13 @@ public class Video {
         this.likes = likes;
         this.dislikes = dislikes;
         this.avatarUrl = avatarUrl;
-        this.timeLimit = timeLimit;
         this.userId = userId;
         this.categoryId = categoryId;
         this.modifiedOn = modifiedOn;
         this.modifiedBy = modifiedBy;
     }
 
-    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, double timeLimit, long userId, long categoryId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
+    public Video(String name, String src, long views, Timestamp postingTime, String hashtag, String content, long likes, long dislikes, String avatarUrl, long userId, long categoryId, Timestamp createdOn, Long createdBy, Timestamp modifiedOn, Long modifiedBy) {
         this.name = name;
         this.src = src;
         this.views = views;
@@ -86,7 +83,6 @@ public class Video {
         this.likes = likes;
         this.dislikes = dislikes;
         this.avatarUrl = avatarUrl;
-        this.timeLimit = timeLimit;
         this.userId = userId;
         this.categoryId = categoryId;
         this.createdOn = createdOn;
@@ -158,7 +154,7 @@ public class Video {
     }
 
     @Basic
-    @Column(name = "content", length = 4096)
+    @Column(name = "content", length = 8192)
     public String getContent() {
         return content;
     }
@@ -195,16 +191,6 @@ public class Video {
 
     public void setAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
-    }
-
-    @Basic
-    @Column(name = "timeLimit", nullable = false)
-    public double getTimeLimit() {
-        return timeLimit;
-    }
-
-    public void setTimeLimit(double timeLimit) {
-        this.timeLimit = timeLimit;
     }
 
     @Basic
@@ -278,7 +264,6 @@ public class Video {
         if (views != video.views) return false;
         if (likes != video.likes) return false;
         if (dislikes != video.dislikes) return false;
-        if (Double.compare(video.timeLimit, timeLimit) != 0) return false;
         if (userId != video.userId) return false;
         if (categoryId != video.categoryId) return false;
         if (!Objects.equals(name, video.name)) return false;
@@ -307,7 +292,7 @@ public class Video {
         result = 31 * result + (int) (likes ^ (likes >>> 32));
         result = 31 * result + (int) (dislikes ^ (dislikes >>> 32));
         result = 31 * result + (avatarUrl != null ? avatarUrl.hashCode() : 0);
-        temp = Double.doubleToLongBits(timeLimit);
+        temp = Double.doubleToLongBits(0);
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + (int) (userId ^ (userId >>> 32));
         result = 31 * result + (int) (categoryId ^ (categoryId >>> 32));

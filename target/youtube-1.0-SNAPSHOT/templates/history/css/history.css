@@ -40,3 +40,11 @@
     color: #606060;
     font-size: 90%;
 }
+
+#container .main .more--info {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}

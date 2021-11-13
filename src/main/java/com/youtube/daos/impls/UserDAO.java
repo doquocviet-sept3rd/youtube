@@ -18,6 +18,8 @@ public class UserDAO extends AbstractDAO<User> implements IUserDAO {
 
     @Override
     public Long insert(User user) {
+        user.setCreatedBy(Long.parseLong("0"));
+        user.setModifiedBy(Long.parseLong("0"));
         user.setCreatedOn(Timestamp.from(Instant.now()));
         user.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(user);

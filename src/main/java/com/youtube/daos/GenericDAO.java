@@ -3,6 +3,7 @@ package com.youtube.daos;
 import java.util.List;
 
 public interface GenericDAO<Entity> {
+
     List<Entity> findAll(String className);
 
     Long insert(Entity entity);
@@ -12,4 +13,6 @@ public interface GenericDAO<Entity> {
     boolean delete(Entity entity);
 
     Entity findOne(String className, Object... params);
+
+    List<Entity> querySelector(String hqlQuery);
 }

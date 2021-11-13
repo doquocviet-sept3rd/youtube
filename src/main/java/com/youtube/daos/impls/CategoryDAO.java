@@ -18,6 +18,8 @@ public class CategoryDAO extends AbstractDAO<Category> implements ICategoryDAO {
 
     @Override
     public Long insert(Category category) {
+        category.setCreatedBy(Long.parseLong("0"));
+        category.setModifiedBy(Long.parseLong("0"));
         category.setCreatedOn(Timestamp.from(Instant.now()));
         category.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(category);

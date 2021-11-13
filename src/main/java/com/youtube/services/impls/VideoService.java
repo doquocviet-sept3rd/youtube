@@ -1,19 +1,21 @@
 package com.youtube.services.impls;
 
+import com.youtube.daos.IVidInteractDAO;
 import com.youtube.daos.IVideoDAO;
 import com.youtube.entities.VidInteract;
 import com.youtube.entities.Video;
 import com.youtube.services.IVideoService;
 
 import javax.inject.Inject;
-import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 public class VideoService implements IVideoService {
 
     @Inject
     private IVideoDAO videoDAO;
+
+    @Inject
+    private IVidInteractDAO vidInteractDAO;
 
     @Override
     public Video findOne(long id) {
@@ -27,34 +29,14 @@ public class VideoService implements IVideoService {
 
     @Override
     public boolean isLikedByUser(long videoId, long userId) {
-        Video video = videoDAO.findOne(videoId);
-        Collection<VidInteract> vidInteracts = video.getVidInteracts();
-        if (vidInteracts != null) {
-            for (VidInteract vidInteract : vidInteracts) {
-                if (vidInteract.getUserId() == userId) {
-                    if (vidInteract.getIsLike()) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
+        VidInteract vidInteract = vidInteractDAO.findOne(userId, videoId);
+        return vidInteract != null && vidInteract.getIsLike();
     }
 
     @Override
     public boolean isDislikedByUser(long videoId, long userId) {
-        Video video = videoDAO.findOne(videoId);
-        Collection<VidInteract> vidInteracts = video.getVidInteracts();
-        if (vidInteracts != null) {
-            for (VidInteract vidInteract : vidInteracts) {
-                if (vidInteract.getUserId() == userId) {
-                    if (!vidInteract.getIsLike()) {
-                        return true;
-                    }
-                }
-            }
-        }
-        return false;
+        VidInteract vidInteract = vidInteractDAO.findOne(userId, videoId);
+        return vidInteract != null && !vidInteract.getIsLike();
     }
 
     @Override
@@ -63,7 +45,11 @@ public class VideoService implements IVideoService {
     }
 
     @Override
-    public List<String> formatXML(String content) {
-        return Arrays.asList(content.split("`"));
+    public List<Video> findAllByKey(String key) {
+        String hqlQuery = "select v from Video v where "
+                + "v.name like '%" + key + "%'" +
+                " or v.hashtag like '%" + key + "%'" +
+                " or v.content like '%" + key + "%'";
+        return videoDAO.querySelector(hqlQuery);
     }
 }

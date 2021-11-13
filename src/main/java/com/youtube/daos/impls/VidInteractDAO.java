@@ -18,6 +18,8 @@ public class VidInteractDAO extends AbstractDAO<VidInteract> implements IVidInte
 
     @Override
     public Long insert(VidInteract vidInteract) {
+        vidInteract.setCreatedBy(vidInteract.getUserId());
+        vidInteract.setModifiedBy(vidInteract.getUserId());
         vidInteract.setCreatedOn(Timestamp.from(Instant.now()));
         vidInteract.setModifiedOn(Timestamp.from(Instant.now()));
         return super.insert(vidInteract);

@@ -5,7 +5,9 @@ import com.youtube.services.ICommonService;
 import java.lang.*;
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.Arrays;
 import java.util.Calendar;
+import java.util.List;
 
 public class CommonService implements ICommonService {
 
@@ -85,5 +87,10 @@ public class CommonService implements ICommonService {
             result.append("...");
         }
         return result.toString();
+    }
+
+    @Override
+    public List<String> formatXML(String content) {
+        return Arrays.asList(content.split("\\n"));
     }
 }

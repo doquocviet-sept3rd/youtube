@@ -3,6 +3,7 @@ package com.youtube.controllers.dashboard;
 import com.youtube.entities.Comment;
 import com.youtube.entities.History;
 import com.youtube.entities.User;
+import com.youtube.entities.Video;
 import com.youtube.services.*;
 import com.youtube.utils.ApplicationUtil;
 
@@ -49,12 +50,7 @@ public class WatchController extends HttpServlet {
         req.setAttribute("cService", commentService);
 
         // get video
-        String id;
-        try {
-            id = req.getParameter("v");
-        } catch (Exception e) {
-            id = "1";
-        }
+        String id = req.getParameter("v");
         req.setAttribute("video", videoService.findOne(parseLong(id)));
 
         // Get comments
@@ -63,7 +59,9 @@ public class WatchController extends HttpServlet {
         req.setAttribute("comments", comments);
 
         // Get videos
-        req.setAttribute("videos", videoService.findAll());
+        List<Video> videos = videoService.findAll();
+        Collections.shuffle(videos);
+        req.setAttribute("videos", videos);
 
         // Add history
         User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
@@ -77,16 +75,16 @@ public class WatchController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        super.doPost(req, resp);
     }
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        super.doPut(req, resp);
     }
 
     @Override
     protected void doDelete(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        super.doDelete(req, resp);
     }
 }
