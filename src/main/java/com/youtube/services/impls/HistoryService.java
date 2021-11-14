@@ -22,13 +22,7 @@ public class HistoryService implements IHistoryService {
 
     @Override
     public Collection<History> findAllByUser(Long id) {
-        Collection<History> histories = new ArrayList<>();
-        for (History history : historyDAO.findAll()) {
-            if (history.getUserId() == id) {
-                histories.add(history);
-            }
-        }
-        return histories;
+        return historyDAO.querySelector("from History h where h.userId = " + id);
     }
 
 }

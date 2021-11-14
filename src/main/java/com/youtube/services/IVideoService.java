@@ -17,4 +17,5 @@ public interface IVideoService {
     boolean update(Video video);
 
     List<Video> findAllByKey(String key);
+
 }

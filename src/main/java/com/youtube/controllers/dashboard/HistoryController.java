@@ -4,7 +4,6 @@ import com.youtube.entities.User;
 import com.youtube.entities.History;
 import com.youtube.services.ICommonService;
 import com.youtube.services.IHistoryService;
-import com.youtube.services.IUserService;
 import com.youtube.utils.ApplicationUtil;
 
 import javax.inject.Inject;
@@ -15,6 +14,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -34,6 +34,9 @@ public class HistoryController extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
         Collection<History> histories = historyService.findAllByUser(userCurrent.getId());
+        if (histories == null) {
+            histories = new ArrayList<>();
+        }
         Collections.reverse((List<?>) histories);
         req.setAttribute("histories", histories);
         req.setAttribute("cs", commonService);

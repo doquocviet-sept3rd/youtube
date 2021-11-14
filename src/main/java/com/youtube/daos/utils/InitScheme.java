@@ -11,7 +11,7 @@ import org.hibernate.tool.hbm2ddl.SchemaExport;
 import org.hibernate.tool.schema.TargetType;
 
 // Hibernate 5
-public class InitDataBase {
+public class InitScheme {
 
     public static final String SCRIPT_FILE = "exportScriptDB.sql";
 

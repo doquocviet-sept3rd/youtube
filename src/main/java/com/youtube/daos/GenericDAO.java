@@ -13,4 +13,6 @@ public interface GenericDAO<Entity> {
     boolean delete(Entity entity);
 
     Entity findOne(String className, Object... params);
+
+    List<Entity> querySelector(String hqlQuery);
 }

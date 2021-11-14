@@ -23,7 +23,7 @@ public class ComInteractService implements IComInteractService {
 
     @Override
     public boolean delete(ComInteract comInteract) {
-        return comInteractDAO.delete(comInteractDAO.findOne(comInteract.getUserId(), comInteract.getCommentId()));
+        return comInteractDAO.delete(comInteract);
     }
 
     @Override

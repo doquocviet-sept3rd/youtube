@@ -1,3 +1,4 @@
+<%--@elvariable id="key" type="java.lang.String"--%>
 <%--@elvariable id="user" type="com.youtube.entities.User"--%>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
@@ -131,7 +132,8 @@
     <div id="center" class="d-flex my-auto">
         <form action="<c:url value="/search"/>" method="GET">
             <label>
-                <input name="key" type="text" placeholder="Tìm kiếm" class="rounded-left lh-40px"/>
+                <input value="${key}" required name="key" type="text" placeholder="Tìm kiếm"
+                       class="rounded-left lh-40px"/>
             </label>
         </form>
         <i id="btn-search" class="fal fa-search btn-search text-center lh-40px cursor-p rounded-right"></i>

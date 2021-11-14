@@ -784,8 +784,697 @@ public class InitData {
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0")
         ));
+        /* end: sport */
 
-        /* video film*/
+        /* begin: news */
+        videos.add(new Video(
+                "Dự báo thời tiết hôm nay mới nhất ngày 13/11/2021 | Dự báo thời tiết 3 ngày tới",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dzhtPmsHIQs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                2796,
+                Timestamp.valueOf("2021-04-01 20:00:00.00"),
+                "#thoitiet #tintuc",
+                "Dự báo thời tiết hôm nay mới nhất ngày 13/11/2021 | Dự báo thời tiết 3 ngày tới | Truyền Hình Nhân Dân\n" +
+                        "Website: https://nhandantv.vn\n" +
+                        "Xem Tin Tức hấp dẫn, Tổng Hợp Video Mới nhất về #thoitiet - Tin Thế Giới mới nhất đang diễn ra trong thời gian qua trên kênh truyền hình nhân dân - Kênh Tin Báo Nhân Dân sẽ cập nhật đến các bạn các thông tin đầy đủ nhất tại đây. Mời bạn đón xem nhé !\n" +
+                        "Đăng Ký Xem Video #tintuc Miễn Phí: http://goo.gl/dVkSzA\n" +
+                        "1. Dự Báo Thời Tiết Hôm Nay : https://bit.ly/2sNoeGo\n" +
+                        "2. Bản Tin Sáng : https://bit.ly/2tAM882\n" +
+                        "3. Bản Tin Trưa : https://bit.ly/2N2HHJJ\n" +
+                        "4. Bản Tin Tối : https://bit.ly/35yEjwX",
+                0,
+                0,
+                "https://i.ytimg.com/vi/dzhtPmsHIQs/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCpZUmtIgTJbKLN_Qe-f4LCnVtlMw",
+                16,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Ukraine đưa 8.500 lính và cảnh sát đến biên giới với Belarus để ngăn người di cư vượt biên | VTC Now",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/B51QtrdnwMI\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                80956,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#vtcnow",
+                "VTC Now | Ngày 11/11, Bộ trưởng Nội vụ Ukraine Denys Monastyrskiy cho biết quốc gia của ông sẽ triển khai thêm 8.500 binh sĩ và sĩ quan cảnh sát, cùng 15 máy bay trực thăng để bảo vệ biên giới với Belarus, ngăn chặn nguy cơ người di cư muốn vượt biên.\n" +
+                        "<br/> \n" +
+                        "(*) Tải ứng dụng trên App Store: https://apple.co/3CcvARH\n" +
+                        "<br/> \n" +
+                        "(*) Tải ứng dụng trên CH Play: https://bit.ly/3tFibhQ\n" +
+                        "<br/> \n" +
+                        "(*) Theo dõi thêm tại www.vtc.gov.vn",
+                0,
+                0,
+                "https://i.ytimg.com/vi/B51QtrdnwMI/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDyyZq1ONFgMUzxAnV-_w5l8B36AQ",
+                17,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Toàn cảnh ĐT Việt Nam vs ĐT Nhật Bản sau trận đấu:Mặc dù thua vẫn được thưởng lên tới 500 triệu đồng",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/HUdmaSTPED4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                36367,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#tintuc24hol #tintuc",
+                "#tintuc24hol #tintuc  \n" +
+                        "Dù chơi đầy nỗ lực, tạo ra một thế trận khá ấn tượng, ĐT Việt Nam vẫn không thể tránh khỏi thất bại với tỷ số 0-1 trước đội bóng hàng đầu châu Á – Nhật Bản tối ngày 11/11 tại Mỹ Đình. Đây cũng là thất bại thứ 5 liên tiếp của ĐT Việt Nam tại vòng loại thứ 3 World Cup 2022. Nhưng sau những gì đã thể hiện trong suốt 90 phút trận đấu, các học trò HLV Park Hang Seo vẫn xứng đáng được dành những lời ngợi khen.\n" +
+                        "Thường trực Ban chấp hành Liên đoàn Bóng đá Việt Nam (VFF) đánh giá Quang Hải và đồng đội đã có trận đấu nỗ lực vượt bậc và khen ngợi tinh thần của đội bóng áo đỏ. Lãnh đạo VFF quyết định thưởng động viên cho toàn đội 500 triệu đồng và nhắc nhở các cầu thủ tiếp tục tập trung, chuẩn bị tốt nhất cho trận tiếp Saudi Arabia vào tối 16/11.\n" +
+                        "Phát biểu sau trận đấu, HLV Park Hang Seo chia sẻ: ““Năng lực cá nhân giữa Nhật Bản và Việt Nam có khoảng cách. Các cầu thủ Việt Nam cũng đã nỗ lực hết sức rồi. Có một vấn đề thế này, Việt Nam đã thua 5 trận ở vòng loại thứ 3 World Cup 2022. Việc các cầu thủ cũng như Ban huấn luyện bị stress vì kết quả không tốt là sự thật. Suốt cuộc đời làm bóng đá, tôi mới hiểu kiếm 1 điểm lại khó đến thế nào. Việc Việt Nam vào vòng loại thứ 3 cũng cho thấy rằng nhiều đội tuyển mạnh hơn Việt Nam thật”.\n" +
+                        "Sau trận đấu với Nhật Bản, ĐT Việt Nam sẽ có 4 ngày để chuẩn bị cho cuộc tiếp đón Saudi Arabia, đội bóng đang bất bại và hiện đứng đầu bảng B sau 5 lượt trận. Trận đấu sẽ diễn ra vào 19h00 ngày 16/11 tại sân Mỹ Đình. \n" +
+                        "▶ TIN TỨC 24H ONLINE là kênh Youtube chia sẻ các nội dung tin tức, bản tin cập nhật 24h online, những nội dung giải trí hấp dẫn được phát sóng trên các kênh chương trình đài truyền hình, các tin tức cập nhật, chương trình truyền hình trực tiếp, chương trình thể thao, bóng đá, giải trí, game show, showbiz… Với mong muốn cập nhật những thông tin chính xác và nhanh nhất trên nền tảng số cho quý vị và các bạn.\n" +
+                        " \n" +
+                        "❤️❤️❤️ Cảm ơn các bạn đã xem video! Các bạn đừng quên nhấn vào ► Đăng Ký Kênh và biểu tượng \uD83D\uDD14 phía dưới góc phải của video để không bỏ lỡ những video mới nhất nhé ❤️❤️❤️\n" +
+                        "<br/> \n" +
+                        "▶ ĐĂNG KÝ KÊNH (miễn phí) TẠI ĐÂY: http://bit.ly/2n4bWWO\n" +
+                        "<br/> \n" +
+                        "▶ Xem những Clip mới và hấp dẫn nhất: \n" +
+                        "- Thể thao: http://bit.ly/2n3dyQt \n" +
+                        "- An ninh ngày mới hôm nay: http://bit.ly/2n6yKoT \n" +
+                        "- Tin tức mới nhất 24h hôm nay: http://bit.ly/2n197pi \n" +
+                        "- Tin tức Công nghệ tổng hợp: http://bit.ly/2l24YAY \n" +
+                        "- Bản tin thời sự Tổng hợp hàng ngày: http://bit.ly/2l3JRyg \n" +
+                        "- Vòng loại World Cup 2020 đội tuyển Việt Nam tổng hợp: http://bit.ly/2n1ddOc \n" +
+                        "<br/> \n" +
+                        "▶ Theo dõi Kênh TIN TỨC 24H ONLINE  trên: \n" +
+                        "- Facebook : https://www.facebook.com/tt24hol/ \n" +
+                        "- Twitter: https://twitter.com/tt24hol \n" +
+                        "<br/> \n" +
+                        "▶ Fair use for news reporting (https://www.youtube.com/yt/copyright/...) and (https://en.wikipedia.org/wiki/Fair_use) \n" +
+                        "<br/> \n" +
+                        "▶ Mọi vấn đề về video vi phạm Bản quyền (https://www.youtube.com/yt/copyright/), Chính sách (https://www.youtube.com/t/terms), \n" +
+                        "- Nguyên tắc cộng đồng (http://www.youtube.com/yt/policyandsa...) chúng tôi sẽ xóa chúng, xin liên hệ trực tiếp qua email: now.tintuc@gmail.com . If there are any copyright issues with any videos posted here We will remove them, please contact our email: now.tintuc@gmail.com",
+                0,
+                0,
+                "https://i.ytimg.com/vi/HUdmaSTPED4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAHvfBVx3mw6OYA0qOCZ2jxEPve3g",
+                17,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Chủ Tịch H. Cô Tô Bị Tố Dắt Cán Bộ Văn Hóa Vào Khách Sạn, Công An Lập Tức Trích Xuất Camera? | SKĐS",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Ml9UaQFXpqE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                3535,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#Share #quangninh #dinhchibithucoto",
+                "SKĐS | Liên quan đến vụ việc Bí Thư - Chủ tịch Huyện Cô Tô, Quảng Ninh bị đình chỉ công tác. Mới đây, cơ quan cảnh sát điều tra đã vào cuộc xác minh và lập tức trích xuất Camera khách sạn - nơi xảy ra vụ việc. Vậy cụ thể hành vi đó như thế nào? Trích xuất camera có gì trong đó? Mời quý vị và các bạn cùng theo dõi ngay sau đây.\n" +
+                        "<br/> \n" +
+                        "Mời quý vị và các bạn xem thêm: Hoàn Nguyên - Tịnh Thất Bồng Lai: 'Chưa Từng Kêu Gọi Từ Thiện, Ai Thương Thì Người Ta Cho' https://youtu.be/yvzfUrtVA20?t=53\n" +
+                        "<br/> \n" +
+                        "\uD83D\uDD06Nút #Share của bạn giờ đây rất hữu ích \n" +
+                        "--------------------\n" +
+                        "\uD83D\uDC4DBáo Sức khỏe và Đời sống – Cơ quan ngôn luận của Bộ Y tế\n" +
+                        "\uD83D\uDDA5Website: http://suckhoedoisong.vn/\n" +
+                        "\uD83D\uDCBB FanPage: https://www.facebook.com/baosuckhoeva...\n" +
+                        "\uD83D\uDCBBYoutube: https://bit.ly/Baosuckhoevadoisong\n" +
+                        "\uD83D\uDCBBTiktok: https://bit.ly/3hOWND9\n" +
+                        "<br/> \n" +
+                        "#quangninh #dinhchibithucoto #lehungson #bithulehungson #skds #suckhoedoisong #baosuckhoedoisong",
+                0,
+                0,
+                "https://i.ytimg.com/vi/Ml9UaQFXpqE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC067IBZ6pMfeMbFDkzuPwJ_zmA2A",
+                16,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Tối 12-11: Cả nước ghi nhận 8.976 ca mới, TP.HCM tăng 203 ca",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pULS-_wFTbo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                83016,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#TinNong #Tin_Nóng #COVID19",
+                "Tính từ 16h ngày 11/11 đến 16h ngày 12/11, trên Hệ thống Quốc gia quản lý ca bệnh COVID-19 ghi nhận 8.982 ca nhiễm mới, trong đó 6 ca nhập cảnh và 8.976 ca ghi nhận trong nước (tăng 831 ca so với hôm qua)\n" +
+                        "<br/> \n" +
+                        "#TinNong #Tin_Nóng #COVID19\n" +
+                        "<br/> \n" +
+                        "Kênh thông tin chính thức và duy nhất của #Báo_Tuổi_Trẻ trên YouTube.\n" +
+                        " \n" +
+                        "Tin tức nhanh nhất, mới nhất, nóng nhất đang diễn ra ở Việt Nam và thế giới về: thời sự, kinh tế, chính trị, xã hội, giáo dục, thể thao, văn hóa, giải trí, công nghệ, nhịp sống số, pháp luật, du lịch...\n" +
+                        "<br/> \n" +
+                        "#TuoiTre #BaoTuoiTre #TinNong #Thời_Sự #ThoiSu #Tuổi_Trẻ \n" +
+                        "<br/> \n" +
+                        "-----------\n" +
+                        "Đăng ký kênh xem thêm nhiều chuyên mục hấp dẫn khác:\n" +
+                        "https://bit.ly/3k1RCAR\n" +
+                        "<br/> \n" +
+                        "Website:\n" +
+                        "- https://tuoitre.vn\n" +
+                        "- https://tv.tuoitre.vn\n" +
+                        "<br/> \n" +
+                        "Facebook: \n" +
+                        "- https://facebook.com/baotuoitre\n" +
+                        "- https://facebook.com/Truyenhinh.BaoTu...\n" +
+                        "<br/> \n" +
+                        "Bản quyền nội dung thuộc về báo Tuổi Trẻ.\n" +
+                        "--------------------\n" +
+                        "TÒA SOẠN BÁO TUỔI TRẺ\n" +
+                        "- Địa chỉ: Số 60A, Hoàng Văn Thụ, Phường.9, Quận Phú Nhuận, Thành phố Hồ Chí Minh, Việt Nam\n" +
+                        "- Điện thoại: (84.8) 3.997.3838\n" +
+                        "- Website: http://tuoitre.vn\n" +
+                        "- Email: tto@tuoitre.com.vn\n" +
+                        "- Đường dây nóng: 0918.033.133 - (84.8) 39.971.010",
+                0,
+                0,
+                "https://i.ytimg.com/vi/pULS-_wFTbo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLACdKvvlXbMgbhLjy5QN5h-5-EeAw",
+                16,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Hiện trường vụ sạt lở 7 căn nhà ở đầu đường Khe Sanh, TP Đà Lạt",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/tNu-JnVQoHk\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                11601,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#TinNong #Tin_Nóng #Sạt_Lở",
+                "Chiều 12-11, một vụ sạt lở xảy ra ở đầu đường Khe Sanh, thuộc phường 10, TP Đà Lạt, tỉnh Lâm Đồng - làm ảnh hưởng đến 7 căn nhà, trong đó có 1 căn bị trôi hoàn toàn xuống phía bên dưới.\n" +
+                        "<br/> \n" +
+                        "#TinNong #Tin_Nóng #Sạt_Lở\n" +
+                        "<br/> \n" +
+                        "Kênh thông tin chính thức và duy nhất của #Báo_Tuổi_Trẻ trên YouTube.\n" +
+                        " \n" +
+                        "Tin tức nhanh nhất, mới nhất, nóng nhất đang diễn ra ở Việt Nam và thế giới về: thời sự, kinh tế, chính trị, xã hội, giáo dục, thể thao, văn hóa, giải trí, công nghệ, nhịp sống số, pháp luật, du lịch...\n" +
+                        "<br/> \n" +
+                        "#TuoiTre #BaoTuoiTre #TinNong #Thời_Sự #ThoiSu #Tuổi_Trẻ ",
+                0,
+                0,
+
+                "https://i.ytimg.com/vi/tNu-JnVQoHk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA-wfDoDho0yoDS8DMV96UNmd-eGQ",
+                17,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Thủ tướng Phạm Minh Chính: Phân bố vaccine vẫn chưa công bằng lắm",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/N-3_5XC860A\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                82490,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#vtcnow",
+                "VTC Now | Sáng 12/11, trả lời chất vấn về vấn đề đảm bảo sự công bằng, quyền được tiêm 2 mũi vaccine cho mọi địa phương trên cả nước, Thủ tướng pHạm Minh Chính cho biế, thời gian qua phân bố vaccine vẫn chưa công bằng do phải tập trung cho các địa phương có dịch. \n" +
+                        "<br/> \n" +
+                        "(*) Tải ứng dụng trên App Store: https://apple.co/3CcvARH\n" +
+                        "<br/> \n" +
+                        "(*) Tải ứng dụng trên CH Play: https://bit.ly/3tFibhQ\n" +
+                        "<br/> \n" +
+                        "(*) Theo dõi thêm tại www.vtc.gov.vn",
+                0,
+                0,
+                "https://i.ytimg.com/vi/N-3_5XC860A/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAN5vGIWKZRCP53gPaJhUzzLGKypw",
+                16,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Tin Biển Đông mới nhất 6/11. Anh tuyên bố sốc nếu máy bay của Trung Quốc xuất kích trên Biển Đông",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/oJKTOBb37zE\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                236600,
+                Timestamp.valueOf("2021-11-6 20:00:00.00"),
+                "#tintuc24hol #tintuc",
+                "Thưa quý vị và các bạn, mặc dù không có quyền lợi trực tiếp ở Biển Đông nhưng Anh nhiều lần tuyên bố không chấp nhận bất kỳ quốc gia nào trên thế giới ngang tàng bất chấp luật biển. Mới đây nhất, Anh đã theo dõi các tàu ngầm của Trung Quốc từ tàu sân bay và sẵn sàng đánh chặn các máy bay phản lực của Bắc Kinh ở Biển Đông nếu có chỉ đạo.\n" +
+                        "<br/> \n" +
+                        "▶ TIN TỨC 24H ONLINE là kênh Youtube chia sẻ các nội dung tin tức, bản tin cập nhật 24h online, những nội dung giải trí hấp dẫn được phát sóng trên các kênh chương trình đài truyền hình, các tin tức cập nhật, chương trình truyền hình trực tiếp, chương trình thể thao, bóng đá, giải trí, game show, showbiz… Với mong muốn cập nhật những thông tin chính xác và nhanh nhất trên nền tảng số cho quý vị và các bạn.\n" +
+                        " \n" +
+                        "❤️❤️❤️ Cảm ơn các bạn đã xem video! Các bạn đừng quên nhấn vào ► Đăng Ký Kênh và biểu tượng \uD83D\uDD14 phía dưới góc phải của video để không bỏ lỡ những video mới nhất nhé ❤️❤️❤️\n" +
+                        "<br/> \n" +
+                        "▶ ĐĂNG KÝ KÊNH (miễn phí) TẠI ĐÂY: http://bit.ly/2n4bWWO\n" +
+                        "<br/> \n" +
+                        "▶ Xem những Clip mới và hấp dẫn nhất: \n" +
+                        "- Thể thao: http://bit.ly/2n3dyQt \n" +
+                        "- An ninh ngày mới hôm nay: http://bit.ly/2n6yKoT \n" +
+                        "- Tin tức mới nhất 24h hôm nay: http://bit.ly/2n197pi \n" +
+                        "- Tin tức Công nghệ tổng hợp: http://bit.ly/2l24YAY \n" +
+                        "- Bản tin thời sự Tổng hợp hàng ngày: http://bit.ly/2l3JRyg \n" +
+                        "- Vòng loại World Cup 2020 đội tuyển Việt Nam tổng hợp: http://bit.ly/2n1ddOc \n" +
+                        "<br/> \n" +
+                        "▶ Theo dõi Kênh TIN TỨC 24H ONLINE  trên: \n" +
+                        "- Facebook : https://www.facebook.com/tt24hol/ \n" +
+                        "- Twitter: https://twitter.com/tt24hol \n" +
+                        "<br/> \n" +
+                        "▶ Fair use for news reporting (https://www.youtube.com/yt/copyright/...) and (https://en.wikipedia.org/wiki/Fair_use) \n" +
+                        "<br/> \n" +
+                        "▶ Mọi vấn đề về video vi phạm Bản quyền (https://www.youtube.com/yt/copyright/), Chính sách (https://www.youtube.com/t/terms), \n" +
+                        "- Nguyên tắc cộng đồng (http://www.youtube.com/yt/policyandsa...) chúng tôi sẽ xóa chúng, xin liên hệ trực tiếp qua email: now.tintuc@gmail.com . If there are any copyright issues with any videos posted here We will remove them, please contact our email: now.tintuc@gmail.com",
+                0,
+                0,
+                "https://i.ytimg.com/vi/oJKTOBb37zE/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA6I8As7gYurGUeDIJAF6UePNmsQg",
+                17,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Nhà Tiên Tri Nostradamus Và Những Tiên Đoán Về Thảm Kịch Sắp Xảy Ra Vào Tháng 11/2021 | TGN",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/U4slniRnuN8\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                1260901,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#thếgiớinghiêng #tgn #nhàtiêntriNostradamus",
+                "THẾ GIỚI NGHIÊNG | Mới đây, sau những gì Virus corona chủng mới có nguồn gốc từ Vũ Hán, Trung Quốc gây ra, người ta lại đặt ra câu hỏi về những tiên tri của Nostradamus cảnh báo từ 500 năm trước. Liệu có phải dịch bệnh do virus corona gây ra hiện nay đã được nhà tiên tri thiên tài Nostradamus tiên tri trước đó, thảm kịch nào sắp xảy ra vào tháng 11/2021, ngay sau đây hãy cùng Thế Giới Nghiêng giải mã.\n" +
+                        "<br/> \n" +
+                        "Mời quý vị và các bạn xem thêm:  Thực Hư Vắc –Xin Trung Quốc Và Chất Lượng Ngừa Covid-19 Toàn Cầu?: https://youtu.be/Y6_upDu13DI\n" +
+                        "✮✮✮ XEM THÊM ✮✮✮\n" +
+                        "★ TIN THẾ GIỚI MỚI NHẤT: https://bit.ly/TINTHEGIOIMOINHAT\n" +
+                        "★ Dịch Covid-19 tại Ấn Độ: https://bit.ly/DichCovidAnDo \n" +
+                        "★ Tin Tức Biển Đông Mới Nhất: https://bit.ly/TinTucBienDongMoiNhat \n" +
+                        "★ Hành trình phá án mới nhất: https://bit.ly/HanhTrinhPhaAnHayNhat\n" +
+                        "<br/> \n" +
+                        "Kênh Thế Giới Nghiêng - TGN là kênh tổng hợp tin tức, thời sự Việt Nam và thế giới, cập nhật những tin tức và diễn biến mới nhất về tình hình quân sự, an ninh, chính trị, kinh tế và văn hóa quốc tế, đặc biệt là về tình hình Biển Đông, Mỹ - Trung Quốc, cùng các phân tích, bình luận của các chuyên gia, học giả trong nước và quốc tế. \n" +
+                        "Cảm ơn các bạn đã xem video! Hãy đăng ký kênh để cập nhật thông tin mới hữu ích nhất!\n" +
+                        "<br/> \n" +
+                        "✮✮✮ ĐĂNG KÝ KÊNH ✮✮✮ \n" +
+                        "★ Thế Giới Nghiêng: http://bit.ly/TheGioiNghiengSubscribe\n" +
+                        "★ Tin Tức Việt Nam : http://bit.ly/TinTucVietNamSubscribe\n" +
+                        "★ Kênh được vận hành bởi 5G Network \n" +
+                        "★ Mọi vấn đề bản quyền xin liên hệ: copyright@5gmedia.vn",
+                0,
+                0,
+                "https://i.ytimg.com/vi/U4slniRnuN8/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBPv_LbmURn5a3nrzwJpDV5aXthcA",
+                16,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Tin thế giới mới nhất 28/10 | Mỹ - Trung khẩu chiến gay gắt về vấn đề Đài Loan | FBNC",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/12nHX2YKV2U\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                310395,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#tintucfbnc #tinthegioi #tinthegioimoinhat",
+                "Tin thế giới mới nhất 28/10 | Mỹ - Trung khẩu chiến gay gắt về vấn đề Đài Loan\n" +
+                        "TRUNG QUỐC- NGA VỪA RỜI ĐI, MỸ - NHẬT ĐÃ RẦM RỘ TẬP TRẬN CHUNG TRÊN BIỂN ĐÔNG\n" +
+                        "ÁM CHỈ TRUNG QUỐC, NHẬT BẢN TUYÊN BỐ PHẢN ĐỐI MẠNH MẼ NHỮNG THÁCH THỨC TRẬT TỰ HÀNG HẢI \n" +
+                        "TRUNG QUỐC TUYÊN BỐ SẼ CÙNG ASEAN NGHIÊN CỨU CÁC LĨNH VỰC MỚI CHO THỎA THUẬN THƯƠNG MẠI TỰ DO\n" +
+                        "PHỚT LỜ CẢNH CÁO CỦA TRUNG QUỐC, PHÁI ĐOÀN NGHỊ VIỆN CHÂU ÂU VẪN SẼ ĐẾN THĂM ĐÀI LOAN \n" +
+                        "TRUNG QUỐC KIÊN QUYẾT PHẢN ĐỐI SỰ ỦNG HỘ ĐÀI LOAN GIA NHẬP LHQ CỦA MỸ\n" +
+                        "CẬN CẢNH “KHUNG XƯƠNG NGƯỜI SẮT” MỚI CỦA QUÂN ĐỘI ĐÀI LOAN \n" +
+                        "TRUNG QUỐC: CÁC BÁC SỸ Ở TÂN CƯƠNG GỌI TIN ĐỒN TRIỆT SẢN PHỤ NỮ LÀ “HOÀN TOÀN VÔ CĂN CỨ”\n" +
+                        "WTO ĐỒNG Ý ĐIỀU TRA MỨC THUẾ CỦA TRUNG QUỐC TRONG TRANH CHẤP RƯỢU VANG VỚI ÚC\n" +
+                        "KẾ HOẠCH ĐÁNH THUẾ BDS CỦA TRUNG QUỐC SẼ BỊ TRÌ HOÃN VÌ CÓ THỂ “ĐỤNG” ĐẾN GIỚI CHÍNH TRỊ?\n" +
+                        "NGA LÙNG SỤC CƯỚP BIỂN TRÊN TÀU HÀNG GAY CẤN NHƯ PHIM HÀNH ĐỘNG\n" +
+                        "MỸ XEM XÉT ĐƯA ISRAEL, ROMANIA VÀ BULGARIA VÀO CHƯƠNG TRÌNH MIỄN THỊ THỰC\n" +
+                        "NỮ HOÀNG ANH ELIZABETH II KHÔNG DỰ HỘI NGHỊ COP26\n" +
+                        "QUÝ III/2021, LỢI NHUẬN CÔNG TY MẸ CỦA GOOGLE TĂNG VỌT\n" +
+                        "ÔNG JACK MA ĐANG THĂM NHIỀU ĐỊA ĐIỂM Ở HÀ LAN\n" +
+                        "TỔNG THỐNG MỸ ĐẾN VATICAN, HỘI ĐÀM VỚI GIÁO HOÀNG FRANCIS\n" +
+                        "ĐẾM NGƯỢC 100 NGÀY, OLYMPIC BẮC KINH 2022 ĐỐI MẶT VỚI NGUY CƠ LỚN TỪ COVID-19\n" +
+                        "CANADA RA MẮT ĐỒNG PHỤC OLYMPIC MÙA ĐÔNG BẮC KINH 2022\n" +
+                        "CHÍNH THỨC: CÁC TAY VỢT CHƯA TIÊM PHÒNG COVID-19 VẪN ĐƯỢC THAM GIA GIẢI ÚC MỞ RỘNG 2022\n" +
+                        "HÀNG NGÀN NGƯỜI NICARAGUA ĐẾN HONDURAS ĐỂ TIÊM CHỦNG\n" +
+                        "PERU NỖ LỰC BẢO TỒN LẠC ĐÀ VICUNA\n" +
+                        "NASA PHÁT HIỆN DẤU HIỆU VỀ HÀNH TINH ĐẦU TIÊN BÊN NGOÀI DẢI NGÂN HÀ\n" +
+                        "--------------------\n" +
+                        "FBNC (Financial Business News Channel) là kênh tin tức chuyên về kinh tế - Tài chính, bất động sản, chứng khoán - cổ phiếu, cập nhật giá vàng , tin thế giới, tin tức 24h,… Với mong muốn cập nhật những thông tin chính xác và nhanh nhất cho quý vị và các bạn.!\n" +
+                        "- Đăng ký kênh để theo dõi tin tức mới nhất: http://popsww.com/FBNC\n" +
+                        "- FBNC Giải Trí: https://www.youtube.com/channel/UCuaJ...\n" +
+                        "Kênh truyền thông FBNC:\n" +
+                        "- Fanpage: https://www.facebook.com/kinhtetaichi...\n" +
+                        "- Group thảo luận, tin nóng: https://www.facebook.com/groups/11262...\n" +
+                        "- Zalo: https://zalo.me/fbncvn\n" +
+                        "- Website: http://fbncvietnam.com/\n" +
+                        "- Email: contact@fbnc.vn",
+                0,
+                0,
+                "https://i.ytimg.com/vi/iJkL88oQs0g/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDIsUanZ-FqtC62EHkhJOLfEwxOnw",
+                17,
+                3,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        /* end: news */
+
+        /* begin: review */
+        videos.add(new Video(
+                "Lạc Vào Thế Giới Game \"Nhưng Có Nạp Lần Đầu\" \uD83D\uDE08\uD83E\uDD75 | Tập Làm Anime | Tóm Tắt Anime Hay",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/UqNw2CrRCPQ\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                783102,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#anime",
+                "Tóm Tắt Anime Hay :\n" +
+                        "• Tên Anime : Infinite Dendrogam\n" +
+                        "\uD83C\uDF38 Like videos và subscribes cho Tập Làm Anime nếu bạn thấy thích nhé.\n" +
+                        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n" +
+                        "♫ Music in video :\n" +
+                        "♡ Track:  NEFFEX - Till I Let Go [Copyright Free]\n" +
+                        "♡ Music provided by NEFFEX\n" +
+                        "♡ Watch: https://www.youtube.com/watch?v=8bblU...\n" +
+                        "♫ Music in video : NEFFEX - Till I Let Go [Copyright Free]\n" +
+                        "♡ Track:  NEFFEX - FOYF [Copyright Free]\n" +
+                        "♡ Music provided by NEFFEX\n" +
+                        "♡ Watch: https://www.youtube.com/watch?v=yTz_M...\n" +
+                        "♫ Music in video : \n" +
+                        "♡ Track: NEFFEX - SOMETHING YOU COULD NEVER OWN [Copyright Free]\n" +
+                        "♡ Music provided by NEFFEX\n" +
+                        "♡ Watch: https://www.youtube.com/watch?v=CO1QE...\n" +
+                        "♫ Music in video : \n" +
+                        "♡ Track: NEFFEX - INSPIRED [Copyright Free]\n" +
+                        "♡ Music provided by NEFFEX\n" +
+                        "♡ Watch: https://www.youtube.com/watch?v=cjny7...\n" +
+                        "♫ Music in video :\n" +
+                        "♡ Track:  NEFFEX - IT'S ONLY WORTH IT IF YOU WORK FOR IT [Copyright Free]\n" +
+                        "♡ Music provided by NEFFEX\n" +
+                        "♡ Watch: https://www.youtube.com/watch?v=QNZy8...\n" +
+                        "♫ Music in video :\n" +
+                        "♡ Track:  NEFFEX - A YEAR AGO [Copyright Free]\n" +
+                        "♡ Music provided by NEFFEX\n" +
+                        "♡ Watch: https://www.youtube.com/watch?v=9_va5...\n" +
+                        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n" +
+                        "★ Từ khóa :\n" +
+                        "⋆Review phim\n" +
+                        "⋆Review hoạt hình\n" +
+                        "⋆Main bá\n" +
+                        "⋆Hành Động\n" +
+                        "⋆Shounen\n" +
+                        "⋆Siêu Nhiên \n" +
+                        "⋆Đời Thường\n" +
+                        "⋆Fantasy\n" +
+                        "⋆Siêu Nhiên\n" +
+                        "⋆Hài Hước \n" +
+                        "⋆Phép Thuật \n" +
+                        "⋆Harem\n" +
+                        "⋆Học Đường\n" +
+                        "⋆Viễn Tưởng\n" +
+                        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n" +
+                        "✽ Mọi vấn đề về vi phạm chính sách , luật bản quyền hay nguyên tắc cộng đồng , xin hãy liên hệ tôi tại\n" +
+                        "↪ Trantqkhai@gmail.com\n" +
+                        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n" +
+                        "♦ All Music , Pictures, Videos and Sounds That Appear In This Video Are Owned By Their Respective Owners\n" +
+                        "♦ Copyright Disclaimer, Under Section 107 of the Copyright Act 1976, allowance is made for 'fair use' for purposes such as criticism, comment, news reporting, teaching, scholarship, and research. Fair use is a use permitted by copyright statute that might otherwise be infringing. Non-profit, educational or personal use tips the balance in favor of fair use.\n" +
+                        "▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n" +
+                        "♡ Cảm Ơn Các Bạn Đã Xem Video Của Mình ଘ(੭*ˊᵕˋ)੭* ੈ✩‧₊˚♡",
+                0,
+                0,
+                "https://i.ytimg.com/vi/UqNw2CrRCPQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDJd2yXRnZ4NaWO1Lq10pmHE5fd-Q",
+                18,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "[Review Phim] Viên Đá Bé Tẹo Khiến Hành Tinh Bay Màu Trong 1 Nốt Nhạc | Men In Black",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/g3i8LmsXMUU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                554785,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#reviewphim #netflix #meninblack #phimkinhdi #tomtatphim #phimhai #willsmith",
+                "Tóm Tắt Phim Viễn Tưởng Siêu Hài Hước | Review Phim Đặc Vụ Áo Đen 4.\n" +
+                        "<br/> \n" +
+                        "Đặc Vụ Áo Đen Phần 4 (Men in Black 4) là một bộ phim hành động khoa học viễn tưởng theo truyện tranh 3D của Mỹ 2019 do F. Gary Gray đạo diễn và có sự tham gia dàn diễn viên không xuất hiện 3 phần trước: Chris Hemsworth, Tessa Thompson và Liam Neeson.\n" +
+                        "Bấy lâu nay, Đặc vụ Áo Đen luôn là những người hùng thầm lặng “ngầu” nhất, bảo vệ Trái Đất khỏi những hiểm họa xấu xa ngoài hành tinh. Trong cuộc phiêu lưu mới này, họ phải đối mặt với mối đe dọa mang tính toàn cầu lớn nhất từ trước đến giờ: truy tìm điệp viên hai mang ẩn mình trong tổ chức Men In Black. ",
+                0,
+                0,
+                "https://i.ytimg.com/vi/g3i8LmsXMUU/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAdDiajcp4As54DU_4Ey6myP1TiJQ",
+                19,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Hậu Duệ Cuối Cùng Của Tộc Rồng Khổng Lồ | Review Phim | Tóm Tắt Phim\n",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6CizF2aPdio\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                1133305,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#reviewphim #phimreview #tomtatphim",
+                "Hậu Duệ Cuối Cùng Của Tộc Rồng Khổng Lồ | Review Phim | Tóm Tắt Phim\n" +
+                        "#reviewphim #phimreview #tomtatphim\n" +
+                        "Đây là video tóm tắt nội dung phim",
+                0,
+                0,
+                "https://i.ytimg.com/vi/6CizF2aPdio/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDR6iB0QcLHt3q_6uYomjeZRcA1Iw",
+                20,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Cuộc Đối Đầu Với Đội Quân Côn Trùng Khổng Lồ | Review Phim | Tóm Tắt Phim\n",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xnIsP8F50n4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                251519,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#reviewphim #phimreview #tomtatphim",
+                "Cuộc Đối Đầu Với Đội Quân Côn Trùng Khổng Lồ | Review Phim | Tóm Tắt Phim\n" +
+                        "#reviewphim #phimreview #tomtatphim\n" +
+                        "Đây là video tóm tắt nội dung phim",
+                0,
+                0,
+                "https://i.ytimg.com/vi/xnIsP8F50n4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCNVWyibTiftSA3adk3gqI3er7btg",
+                20,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "[Review] TOP sản phẩm làm đẹp NỘI ĐỊA TRUNG SIÊU RẺ HOT VÔ ĐỐI trên SHOPEE CHỈ TỪ 1K!",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/92M7oMHuyds\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                632248,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#NoCopyright #CopyrightFree #1HMNCNoCopyrightMusic",
+                "Review] TOP sản phẩm làm đẹp NỘI ĐỊA TRUNG SIÊU RẺ HOT VÔ ĐỐI trên SHOPEE CHỈ TỪ 1K!\n" +
+                        "<br/> \n" +
+                        "Link sản phẩm trong video\n" +
+                        "<br/> \n" +
+                        "1. Mặt nạ giấy dưỡng trắng da mụn cấp ẩm thải độc HA Images\n" +
+                        "https://shp.ee/u5vtwj3\n" +
+                        "2.  Mặt nạ dưỡng môi collagen nội địa trung biaqua,images giảm thâm môi làm mềm môi\n" +
+                        "https://shp.ee/gxn6qc3\n" +
+                        "3. Mặt Nạ Dưỡng Ẩm Dưỡng Trắng Da HA Maycreate Mask \n" +
+                        "https://shp.ee/kpwjkx3\n" +
+                        "4. Mặt nạ mắt Images 80g (60 cái)\n" +
+                        "https://shp.ee/4gvspu3\n" +
+                        "5. Bộ 60 Miếng Mặt Nạ Lanbena \n" +
+                        "https://shp.ee/pqv3yt3\n" +
+                        "6. Cọ Rửa Mặt GDTIMA Hình Bạch Tuộc Độc Đáo Chất Lượng Cao 20g\n" +
+                        "https://shp.ee/j836wqj\n" +
+                        "7. Bông Tẩy Trang Cotton Pads 3 Lớp Túi 222 Miếng\n" +
+                        "https://shp.ee/8bj7x3j\n" +
+                        "8. Bông tẩy trang Laneila \n" +
+                        "https://shp.ee/ka459q3",
+                0,
+                0,
+                "https://i.ytimg.com/vi/92M7oMHuyds/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD44HQcN3cnouhyr5FkDx4_koYTaA",
+                18,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "[Review] Kem chống nắng Hemia, Ủ nhả nắng Yến tươi Queen Perfect, Kem body | U là trời !!!\n",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/XZZ65Ny4XKo\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                97299,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#HALINH #HEMIA #QUEENPERFECT",
+                "[Review] Kem chống nắng Hemia, Ủ nhả nắng Yến tươi Queen Perfect, Kem body | U là trời!\n" +
+                        "<br/> \n" +
+                        "♥ Connect with me: \n" +
+                        "►Youtube: https://bit.ly/2mzuNZY\n" +
+                        "►Page: https://www.facebook.com/vohalinh.bee\n" +
+                        "►Facebook : https://www.facebook.com/halinh.bee\n" +
+                        "►Instagram: https://www.instagram.com/vth.linh\n" +
+                        "►Email: vhlinh.1211@gmail.com\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
+                        "#HALINH #HEMIA #QUEENPERFECT\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/XZZ65Ny4XKo/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLApkaFGoetAo2L4uoM-Xd9Yt4CJVA",
+                19,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "10 smartphone DƯỚI 5 TRIỆU học online TỐT NHẤT 2021: Màn đẹp, pin trâu, loa tốt, bảo hành ĐẦY ĐỦ!\n",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Pu8M2sYa5jw\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                103114,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#Xiaomi #Realme #Vsmart",
+                "10 smartphone DƯỚI 5 TRIỆU học online TỐT NHẤT 2021: Màn đẹp, pin trâu, loa tốt, bảo hành ĐẦY ĐỦ!\n" +
+                        "Đặt trước iPhone 13 series tại Di Động Việt:\n" +
+                        "\uD83D\uDD17 https://didongviet.vn/iphone-13\n" +
+                        "Đặt hàng Samsung Galaxy Z Fold3 5G, Galaxy Z Flip3 5G tại:\n" +
+                        "\uD83D\uDD17 https://didongviet.vn/galaxy-z-fold3-...\n" +
+                        "Hot Sale thiết bị y tế phòng Covid-19:\n" +
+                        "\uD83D\uDD17 https://didongviet.vn/thiet-bi-y-te\n" +
+                        "<br/> \n" +
+                        "Điện thoại học online giá rẻ, smartphone học online giá rẻ, hay tablet học online giá rẻ đã trở thành cụm từ được tìm kiếm bậc nhất trong những tuần vừa qua. Ngày tựu trường đã trở lại, không phải quý vị phụ huynh nào cũng có điều kiện sắm cho con em mình những thiết bị smartphone hoặc tablet đắt tiền. Dưới 5 triệu, những lựa chọn hàng đầu sẽ bao gồm Nokia, Xiaomi - POCO - Redmi, realme và cả Vsmart.\n" +
+                        "<br/> \n" +
+                        "Xin trân trọng cảm ơn nền tảng đánh giá hiệu năng WeTest PerfDog (Full mobile platform performance test and analysis tool) - Download & thông tin chi tiết tại:\n" +
+                        "\uD83D\uDD17 https://perfdog.wetest.net\n" +
+                        "\uD83D\uDD17https://www.wetest.net/pltfms/view/we...",
+                0,
+                0,
+                "https://i.ytimg.com/vi/Pu8M2sYa5jw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAP3J68SEI7eJMoELPSjW-dyQCnoQ",
+                18,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Lookback MacBook Pro sau 12 năm còn có 4 TRIỆU!\n",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zq7qQpvQIx4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                32793,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#MacBookPro #MacBook #ReLab",
+                "Lookback MacBook Pro sau 12 năm còn có 4 TRIỆU!\n" +
+                        "Tham khảo giá bán các dòng MacBook, iPad, iPhone tại:\n" +
+                        "\uD83D\uDD17 https://shopdunk.com/mac/\n" +
+                        "\uD83D\uDD17 https://shopdunk.com/iphone/\n" +
+                        "<br/> \n" +
+                        "MacBook Pro giá chỉ 4 triệu thì có gì nhỉ? Có tuổi các bạn ạ \uD83E\uDD23 MacBook Pro Mid 2009 với cấu hình rất cũ như Intel Core 2 Duo, NVIDIA Geforce 9400M, 4GB RAM chỉ đủ đáp ứng những nhu cầu cơ bản như lướt web, học online, làm việc gõ văn bản nhẹ nhàng. Bàn phím MacBook Pro Mid 2009 gõ rất sướng với hành trình phím sâu, độ nảy cao, touchpad phủ kính vuốt mượt mà. Điểm mạnh của những chiếc MacBook siêu cũ như bản Mid 2009 này là có rất nhiều cổng kết nối, có cả đầu đọc đĩa quang CD, USB Type-A, đầu đọc thẻ nhớ SD, jack ethernet RJ45, v.v\n" +
+                        "<br/> \n" +
+                        "Phần mềm đánh giá hiệu năng, đo FPS Wetest Perfdog - Download và dùng thử MIỄN PHÍ ngay tại:\n" +
+                        "\uD83D\uDD17 https://www.wetest.net/?utm_source=yt... \n" +
+                        "<br/> \n" +
+                        "______________________________\n" +
+                        "Thực hiện\n" +
+                        "Quay phim | Hậu kỳ: Linh Trần\n" +
+                        "Dẫn | Reviewer: @Thành Thử \n" +
+                        "Nội dung: @Thành Thử \n" +
+                        "<br/> \n" +
+                        "______________________________\n" +
+                        "Tags:\n" +
+                        "đánh giá smartphone,relab,tuấn ngọc,review điện thoại,review smartphone,đánh giá điện thoại,công nghệ,thành thật thà,macbook pro,laptop sinh viên,laptop cao cấp,macbook pro mid 2009,macbook 2009,đánh giá macbook pro 2009,giá bán macbook pro 2009,review macbook pro 2009,macbook pro 2009 giá bao nhiêu,laptop cũ,macbook pro cũ,macbook cũ,có nên mua macbook cũ,laptop văn phòng,macbook giá rẻ,macbook giá tốt\n" +
+                        "<br/> \n" +
+                        "______________________________\n" +
+                        "Menu\n" +
+                        "00:00 Intro\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
+                        "______________________________\n" +
+                        "ReLab là kênh truyền thông đánh giá chuyên sâu các sản phẩm công nghệ, mang lại cái nhìn khách quan và chính xác, giúp các bạn đưa ra lựa chọn dễ dàng hơn trước khi quyết định mua. Đừng quên bấm LIKE, SUBSCRIBE và BẤM CHUÔNG để không bỏ lỡ bất kì video nào nhé. ✌\n" +
+                        "<br/> \n" +
+                        "\uD83D\uDCE7 Email liên hệ hợp tác: ads@navimedia.com.vn\n" +
+                        "\uD83D\uDCE7 Contact for work: ads@navimedia.com.vn\n" +
+                        "<br/> \n" +
+                        "© Bản quyền thuộc về NAVI MEDIA & RELAB.\n" +
+                        "© Copyright by NAVI MEDIA & RELAB. Please do not Re-up.",
+                0,
+                0,
+                "https://i.ytimg.com/vi/zq7qQpvQIx4/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCx-VspnihIZe3WW3Z_HaVJJZOy9g",
+                19,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "5 CUỐN SÁCH THAY ĐỔI CÁCH NHÌN CUỘC SỐNG CỦA BẠN | 5 books to read now...",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/nVztbNncPME\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                23743,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#sachthaydoicuocsong #trietlycuocsong #hakhuat",
+                "Mng ơi mình đã quay trở lại vs chiếc clip review sách hay đây, mong là mng enjoy nhaaaa\n" +
+                        "Những cuốn sách Hà đề cập trong clip: \n" +
+                        "1. Luật Tâm thức : https://shp.ee/3qrj5rx\n" +
+                        "2. 101 essays that will change the way you think \n" +
+                        "3. Hảo nữ trung hoa: https://shp.ee/t7t5y8f\n" +
+                        "4. Ung thu Sự thật và tin đồn\n" +
+                        "5. Cởi trói linh hồn: https://shp.ee/bidbvtf\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
+                        "CÁC CHẾ TÌM MÌNH Ở ĐÂY NHA:\n" +
+                        "\uD83D\uDC49\uD83D\uDC49\uD83D\uDC49Insta của mình nha: rachelkhuat_\n" +
+                        "\uD83D\uDC49\uD83D\uDC49\uD83D\uDC49Email: habon1210@gmail.com\n" +
+                        "\uD83D\uDC49\uD83D\uDC49\uD83D\uDC49Goodread: https://goo.gl/1HqcdD\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
+                        "My background music: \n" +
+                        "► Music Credit: LAKEY INSPIRED\n" +
+                        "Track Name: \"Better Days\"<br/> \n" +
+                        "Music By: LAKEY INSPIRED @ \n" +
+                        "► Music Credit: Dj Quads\n" +
+                        "Track Name: \"It's Near\"<br/> \n" +
+                        "► Music Credit: Artificial.Music\n" +
+                        "Track Name: \"And So It Begins\"<br/> \n" +
+                        "License for commercial use: Creative Commons Attribution 3.0 Unported CC BY 3.0 License.\n" +
+                        "Full License HERE - https://creativecommons.org/licenses/...\n" +
+                        "Music promoted by NCM https://goo.gl/fh3rEJ\n" +
+                        "<br/> \n" +
+                        "* Bấm Đăng ký/Subscrie để theo dõi mình nha các chế !\n" +
+                        "☆ ĐĂNG KÝ/SUBSCRIBE: http://bit.ly/HaKhuat\n" +
+                        "#sachthaydoicuocsong #trietlycuocsong #hakhuat\n" +
+                        "================================\n" +
+                        "© Bản quyền thuộc về Hà Khuất\n" +
+                        "© Copyright by Hà Khuất ☞ Do not Reup",
+                0,
+                0,
+                "https://i.ytimg.com/vi/nVztbNncPME/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSclcf8TwzdSiCKB1Yw2Z3-i_pHw",
+                20,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "3 cuốn trinh thám SIÊU HAYYYY | Ai rồi cũng phải đọc trinh thám thôi | Hà Khuất",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/sjDi36nnbps\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                18401,
+                Timestamp.valueOf("2021-09-19 20:00:00.00"),
+                "#sachtrinhtham #sachhay #hakhuat",
+                "Helu các bác sau một khoảng thời gian nhận được quá nhiều recommendation của các bác thì t cx chính thức lọt hố trinh thám ạ, và đây là 3 cuốn mị rất tâm đắc thời gian qua, mong mng enjoy nhaa....\n" +
+                        "<br/> \n" +
+                        "NHỮNG CÂU HỎI CÁC BẠN HAY HỎI MÌNH: \n" +
+                        "1. mình quay bằng máy gì: canon m100 nha \n" +
+                        "2. mình edit bằng: adobe premiere 2020 nha \n" +
+                        "3. mình thường mua sách ở: Tiki, Fahasa \n" +
+                        "4. đồ mình đang mặc: Uniqlo\n" +
+                        "5. son mình đang dùng: 3CE Smoked rose nha \n" +
+                        "<br/> \n" +
+                        "* Bấm Đăng ký/Subscrie để theo dõi mình nha các chế !\n" +
+                        "☆ ĐĂNG KÝ/SUBSCRIBE: http://bit.ly/HaKhuat\n" +
+                        "#sachtrinhtham #sachhay #hakhuat #thamtu\n" +
+                        "================================\n" +
+                        "© Bản quyền thuộc về Hà Khuất\n" +
+                        "© Copyright by Hà Khuất ☞ Do not Reup",
+                0,
+                0,
+                "https://i.ytimg.com/vi/sjDi36nnbps/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCfiUijpcR0P7WHZlxhLxPxIkIebQ",
+                20,
+                4,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        /* end: review */
+
+        /* begin: film */
         videos.add(new Video(
                 "Ngọa Hổ Tàng Long [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Gây Cấn Hay Nhất 2021",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gJB-zniClpE?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
@@ -929,7 +1618,7 @@ public class InitData {
                 "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
                 "Anh Hùng Cứu Thế [Thuyết Minh] | Phim Hành Động Võ Thuật Gây Cấn Kịch Tính Hay Nhất\n" +
                         "<br/> \n" +
-                        "⭐Chào mừng các bạn đến với Lạ Phim.⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:https://www.youtube.com/channel/UCCZR...&lt;br&gt;" +
+                        "⭐Chào mừng các bạn đến với Lạ Phim.⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:https://www.youtube.com/channel/UCCZR...;" +
                         "<br/> \n" +
                         "\uD83C\uDFAC Uni Movie - Kho Phim Của Mọi Nhà:https://www.youtube.com/channel/UCzZV...\n" +
                         "<br/> \n" +
@@ -1069,7 +1758,7 @@ public class InitData {
                 "PHIM MỚI 2021 | PHI VỤ TIỀN GIẢ | Châu Nhuận Phát | Phim Hành Động Võ Thuật Chiếu Rạp Thuyết Minh",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/_fZzEssjPBc?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 4616402,
-                Timestamp.valueOf("2020-19-04 07:00:00.00"),
+                Timestamp.valueOf("2020-09-04 07:00:00.00"),
                 "#phimhanhdong #phimthuyetminh #phimvothuat",
                 "Phi Vụ Tiền Giả - Châu Nhuận Phát - Quách Phú Thành là phim hành động võ thuật, phim hay 2019 thuyết minh, phim chiếu rạp, phim hay 2020 thuyết minh.\n" +
                         "Nội dung chính:\n" +
@@ -1148,9 +1837,9 @@ public class InitData {
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0")
         ));
-        /* end video  film*/
+        /* end: film*/
 
-        /* video  education*/
+        /* begin: education*/
         videos.add(new Video(
                 "Cách Dễ Nhất Để Học Giỏi (Dù cho bận rộn)",
                 "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/vIk5zZ3YA38?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
@@ -1527,7 +2216,997 @@ public class InitData {
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0")
         ));
-        /* end video  education*/
+        /* end: education*/
+
+        /* begin: technology*/
+        videos.add(new Video(
+                "Những Thiết Bị Công Nghệ Sẽ Khiến Bạn Phát Cuồng - 7 Ngày Công Nghệ",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/vAmNuhRMBvs?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                25904,
+                Timestamp.valueOf("2021-04-26 20:00:00.00"),
+                "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin",
+                "Nơi giới thiệu những công nghệ đỉnh cao mới nhất\n" +
+                        "\uD83D\uDD14 Theo dõi kênh: https://bit.ly/2K20sv5\n" +
+                        "\uD83D\uDCFA Tổng hợp PLAYLIST:\n" +
+                        "\uD83D\uDCAB 1001 Thiết Bị Thông Minh: https://bit.ly/2XAiiNm\n" +
+                        "\uD83D\uDCAB Những Công Nghệ Vũ Trang Tân Tiến Nhất: https://bit.ly/30aCLtP\n" +
+                        "\uD83D\uDCAB Phương Tiện Đi lại Thời Nanotechnology: https://bit.ly/3gZufDR\n" +
+                        "\uD83D\uDC8C Nếu bạn yêu thích video, đừng quên đăng ký và nhấn vào nút \uD83D\uDD14 để cập nhật những video mới nhất của kênh nha!!!\n" +
+                        "❤️❤️❤️ Cảm ơn bạn đã xem video và quan tâm kênh ❤️❤️❤️" +
+                        "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin\n" +
+                        "#côngnghệmới\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/vAmNuhRMBvs/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-IuGvTZ7gEXF0yC6JeL4etyobUA",
+                11,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "10 Thiết Bị Thông Minh Giúp Cải Thiện Của Sống Của Bạn #7 - 7 Ngày Công Nghệ",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/HxyiRFqo6Y0?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                6458,
+                Timestamp.valueOf("2021-04-26 20:00:00.00"),
+                "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin",
+                "Nơi giới thiệu những công nghệ đỉnh cao mới nhất\n" +
+                        "\uD83D\uDD14 Theo dõi kênh: https://bit.ly/2K20sv5\n" +
+                        "\uD83D\uDCFA Tổng hợp PLAYLIST:\n" +
+                        "\uD83D\uDCAB 1001 Thiết Bị Thông Minh: https://bit.ly/2XAiiNm\n" +
+                        "\uD83D\uDCAB Những Công Nghệ Vũ Trang Tân Tiến Nhất: https://bit.ly/30aCLtP\n" +
+                        "\uD83D\uDCAB Phương Tiện Đi lại Thời Nanotechnology: https://bit.ly/3gZufDR\n" +
+                        "\uD83D\uDC8C Nếu bạn yêu thích video, đừng quên đăng ký và nhấn vào nút \uD83D\uDD14 để cập nhật những video mới nhất của kênh nha!!!\n" +
+                        "❤️❤️❤️ Cảm ơn bạn đã xem video và quan tâm kênh ❤️❤️❤️" +
+                        "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin\n" +
+                        "#côngnghệmới\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/HxyiRFqo6Y0/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSe0UCtJ9iFHo0V4cj087u2spXoQ",
+                11,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Top 5 phát minh khoa học trong phim viễn tưởng có thật",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/HxyiRFqo6Y0?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                10898,
+                Timestamp.valueOf("2021-11-27 20:00:00.00"),
+                "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin",
+                "Nơi giới thiệu những công nghệ đỉnh cao mới nhất\n" +
+                        "\uD83D\uDD14 Theo dõi kênh: https://bit.ly/2K20sv5\n" +
+                        "\uD83D\uDCFA Tổng hợp PLAYLIST:\n" +
+                        "\uD83D\uDCAB 1001 Thiết Bị Thông Minh: https://bit.ly/2XAiiNm\n" +
+                        "\uD83D\uDCAB Những Công Nghệ Vũ Trang Tân Tiến Nhất: https://bit.ly/30aCLtP\n" +
+                        "\uD83D\uDCAB Phương Tiện Đi lại Thời Nanotechnology: https://bit.ly/3gZufDR\n" +
+                        "\uD83D\uDC8C Nếu bạn yêu thích video, đừng quên đăng ký và nhấn vào nút \uD83D\uDD14 để cập nhật những video mới nhất của kênh nha!!!\n" +
+                        "❤️❤️❤️ Cảm ơn bạn đã xem video và quan tâm kênh ❤️❤️❤️" +
+                        "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin\n" +
+                        "#côngnghệmới\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/XXbn-MPPiNU/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBcelYzB4u6VLl0EsUV0mylzYEOAQ",
+                11,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Điểm mặt những sản phẩm công nghệ ấn tượng nhất tại sự kiện CES 2021 | 7NCN",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/tHFCrprT6rY?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                9111,
+                Timestamp.valueOf("2021-01-27 20:00:00.00"),
+                "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin",
+                "Triễn lãm điện tử tiêu dùng toàn cầu CES ( Consumer Electronic Show ): là một trong những sự kiện lớn nhất của làng công nghệ thế giới\n" +
+                        "Nơi giới thiệu những công nghệ đỉnh cao mới nhất\n" +
+                        "\uD83D\uDD14 Theo dõi kênh: https://bit.ly/2K20sv5\n" +
+                        "\uD83D\uDCFA Tổng hợp PLAYLIST:\n" +
+                        "\uD83D\uDCAB 1001 Thiết Bị Thông Minh: https://bit.ly/2XAiiNm\n" +
+                        "\uD83D\uDCAB Những Công Nghệ Vũ Trang Tân Tiến Nhất: https://bit.ly/30aCLtP\n" +
+                        "\uD83D\uDCAB Phương Tiện Đi lại Thời Nanotechnology: https://bit.ly/3gZufDR\n" +
+                        "\uD83D\uDC8C Nếu bạn yêu thích video, đừng quên đăng ký và nhấn vào nút \uD83D\uDD14 để cập nhật những video mới nhất của kênh nha!!!\n" +
+                        "❤️❤️❤️ Cảm ơn bạn đã xem video và quan tâm kênh ❤️❤️❤️" +
+                        "#7ngaycongnghe #côngnghệtươnglai #côngnghệthôngtin\n" +
+                        "#côngnghệmới\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/tHFCrprT6rY/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNFh0j57eog9kpdp8tFcAN6T1F4Q",
+                11,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Google Makes Own Chips for New Pixel Phones",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/bGqT5sXHM7w?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                23660,
+                Timestamp.valueOf("2021-08-03 20:00:00.00"),
+                "",
+                "Aug.02 -- Google is making a bigger bet on smartphones by joining rivals Apple Inc. and Samsung Electronics Co. in designing the device’s most critical component in-house: the main processor. Mark Gurman reports on Power On\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/bGqT5sXHM7w/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLA2ZtBv_kIDCbBpWUdyay8cCpDgQg",
+                12,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Amazon Unveils $1,000 Robot for the Home",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/QsVCqTmvt3Y?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                25693,
+                Timestamp.valueOf("2021-09-29 20:00:00.00"),
+                "",
+                "Amazon unveils a range of new products for the home. Among them is a $1,000 robot called \"Astro.\" Emily Chang talks to Dave Limp, Amazon senior vice president of devices and services. (Source: Bloomberg)\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/QsVCqTmvt3Y/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLBrkrvXB8HaHSSm1Bi_8xMPvvrLRw",
+                12,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "BREAKTHROUGH: Scientists Reverse Blindness [CRISPR Technology]",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/rbVvu_104Pg?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                343407,
+                Timestamp.valueOf("2021-11-08 20:00:00.00"),
+                "",
+                "CRISPR Gene editing therapy is used for the first time in living humans with amazing results.\n" +
+                        "<br/> \n" +
+                        "0:00 Introduction \n" +
+                        "0:53 What is CRISPR?\n" +
+                        "2:05 How Does CRISPR work?\n" +
+                        "3:18 The Experiment\n" +
+                        "5:30 The Results\n" +
+                        "9:31 Shortcomings\n" +
+                        "10:34 The Future\n" +
+                        "12:00 Caution\n" +
+                        "13:02 Conclusions\n" +
+                        "<br/> \n" +
+                        "--- About ColdFusion ---\n" +
+                        "ColdFusion is an Australian based online media company independently run by Dagogo Altraide since 2009. Topics cover anything in science, technology, history and business in a calm and relaxed environment. \n" +
+                        "<br/> \n" +
+                        "ColdFusion Discord:  https://discord.gg/coldfusion\n" +
+                        "<br/> \n" +
+                        "Podcast: https://open.spotify.com/show/3dj6YGj...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Music Channel: https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Merch:\n" +
+                        "INTERNATIONAL: https://store.coldfusioncollective.com/\n" +
+                        "AUSTRALIA: https://shop.coldfusioncollective.com/\n" +
+                        "<br/> \n" +
+                        "If you enjoy my content, please consider subscribing!\n" +
+                        "I'm also on Patreon: https://www.patreon.com/ColdFusion_TV\n" +
+                        "Bitcoin address: 13SjyCXPB9o3iN4LitYQ2wYKeqYTShPub8\n" +
+                        "<br/> \n" +
+                        "--- \"New Thinking\" written by Dagogo Altraide ---\n" +
+                        "This book was rated the 9th best technology history book by book authority.\n" +
+                        "In the book you’ll learn the stories of those who invented the things we use everyday and how it all fits together to form our modern world.\n" +
+                        "Get the book on Amazon: http://bit.ly/NewThinkingbook\n" +
+                        "Get the book on Google Play: http://bit.ly/NewThinkingGooglePlay\n" +
+                        "https://newthinkingbook.squarespace.c...\n" +
+                        "<br/> \n" +
+                        "--- ColdFusion Social Media ---\n" +
+                        "» Twitter | @ColdFusion_TV\n" +
+                        "» Instagram | coldfusiontv\n" +
+                        "» Facebook | https://www.facebook.com/ColdFusionTV\n" +
+                        "<br/> \n" +
+                        "Sources:\n" +
+                        "<br/> \n" +
+                        "https://theconversation.com/what-is-c...\n" +
+                        "<br/> \n" +
+                        "https://www.newscientist.com/definiti...\n" +
+                        "<br/> \n" +
+                        "Research paper: https://journals.lww.com/retinajourna...\n" +
+                        "<br/> \n" +
+                        "https://futurism.com/neoscope/gene-th...\n" +
+                        "<br/> \n" +
+                        "https://www.vox.com/2018/7/23/1759486...\n" +
+                        "<br/> \n" +
+                        "https://www.npr.org/sections/health-s...\n" +
+                        "<br/> \n" +
+                        "My Music Channel:  https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "//Soundtrack//\n" +
+                        "<br/> \n" +
+                        "Burn Water - Nostalgia Dreams\n" +
+                        "<br/> \n" +
+                        "Luis Miehlich - I Tried To Reach Out (with Handbook of Magic)\n" +
+                        "<br/> \n" +
+                        "Hiatus - As Close To Me As You Are Now\n" +
+                        "<br/> \n" +
+                        "Roald Velden - Peaceful\n" +
+                        "<br/> \n" +
+                        "Gem Club - First Weeks\n" +
+                        "<br/> \n" +
+                        "Sleepyfish - Forgot It Was Monday \n" +
+                        "<br/> \n" +
+                        "Nova Nova - See\n" +
+                        "<br/> \n" +
+                        "Burn Water - Youth \n" +
+                        "<br/> \n" +
+                        "» Music I produce | http://burnwater.bandcamp.com or \n" +
+                        "» http://www.soundcloud.com/burnwater\n" +
+                        "» https://www.patreon.com/ColdFusion_TV\n" +
+                        "» Collection of music used in videos: https://www.youtube.com/watch?v=YOrJJ...\n" +
+                        "<br/> \n" +
+                        "Producer: Dagogo Altraide\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/rbVvu_104Pg/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCOV_9qBteBUiFSwYf2fnGS5rQJqQ",
+                13,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "A Deep Look at AI Generated Music",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/EyeW_axUEQU?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                200346,
+                Timestamp.valueOf("2021-09-22 20:00:00.00"),
+                "",
+                "Go to https://www.Brilliant.org/coldfusion to receive 20% off!\n" +
+                        "Previous AI Episode: https://youtu.be/KZ7BnJb30Cc" +
+                        "<br/> \n" +
+                        "--- About ColdFusion ---\n" +
+                        "ColdFusion is an Australian based online media company independently run by Dagogo Altraide since 2009. Topics cover anything in science, technology, history and business in a calm and relaxed environment. \n" +
+                        "<br/> \n" +
+                        "ColdFusion Discord:  https://discord.gg/coldfusion\n" +
+                        "<br/> \n" +
+                        "Podcast: https://open.spotify.com/show/3dj6YGj...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Music Channel: https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Merch:\n" +
+                        "INTERNATIONAL: https://store.coldfusioncollective.com/\n" +
+                        "AUSTRALIA: https://shop.coldfusioncollective.com/\n" +
+                        "<br/> \n" +
+                        "If you enjoy my content, please consider subscribing!\n" +
+                        "I'm also on Patreon: https://www.patreon.com/ColdFusion_TV\n" +
+                        "Bitcoin address: 13SjyCXPB9o3iN4LitYQ2wYKeqYTShPub8\n" +
+                        "<br/> \n" +
+                        "--- \"New Thinking\" written by Dagogo Altraide ---\n" +
+                        "This book was rated the 9th best technology history book by book authority.\n" +
+                        "In the book you’ll learn the stories of those who invented the things we use everyday and how it all fits together to form our modern world.\n" +
+                        "Get the book on Amazon: http://bit.ly/NewThinkingbook\n" +
+                        "Get the book on Google Play: http://bit.ly/NewThinkingGooglePlay\n" +
+                        "https://newthinkingbook.squarespace.c...\n" +
+                        "<br/> \n" +
+                        "--- ColdFusion Social Media ---\n" +
+                        "» Twitter | @ColdFusion_TV\n" +
+                        "» Instagram | coldfusiontv\n" +
+                        "» Facebook | https://www.facebook.com/ColdFusionTV\n" +
+                        "<br/> \n" +
+                        "Sources:\n" +
+                        "<br/> \n" +
+                        "https://theconversation.com/what-is-c...\n" +
+                        "<br/> \n" +
+                        "https://www.newscientist.com/definiti...\n" +
+                        "<br/> \n" +
+                        "Research paper: https://journals.lww.com/retinajourna...\n" +
+                        "<br/> \n" +
+                        "https://futurism.com/neoscope/gene-th...\n" +
+                        "<br/> \n" +
+                        "https://www.vox.com/2018/7/23/1759486...\n" +
+                        "<br/> \n" +
+                        "https://www.npr.org/sections/health-s...\n" +
+                        "<br/> \n" +
+                        "My Music Channel:  https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "//Soundtrack//\n" +
+                        "<br/> \n" +
+                        "Burn Water - Nostalgia Dreams\n" +
+                        "<br/> \n" +
+                        "Luis Miehlich - I Tried To Reach Out (with Handbook of Magic)\n" +
+                        "<br/> \n" +
+                        "Hiatus - As Close To Me As You Are Now\n" +
+                        "<br/> \n" +
+                        "Roald Velden - Peaceful\n" +
+                        "<br/> \n" +
+                        "Gem Club - First Weeks\n" +
+                        "<br/> \n" +
+                        "Sleepyfish - Forgot It Was Monday \n" +
+                        "<br/> \n" +
+                        "Nova Nova - See\n" +
+                        "<br/> \n" +
+                        "Burn Water - Youth \n" +
+                        "<br/> \n" +
+                        "» Music I produce | http://burnwater.bandcamp.com or \n" +
+                        "» http://www.soundcloud.com/burnwater\n" +
+                        "» https://www.patreon.com/ColdFusion_TV\n" +
+                        "» Collection of music used in videos: https://www.youtube.com/watch?v=YOrJJ...\n" +
+                        "<br/> \n" +
+                        "Producer: Dagogo Altraide\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/EyeW_axUEQU/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDxiOvVb7X3yVQ1MnGVZArdaA6loQ",
+                13,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Companies Losing 100s of Billions - Global Chip Shortage",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/AeN3oQx-o68?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                696901,
+                Timestamp.valueOf("2021-06-10 20:00:00.00"),
+                "",
+                "ColdFusion Discord:  https://discord.gg/coldfusion\n" +
+                        "<br/> \n" +
+                        "ColdFusion Music Channel: https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "--- About ColdFusion ---\n" +
+                        "ColdFusion is an Australian based online media company independently run by Dagogo Altraide since 2009. Topics cover anything in science, technology, history and business in a calm and relaxed environment. \n" +
+                        "<br/> \n" +
+                        "ColdFusion Discord:  https://discord.gg/coldfusion\n" +
+                        "<br/> \n" +
+                        "Podcast: https://open.spotify.com/show/3dj6YGj...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Music Channel: https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Merch:\n" +
+                        "INTERNATIONAL: https://store.coldfusioncollective.com/\n" +
+                        "AUSTRALIA: https://shop.coldfusioncollective.com/\n" +
+                        "<br/> \n" +
+                        "If you enjoy my content, please consider subscribing!\n" +
+                        "I'm also on Patreon: https://www.patreon.com/ColdFusion_TV\n" +
+                        "Bitcoin address: 13SjyCXPB9o3iN4LitYQ2wYKeqYTShPub8\n" +
+                        "<br/> \n" +
+                        "--- \"New Thinking\" written by Dagogo Altraide ---\n" +
+                        "This book was rated the 9th best technology history book by book authority.\n" +
+                        "In the book you’ll learn the stories of those who invented the things we use everyday and how it all fits together to form our modern world.\n" +
+                        "Get the book on Amazon: http://bit.ly/NewThinkingbook\n" +
+                        "Get the book on Google Play: http://bit.ly/NewThinkingGooglePlay\n" +
+                        "https://newthinkingbook.squarespace.c...\n" +
+                        "<br/> \n" +
+                        "--- ColdFusion Social Media ---\n" +
+                        "» Twitter | @ColdFusion_TV\n" +
+                        "» Instagram | coldfusiontv\n" +
+                        "» Facebook | https://www.facebook.com/ColdFusionTV\n" +
+                        "<br/> \n" +
+                        "Sources:\n" +
+                        "<br/> \n" +
+                        "https://theconversation.com/what-is-c...\n" +
+                        "<br/> \n" +
+                        "https://www.newscientist.com/definiti...\n" +
+                        "<br/> \n" +
+                        "Research paper: https://journals.lww.com/retinajourna...\n" +
+                        "<br/> \n" +
+                        "https://futurism.com/neoscope/gene-th...\n" +
+                        "<br/> \n" +
+                        "https://www.vox.com/2018/7/23/1759486...\n" +
+                        "<br/> \n" +
+                        "https://www.npr.org/sections/health-s...\n" +
+                        "<br/> \n" +
+                        "My Music Channel:  https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "//Soundtrack//\n" +
+                        "<br/> \n" +
+                        "Burn Water - Nostalgia Dreams\n" +
+                        "<br/> \n" +
+                        "Luis Miehlich - I Tried To Reach Out (with Handbook of Magic)\n" +
+                        "<br/> \n" +
+                        "Hiatus - As Close To Me As You Are Now\n" +
+                        "<br/> \n" +
+                        "Roald Velden - Peaceful\n" +
+                        "<br/> \n" +
+                        "Gem Club - First Weeks\n" +
+                        "<br/> \n" +
+                        "Sleepyfish - Forgot It Was Monday \n" +
+                        "<br/> \n" +
+                        "Nova Nova - See\n" +
+                        "<br/> \n" +
+                        "Burn Water - Youth \n" +
+                        "<br/> \n" +
+                        "» Music I produce | http://burnwater.bandcamp.com or \n" +
+                        "» http://www.soundcloud.com/burnwater\n" +
+                        "» https://www.patreon.com/ColdFusion_TV\n" +
+                        "» Collection of music used in videos: https://www.youtube.com/watch?v=YOrJJ...\n" +
+                        "<br/> \n" +
+                        "Producer: Dagogo Altraide\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/AeN3oQx-o68/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLApkxRxHwehEZhwri_7Hnmx5WKVGw",
+                13,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "The Great Google Crash: The World’s Dependency Revealed",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/vJ1cfb-5pHQ?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                1100446,
+                Timestamp.valueOf("2020-12-22 20:00:00.00"),
+                "",
+                "Become smarter in 5 minutes by signing up for free today: https://cen.yt/mbcoldfusion4  - Thanks to Morning Brew for sponsoring today’s video.\n" +
+                        "<br/> \n" +
+                        "--- About ColdFusion ---\n" +
+                        "ColdFusion is an Australian based online media company independently run by Dagogo Altraide since 2009. Topics cover anything in science, technology, history and business in a calm and relaxed environment. \n" +
+                        "<br/> \n" +
+                        "ColdFusion Discord:  https://discord.gg/coldfusion\n" +
+                        "<br/> \n" +
+                        "Podcast: https://open.spotify.com/show/3dj6YGj...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Music Channel: https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "ColdFusion Merch:\n" +
+                        "INTERNATIONAL: https://store.coldfusioncollective.com/\n" +
+                        "AUSTRALIA: https://shop.coldfusioncollective.com/\n" +
+                        "<br/> \n" +
+                        "If you enjoy my content, please consider subscribing!\n" +
+                        "I'm also on Patreon: https://www.patreon.com/ColdFusion_TV\n" +
+                        "Bitcoin address: 13SjyCXPB9o3iN4LitYQ2wYKeqYTShPub8\n" +
+                        "<br/> \n" +
+                        "--- \"New Thinking\" written by Dagogo Altraide ---\n" +
+                        "This book was rated the 9th best technology history book by book authority.\n" +
+                        "In the book you’ll learn the stories of those who invented the things we use everyday and how it all fits together to form our modern world.\n" +
+                        "Get the book on Amazon: http://bit.ly/NewThinkingbook\n" +
+                        "Get the book on Google Play: http://bit.ly/NewThinkingGooglePlay\n" +
+                        "https://newthinkingbook.squarespace.c...\n" +
+                        "<br/> \n" +
+                        "--- ColdFusion Social Media ---\n" +
+                        "» Twitter | @ColdFusion_TV\n" +
+                        "» Instagram | coldfusiontv\n" +
+                        "» Facebook | https://www.facebook.com/ColdFusionTV\n" +
+                        "<br/> \n" +
+                        "Sources:\n" +
+                        "<br/> \n" +
+                        "https://theconversation.com/what-is-c...\n" +
+                        "<br/> \n" +
+                        "https://www.newscientist.com/definiti...\n" +
+                        "<br/> \n" +
+                        "Research paper: https://journals.lww.com/retinajourna...\n" +
+                        "<br/> \n" +
+                        "https://futurism.com/neoscope/gene-th...\n" +
+                        "<br/> \n" +
+                        "https://www.vox.com/2018/7/23/1759486...\n" +
+                        "<br/> \n" +
+                        "https://www.npr.org/sections/health-s...\n" +
+                        "<br/> \n" +
+                        "My Music Channel:  https://www.youtube.com/channel/UCGkp...\n" +
+                        "<br/> \n" +
+                        "//Soundtrack//\n" +
+                        "<br/> \n" +
+                        "Burn Water - Nostalgia Dreams\n" +
+                        "<br/> \n" +
+                        "Luis Miehlich - I Tried To Reach Out (with Handbook of Magic)\n" +
+                        "<br/> \n" +
+                        "Hiatus - As Close To Me As You Are Now\n" +
+                        "<br/> \n" +
+                        "Roald Velden - Peaceful\n" +
+                        "<br/> \n" +
+                        "Gem Club - First Weeks\n" +
+                        "<br/> \n" +
+                        "Sleepyfish - Forgot It Was Monday \n" +
+                        "<br/> \n" +
+                        "Nova Nova - See\n" +
+                        "<br/> \n" +
+                        "Burn Water - Youth \n" +
+                        "<br/> \n" +
+                        "» Music I produce | http://burnwater.bandcamp.com or \n" +
+                        "» http://www.soundcloud.com/burnwater\n" +
+                        "» https://www.patreon.com/ColdFusion_TV\n" +
+                        "» Collection of music used in videos: https://www.youtube.com/watch?v=YOrJJ...\n" +
+                        "<br/> \n" +
+                        "Producer: Dagogo Altraide\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/vJ1cfb-5pHQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD-5CJi29WFGmUIAAwDHILZ8vLqgw",
+                13,
+                7,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        /* end: technology*/
+
+        /* begin: life */
+        videos.add(new Video(
+                "Living with the Dark Winters in Sweden | Midnight sun & Polar night",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/3zTR4ayDG38?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                12758413,
+                Timestamp.valueOf("2020-01-13 20:00:00.00"),
+                "",
+                "Dark winters with no sunlight for many weeks, and bright summers with sunlight 24 hours/day. How is it to live with the extreme light conditions that countries in the Northern hemisphere have? \n" +
+                        "In this video I want to share my own personal experience and perspective of living with the seasons in the North of Sweden, and take you on a journey to the darkest and brightest times of the year, and share the beauty and the challenges that comes with them. \n" +
+                        "<br/> \n" +
+                        "I hope you will enjoy it! Thank you so much for watching! ♥\n" +
+                        "<br/> \n" +
+                        "► MY SOCIAL MEDIA AND LINKS!\n" +
+                        "• My Art & Jewelry Webshop: https://jonnajintonsweden.com\n" +
+                        "• Instagram: @jonnajinton  http://www.instagram.com/jonnajinton\n" +
+                        "• Wallpaper collection: https://www.photowall.com/designers/j...\n" +
+                        "• Facebook Page - http://www.facebook.com/jonnajinton\n" +
+                        "• Blog: https://jonnajintonsweden.com/blog/\n" +
+                        "<br/> \n" +
+                        "► MUSIC\n" +
+                        "You can find most of the songs I use here:\n" +
+                        "http://share.epidemicsound.com/pR9G6 (affiliate link)\n" +
+                        "Break - Roary (Musicbed)\n" +
+                        "Daydream in A for piano - Eric Kinny (Musicbed)\n" +
+                        "Daydream in D for cello - Eric Kinny\n" +
+                        "Cause - Infinite Ripple\n" +
+                        "Through the storm - Savvun\n" +
+                        "Memories of Sardinia - Franz Gordon\n" +
+                        "Oasis - Yi Nantiro\n" +
+                        "The Goths - Bonnie Grace\n" +
+                        "<br/> \n" +
+                        "MB01WYFTHEO2U07\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/3zTR4ayDG38/hqdefault.jpg?sqp=-oaymwEbCKgBEF5IVfKriqkDDggBFQAAiEIYAXABwAEG&rs=AOn4CLDt2o2TNk1PvZE7FB-hdFEY70lBdg",
+                14,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Building my CamperVan + Life, love and loss",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/B4uPNvLLRNY?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                1111178,
+                Timestamp.valueOf("2020-06-25 20:00:00.00"),
+                "",
+                "I am so excited to finally show you what I've been working on for the last month, and to also give you a little overall life update with all its ups and downs. My campervan is finally finished and it became the van of my dreams! I can't wait to go on my first roadtrip now. \n" +
+                        "<br/> \n" +
+                        "Now it's June and the time of midsummer here in Sweden. The days are endless. The nights are bright as a cloudy day and this is my favorite time of the year. So much flowing energy in nature. It's magical. I look forward to share more of the beautiful Swedish summer in the next video. \n" +
+                        "<br/> \n" +
+                        "I hope you enjoyed watching this! Thank you for being here.\n" +
+                        "You make the world a more beautiful place ♥\n" +
+                        "<br/> \n" +
+                        "Sending you all LOTS of love! \n" +
+                        "<br/> \n" +
+                        "► MY SOCIAL MEDIA AND LINKS!\n" +
+                        "• My Art & Jewelry Webshop: https://jonnajintonsweden.com\n" +
+                        "• Instagram: @jonnajinton  http://www.instagram.com/jonnajinton\n" +
+                        "• Wallpaper collection: https://www.photowall.com/designers/j...\n" +
+                        "• Facebook Page - http://www.facebook.com/jonnajinton\n" +
+                        "• Blog: https://jonnajintonsweden.com/blog/\n" +
+                        "<br/> \n" +
+                        "► MUSIC\n" +
+                        "You can find some of the songs here: \n" +
+                        "http://share.epidemicsound.com/pR9G6\u200B (affiliate link)\n" +
+                        "Allude - Madron\n" +
+                        "Skjonnhet reprise - Judah Earl\n" +
+                        "Calm heart wild river - Sad Moses\n" +
+                        "Nostalguiqe - Martin Hall\n" +
+                        "Urban Farm - Gary the Canary\n" +
+                        "Woman like you - Peter Crosby\n" +
+                        "Avenoir - Katharine Petkovski\n" +
+                        "Light in your hand - Sad Moses\n" +
+                        "Time without end - Spectacles wallet and watch\n" +
+                        "<br/> \n" +
+                        "MB01GJ3MTHGRRSD\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/B4uPNvLLRNY/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC6X5ueFxvdoW0VKSUm3Q0jRuJVgA",
+                14,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Where I've been",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/WYGuRANhitA?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                860991,
+                Timestamp.valueOf("2020-09-24 20:00:00.00"),
+                "",
+                "Hello my loves! \n" +
+                        "Summer has ended here in the North and I wanted to share with you what I've been up to since my last video. My first trip in the van, a magical week in the medieval time, a new family member and just lots of small projects here and there. I hope you will enjoy it! :)\n" +
+                        "<br/> \n" +
+                        "Thank you so much for watching my video! ♥ And thank you for all your comments!! \n" +
+                        "Wish I could answer you all to let you know how grateful I am.\n" +
+                        "Sending SO much love to all of you! Take care! \n" +
+                        "<br/> \n" +
+                        "► MY SOCIAL MEDIA AND LINKS!\n" +
+                        "• My Art & Jewelry Webshop: https://jonnajintonsweden.com\n" +
+                        "• Instagram: @jonnajinton  http://www.instagram.com/jonnajinton\n" +
+                        "• Wallpaper collection: https://www.photowall.com/designers/j...\n" +
+                        "• Facebook Page - http://www.facebook.com/jonnajinton\n" +
+                        "• Blog: https://jonnajintonsweden.com/blog/\n" +
+                        "<br/> \n" +
+                        "► MUSIC\n" +
+                        "You can find most of the songs here:\n" +
+                        "http://share.epidemicsound.com/pR9G6\u200B (affiliate link)\n" +
+                        "The Bard's Tale - Christoffer Moe Ditlevsen\n" +
+                        "For the Weary - Bonnie Grace\n" +
+                        "Free Form - Amaranth\n" +
+                        "Logistics - Bytheway May\n" +
+                        "Across the aisle - Madron\n" +
+                        "Mountain Air - Cody Francis\n" +
+                        "Light in your hand - Sad Moses\n" +
+                        "Deeper - Chris Coleman\n" +
+                        "Through the Storm - Savvun\n" +
+                        "Ack Varmenland, du Skona - Traditional\n" +
+                        "Time without end - Spectacles wallet and watch\n" +
+                        "<br/> \n" +
+                        "MB01FRGNZCDM37G\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/WYGuRANhitA/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDE_SnBGKb6GmvDkRNhLONJs6LFfQ",
+                14,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "A time of change",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/g7ev29b9sqM?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                120769,
+                Timestamp.valueOf("2020-04-30 20:00:00.00"),
+                "",
+                "So this is my past two months wrapped up into 20 minutes, with all it's messy, hard and beautiful moments. There is so much going on in my life right now, both on the surface and inside, which I know a lot of you can relate to. But I am very glad to finally have time again for creating videos. I've missed you! \n" +
+                        "I hope this little video can bring a smile on your beautiful face, or maybe just a moment to relax or enjoy some highlights from my life the past weeks. Hope you'll like it! \n" +
+                        "<br/> \n" +
+                        "Sending you tons of love! ♥\n" +
+                        "(AND THANK YOU FOR 3 MILLION SUBS!!!)\n" +
+                        "<br/> \n" +
+                        "►  Marie's channel: https://www.youtube.com/user/Emlouxo\n" +
+                        "►  Ash's channel: https://www.youtube.com/user/MadForBi...\n" +
+                        "►  Adrian's channel: https://www.youtube.com/channel/UCKst...\n" +
+                        "<br/> \n" +
+                        "► Jonas video from our adventure in in mountains: https://www.youtube.com/watch?v=Bhc9u...\n" +
+                        "<br/> \n" +
+                        "► MY SOCIAL MEDIA AND LINKS\n" +
+                        "• My Art & Jewelry Webshop: https://jonnajintonsweden.com\n" +
+                        "• Instagram: @jonnajinton  http://www.instagram.com/jonnajinton\n" +
+                        "• Wallpaper collection: https://www.photowall.com/designers/j...\n" +
+                        "• Facebook Page - http://www.facebook.com/jonnajinton\n" +
+                        "• Blog: https://jonnajintonsweden.com/blog/\n" +
+                        "<br/> \n" +
+                        "► MUSIC\n" +
+                        "You can find some of the songs here: \n" +
+                        "http://share.epidemicsound.com/pR9G6\u200B (affiliate link)\n" +
+                        "Tenderness - Tony Andersson (Musicbed)\n" +
+                        "Yearn - Chris Coleman (Musicbed)\n" +
+                        "Drifting - Nick Box (Musicbed)\n" +
+                        "Mountain Spring High - Gabriel Lewis\n" +
+                        "Patchwork Heart - Justin Wade (Musicbed)\n" +
+                        "Taking me high taking me low - Johan Glossner \n" +
+                        "Unfold - Steven Gutheinz (Musicbed)\n" +
+                        "Running Circles - Cody Francis\n" +
+                        "My Old Man - Lindsey Abraham\n" +
+                        "Light in your hand - Sad Moses (Musicbed)\n" +
+                        "Time without end - Spectacles wallet and watch\n" +
+                        "<br/> \n" +
+                        "MB01LMQKLRUUH4Y\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/g7ev29b9sqM/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLB8UJY7t3qdDYbBMw79-1S4mC1eBg",
+                14,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Summer in the North | My days of July",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/xmRbkgikEVE?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                1252600,
+                Timestamp.valueOf("2020-07-26 20:00:00.00"),
+                "",
+                "Summer is here and that means a lot of things going on and energy flowing from all directions. I've had a beautiful summer so far and in this video I hope to take you with me into my world for a little while and share what I've been up to in July. \n" +
+                        "A Shaman retreat, herding cows, picking berries, fighting mosquitos, working and much more! \n" +
+                        "<br/> \n" +
+                        "How are your summer so far? I hope you are all well and taking care of yourselves. \n" +
+                        "Thank you so much for watching this and being here ! Sending you tons of love! ♥\n" +
+                        "<br/> \n" +
+                        "► MY SOCIAL MEDIA AND LINKS\n" +
+                        "• My Art & Jewelry Webshop: https://jonnajintonsweden.com\n" +
+                        "• Instagram: @jonnajinton  http://www.instagram.com/jonnajinton\n" +
+                        "• Wallpaper collection: https://www.photowall.com/designers/j...\n" +
+                        "• Facebook Page - http://www.facebook.com/jonnajinton\n" +
+                        "• Blog: https://jonnajintonsweden.com/blog/\n" +
+                        "<br/> \n" +
+                        "► MUSIC\n" +
+                        "You can find some of the songs here: \n" +
+                        "http://share.epidemicsound.com/pR9G6\u200B (affiliate link)\n" +
+                        "Peace in the realm - Bonnie Grace\n" +
+                        "Safe - Adrian Disch\n" +
+                        "Logistics - Bytheway May\n" +
+                        "What is lost - Dexter Britain\n" +
+                        "First Love - Jonathan David Melissa Helser\n" +
+                        "A woman like you - Peter Crosby\n" +
+                        "Call the herd - Bonnie Grace\n" +
+                        "Light in your hand - Sad Moses\n" +
+                        "After the storm - Above the clouds\n" +
+                        "Through the storm - Savvun\n" +
+                        "Never stop - Tyler Brown Williams\n" +
+                        "Lum with lane king - Chris Coleman\n" +
+                        "Patchwork heart - Justin Wade Tam\n" +
+                        "Time without end - Spectacles wallet and watch\n" +
+                        "<br/> \n" +
+                        "MB01OKXLHSGPXPI\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/xmRbkgikEVE/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC-yxEPFQGgBwYk3EKJSPWguHsj_A",
+                14,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "Vẻ đẹp của một cuộc sống bình thường - mạng xã hội và cuộc sống giản dị",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/7H3D-6nj_dY?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                1562657,
+                Timestamp.valueOf("2020-06-17 20:00:00.00"),
+                "",
+                "Hôm nay tôi muốn chia sẻ một số kinh nghiệm và cảm nhận của mình về mạng xã hội, cũng như những lợi ích và thách thức liên quan đến nó.\n" +
+                        "Tôi cũng muốn chia sẻ lý do tại sao tôi chỉ chia sẻ một số khía cạnh của cuộc sống và sự riêng tư quan trọng như thế nào đối với tôi, đặc biệt là đối với các mối quan hệ của tôi. Kênh này sẽ luôn là thiên đường nghệ thuật của ánh sáng và hòa bình, được nhìn qua lăng kính sáng tạo nhằm làm nổi bật vẻ đẹp như tranh vẽ của đời thường và hàng ngày.\n" +
+                        "Tên tôi là Paola, tôi là người Mỹ gốc Puerto Rico, 24 tuổi và hiện đang tự kinh doanh tại Bang Washington. Cảm ơn bạn vì tất cả những bình luận đáng yêu của bạn, nó được đánh giá cao ❤️\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8A\uD83C\uDF44My Etsy Shop: https://www.etsy.com/shop/thecottagef...\n" +
+                        "<br/> \n" +
+                        "❤️ Không có nghĩa vụ gì, nhưng nếu bạn muốn đóng góp để ủng hộ kênh này. $ 5 sẽ nhận được một tấm bưu thiếp cảm ơn (nghệ thuật của riêng tôi) từ tôi trong thư (bạn phải ghi địa chỉ trong ghi chú của mình để tôi có thể gửi nó!). Nó được đánh giá cao: https://www.paypal.com/donate?hosted_...\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8BInstagram: https://www.instagram.com/the_cottage...\n" +
+                        "<br/> \n" +
+                        "\uD83C\uDF0C Video này được thực hiện với anh trai của tôi! Anh ấy có một kênh bây giờ! https://linktr.ee/rohan_merrill\n" +
+                        "<br/> \n" +
+                        "Nguồn cảm hứng công thức (Tôi đã làm bánh nướng xốp thay vì bánh nướng nhỏ, nhưng tôi cá rằng bánh nướng nhỏ thậm chí còn ngon hơn): https://www.acozykitchen.com/chamomil...\n" +
+                        "<br/> \n" +
+                        "Cánh hoa hồng có kẹo: https://leitesculinaria.com/104920/re...\n" +
+                        "<br/> \n" +
+                        "2 cuốn sách yêu thích của tôi về thảo mộc, thực phẩm hoang dã và kiếm ăn (tôi đã học được rất nhiều điều từ những cuốn sách này! Chúng rất dễ hiểu, được chụp ảnh và viết đẹp mắt):\n" +
+                        "<br/> \n" +
+                        "    1. Wild Remedies của Rosalee de la Foret\n" +
+                        "Hiệu sách: shorturl.at/akAHO\n" +
+                        "Amazon: https://amzn.to/35rGZzH \n" +
+                        "    2. Alchemy of Herbs của Rosalee de la Foret\n" +
+                        "Hiệu sách: shorturl.at/eIKSU\n" +
+                        "Amazon: https://amzn.to/2JRuXaa\n" +
+                        "    3. Cuốn sách yêu thích của tôi về pha trà: https://amzn.to/3cJQWud\n" +
+                        "<br/> \n" +
+                        "Một số trong nhiều cuốn sách yêu thích:\n" +
+                        "<br/> \n" +
+                        "1. \"Cậu bé, chuột chũi, cáo và ngựa\" của Charlie Mackesy: https://amzn.to/348of6g\n" +
+                        "2. Once Upon a River của Diane Setterfield:\n" +
+                        "https://amzn.to/3kp1a5e\n" +
+                        "3. Đứa trẻ tuyết của Eowyn Ivey\n" +
+                        "Amazon: https://amzn.to/32B2ITM\n" +
+                        "<br/> \n" +
+                        "Giấy phép Artlist cụ thể\n" +
+                        "Số giấy phép - 578124 Chủ sở hữu giấy phép - Rohan B. Merrill\n" +
+                        "<br/> \n" +
+                        "Nhạc bổ sung được tìm thấy tại @\n" +
+                        "https://www.epidemicsound.com/referra...\n" +
+                        "(Nhận miễn phí một tháng với mã giới thiệu của tôi)\n" +
+                        "<br/> \n" +
+                        "Một số liên kết ở trên có thể là liên kết, nghĩa là tôi nhận được một khoản hoa hồng nhỏ\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/7H3D-6nj_dY/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBhMZdF-dGuZ57ttzLZpcqfNsaXww",
+                15,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "The Cost of Rural Cottage Life - being honest with myself, looking for a ‘quick fix’",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/OHucv0YV9c4?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                189165,
+                Timestamp.valueOf("2020-10-28 20:00:00.00"),
+                "",
+                "The Cost of Rural Cottage Life - being honest with myself, looking for a ‘quick fix’\n" +
+                        "<br/> \n" +
+                        "More details below⬇️ \n" +
+                        "<br/> \n" +
+                        "\uD83E\uDDF9Broom DIY: https://www.motherearthnews.com/diy/t...\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8A\uD83C\uDF44My Etsy Shop: https://www.etsy.com/shop/thecottagef... (I am closing in late November for the rest of 2021! Thank you\uD83D\uDE0A )\n" +
+                        "<br/> \n" +
+                        "❤️No obligation whatsoever, but if you would like to donate to support this channel. $5 will get a thank you postcard (my own art) from me in the mail (you must include address in your note so I can send it!). It is much appreciated: https://www.paypal.com/donate?hosted_...\n" +
+                        "NOTE: now and then a postcard has been returned to me or lost in the mail. If you have not received a postcard e-mail me at endymionmerrill@gmail.com! I send them out each month! Thank you!\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8BInstagram: https://www.instagram.com/the_cottage...\n" +
+                        "<br/> \n" +
+                        "Link to video I mentioned: https://youtu.be/3Wd70GBa62c\n" +
+                        "<br/> \n" +
+                        "\uD83C\uDF0C This video was made with my brother! He has a channel now! https://linktr.ee/rohan_merrill\n" +
+                        "<br/> \n" +
+                        "Information and conservation efforts in the beautiful Okanogan County: https://methowconservancy.org\n" +
+                        "\uD83C\uDF0E Take action to protect our lands (no donations necessary): https://www.audubon.org/takeaction\n" +
+                        "\uD83C\uDF19 My favorite charity: https://www.nrdc.org \n" +
+                        "☀️Take Action: https://www.sierraclub.org/take-action\n" +
+                        "<br/> \n" +
+                        "Business e-mail: endymionmerrill@gmail.com\n" +
+                        "<br/> \n" +
+                        "Additional music found at @\n" +
+                        "https://www.epidemicsound.com/referra...\n" +
+                        "(Get a month free with my referral code)\n" +
+                        "<br/> \n" +
+                        "<br/> \n" +
+                        "Challenges I encountered while living rural: \n" +
+                        "- garbage disposal is a bit more complicated\n" +
+                        "- In some areas there are limited housing opportunities (even though the rentals I found were affordable, there were not a lot available, which is an issue my town has been dealing with for a while now. However, towns nearby have more rental options.)\n" +
+                        "- higher food expenses due to smaller grocery stores with limited backstock. \n" +
+                        "- Taking care of a garden or lawn can be expensive (or you can do what I did, which is make friends with the weeds).\n" +
+                        "- The more extreme weather means I have to do more frequent fixes on my car. \n" +
+                        "- It is hard to find plumbers and handymen, so you have to fix things yourself (and sometimes make expensive mistakes, hehe)\n" +
+                        "<br/> \n" +
+                        "Ways I budget (while I do not need to do all these things, I like to in order to be more environmentally conscious and work towards my goal of owning a home): \n" +
+                        "- I chose low waste recycling options (keeping garbage low reduces expenses since I have to drive to the dump myself.)\n" +
+                        "- I shop in bulk when I visit large supermarkets several times a year.\n" +
+                        "- I buy clothing and furniture second hand when possible (I love yard sales). \n" +
+                        "- I cook with more simple ingredients (cheese toasties and tomato soup are a winner) and grow my own veggies and tea herbs. \n" +
+                        "- I limit my driving by trying to plan a lot of errands on the same day. \n" +
+                        "- While this isn’t budgeting related, I do love to patronize artists and creators that make work that speak to me. I recently tried to purchase all my Christmas gifts from small businesses. I find it a very meaningful way to connect with other artists.\n" +
+                        "- I find I naturally spend less due to not being exposed to as many advertisements on billboards/magazines/internet. I had never realized how much these ads influenced my spending until I moved. Another way I limit this is by pre-downloading tv shows and audiobooks and having set times to use social media, as I do not have wifi at home.   \n" +
+                        "- I try to educate myself on financial management as much as possible, prioritizing health insurance if possible and trying to prepare for retirement (even if it’s only a tiny contribution). I know this isn’t always possible for everyone, but the more I learn the more I realized how important it is. \n" +
+                        "<br/> \n" +
+                        "As I mentioned before, when I first started considering a transition over here I was 21. I eventually did get assistance from my family in order to start a new job. On the internet I notice there are a surprising amount of individuals who find it shameful to get support from others as a young person, but I do not believe that is true. While it is definitely an incredible blessing to have parents that can help you relocate, one that I am very grateful for, there is absolutely nothing wrong with accepting help if you need it (from anyone, not simply family). I have never met anyone who hasn’t received help from someone else during some time in their lives, I think it’s beautiful to build bonds and relationships in this way as long as it’s done with honor and respect for others.\n" +
+                        "<br/> \n" +
+                        "If there is one thing I’ve found empowering, is finding practical ways to work towards your dreams. Every if it’s baby steps, you can clearly see the progress you are making and feel very motivated to keep working towards your goals.\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/OHucv0YV9c4/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBxVZGC4Ej_1_83BG_nSt7TjC-1Dw",
+                15,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "The Downsides of Life in a Rural Cottage - and why I need a change",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/rf97SOokQaI?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                222567,
+                Timestamp.valueOf("2020-11-04 20:00:00.00"),
+                "",
+                "The Downsides of Life in a Rural Cottage - and why I need a change\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8A\uD83C\uDF44My Etsy Shop: https://www.etsy.com/shop/thecottagef... (I am closing in late November for the rest of 2021! Thank you\uD83D\uDE0A I will RE OPEN for limited sales in 2022)\n" +
+                        "<br/> \n" +
+                        "It was time for a change. I have found myself not feeling as satisfied with my current work situation, I lacked a feeling of purpose that I always had before when working with children. As it’s tricky simply to start a new job short notice, so I will be working in town for the next several months as holiday help and plan from there. It is a much needed shift to a more social environment, and hopefully a greater work/life balance. I find it very hard to divide work from personal life at home, so I think this will have a wonderful affect on my mental health as well.\n" +
+                        "<br/> \n" +
+                        "In this video I am sharing some less-than-ideal aspects of living rurally (for me, it may not be the case for someone else). In connection, I wanted to explain why I do not live off grid, and what downsides you may - perhaps - face if you do (which is the reason I live near town). I forgot to mention that I do not have the wish, time to commit, nor the funds to live off grid. It can be very expensive to buy land, build a house, and set up a survival system. I only rent my cottage and am not yet in the position to buy a home, much less build one (the lumber prices lately are insane!). Most people I personally know who live off grid in my valley work remotely so that they can have a flexible schedule, and that is something that I certainly cannot do with my current job. Hope that clarifies things for anyone who was curious! Thank you very much \n" +
+                        "<br/> \n" +
+                        "❤️No obligation whatsoever, but if you would like to donate to support this channel. $5 will get a thank you postcard (my own art) from me in the mail (you must include address in your note so I can send it!). It is much appreciated: https://www.paypal.com/donate?hosted_...\n" +
+                        "NOTE: now and then a postcard has been returned to me or lost in the mail. If you have not received a postcard e-mail me at endymionmerrill@gmail.com! I send them out each month! Thank you!\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8BInstagram: https://www.instagram.com/the_cottage...\n" +
+                        "<br/> \n" +
+                        "\uD83C\uDF0C This video was a collaboration with my brother, Rohan. He has a channel now! https://linktr.ee/rohan_merrill\n" +
+                        "<br/> \n" +
+                        "Information and conservation efforts in the beautiful Okanogan County: https://methowconservancy.org\n" +
+                        "\uD83C\uDF0E Take action to protect our lands (no donations necessary): https://www.audubon.org/takeaction\n" +
+                        "\uD83C\uDF19 My favorite charity: https://www.nrdc.org \n" +
+                        "☀️Take Action: https://www.sierraclub.org/take-action\n" +
+                        "<br/> \n" +
+                        "Business e-mail: endymionmerrill@gmail.com\n" +
+                        "<br/> \n" +
+                        "Additional music found at @\n" +
+                        "https://www.epidemicsound.com/referra...\n" +
+                        "(Get a month free with my referral code)\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/rf97SOokQaI/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLC-0_5MDUAHnJ3fboFh-tzIuK605g",
+                15,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "My life is changing (and so is this channel)",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/sWfcgeDth_w?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                189165,
+                Timestamp.valueOf("2020-10-28 20:00:00.00"),
+                "",
+                "My life is changing (and so is this channel)\n" +
+                        "<br/> \n" +
+                        "In this video I am sharing important changes in regards to this channel and my life. Transitions have always been difficult for me and so I wanted to share some ways that I cope with big changes in life (since I am now planning a new career as an art teacher and focusing on my small business). Also, I wanted to make clear that up until next week, my channel has been - for the most part - an individual endeavor. But that is now changing \uD83E\uDD0D and that is extremely exciting!\n" +
+                        "<br/> \n" +
+                        "Rose Syrup Example (it tastes delicious): https://en.julskitchen.com/preserves/... (I mixed it with club soda)\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8BInstagram: https://www.instagram.com/the_cottage...\n" +
+                        "\uD83E\uDD8A\uD83C\uDF44Etsy: https://www.etsy.com/shop/thecottagef...\n" +
+                        "<br/> \n" +
+                        "❤️ No obligation whatsoever, but if you would like to donate to support this channel. $5 will get a thank you postcard (my own art) from me in the mail (you must include address in your note so I can send it!). It is much appreciated: https://www.paypal.com/donate?hosted_...      \n" +
+                        "<br/> \n" +
+                        "\uD83C\uDF0C This video is a collaboration with my brother Rohan. He has a channel now! https://linktr.ee/rohan_merrill\n" +
+                        "<br/> \n" +
+                        "Pie recipe inspo (I used my own canned berries): https://honestcooking.com/spring-berr...\n" +
+                        "<br/> \n" +
+                        "Taking action to help the environment costs nothing but your signature: https://www.audubon.org/takeaction\n" +
+                        "<br/> \n" +
+                        "Business inquiries: endymionmerrill@gmail.com\n" +
+                        "Only business related e-mails please, I see all my YouTube comments so feel free to ask your questions there and I will answer if I am able \uD83D\uDE4F \n" +
+                        "<br/> \n" +
+                        "All music found at: https://www.epidemicsound.com/referra...\n" +
+                        "(Get a month free with my referral code)\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/sWfcgeDth_w/hqdefault.jpg?sqp=-oaymwEXCNACELwBSFryq4qpAwkIARUAAIhCGAE=&rs=AOn4CLDYgOO18wGWBcDMk_ATQ3AckrVX4A",
+                15,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        videos.add(new Video(
+                "This is where I live",
+                "<iframe width=\"560\" height=\"315\" src=\"https://youtube.com/embed/EtAKmIy1HZA?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                415563,
+                Timestamp.valueOf("2020-04-29 20:00:00.00"),
+                "",
+                "“this is where I live” \n" +
+                        "To all who are new here, welcome to my valley and my cottage! Today I wanted to take you on a little tour of my favorite places around my home and cottage. I was spending this week foraging new growth mint and mullein, as well as enjoying the delights of spring (the Spring Beauty flowers, in particular). Experiencing the seasons, especially spring, in my rural home is always interesting, providing endless delights.  \n" +
+                        "Below linked is more information on mint and mullein, their history and uses.\n" +
+                        "<br/> \n" +
+                        "You can follow my wonderful brother and camera man Rohan on IG @rohan_merrill\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8A\uD83C\uDF44Etsy: https://www.etsy.com/shop/thecottagef...\n" +
+                        "(Flower and herb art back in stock this weekend)\n" +
+                        "<br/> \n" +
+                        "\uD83E\uDD8BInstagram: https://www.instagram.com/the_cottage...\n" +
+                        "<br/> \n" +
+                        "\uD83C\uDF0C This video is a collaboration with my brother Rohan. He has a channel now! https://linktr.ee/rohan_merrill\n" +
+                        "<br/> \n" +
+                        "❤️ No obligation whatsoever, but if you would like to donate to support this channel. $5 will get a thank you postcard (my own art) from me in the mail (you must include address in your note so I can send it!). It is much appreciated: https://www.paypal.com/donate?hosted_...      \n" +
+                        "<br/> \n" +
+                        "Information on Mullein: https://mountainroseherbs.com/mullein...\n" +
+                        "Information on Wild Mint: https://eattheplanet.org/wild-mint-fr...\n" +
+                        "<br/> \n" +
+                        "Taking action to help the environment costs nothing but your signature: https://www.audubon.org/takeaction\n" +
+                        "<br/> \n" +
+                        "Lentil Soup: https://www.hellofresh.com/recipes/af...\n" +
+                        "<br/> \n" +
+                        "Business inquiries: endymionmerrill@gmail.com\n" +
+                        "Only business related e-mails please, I see all my YouTube comments so feel free to ask your questions there and I will answer if I am able \uD83D\uDE4F \n" +
+                        "<br/> \n" +
+                        "All music found through a subscription to: Artlist.io \n" +
+                        "<br/> \n" +
+                        "Artlist Specific License\n" +
+                        "License Number - 578124 License owner - Rohan B. Merrill\n" +
+                        "<br/> \n" +
+                        "Additional music found at @\n" +
+                        "https://www.epidemicsound.com/referra...\n" +
+                        "(Get a month free with my referral code)\n",
+                0,
+                0,
+                "https://i.ytimg.com/vi/EtAKmIy1HZA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDktX4qVoxxcueHHJ50BvXUvI0C1Q",
+                15,
+                8,
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        /* end: life*/
         return videos;
     }
 
@@ -1675,20 +3354,160 @@ public class InitData {
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0")
         ));
+        //11
+        users.add(new User(
+                "7ngaycongnghe@gmail.com",
+                "7ngaycongnghe",
+                "https://yt3.ggpht.com/ytc/AKedOLT9iYSOs6sEqdbLAuf53nQ37Ur0rHkAdxVMBXs=s176-c-k-c0x00ffffff-no-rj",
+                0,
+                "7 Ngày Công Nghệ ",
+                "https://yt3.ggpht.com/ytc/AKedOLT9iYSOs6sEqdbLAuf53nQ37Ur0rHkAdxVMBXs=s176-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/42BzT-mHef2bLMiqOsSpkbSpFg0fEBs3TeSk1IkCf_ctMXAe5llLs1uzPd7dxxTcEsVJ078=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //12
+        users.add(new User(
+                "bloombergtechnology@gmail.com",
+                "bloombergtechnology",
+                "https://yt3.ggpht.com/ytc/AKedOLQPoMuCqnh_1W0qHoeuGK5h0NDWkEq_bpAmMyBJ=s68-c-k-c0x00ffffff-no-rj",
+                0,
+                "Bloomberg Technology",
+                "https://yt3.ggpht.com/ytc/AKedOLQPoMuCqnh_1W0qHoeuGK5h0NDWkEq_bpAmMyBJ=s68-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/n3MV1g0FCw4gBzmnpC1Rketk-8zP3cbFEmoqE3pEAri1c5VB8EJ6UmEEoDXufDrXUdCm-wNIkvM=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //13
+        users.add(new User(
+                "coldfusion@gmail.com",
+                "coldfusion",
+                "https://yt3.ggpht.com/ytc/AKedOLQRGnmWU8PEmyuP6OayR7NfETB-aLi3SIeyhldRzg=s68-c-k-c0x00ffffff-no-rj",
+                0,
+                "ColdFusion",
+                "https://yt3.ggpht.com/ytc/AKedOLQRGnmWU8PEmyuP6OayR7NfETB-aLi3SIeyhldRzg=s68-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/uUUDCpYoqWpb2QRtpo3MjA5ffCg8BNSSIMKK_JfNeAJbru5Z7FeIlhUcPAIKuUHf_uJmwfWT=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //14
+        users.add(new User(
+                "jonnajinton@gmail.com",
+                "jonnajinton",
+                "https://yt3.ggpht.com/ytc/AKedOLRSf5mnTYz_yRpQVviOY-Am5QFT0mHXlvrpZlkwhg=s88-c-k-c0x00ffffff-no-rj",
+                0,
+                "Jonna Jinton",
+                "https://yt3.ggpht.com/ytc/AKedOLRSf5mnTYz_yRpQVviOY-Am5QFT0mHXlvrpZlkwhg=s88-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/Kz7ICGetfcGqd50ZN5P95_E8bfHcy7MrNTqCgTsy376l3FKnXUu8drjZBfwPsYgV7vS7k_Zg=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //15
+        users.add(new User(
+                "thecottagefairy@gmail.com",
+                "thecottagefairy",
+                "https://yt3.ggpht.com/ARBjsHd7IJRxF2LjirBJAMqAvBxIjUp5REeUibWxzNJ5q7H-8LkSOmrsx_jj3CNipa77znWL=s88-c-k-c0x00ffffff-no-rj",
+                0,
+                "TheCottageFairy",
+                "https://yt3.ggpht.com/ARBjsHd7IJRxF2LjirBJAMqAvBxIjUp5REeUibWxzNJ5q7H-8LkSOmrsx_jj3CNipa77znWL=s88-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/xSkVpjSOdxVoq_f_6qOIQU-gGeIm7XMqd8EZh_ON9PGkpOrIAnFEYmwtYuyIuoRwo9Ip326UFg=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //16
+        users.add(new User(
+                "baotuoitre@gmail.com",
+                "baotuoitre",
+                "https://yt3.ggpht.com/ytc/AKedOLS5BIK9LUNgfoYekApq9lJINIaeLQCj7MnsE68Okg=s88-c-k-c0x00ffffff-no-rj",
+                0,
+                "Báo Tuổi Trẻ ",
+                "https://yt3.ggpht.com/ytc/AKedOLS5BIK9LUNgfoYekApq9lJINIaeLQCj7MnsE68Okg=s88-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/ytc/AKedOLS5BIK9LUNgfoYekApq9lJINIaeLQCj7MnsE68Okg=s88-c-k-c0x00ffffff-no-rj",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //17
+        users.add(new User(
+                "vtcnow@gmail.com",
+                "vtcnow",
+                "https://yt3.ggpht.com/v1-iy7rfCvXvovesVC9k6pZSsFNHaJLEXlLUEinhE9ucA8lPg4EHtR1DThZ9VL7aoXfGZRy11A=s176-c-k-c0x00ffffff-no-rj-mo",
+                0,
+                "VTC NOW",
+                "https://yt3.ggpht.com/v1-iy7rfCvXvovesVC9k6pZSsFNHaJLEXlLUEinhE9ucA8lPg4EHtR1DThZ9VL7aoXfGZRy11A=s176-c-k-c0x00ffffff-no-rj-mo",
+                "https://i.ytimg.com/vi/JLlF_AaFDcQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0UZ2qGxs4mBGrIhG6Y9g9OMRD6w",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //18
+        users.add(new User(
+                "gaubeovungve@gmail.com",
+                "aubeovungve",
+                "https://yt3.ggpht.com/xhscPWZJqzgfISL5imqtrpzpNtBRR2cwZiYiVwuJFHPg7XkTaOqvRDXcfdWDbUk7gxJs_WLqOg=s176-c-k-c0x00ffffff-no-rj-mo",
+                0,
+                "Gấu Béo Vụng Về",
+                "https://yt3.ggpht.com/xhscPWZJqzgfISL5imqtrpzpNtBRR2cwZiYiVwuJFHPg7XkTaOqvRDXcfdWDbUk7gxJs_WLqOg=s176-c-k-c0x00ffffff-no-rj-mo",
+                "https://i.ytimg.com/vi/SsMD2BFkqgA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBef7mvI-MkHm4xzkZS6OL8CINl_w",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //19
+        users.add(new User(
+                "hakhuat@gmail.com",
+                "hakhuat",
+                "https://yt3.ggpht.com/ytc/AKedOLSo0gM8RbZ-jWdllvpGlpKHvLUv7e_mw_FiLSMA=s88-c-k-c0x00ffffff-no-rj",
+                0,
+                "Hà Khuất",
+                "https://yt3.ggpht.com/ytc/AKedOLSo0gM8RbZ-jWdllvpGlpKHvLUv7e_mw_FiLSMA=s88-c-k-c0x00ffffff-no-rj",
+                "https://i.ytimg.com/vi/1wfdUEomkCw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-NjTf0pONZD2bJCHEJPN2ApLIUw",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
+        //20
+        users.add(new User(
+                "halinh@gmail.com",
+                "halinh",
+                "https://yt3.ggpht.com/ytc/AKedOLRsTk5m6bvl-Ce1DRsp1YbWV4196gfydfUuiXKHCg=s88-c-k-c0x00ffffff-no-rj",
+                0,
+                "Ha Linh Official",
+                "https://yt3.ggpht.com/ytc/AKedOLRsTk5m6bvl-Ce1DRsp1YbWV4196gfydfUuiXKHCg=s88-c-k-c0x00ffffff-no-rj",
+                "https://i.ytimg.com/vi/92M7oMHuyds/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYG1LlMlyRINfh8P-ayBXgj_g6oQ",
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0"),
+                Timestamp.from(Instant.now()),
+                Long.valueOf("0")
+        ));
         return users;
     }
 
     public void init() {
 
-//        Collection<Category> categories = initCategories();
-//        for (Category category : categories) {
-//            categoryDAO.insert(category);
-//        }
-//
-//        Collection<User> users = initUsers();
-//        for (User user : users) {
-//            userDAO.insert(user);
-//        }
+        Collection<Category> categories = initCategories();
+        for (Category category : categories) {
+            categoryDAO.insert(category);
+        }
+
+        Collection<User> users = initUsers();
+        for (User user : users) {
+            userDAO.insert(user);
+        }
 
         Collection<Video> videos = initVideos();
         for (Video video : videos) {

@@ -58,8 +58,9 @@ const btnSearchOnlick = function () {
     let btnSearch = $('#btn-search');
     btnSearch.onclick = function () {
         let form = $('#center form');
-        form.submit();
-        console.log('submited')
+        if (form.querySelector('input').value != null) {
+            form.submit();
+        }
     }
 }
 

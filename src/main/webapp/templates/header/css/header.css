@@ -159,6 +159,7 @@ header {
     top: 56px;
     box-shadow: 0 0 10px rgba(202, 202, 202, 0.9);
     display: none;
+    z-index: 2;
 }
 
 #profile .session > a {

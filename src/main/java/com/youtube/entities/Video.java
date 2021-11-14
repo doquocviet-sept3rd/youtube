@@ -154,7 +154,7 @@ public class Video {
     }
 
     @Basic
-    @Column(name = "content", length = 4096)
+    @Column(name = "content", length = 8192)
     public String getContent() {
         return content;
     }

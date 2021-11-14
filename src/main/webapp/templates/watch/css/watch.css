@@ -17,6 +17,7 @@
 
 #primary iframe {
     width: 100%;
+    max-width: 100%;
 }
 
 #primary .video .hashtag {
@@ -109,6 +110,9 @@
 
 #primary .content .expander > p {
     margin: 0;
+    max-width: 1024px;
+    padding-right: 20px;
+    overflow: hidden;
 }
 
 #primary .comments,

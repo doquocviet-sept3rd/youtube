@@ -38,6 +38,6 @@
 
 <script type="text/javascript" src="<c:url value='/templates/common/vendor/jquery/jquery.min.js'/>"></script>
 <script type="text/javascript" src="<c:url value='/templates/common/vendor/bootstrap/js/bootstrap.min.js'/>"></script>
-<script type="text/javascript" src="<c:url value='/templates/header/header.js'/>"></script>
+<script type="text/javascript" src="<c:url value='/templates/header/js/header.js'/>"></script>
 </body>
 </html>

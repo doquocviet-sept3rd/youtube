@@ -17,23 +17,28 @@
 <hr>
 <p class="heading fw-600">Lịch sử xem</p>
 <div class="fw-600 main">
-    <c:forEach var="history" items="${histories}">
-        <a href="<c:url value="/watch?v=${history.videoId}"/>">
-            <img src="<c:url value="${history.video.avatarUrl}"/>" alt="">
-            <div>
-                <p class="name m-0">
-                    <c:out value="${history.video.name}"/>
-                </p>
-                <p class="username">
-                    <c:out value="${history.video.user.name}"/> &#183;
-                    <c:out value="${cs.formatNumber(history.video.views)}"/> lượt xem
-                </p>
-                <p class="more--info">
-                    <c:out value="${cs.formatXML(history.video.content)}" escapeXml="false"/>
-                </p>
-            </div>
-        </a>
-    </c:forEach>
+    <c:if test='${histories.size() == 0}'>
+        <p class="fw-600 mx-auto">Không có lịch sử xem nào gần đây</p>
+    </c:if>
+    <c:if test='${histories.size() != 0}'>
+        <c:forEach var="history" items="${histories}">
+            <a href="<c:url value="/watch?v=${history.videoId}"/>">
+                <img src="<c:url value="${history.video.avatarUrl}"/>" alt="">
+                <div>
+                    <p class="name m-0">
+                        <c:out value="${history.video.name}"/>
+                    </p>
+                    <p class="username">
+                        <c:out value="${history.video.user.name}"/> &#183;
+                        <c:out value="${cs.formatNumber(history.video.views)}"/> lượt xem
+                    </p>
+                    <p class="more--info">
+                        <c:out value="${cs.formatXML(history.video.content)}" escapeXml="false"/>
+                    </p>
+                </div>
+            </a>
+        </c:forEach>
+    </c:if>
 </div>
 
 <script type="text/javascript" src="<c:url value='/templates/common/js/common.js'/>"></script>

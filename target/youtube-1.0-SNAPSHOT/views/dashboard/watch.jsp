@@ -58,7 +58,7 @@
     <hr/>
     <div class="content">
         <div class="info d-flex">
-            <a href="<c:url value='/#'/>" class="profile d-flex">
+            <a href="<c:url value='/channel?id=${video.userId}'/>" class="profile d-flex">
                 <figure>
                     <img class="rounded-circle" src="<c:url value='${video.user.avatarChannelUrl}'/>"
                          alt="avatar"/>
@@ -77,8 +77,8 @@
             </div>
         </div>
         <div class="expander">
-            <c:forEach var="content" items="${cs.formatXML(video.content)}">
-                <p class="fw-600"><c:out value='${content}' escapeXml="false"/></p>
+            <c:forEach var='content' items='${cs.formatXML(video.content)}'>
+                <p class="fw-600"><c:out value='${content}' escapeXml='false'/></p>
             </c:forEach>
         </div>
     </div>
@@ -715,10 +715,10 @@
     }
 
     const nextVideo = function () {
-        setInterval(function () {
-            let iframe = $('#primary iframe');
-            console.log(!iframe.getCurrentTime ? 0.0 : iframe.getCurrentTime());
-        }, 1000);
+        // setInterval(function () {
+        //     let iframe = $('#primary iframe');
+        //     console.log(!iframe.getCurrentTime ? 0.0 : iframe.getCurrentTime());
+        // }, 1000);
     }
 
     const callAPI = function (url, options) {

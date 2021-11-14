@@ -3,7 +3,6 @@ package com.youtube.daos.impls;
 import com.youtube.daos.ICommentDAO;
 import com.youtube.entities.Comment;
 
-import java.sql.Time;
 import java.sql.Timestamp;
 import java.time.Instant;
 import java.util.List;
