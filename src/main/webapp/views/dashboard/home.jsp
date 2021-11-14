@@ -60,8 +60,7 @@
 <div class="d-flex fw-600" id="main">
     <c:forEach var='video' items='${videos}'>
         <a href="<c:url value='/watch?v=${video.id}'/>">
-            <img src="<c:url value='${video.avatarUrl}'/>"
-                 alt="">
+            <img src="<c:url value='${video.avatarUrl}'/>"  alt="">
             <div class="info d-flex">
                 <figure>
                     <img class="rounded-circle"

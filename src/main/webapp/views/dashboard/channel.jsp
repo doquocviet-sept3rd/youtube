@@ -1,115 +1,63 @@
+<jsp:useBean id="cs" scope="request" type="com.youtube.services.ICommonService"/>
+<jsp:useBean id="videos" scope="request" type="java.util.List"/>
+<%--<jsp:useBean id="video" scope="request" type="com.youtube.entities.Video"/>--%>
+<%--<jsp:useBean id="users" scope="request" type="java.util.List"/>--%>
+<jsp:useBean id="user" scope="request" type="com.youtube.entities.User"/>
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <link rel="stylesheet" href="<c:url value='/templates/channel/css/channel.css'/>" type="text/css">
-    <link rel="stylesheet" href="<c:url value='/templates/channel/css/channel_responsive.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/templates/channel/css/channels.css'/>" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/templates/channel/css/channels_responsive.css'/>" type="text/css">
     <title>Channel</title>
 </head>
 <body>
 <div id="userchannel">
     <figure>
-        <img  id="chanelcoverimage" src="https://i.ytimg.com/vi/1rgGwx7Qtjc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCzNXmfnZ-ALGdnyUOFwed9Wh-IYg" alt="Channel Cover Image">
+        <img id="chanelcoverimage" src="<c:url value='${user.coverChannelUrl}'/> " alt="Channel Cover Image">
     </figure>
 
     <!-- begin aboutchanel -->
     <div id="aboutchanel">
         <figure>
-            <img id="avtmychanel" src="https://yt3.ggpht.com/Vai9EFHgVVYHlAax-zamzZUTqXV3pfBqxkHiMwafvtIwBDTTZfqKkiqoRmxT2I6bEJeL03AKgg=s88-c-k-c0x00ffffff-no-rj" alt="avatar">
+            <img id="avtmychanel" src="<c:url value='${user.avatarChannelUrl}'/> " alt="avatar">
             <div>
-                <p>Đen Vâu Official</p>
-                <span>10tr người đăng ký</span>
+                <p><c:out value='${user.nameChannel}'/></p>
+                <span id="sldangki"><c:out value='${user.subscribe == 0 ? 0 : cs.formatNumber(user.subscribe)}'/>
+                        &nbsp;người đăng ký</span>
             </div>
         </figure>
-        <input type="submit" value="ĐĂNG KÝ" id="subscribeb" />
+        <input type="submit" value="ĐĂNG KÝ" id="subscribeb"/>
     </div>
     <!-- end aboutchanel -->
 
     <!-- begin videochanel -->
-    <div id="videochanel">
-        <a href="#" class="session">
-            <figure>
-                <img src="https://i.ytimg.com/vi/wYyteSWn9Cc/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLAD5o3ElfRMZqv6alMCUozaPGwmJA"
-                     alt="">
-                <div>
-                    <p class="name">Đen: Nhiều  năm nữa</p>
-                    <p class="user">Đen Vâu Official</p>
-                    <p class="info">5,7 Tr lượt xem &#183; 4 ngày trước</p>
+    <div class="d-flex fw-600" id="videochanel">
+        <c:forEach var='video' items='${videos}'>
+            <a href="<c:url value='/watch?v=${video.id}'/>">
+                <img src="<c:url value='${video.avatarUrl}'/> " alt="video">
+                <div class="info ">
+                    <p class="name m-0"><c:out value='${video.name}'/></p>
+                    <p class="user m-0"><c:out value='${video.user.nameChannel}'/></p>
+                    <p class="moreinfo m-0">
+                        <c:out value='${video.views == 0 ? 0 : cs.formatNumber(video.views)}'/>
+                        &nbsp;lượt xem •&nbsp;
+                        <c:out value='${cs.distanceTime(video.postingTime)}'/>
+                    </p>
                 </div>
-            </figure>
+            </a>
+        </c:forEach>
 
-        </a>
-        <a href="#" class="session">
-            <figure>
-                <img src="	https://i.ytimg.com/vi/mpaxHOoAb9Y/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLB6xm1oqhiiKQ0nSoshCzLXcJ5FAA"
-                     alt="">
-                <div>
-                    <p class="name">Đen: Đi Theo Bóng Mặt Trời</p>
-                    <p class="user">Đen Vâu Official</p>
-                    <p class="info">100 Tr lượt xem &#183; 2 ngày trước</p>
-                </div>
-            </figure>
-
-        </a>
-        <a href="#" class="session">
-            <figure>
-                <img src="https://i.ytimg.com/vi/KKc_RMln5UY/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLAj6XiqMm3j1NqekRWEUXiOlK851Q"
-                     alt="">
-                <div>
-                    <p class="name">Lối nhỏ</p>
-                    <p class="user">Đen Vâu Official</p>
-                    <p class="info">999 Tr lượt xem &#183; 2 năm trước</p>
-                </div>
-            </figure>
-
-        </a>
-        <a href="#" class="session">
-            <figure>
-                <img src="https://i.ytimg.com/vi/vTJdVE_gjI0/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLByHXCYeKbzC7iLWlHRHWTODtSwwA"
-                     alt="">
-                <div>
-                    <p class="name">Đường về nhà</p>
-                    <p class="user">Đen Vâu Official</p>
-                    <p class="info">180 Tr lượt xem &#183; 1 năm trước</p>
-                </div>
-            </figure>
-
-        </a>
-        <a href="#" class="session">
-            <figure>
-                <img src="https://i.ytimg.com/vi/ddaEtFOsFeM/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLCJ-89cFfVb2yy5zndh2yXdPuxnKQ"
-                     alt="">
-                <div>
-                    <p class="name">Bài này chill phết</p>
-                    <p class="user">Đen Vâu Official</p>
-                    <p class="info">158Tr lượt xem &#183; 3 năm trước</p>
-                </div>
-            </figure>
-
-        </a>
-        <a href="#" class="session">
-            <figure>
-                <img src="https://i.ytimg.com/vi/ddaEtFOsFeM/hqdefault.jpg?s…AFwAcABBg==&rs=AOn4CLCJ-89cFfVb2yy5zndh2yXdPuxnKQ"
-                     alt="">
-                <div>
-                    <p class="name">Bài này chill phết</p>
-                    <p class="user">Đen Vâu Official</p>
-                    <p class="info">158Tr lượt xem &#183; 3 năm trước</p>
-                </div>
-            </figure>
-
-        </a>
     </div>
     <!-- end videochanel -->
 
     <!-- begin introducechanel -->
     <div id="introducechanel">
-        <p id="namechanel">Tên Channel: Đen Vâu</p>
-        <p id="email">Email liên hệ: denvau@gmail.com</p>
-        <p id="createdate">Ngày thành lập: 20/12/2001</p>
+        <p id="namechanel">Tên Channel: <c:out value='${user.nameChannel}'/></p>
+        <p id="email">Email liên hệ: <c:out value='${user.email}'/></p>
+        <p id="createdate">Ngày thành lập: <c:out value='${user.createdOn}'/></p>
     </div>
     <!-- end introducechanel -->
 </div>

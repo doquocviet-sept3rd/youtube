@@ -18,4 +18,6 @@ public interface IVideoDAO extends GenericDAO<Video> {
     boolean delete(Video video);
 
     Video findOne(Object... params);
+
+    Video findByUser(Object... params);
 }

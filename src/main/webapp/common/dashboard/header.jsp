@@ -166,13 +166,13 @@
                     <img src="<c:url value='${user.avatarUrl}'/>" class="w-40px rounded-circle" alt="avatar">
                 </figure>
                 <div>
-                    <p class="name">Viet Do Quoc</p>
+                    <p class="name"><c:out value='${user.nameChannel}'/></p>
                     <a href="<c:url value='/#'/>">Quản lý tài khoản Google của ...</a>
                 </div>
             </div>
             <hr class="m-0">
             <div class="session">
-                <a href="<c:url value='/channel'/>" class="d-block h-40px lh-40px">
+                <a href="<c:url value='/channel?id=${user.id}'/>" class="d-block h-40px lh-40px">
                     <i class="fal fa-user-circle"></i>
                     <span>Kênh của bạn</span>
                 </a>

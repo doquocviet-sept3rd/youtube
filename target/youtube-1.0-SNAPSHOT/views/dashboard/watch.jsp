@@ -8,7 +8,6 @@
 <jsp:useBean id="comments" scope="request" type="java.util.List"/>
 <%@ page contentType="text/html;charset=UTF-8; charset=UTF-8" pageEncoding="UTF-8" %>
 <%@ include file="/common/taglibs.jsp" %>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,7 +57,7 @@
     <hr/>
     <div class="content">
         <div class="info d-flex">
-            <a href="<c:url value='/channel?id=${video.userId}'/>" class="profile d-flex">
+            <a href="<c:url value='/channel?id=${video.user.id}'/>" class="profile d-flex">
                 <figure>
                     <img class="rounded-circle" src="<c:url value='${video.user.avatarChannelUrl}'/>"
                          alt="avatar"/>

@@ -42,6 +42,12 @@ public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
     }
 
     @Override
+    public Video findByUser(Object... params) {
+
+        return null;
+    }
+
+    @Override
     public List<Video> querySelector(String sqlQuery) {
         return super.querySelector(sqlQuery);
     }
