@@ -28,6 +28,11 @@ public class VideoService implements IVideoService {
     }
 
     @Override
+    public List<Video> findByUser(long id) {
+        return videoDAO.findByUser(id);
+    }
+
+    @Override
     public boolean isLikedByUser(long videoId, long userId) {
         VidInteract vidInteract = vidInteractDAO.findOne(userId, videoId);
         return vidInteract != null && vidInteract.getIsLike();

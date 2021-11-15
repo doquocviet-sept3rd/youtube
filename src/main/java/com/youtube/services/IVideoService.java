@@ -9,6 +9,7 @@ public interface IVideoService {
     Video findOne(long id);
 
     List<Video> findAll();
+    List<Video> findByUser(long id);
 
     boolean isLikedByUser(long videoId, long userId);
 

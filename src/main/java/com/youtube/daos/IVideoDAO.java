@@ -2,6 +2,7 @@ package com.youtube.daos;
 
 import com.youtube.entities.Video;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public interface IVideoDAO extends GenericDAO<Video> {
@@ -19,5 +20,5 @@ public interface IVideoDAO extends GenericDAO<Video> {
 
     Video findOne(Object... params);
 
-    Video findByUser(Object... params);
+    ArrayList<Video> findByUser(long id);
 }

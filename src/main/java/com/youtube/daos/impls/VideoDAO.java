@@ -1,10 +1,15 @@
 package com.youtube.daos.impls;
 
 import com.youtube.daos.IVideoDAO;
+import com.youtube.daos.utils.HibernateUtils;
 import com.youtube.entities.Video;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 
 import java.sql.Timestamp;
 import java.time.Instant;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
@@ -42,8 +47,26 @@ public class VideoDAO extends AbstractDAO<Video> implements IVideoDAO {
     }
 
     @Override
-    public Video findByUser(Object... params) {
+    public ArrayList<Video> findByUser(long id) {
+        SessionFactory factory = HibernateUtils.getSessionFactory();
+        Session session = factory.getCurrentSession();
+        session.getTransaction().begin();
+        ArrayList<Video> arr;
+        try {
+            StringBuilder sql = new StringBuilder("FROM Video WHERE user_id = ");
+            sql.append(id);
+            //String sql = "FROM video WHERE user_id = '"+id +"' ";
+            Query query=session.createQuery(sql.toString());
+            arr= (ArrayList<Video>) query.list();
+            return arr;
+        } catch (Exception e) {
 
+            e.printStackTrace();
+            session.getTransaction().rollback();
+
+        } finally {
+            session.close();
+        }
         return null;
     }
 
