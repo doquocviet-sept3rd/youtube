@@ -3,6 +3,11 @@ header {
     justify-content: space-between;
     z-index: 1;
     background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0.95;
 }
 
 /* start */

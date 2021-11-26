@@ -1,52 +1,53 @@
-
-/* Begin: userchannel */
-
-#userchannel {
-    /* display: block; */
-    background-color: #f9f9f9;
-    padding: 24px 100px 0 100px;
+#container {
+    margin-top: 56px;
 }
 
-#userchannel #chanelcoverimage{
-    /* display: block; */
-    width: 1160px;
-    height: 300px;
-    object-fit: cover;
+#userchannel {
+    flex-wrap: wrap;
+    margin: 0 -0.7%;
+}
+
+#userchannel #chanelcoverimage {
+    padding: 30px 30px 0 30px;
+    width: 100%;
+    /*object-fit: cover;*/
 }
 
 
 /* begin aboutchanel */
 #aboutchanel {
     display: flex;
-    width: 1160px;
-    height: 100px;
-    padding: 15px;
+    width: calc(100% - 60px);
+    padding: 10px 10px 0 10px;
+    margin: 0 30px 15px;
     background-color: #e2e2e2;
     justify-content: space-between;
 }
-#userchannel #avtmychanel{
+
+#userchannel #avtmychanel {
     display: flex;
     top: auto;
     width: 65px;
     border-radius: 50%;
     margin-left: 20px;
 }
-#aboutchanel div p{
 
+#aboutchanel div p {
     margin-left: 100px;
     margin-top: -60px;
     font-size: 160%;
     font-weight: bold;
 
 }
-#aboutchanel div span{
 
+#aboutchanel div span {
     font-size: 90%;
     margin-left: 100px;
-    margin-top: -50px;
+    margin-top: -100px;
 }
-#aboutchanel #subscribeb{
-    margin-right: 50px;
+
+#btn-subscribe {
+    margin-right: 70px;
     margin-top: 10px;
     background-color: #cc0000;
     border: none;
@@ -55,53 +56,64 @@
     padding: 0 20px;
     font-size: 14px;
     border-radius: 5px;
-    cursor: pointer;
-
 }
+
+#aboutchanel .subscribed {
+    background-color: #bbb !important;
+    color: #333 !important;
+    font-weight: 600 !important;
+}
+
 /* end aboutchanel */
 
 /* <!-- begin videochanel --> */
-#videochanel{
+#videochanel {
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between ;
-
+    /*justify-content: space-between;*/
+    padding: 24px 20px 0 20px;
 }
-#videochanel .session {
 
-    display:flex;
-    text-decoration: none;
-    flex-basis: 15%;
+#videochanel > a {
+    flex-basis: 18.6%;
+    margin: 0 0.7% 20px;
+}
 
+#videochanel > a > img {
+    width: 100%;
 }
-#videochanel .session figure{
-    flex: 15%;
-}
-#videochanel .session figure img{
 
-    margin-top: 20px;
-    width: 220px;
-    height: 150px;
+#videochanel .info {
+    padding: 10px;
 }
-#videochanel .session .name{
 
-    color: #030303;
-    font-size: 14px;
-    font-weight: 600;
-    line-height: 1.3;
+#videochanel .info .name {
+    color: #333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
-#videochanel .session  .user,
-#videochanel .session .info {
-    display: flex;
+
+#videochanel .info .user,
+#videochanel .info .moreinfo {
     color: #606060;
-    font-size: 12px;
-    padding-top: 5px;
-    font-weight: 600;
+    font-size: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
 }
-#videochanel .session .info {
+
+#videochanel .info .moreinfo {
     padding-bottom: 20px;
 }
+
 /* <!-- end videochanel --> */
+
+
 /* <!-- begin introducechanel --> */
 #introducechanel {
     display: block;
@@ -109,15 +121,17 @@
     background-color: #dbd8d8;
     border-radius: 3%;
 }
-#introducechanel p{
+
+#introducechanel p {
     margin-bottom: 10px;
     text-align: center;
     font-weight: bold;
     font-size: 100%;
 }
-#introducechanel p #namechanel{
 
+#introducechanel p #namechanel {
     font-weight: bold;
 }
+
 /* <!-- end introducechanel --> */
 /* End: userchannel */

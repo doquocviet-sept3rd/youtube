@@ -2,7 +2,9 @@ package com.youtube.controllers.dashboard.apis;
 
 import com.youtube.entities.User;
 import com.youtube.entities.VidInteract;
+import com.youtube.entities.Video;
 import com.youtube.services.IVidInteractService;
+import com.youtube.services.IVideoService;
 import com.youtube.utils.ApplicationUtil;
 import com.youtube.utils.HttpUtil;
 import com.youtube.utils.PrintWriterUtil;
@@ -26,6 +28,9 @@ public class VidInteractAPI extends HttpServlet {
     @Inject
     private PrintWriterUtil printWriterUtil;
 
+    @Inject
+    private IVideoService videoService;
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("UTF-8");
@@ -35,10 +40,22 @@ public class VidInteractAPI extends HttpServlet {
             VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
             User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
             vidInteract.setUserId(userCurrent.getId());
-            vidInteractService.insert(vidInteract);
-            printWriterUtil.println(true);
+            if (vidInteractService.insert(vidInteract) == 0) {
+                Video video = videoService.findOne(vidInteract.getVideoId());
+                if (vidInteract.getIsLike()) {
+                    video.setLikes(video.getLikes() + 1);
+                } else {
+                    video.setDislikes(video.getDislikes() + 1);
+                }
+                if (!videoService.update(video)) {
+                    vidInteractService.delete(vidInteract);
+                    assert false;
+                }
+                printWriterUtil.printlnTrue();
+            }
+            assert false;
         } catch (Exception e) {
-            printWriterUtil.println(false);
+            printWriterUtil.printlnFalse();
         }
     }
 
@@ -48,14 +65,33 @@ public class VidInteractAPI extends HttpServlet {
         resp.setContentType("application/json");
         printWriterUtil.getInstance(resp);
         try {
-            VidInteract vidInteract = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
+            VidInteract vidInteractFromJson = HttpUtil.of(req.getReader()).toModel(VidInteract.class);
             User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
-            VidInteract vidInteractDB = vidInteractService.findOne(userCurrent.getId(), vidInteract.getVideoId());
-            vidInteractDB.setIsLike(vidInteract.getIsLike());
-            vidInteractService.update(vidInteractDB);
-            printWriterUtil.println(true);
+            VidInteract vidInteract = vidInteractService.findOne(userCurrent.getId(), vidInteractFromJson.getVideoId());
+
+            // throw if vidInteract is sample
+            assert vidInteract.getIsLike() == vidInteractFromJson.getIsLike();
+
+            vidInteract.setIsLike(vidInteractFromJson.getIsLike());
+            if (vidInteractService.update(vidInteract)) {
+                Video video = videoService.findOne(vidInteract.getVideoId());
+                if (vidInteract.getIsLike()) {
+                    video.setLikes(video.getLikes() + 1);
+                    video.setDislikes(video.getDislikes() - 1);
+                } else {
+                    video.setLikes(video.getLikes() - 1);
+                    video.setDislikes(video.getDislikes() + 1);
+                }
+                if (!videoService.update(video)) {
+                    vidInteract.setIsLike(!vidInteractFromJson.getIsLike());
+                    vidInteractService.update(vidInteract);
+                    assert false;
+                }
+                printWriterUtil.printlnTrue();
+            }
+            assert false;
         } catch (Exception e) {
-            printWriterUtil.println(false);
+            printWriterUtil.printlnFalse();
         }
     }
 
@@ -67,10 +103,27 @@ public class VidInteractAPI extends HttpServlet {
         try {
             Long id = Long.parseLong(req.getParameter("id"));
             User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
-            vidInteractService.delete(vidInteractService.findOne(userCurrent.getId(), id));
-            printWriterUtil.println(true);
+            VidInteract vidInteract = vidInteractService.findOne(userCurrent.getId(), id);
+            Video video = videoService.findOne(vidInteract.getVideoId());
+            if (vidInteract.getIsLike()) {
+                video.setLikes(video.getLikes() - 1);
+            } else {
+                video.setDislikes(video.getDislikes() - 1);
+            }
+            if (videoService.update(video)) {
+                if (!vidInteractService.delete(vidInteract)) {
+                    if (vidInteract.getIsLike()) {
+                        video.setLikes(video.getLikes() + 1);
+                    } else {
+                        video.setDislikes(video.getDislikes() + 1);
+                    }
+                    assert false;
+                }
+                printWriterUtil.printlnTrue();
+            }
+            assert false;
         } catch (Exception e) {
-            printWriterUtil.println(false);
+            printWriterUtil.printlnFalse();
         }
     }
 }

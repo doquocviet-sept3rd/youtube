@@ -1,8 +1,10 @@
 package com.youtube.controllers.dashboard.apis;
 
 import com.youtube.entities.ComInteract;
+import com.youtube.entities.Comment;
 import com.youtube.entities.User;
 import com.youtube.services.IComInteractService;
+import com.youtube.services.ICommentService;
 import com.youtube.utils.ApplicationUtil;
 import com.youtube.utils.HttpUtil;
 import com.youtube.utils.PrintWriterUtil;
@@ -24,6 +26,9 @@ public class ComInteractAPI extends HttpServlet {
     private IComInteractService comInteractService;
 
     @Inject
+    private ICommentService commentService;
+
+    @Inject
     private PrintWriterUtil printWriterUtil;
 
     @Override
@@ -35,10 +40,22 @@ public class ComInteractAPI extends HttpServlet {
             ComInteract comInteract = HttpUtil.of(req.getReader()).toModel(ComInteract.class);
             User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
             comInteract.setUserId(userCurrent.getId());
-            comInteractService.insert(comInteract);
-            printWriterUtil.println(true);
+            if (comInteractService.insert(comInteract) == 0) {
+                Comment comment = commentService.findOne(comInteract.getCommentId());
+                if (comInteract.getIsLike()) {
+                    comment.setLikes(comment.getLikes() + 1);
+                } else {
+                    comment.setDislikes(comment.getDislikes() + 1);
+                }
+                if (!commentService.update(comment)) {
+                    comInteractService.delete(comInteract);
+                    assert false;
+                }
+                printWriterUtil.printlnTrue();
+            }
+            assert false;
         } catch (Exception e) {
-            printWriterUtil.println(false);
+            printWriterUtil.printlnFalse();
         }
     }
 
@@ -48,14 +65,33 @@ public class ComInteractAPI extends HttpServlet {
         resp.setContentType("application/json");
         printWriterUtil.getInstance(resp);
         try {
-            ComInteract comInteract = HttpUtil.of(req.getReader()).toModel(ComInteract.class);
+            ComInteract comInteractFromJson = HttpUtil.of(req.getReader()).toModel(ComInteract.class);
             User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
-            ComInteract comInteractDB = comInteractService.findOne(userCurrent.getId(), comInteract.getCommentId());
-            comInteractDB.setIsLike(comInteract.getIsLike());
-            comInteractService.update(comInteractDB);
-            printWriterUtil.println(true);
+            ComInteract comInteract = comInteractService.findOne(userCurrent.getId(), comInteractFromJson.getCommentId());
+
+            // throw if comInteract is sample
+            assert comInteract.getIsLike() == comInteractFromJson.getIsLike();
+
+            comInteract.setIsLike(comInteractFromJson.getIsLike());
+            if (comInteractService.update(comInteract)) {
+                Comment comment = commentService.findOne(comInteract.getCommentId());
+                if (comInteract.getIsLike()) {
+                    comment.setLikes(comment.getLikes() + 1);
+                    comment.setDislikes(comment.getDislikes() - 1);
+                } else {
+                    comment.setLikes(comment.getLikes() - 1);
+                    comment.setDislikes(comment.getDislikes() + 1);
+                }
+                if (!commentService.update(comment)) {
+                    comInteract.setIsLike(!comInteractFromJson.getIsLike());
+                    comInteractService.update(comInteract);
+                    assert false;
+                }
+                printWriterUtil.printlnTrue();
+            }
+            assert false;
         } catch (Exception e) {
-            printWriterUtil.println(false);
+            printWriterUtil.printlnFalse();
         }
     }
 
@@ -67,10 +103,27 @@ public class ComInteractAPI extends HttpServlet {
         try {
             Long id = Long.parseLong(req.getParameter("id"));
             User userCurrent = (User) ApplicationUtil.getInstance().getValue(req, "user");
-            comInteractService.delete(comInteractService.findOne(userCurrent.getId(), id));
-            printWriterUtil.println(true);
+            ComInteract comInteract = comInteractService.findOne(userCurrent.getId(), id);
+            Comment comment = commentService.findOne(comInteract.getCommentId());
+            if (comInteract.getIsLike()) {
+                comment.setLikes(comment.getLikes() - 1);
+            } else {
+                comment.setDislikes(comment.getDislikes() - 1);
+            }
+            if (commentService.update(comment)) {
+                if (!comInteractService.delete(comInteract)) {
+                    if (comInteract.getIsLike()) {
+                        comment.setLikes(comment.getLikes() + 1);
+                    } else {
+                        comment.setDislikes(comment.getDislikes() + 1);
+                    }
+                    assert false;
+                }
+                printWriterUtil.printlnTrue();
+            }
+            assert false;
         } catch (Exception e) {
-            printWriterUtil.println(false);
+            printWriterUtil.printlnFalse();
         }
     }
 }

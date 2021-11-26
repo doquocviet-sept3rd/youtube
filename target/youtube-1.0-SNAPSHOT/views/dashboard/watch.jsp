@@ -32,6 +32,7 @@
         </p>
         <p class="views-time m-0">
             <c:out value='${video.views == 0 ? 0 : cs.addFPoint(video.views)}'/>
+<%--            <fmt:formatNumber value = "${video.views}" type = "currency"/>--%>
             &nbsp;lượt xem •&nbsp;
             <c:out value='${cs.formatTime(video.postingTime)}'/>
         </p>
@@ -72,7 +73,7 @@
                 </div>
             </a>
             <div id="btn-subscribe"
-                 class="${sService.isSubscribed(video.userId, user.id) ? 'btn-sub h-40px rounded cursor-p lh-40px subscribeb' : 'btn-sub h-40px rounded cursor-p lh-40px'}">
+                 class="btn-sub h-40px rounded cursor-p lh-40px ${sService.isSubscribed(video.userId, user.id) ? 'subscribeb' : ''}">
                 <c:out value='${sService.isSubscribed(video.userId, user.id) ? \'ĐÃ ĐĂNG KÝ\' : \'ĐĂNG KÝ\'}'/>
             </div>
         </div>
@@ -85,7 +86,7 @@
     <hr/>
     <div class="comments">
         <div class="heading fw-600">
-            <span><c:out value='${comments.size() == 0 ? 0 : cs.formatNumber(comments.size())} bình luận'/></span>
+            <span id="quantity-comment"><c:out value='${comments.size() == 0 ? 0 : cs.formatNumber(comments.size())} bình luận'/></span>
             <span>
                 <i class="fal fa-sort-amount-up-alt"></i>
                 SẮP XẾP THEO
@@ -213,6 +214,9 @@
         userId: ${video.userId}
     }
 
+    // quantity of comment
+    let commentQuantity = ${video.comments.size()};
+
     // Interaction of video
     const videoInteraction = function () {
 
@@ -236,7 +240,7 @@
             btnInteractionClick(false);
         };
 
-        const btnInteractionClick = function (isBtnLike) {
+        let btnInteractionClick = function (isBtnLike) {
 
             // Check user of scope not null
             if (${user != null}) {
@@ -250,32 +254,21 @@
                 // Interaction is define
                 let defineInteraction = function (isBtnLike) {
 
-                    // is mode dislike
                     if ((interaction === -1 && isBtnLike) || (interaction === 1 && isBtnLike === false)) {
-
-                        Promise.all([callAPI(urlAPI.VidInteract, {
+                        callAPI(urlAPI.VidInteract, {
                             method: 'PUT',
                             body: bodyAPI
-
-                        }), callAPI(urlAPI.Video + `?src=interaction&action=update&id=` + video.id + `&isLike=` + isBtnLike, {
-                            method: 'PUT'
-
-                        })]).then(([isUpdateVidInteractionSuccess, isUpdateInteractionOfVideoSuccess]) => {
-                            if (!(isUpdateVidInteractionSuccess && isUpdateInteractionOfVideoSuccess)) {
+                        }).then(isSuccess => {
+                            if (!isSuccess) {
                                 return false;
                             }
                         });
 
                     } else {
-
-                        Promise.all([callAPI(urlAPI.VidInteract + `?id=` + video.id, {
+                        callAPI(urlAPI.VidInteract + `?id=` + video.id, {
                             method: 'DELETE'
-
-                        }), callAPI(urlAPI.Video + `?src=interaction&action=delete&id=` + video.id + `&isLike=` + isBtnLike, {
-                            method: 'PUT'
-
-                        })]).then(([isDeleteVidInteractionSuccess, isUpdateInteractionOfVideoSuccess]) => {
-                            if (!(isDeleteVidInteractionSuccess && isUpdateInteractionOfVideoSuccess)) {
+                        }).then(isSuccess => {
+                            if (!isSuccess) {
                                 return false;
                             }
                         });
@@ -284,17 +277,12 @@
                 }
 
                 // Interaction is undefine
-                let undefineInteraction = function (isBtnLike) {
-
-                    Promise.all([callAPI(urlAPI.VidInteract, {
+                let undefineInteraction = function () {
+                    callAPI(urlAPI.VidInteract, {
                         method: 'POST',
                         body: bodyAPI
-
-                    }), callAPI(urlAPI.Video + `?src=interaction&action=add&id=` + video.id + `&isLike=` + isBtnLike, {
-                        method: 'PUT'
-
-                    })]).then(([isAddVidInteractionSuccess, isUpdateInteractionOfVideoSuccess]) => {
-                        if (isAddVidInteractionSuccess && isUpdateInteractionOfVideoSuccess) {
+                    }).then(isSuccess => {
+                        if (!isSuccess) {
                             return false;
                         }
                     });
@@ -319,7 +307,7 @@
                         break;
                     }
                     case 0: {
-                        if (undefineInteraction(isBtnLike)) {
+                        if (undefineInteraction()) {
                             if (isBtnLike) {
                                 btnLike.classList.add('active');
                                 video.likes++;
@@ -363,7 +351,6 @@
     const subscribeChannel = function () {
 
         let isSub = ${sService.isSubscribed(video.userId, user.id)};
-        console.log('Begin: ' + isSub);
 
         // Quantity subscribe
         let subscribes = ${video.user.subscribe};
@@ -377,34 +364,26 @@
                 if (isSub) {
 
                     // subscribed
-                    Promise.all([callAPI(urlAPI.Subscribe + '?userId=' + video.userId, {
+                    callAPI(urlAPI.Subscribe + '?userId=' + video.userId, {
                         method: 'DELETE'
-
-                    }), callAPI(urlAPI.User + '?src=subscribe&action=delete&userId=' + video.userId, {
-                        method: 'PUT'
-
-                    })]).then(function ([isDeleteSubscribeSuccess, isUpdateSubscribeOfUserSuccess]) {
-                        if (!(isDeleteSubscribeSuccess && isUpdateSubscribeOfUserSuccess)) {
-                            return false;
-                        }
-                    })
+                    }).then(isSuccess => {
+                       if (!isSuccess) {
+                           return false;
+                       }
+                    });
                     btnSubscribe.innerHTML = 'ĐĂNG KÝ';
                     subscribes--;
 
                 } else {
 
                     // subscribe
-                    Promise.all([callAPI(urlAPI.Subscribe + '?userId=' + video.userId, {
+                    callAPI(urlAPI.Subscribe + '?userId=' + video.userId, {
                         method: 'POST'
-
-                    }), callAPI(urlAPI.User + '?src=subscribe&action=add&userId=' + video.userId, {
-                        method: 'PUT'
-
-                    })]).then(function ([isAddSubscribeSuccess, isUpdateSubscribeOfUserSuccess]) {
-                        if (!(isAddSubscribeSuccess && isUpdateSubscribeOfUserSuccess)) {
-                            return null;
+                    }).then(isSuccess => {
+                        if (!isSuccess) {
+                            return false;
                         }
-                    })
+                    });
                     btnSubscribe.innerHTML = 'ĐÃ ĐĂNG KÝ';
                     subscribes++;
                 }
@@ -453,18 +432,23 @@
         if (btnAddComment != null) {
             btnAddComment.onclick = () => {
                 let commentContent = input.value;
-                if (commentContent === "") {
+                if (commentContent === '') {
                     return false;
                 }
 
                 // Insert into database
-                callAPI(urlAPI.Comment + "?src=crud", {
+                callAPI(urlAPI.Comment, {
                     method: 'POST',
                     body: JSON.stringify({
                         content: commentContent,
                         videoId: video.id
                     })
                 }).then((id) => {
+                    if (id === null) {
+                        alert('Không thành công!');
+                        return false;
+                    }
+
                     // render page
                     let renderComment = $('#render-comment');
                     renderComment.innerHTML = `
@@ -507,6 +491,8 @@
                         </div>
                     ` + renderComment.innerHTML;
                     fromAction.style.display = 'none';
+                    commentQuantity++;
+                    $('#quantity-comment').innerHTML = formatNumber(commentQuantity) + ` bình luận`;
                     input.value = '';
                     isDisplayAddComment = false;
                     editOrDeleteComment();
@@ -544,11 +530,10 @@
             }
 
             btnDelete.onclick = () => {
-                callAPI(urlAPI.Comment + '?src=crud&id=' + id, {
+                callAPI(urlAPI.Comment + '?id=' + id, {
                     method: 'DELETE'
-
-                }).then((isDeleteCommentSuccess) => {
-                    if (!isDeleteCommentSuccess) {
+                }).then((isSuccess) => {
+                    if (!isSuccess) {
                         return false;
                     }
                 });
@@ -557,6 +542,8 @@
                 comments.forEach((comment) => {
                     if (comment.getAttribute('data-id') === id) {
                         comment.innerHTML = ``;
+                        commentQuantity--;
+                        $('#quantity-comment').innerHTML = formatNumber(commentQuantity) + ` bình luận`;
                     }
                 });
             }
@@ -570,7 +557,7 @@
 
         interactionComments.forEach((interactionComment) => {
 
-            const id = interactionComment.getAttribute("data-id");
+            const id = interactionComment.getAttribute('data-id');
             const btnLike = interactionComment.querySelector('.btn__likecomment');
             const btnDislike = interactionComment.querySelector('.btn__dislikecomment');
 
@@ -608,30 +595,20 @@
 
                         // is mode dislike
                         if ((interaction === -1 && isBtnLike) || (interaction === 1 && isBtnLike === false)) {
-
-                            Promise.all([callAPI(urlAPI.ComInteract, {
+                            callAPI(urlAPI.ComInteract, {
                                 method: 'PUT',
                                 body: bodyAPI
-
-                            }), callAPI(urlAPI.Comment + `?src=interaction&action=update&id=` + id + `&isLike=` + isBtnLike, {
-                                method: 'PUT'
-
-                            })]).then(([isUpdateComInteractionSuccess, isUpdateInteractionOfCommentSuccess]) => {
-                                if (!(isUpdateComInteractionSuccess && isUpdateInteractionOfCommentSuccess)) {
+                            }).then(isSuccess => {
+                                if (!isSuccess) {
                                     return false;
                                 }
                             });
 
                         } else {
-
-                            Promise.all([callAPI(urlAPI.ComInteract + `?id=` + id, {
+                            callAPI(urlAPI.ComInteract + `?id=` + id, {
                                 method: 'DELETE'
-
-                            }), callAPI(urlAPI.Comment + `?src=interaction&action=delete&id=` + id + `&isLike=` + isBtnLike, {
-                                method: 'PUT'
-
-                            })]).then(([isDeleteComInteractionSuccess, isUpdateInteractionOfCommentSuccess]) => {
-                                if (!(isDeleteComInteractionSuccess && isUpdateInteractionOfCommentSuccess)) {
+                            }).then(isSuccess => {
+                                if (!isSuccess) {
                                     return false;
                                 }
                             });
@@ -640,17 +617,12 @@
                     }
 
                     // Interaction is undefine
-                    let undefineInteraction = function (isBtnLike) {
-
-                        Promise.all([callAPI(urlAPI.ComInteract, {
+                    let undefineInteraction = function () {
+                        callAPI(urlAPI.ComInteract, {
                             method: 'POST',
                             body: bodyAPI
-
-                        }), callAPI(urlAPI.Comment + `?src=interaction&action=add&id=` + id + `&isLike=` + isBtnLike, {
-                            method: 'PUT'
-
-                        })]).then(([isAddComInteractionSuccess, isUpdateInteractionOfCommentSuccess]) => {
-                            if (isAddComInteractionSuccess && isUpdateInteractionOfCommentSuccess) {
+                        }).then(isSuccess => {
+                            if (!isSuccess) {
                                 return false;
                             }
                         });
@@ -675,7 +647,7 @@
                             break;
                         }
                         case 0: {
-                            if (undefineInteraction(isBtnLike)) {
+                            if (undefineInteraction()) {
                                 if (isBtnLike) {
                                     btnLike.classList.add('active');
                                     likes++;
@@ -724,11 +696,9 @@
     const callAPI = function (url, options) {
         return fetch(url, options)
             .then((resp) => {
-                console.log(resp);
                 return resp.json();
             })
             .then((valueOfResponse) => {
-                console.log(valueOfResponse);
                 return valueOfResponse;
             })
         // .catch((err) => {
@@ -740,22 +710,26 @@
         let result;
         if (number > 1000000) {
             let coefficient = number / 1000000;
-            result = coefficient.toFixed(1) + ' Tr';
+            result = (coefficient.toFixed(1) - coefficient ? coefficient : coefficient.toFixed(1)) + ' Tr';
         } else if (number > 1000) {
             let coefficient = number / 1000;
-            result = coefficient.toFixed(1) + ' N';
+            result = (coefficient.toFixed(1) - coefficient ? coefficient : coefficient.toFixed(1)) + ' N';
         } else {
             result = number;
         }
         return result;
     }
 
-    videoInteraction();
-    subscribeChannel();
-    addComment();
-    editOrDeleteComment();
-    commentInteraction();
-    nextVideo();
+    const main = function () {
+        videoInteraction();
+        subscribeChannel();
+        addComment();
+        editOrDeleteComment();
+        commentInteraction();
+        nextVideo();
+    }
+
+    main();
 
 </script>
 

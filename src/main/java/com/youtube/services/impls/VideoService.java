@@ -48,6 +48,7 @@ public class VideoService implements IVideoService {
     public List<Video> findAllByKey(String key) {
         String hqlQuery = "select v from Video v where "
                 + "v.name like '%" + key + "%'" +
+                " or v.user.name like '%" + key + "%'" +
                 " or v.hashtag like '%" + key + "%'" +
                 " or v.content like '%" + key + "%'";
         return videoDAO.querySelector(hqlQuery);

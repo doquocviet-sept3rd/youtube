@@ -22,4 +22,14 @@ public class PrintWriterUtil {
         printWriter.println(new Gson().toJson(value));
         printWriter.flush();
     }
+
+    public void printlnFalse() {
+        printWriter.println(new Gson().toJson(false));
+        printWriter.flush();
+    }
+
+    public void printlnTrue() {
+        printWriter.println(new Gson().toJson(true));
+        printWriter.flush();
+    }
 }

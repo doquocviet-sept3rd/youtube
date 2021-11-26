@@ -30,24 +30,27 @@ public class HomeController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+        List<Video> videosResult = null;
+        String key = "";
+        boolean isSearch = false;
+
         if (req.getServletPath().equals("/search")) {
-            String key = req.getParameter("key");
-            List<Video> videosResult = videoService.findAllByKey(key);
-            if (videosResult == null) {
-                videosResult = new ArrayList<>();
-            }
-            req.setAttribute("key", key);
-            req.setAttribute("videosResult", videosResult);
-            req.setAttribute("isSearch", true);
-        } else {
-            req.setAttribute("videosResult", new ArrayList<Video>());
-            req.setAttribute("isSearch", false);
-            req.setAttribute("key", "");
+            key = req.getParameter("key");
+            videosResult = videoService.findAllByKey(key);
+            isSearch = true;
         }
+
+        req.setAttribute("videosResult", videosResult == null ? new ArrayList<>() : videosResult);
+        req.setAttribute("isSearch", isSearch);
+        req.setAttribute("key", key);
+
         Collection<Video> videos = videoService.findAll();
         Collections.shuffle((List<?>) videos);
         req.setAttribute("videos", videos);
+
         req.setAttribute("cs", commonService);
+
         RequestDispatcher rd = req.getRequestDispatcher("/views/dashboard/home.jsp");
         rd.forward(req, resp);
     }

@@ -1,4 +1,5 @@
 #container {
+    margin-top: 56px;
     display: flex;
     background-color: #f9f9f9;
     padding: 24px 100px 0 100px;
@@ -96,7 +97,7 @@
 }
 
 #primary .content .info .subscribeb {
-    background-color: #bbbbbb;
+    background-color: #bbb;
     color: #333;
     font-weight: 600;
 }

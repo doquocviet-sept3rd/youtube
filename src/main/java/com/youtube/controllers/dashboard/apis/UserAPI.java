@@ -1,10 +1,5 @@
 package com.youtube.controllers.dashboard.apis;
 
-import com.youtube.entities.User;
-import com.youtube.services.IUserService;
-import com.youtube.utils.PrintWriterUtil;
-
-import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -16,12 +11,6 @@ import java.io.IOException;
 public class UserAPI extends HttpServlet {
 
     private static final Long serialVersionUID = 1L;
-
-    @Inject
-    private IUserService userService;
-
-    @Inject
-    private PrintWriterUtil printWriterUtil;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -35,25 +24,7 @@ public class UserAPI extends HttpServlet {
 
     @Override
     protected void doPut(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-        resp.setContentType("application/json");
-        printWriterUtil.getInstance(resp);
-        if (req.getParameter("src").equals("subscribe")) {
-            try {
-                User user;
-                if (req.getParameter("action").equals("add")) {
-                    user = userService.findOne(Long.valueOf(req.getParameter("userId")));
-                    user.setSubscribe(user.getSubscribe() + 1);
-                } else {
-                    user = userService.findOne(Long.valueOf(req.getParameter("userId")));
-                    user.setSubscribe(user.getSubscribe() - 1);
-                }
-                userService.update(user);
-                printWriterUtil.println(true);
-            } catch (Exception e) {
-                printWriterUtil.println(false);
-            }
-        }
+        super.doPut(req, resp);
     }
 
     @Override

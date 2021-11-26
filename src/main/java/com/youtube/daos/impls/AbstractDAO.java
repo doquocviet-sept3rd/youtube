@@ -2,6 +2,9 @@ package com.youtube.daos.impls;
 
 import com.youtube.daos.GenericDAO;
 import com.youtube.daos.utils.HibernateUtils;
+import com.youtube.entities.ComInteract;
+import com.youtube.entities.Subscribe;
+import com.youtube.entities.VidInteract;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -72,7 +75,11 @@ public class AbstractDAO<Entity> implements GenericDAO<Entity> {
 
             // Return Entity's id after inserted successfully
             try {
-                return (Long) id;
+                if (entity.getClass() == VidInteract.class || entity.getClass() == ComInteract.class || entity.getClass() == Subscribe.class) {
+                    return Long.valueOf("0");
+                } else {
+                    return (Long) id;
+                }
             } catch (Exception e) {
                 return null;
             }

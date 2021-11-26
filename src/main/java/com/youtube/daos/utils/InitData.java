@@ -789,7 +789,7 @@ public class InitData {
         /* begin: news */
         videos.add(new Video(
                 "Dự báo thời tiết hôm nay mới nhất ngày 13/11/2021 | Dự báo thời tiết 3 ngày tới",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/dzhtPmsHIQs\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/e3uTbGN4-MM\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 2796,
                 Timestamp.valueOf("2021-04-01 20:00:00.00"),
                 "#thoitiet #tintuc",
@@ -1215,7 +1215,7 @@ public class InitData {
         ));
         videos.add(new Video(
                 "Hậu Duệ Cuối Cùng Của Tộc Rồng Khổng Lồ | Review Phim | Tóm Tắt Phim\n",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/6CizF2aPdio\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/--H8KhqpzM0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 1133305,
                 Timestamp.valueOf("2021-09-19 20:00:00.00"),
                 "#reviewphim #phimreview #tomtatphim",
@@ -1234,7 +1234,7 @@ public class InitData {
         ));
         videos.add(new Video(
                 "Cuộc Đối Đầu Với Đội Quân Côn Trùng Khổng Lồ | Review Phim | Tóm Tắt Phim\n",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xnIsP8F50n4\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/m0uGZtkaFvU\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
                 251519,
                 Timestamp.valueOf("2021-09-19 20:00:00.00"),
                 "#reviewphim #phimreview #tomtatphim",
@@ -1476,43 +1476,21 @@ public class InitData {
 
         /* begin: film */
         videos.add(new Video(
-                "Ngọa Hổ Tàng Long [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Gây Cấn Hay Nhất 2021",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/gJB-zniClpE?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-                812960,
+                "DIỆP VẤN 3 [Thuyết Minh] | Chung Tử Ðơn, Mike Tyson | Phim Võ Thuật Hành Động Kinh Điển Nhất",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/5kJz1TmbTb8?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                16150991,
                 Timestamp.valueOf("2021-10-27 23:00:00.00"),
-                "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
-                "Ngọa Hổ Tàng Long [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Gây Cấn Hay Nhất 2021\n" +
-                        "<br/> \n" +
-                        "⭐Chào mừng các bạn đến với Lạ Phim.\n" +
-                        "⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\n" +
-                        "\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:\n" +
-                        "https://www.youtube.com/channel/UCCZR...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACUni Movie - Kho Phim Của Mọi Nhà:\n" +
-                        "https://www.youtube.com/channel/UCzZV...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Kiếm Hiệp Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCPp9...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Drama, Ngôn Tình Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCSZt...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Cổ Trang Hoa Ngữ Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCTqL...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Hành Động Chiếu Rạp Mỹ:\n" +
-                        "https://www.youtube.com/channel/UCvTf...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Võ Thuật Chiếu Rạp Mỹ:\n" +
-                        "https://www.youtube.com/channel/UCV9c....\n" +
-                        "<br/> \n" +
-                        "© Bản quyền phim thuộc về Lạ Phim.\n" +
-                        "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "<br/> \n" +
-                        "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimvothuat #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
-                2401,
-                335,
-                "https://i.ytimg.com/vi/gJB-zniClpE/maxresdefault.jpg",
+                "##phimvõthuật #chungtửđơn #kungfu",
+                "DIỆP VẤN 3 | Chung Tử Ðơn, Mike Tyson | Phim Võ Thuật Hành Động Thuyết Minh.\n" +
+                        "\n" +
+                        "Diệp Vấn 3 “ Trận Chiến Cuối Cùng ” – Phim thuộc thể loại hành động do Trung Quốc sản xuất câu chuyện nói về một nhân vật quan trọng trong nền võ thuật của Trung Quốc, Phim khắc hoạ lại hình ảnh thầy trò của Diệp Vấn và Lý Tiểu Long, bên cạnh đó phim còn có sự khai thác mới giữa Diệp Vấn đối đầu với một võ sĩ huyền anh của Mỹ, bên cạnh đó điểm hấp dẫn nhất là nhà sản xuất dùng công nghệ làm nhân vật huyền thoại Lý Tiểu Long sống lại và còn có sự góp mặt của tay đấm huyền anh thế giới Mike Tyson. Trong những cảnh quay Chân Tử Đan tự diễn những pha hành động mà không nhờ thế thân nên bộ phim trở nên rất thiết thật và có tính chân thật khiến người xem thích thú. Chung Tử Đơn sẽ vào vai diệp vấn…!!!\n" +
+                        "\n" +
+                        "#phimvõthuật #chungtửđơn #kungfu\n" +
+                        "\n" +
+                        "Chân thành cảm ơn các nhãn hàng đã tài trợ: #pepsi #shopee #lazada #tiki #samsung #iphone #apple #Microsoft #Amazon #Nestle #Unilever #Gojek #Bee #Honda #Yamaha #Toyota",
+                32208,
+                6547,
+                "https://i.ytimg.com/vi/5kJz1TmbTb8/maxresdefault.jpg",
                 6,
                 5,
                 Timestamp.from(Instant.now()),
@@ -1521,43 +1499,21 @@ public class InitData {
                 Long.valueOf("0")
         ));
         videos.add(new Video(
-                "Ngũ Hổ Quảng Đông [Thuyết Minh] | Phim Hành Động Võ Thuật Đỉnh Cao Gây Cấn Kịch Tính Hay Nhất 2021",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/zWiass4WloY?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-                450927,
-                Timestamp.valueOf("2021-11-01 18:00:00.00"),
-                "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
-                "Ngũ Hổ Quảng Đông [Thuyết Minh] | Phim Hành Động Võ Thuật Đỉnh Cao Gây Cấn Kịch Tính Hay Nhất 2021\n" +
-                        "<br/> \n" +
-                        "⭐Chào mừng các bạn đến với Lạ Phim.\n" +
-                        "⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\n" +
-                        "\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:\n" +
-                        "https://www.youtube.com/channel/UCCZR...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACUni Movie - Kho Phim Của Mọi Nhà:\n" +
-                        "https://www.youtube.com/channel/UCzZV...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Kiếm Hiệp Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCPp9...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Drama, Ngôn Tình Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCSZt...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Cổ Trang Hoa Ngữ Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCTqL...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Hành Động Chiếu Rạp Mỹ:\n" +
-                        "https://www.youtube.com/channel/UCvTf...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Võ Thuật Chiếu Rạp Mỹ:\n" +
-                        "https://www.youtube.com/channel/UCV9c....\n" +
-                        "<br/> \n" +
-                        "© Bản quyền phim thuộc về Lạ Phim.\n" +
-                        "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "<br/> \n" +
-                        "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimvothuat #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
-                1920,
-                241,
-                "https://i.ytimg.com/vi/zWiass4WloY/maxresdefault.jpg",
+                "DIỆP VẤN [Thuyết Minh] | Chung Tử Đơn, Nhậm Đạt Hoa | Phim Võ Thuật Kungfu Đỉnh Cao Mãn Nhãn Nhất",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/pTYa27TLyxM?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                13438719,
+                Timestamp.valueOf("2019-09-24 18:00:00.00"),
+                "#phimhànhđộng #phimvõthuật #chungtửđơn",
+                "DIỆP VẤN [Thuyết Minh] | Chung Tử Đơn, Nhậm Đạt Hoa - Phim Võ Thuật Kungfu Vịnh Xuân Quyền.\n" +
+                        "\n" +
+                        "Diệp Vấn bấy giờ được mọi người cho là cao thủ bậc nhất của Vịnh Xuân Quyền. Lưu sư phụ mới mở một lò võ và muốn đến Diệp gia xin 'chỉ giáo' trong một trận đấu bí mật. Diệp Vấn đã chiến thắng một cách dễ dàng, tăng thêm sự ngưỡng mộ của mọi người đối với anh. Không lâu sau, một tên thảo khấu tên là Kim Sơn Trảo cùng bè lũ đến vùng Phật Sơn, hắn cho rằng nếu đấu võ thắng Diệp Vấn, hắn sẽ được người dân ủng hộ và xin theo học võ công. Nhưng Diệp Vấn đã “dạy dỗ” Sơn Trảo bằng bốn môn công phu của Vĩnh Xuân là quyền, cước, liễu diệp đao, và côn thẳng như vậy...?\n" +
+                        "\n" +
+                        "#phimhànhđộng #phimvõthuật #chungtửđơn\n" +
+                        "\n" +
+                        "Chân thành cảm ơn các nhãn hàng đã tài trợ: #pepsi #shopee #lazada #tiki #samsung #iphone #apple #Microsoft #Amazon #Nestle #Unilever #Gojek #Bee #Honda #Yamaha #Toyota",
+                37740,
+                5102,
+                "https://i.ytimg.com/vi/pTYa27TLyxM/maxresdefault.jpg",
                 6,
                 5,
                 Timestamp.from(Instant.now()),
@@ -1566,43 +1522,19 @@ public class InitData {
                 Long.valueOf("0")
         ));
         videos.add(new Video(
-                "Cuộc Chiến Bến Thượng Hải [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Mới 2021",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/ioQWPpPR5aw?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-                159466,
-                Timestamp.valueOf("2021-11-01 20:00:00.00"),
-                "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
-                "Cuộc Chiến Bến Thượng Hải [Thuyết Minh] | Phim Hành Động Võ Thuật Kịch Tính Mới 2021\n" +
-                        "<br/> \n" +
-                        "⭐Chào mừng các bạn đến với Lạ Phim.\n" +
-                        "⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\n" +
-                        "\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:\n" +
-                        "https://www.youtube.com/channel/UCCZR...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACUni Movie - Kho Phim Của Mọi Nhà:\n" +
-                        "https://www.youtube.com/channel/UCzZV...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Kiếm Hiệp Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCPp9...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Drama, Ngôn Tình Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCSZt...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Cổ Trang Hoa Ngữ Mới Hay Nhất:\n" +
-                        "https://www.youtube.com/channel/UCTqL...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Hành Động Chiếu Rạp Mỹ:\n" +
-                        "https://www.youtube.com/channel/UCvTf...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFACPhim Võ Thuật Chiếu Rạp Mỹ:\n" +
-                        "https://www.youtube.com/channel/UCV9c....\n" +
-                        "<br/> \n" +
-                        "© Bản quyền phim thuộc về Lạ Phim.\n" +
-                        "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "<br/> \n" +
-                        "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimvothuat #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
-                561,
-                70,
-                "https://i.ytimg.com/vi/ioQWPpPR5aw/maxresdefault.jpg",
+                "CUỒNG THÚ [Thuyết Minh] | Phim Võ Thuật Hành Động Kungfu Hay Nhất",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/9Tp2PXLh2AQ?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                5566634,
+                Timestamp.valueOf("2019-10-26 20:00:00.00"),
+                "#PHIMVÕTHUẬT #PHIMHÀNHĐỘNG #KUNGFU",
+                "CUỒNG THÚ | Phim Hành Động Võ Thuật Kungfu Kinh Điển Nhất Thuyết Minh.\n" +
+                        "\n" +
+                        "Nội dung: Phim Cuồng Thú kể về câu chuyện huynh đệ tương tàn, cảnh sát và bọn cướp trong sự cám dỗ của tiền bạc. Mời các bạn đón xem diễn biến của tập phim sẽ diễn ra như thế nào nhé! Chúc các bạn một ngày vui vẻ ^^!\n" +
+                        "\n" +
+                        "#PHIMVÕTHUẬT #PHIMHÀNHĐỘNG #KUNGFU",
+                7658,
+                1952,
+                "https://i.ytimg.com/vi/9Tp2PXLh2AQ/maxresdefault.jpg",
                 6,
                 5,
                 Timestamp.from(Instant.now()),
@@ -1611,36 +1543,19 @@ public class InitData {
                 Long.valueOf("0")
         ));
         videos.add(new Video(
-                "Anh Hùng Cứu Thế [Thuyết Minh] | Phim Hành Động Võ Thuật Gây Cấn Kịch Tính Hay Nhất",
-                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/xxACrkCqRPE?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
-                388608,
-                Timestamp.valueOf("2021-10-08 21:30:00.00"),
-                "#phimcotrang #phimkiemhiep #phimkiemhiep2021",
-                "Anh Hùng Cứu Thế [Thuyết Minh] | Phim Hành Động Võ Thuật Gây Cấn Kịch Tính Hay Nhất\n" +
-                        "<br/> \n" +
-                        "⭐Chào mừng các bạn đến với Lạ Phim.⭐Nơi tổng hợp những bộ phim hành động, kiếm hiệp Trung Quốc hay nhất mọi thời đại.\uD83D\uDD14 Đăng ký kênh và nhấn chuông thông báo để đón xem những tập phim hay nhất:https://www.youtube.com/channel/UCCZR...;" +
-                        "<br/> \n" +
-                        "\uD83C\uDFAC Uni Movie - Kho Phim Của Mọi Nhà:https://www.youtube.com/channel/UCzZV...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFAC Phim Kiếm Hiệp Mới Hay Nhất:https://www.youtube.com/channel/UCPp9...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFAC Phim Drama, Ngôn Tình Mới Hay Nhất:https://www.youtube.com/channel/UCSZt...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFAC Phim Cổ Trang Hoa Ngữ Mới Hay Nhất:https://www.youtube.com/channel/UCTqL...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFAC Phim Hành Động Chiếu Rạp Mỹ:https://www.youtube.com/channel/UCvTf...\n" +
-                        "<br/> \n" +
-                        "\uD83C\uDFAC Phim Võ Thuật Chiếu Rạp Mỹ:https://www.youtube.com/channel/UCV9c...\n" +
-                        "<br/> \n" +
-
-                        "-----------------\n" +
-                        "© Bản quyền phim thuộc về Lạ Phim.\n" +
-                        "Vui lòng không reup dưới mọi hình thức!\n" +
-                        "<br/> \n" +
-                        "#phimcotrang #phimkiemhiep #phimkiemhiep2021 #phimbothuyetminh #phimcotrang2021 #phimcotrangtrungquoc #phimbotrungquoc #phimbo #phimhay #phimthuyetminh #phimtrungquoc #phimcotrangtrungquoc #phimvothuatdinhcao  #phimmoi #phimhay2021",
-                1341,
-                211,
-                "https://i.ytimg.com/vi/xxACrkCqRPE/maxresdefault.jpg",
+                "PHIM HÀNH ĐỘNG XHĐ SÁT THỦ NẰM VÙNG | TINH ANH PHI HỔ | Võ Thuật Chiếu Rạp Hay Nhất",
+                "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/csjuHllTGi8?autoplay=1\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>",
+                40959,
+                Timestamp.valueOf("2021-11-06 21:30:00.00"),
+                "#phimhànhđộng #phimvõthuật #phimchiếurạp",
+                "Phim Hành Động Võ Thuật Siêu Sát Thủ Hay Nhất Chiếu Rạp | Tinh Anh Phi Hổ - Ngô Mạnh Đạt, Trịnh Tú Văn.\n" +
+                        "\n" +
+                        "Sau cái chết của con trai mình, Bi Nhỏ(Ngô Mạnh Đạt) đã để đứa con trai còn tham gia vào một nhóm cảnh sát ưu tú được gọi là \"Phi Hổ\" và tìm hiểu ý nghĩa thực sự của công lý. \n" +
+                        "\n" +
+                        "#phimhànhđộng #phimvõthuật #phimchiếurạp #sátthủ #ngômạnhđạt #phimhay #phimmới",
+                96,
+                22,
+                "https://i.ytimg.com/vi/csjuHllTGi8/maxresdefault.jpg",
                 6,
                 5,
                 Timestamp.from(Instant.now()),
@@ -3278,7 +3193,7 @@ public class InitData {
                 0,
                 "BT Sport",
                 "https://yt3.ggpht.com/ytc/AKedOLTah3wO8rXzUJAUk_Mc2yqGPUTdk6L5809pq9jaoQ=s88-c-k-c0x00ffffff-no-rj",
-                "https://yt3.ggpht.com/R3u6oAK7Lu6PFLxb_BW9RUfMVsMzG96irtpCKzsRRQKuSfYi4awv6hp7qbvge40J1jXfBPD9Yw=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                "https://yt3.ggpht.com/yCYpSmTHfYyoUVhAva3o9ZrevdIIJ68zsMhHiIHpaHC43j5WcOeqPfqvocDj8QJRVQCdC9J9fA=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3286,13 +3201,13 @@ public class InitData {
         ));
         //6
         users.add(new User(
-                "laphim@gmail.com",
-                "laphim",
-                "https://yt3.ggpht.com/v3vCPUHnGfdGQ8ZHWC7euno-e7WEhbGPT-231RdfcQwVHT0vMSjiJX9Z8yEBqIdSJdQb8abrhQ=s900-c-k-c0x00ffffff-no-rj",
-                11288852,
-                "LẠ PHIM",
-                "https://yt3.ggpht.com/v3vCPUHnGfdGQ8ZHWC7euno-e7WEhbGPT-231RdfcQwVHT0vMSjiJX9Z8yEBqIdSJdQb8abrhQ=s900-c-k-c0x00ffffff-no-rj",
-                "https://yt3.ggpht.com/_UwiH8qo89mDDxBpBBbI69urcmizKksf68mbnXBRrFnfIpR0JAsEZY0ACN0A4TUPHQqBDYE4gQ=w1138-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
+                "publicmovie@gmail.com",
+                "publicmovie",
+                "https://yt3.ggpht.com/ytc/AKedOLQfbfW-mJ8HTNMKupxnO4ZY6e9k7hW999xj9x6R=s176-c-k-c0x00ffffff-no-rj",
+                627000,
+                "PUBLIC MOVIE",
+                "https://yt3.ggpht.com/ytc/AKedOLQfbfW-mJ8HTNMKupxnO4ZY6e9k7hW999xj9x6R=s176-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/I_t4bqwED544BI6lNlYGdmHhv5YTwte2RcGvFZ5nR3S5lmMQ-CQMEeCVWfSIWxpWc73PM5ZDpGA=w1060-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3432,7 +3347,7 @@ public class InitData {
                 0,
                 "Báo Tuổi Trẻ ",
                 "https://yt3.ggpht.com/ytc/AKedOLS5BIK9LUNgfoYekApq9lJINIaeLQCj7MnsE68Okg=s88-c-k-c0x00ffffff-no-rj",
-                "https://yt3.ggpht.com/ytc/AKedOLS5BIK9LUNgfoYekApq9lJINIaeLQCj7MnsE68Okg=s88-c-k-c0x00ffffff-no-rj",
+                "https://yt3.ggpht.com/HFy-cZSs1lzTaZzogd-Ywtkrd9fDRjF77FLho6bZ1V7dLPGuVlJCYAL7k6qan-3kOAVzb8mxwA=w2120-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3442,11 +3357,11 @@ public class InitData {
         users.add(new User(
                 "vtcnow@gmail.com",
                 "vtcnow",
-                "https://yt3.ggpht.com/v1-iy7rfCvXvovesVC9k6pZSsFNHaJLEXlLUEinhE9ucA8lPg4EHtR1DThZ9VL7aoXfGZRy11A=s176-c-k-c0x00ffffff-no-rj-mo",
+                "https://yt3.ggpht.com/y9CMqrQCkIPpx5dAVBdLmCrokX6K6ZJv10Rz3oUkGg0gzjWpCghwN6UhYP3Cx2eZMae9u1-jVw=s88-c-k-c0x00ffffff-no-rj",
                 0,
                 "VTC NOW",
-                "https://yt3.ggpht.com/v1-iy7rfCvXvovesVC9k6pZSsFNHaJLEXlLUEinhE9ucA8lPg4EHtR1DThZ9VL7aoXfGZRy11A=s176-c-k-c0x00ffffff-no-rj-mo",
-                "https://i.ytimg.com/vi/JLlF_AaFDcQ/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD0UZ2qGxs4mBGrIhG6Y9g9OMRD6w",
+                "https://yt3.ggpht.com/y9CMqrQCkIPpx5dAVBdLmCrokX6K6ZJv10Rz3oUkGg0gzjWpCghwN6UhYP3Cx2eZMae9u1-jVw=s88-c-k-c0x00ffffff-no-rj",
+                "https://i.ytimg.com/vi/1XLMISGDjeA/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLB8zwNT9suEP3fAPcmBnszxXI-04Q",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3460,7 +3375,7 @@ public class InitData {
                 0,
                 "Gấu Béo Vụng Về",
                 "https://yt3.ggpht.com/xhscPWZJqzgfISL5imqtrpzpNtBRR2cwZiYiVwuJFHPg7XkTaOqvRDXcfdWDbUk7gxJs_WLqOg=s176-c-k-c0x00ffffff-no-rj-mo",
-                "https://i.ytimg.com/vi/SsMD2BFkqgA/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBef7mvI-MkHm4xzkZS6OL8CINl_w",
+                "https://yt3.ggpht.com/Wv_cnAQVxBkyFdxJIjlu6rO7vytK4fH-u2vGL1cysMMA-uYJ5DaNDRCcSji_WaZJp0RR2K60ag=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3474,7 +3389,7 @@ public class InitData {
                 0,
                 "Hà Khuất",
                 "https://yt3.ggpht.com/ytc/AKedOLSo0gM8RbZ-jWdllvpGlpKHvLUv7e_mw_FiLSMA=s88-c-k-c0x00ffffff-no-rj",
-                "https://i.ytimg.com/vi/1wfdUEomkCw/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC-NjTf0pONZD2bJCHEJPN2ApLIUw",
+                "https://yt3.ggpht.com/PmOhKU8Sb-RfrzUDLdGusMS6NW_7Tsi422_Irnir4YQycr7MTjkaD7CO7rp6SsHSWILyoUcnBQ=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3488,7 +3403,7 @@ public class InitData {
                 0,
                 "Ha Linh Official",
                 "https://yt3.ggpht.com/ytc/AKedOLRsTk5m6bvl-Ce1DRsp1YbWV4196gfydfUuiXKHCg=s88-c-k-c0x00ffffff-no-rj",
-                "https://i.ytimg.com/vi/92M7oMHuyds/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAYG1LlMlyRINfh8P-ayBXgj_g6oQ",
+                "https://yt3.ggpht.com/kK2_lWmLdJtyem_b20RlQfbUlWzaW96ZRwuGzrG0rHpznlkw537TLGiLrqGBDPWSWsrd2jor9AE=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
                 Timestamp.from(Instant.now()),
                 Long.valueOf("0"),
                 Timestamp.from(Instant.now()),
@@ -3513,6 +3428,5 @@ public class InitData {
         for (Video video : videos) {
             videoDAO.insert(video);
         }
-
     }
 }

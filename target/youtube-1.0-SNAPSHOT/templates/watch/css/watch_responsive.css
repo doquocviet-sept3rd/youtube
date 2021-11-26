@@ -37,6 +37,10 @@
         display: block;
     }
 
+    #secondary .session figure img {
+        width: 100%;
+    }
+
     #secondary .session > div {
         padding-left: 0;
         padding-right: 30px;

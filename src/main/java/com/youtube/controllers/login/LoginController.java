@@ -35,7 +35,10 @@ public class LoginController extends HttpServlet {
                 User user = GoogleUtil.getUserInfo(access_token);
                 Long id;
                 if (userService.isExistEmail(user.getEmail())) {
-                    id = userService.findOneByEmail(user.getEmail()).getId();
+                    User userInDataBase = userService.findOneByEmail(user.getEmail());
+                    id = userInDataBase.getId();
+                    userInDataBase.setAvatarUrl(user.getAvatarUrl());
+                    userService.update(userInDataBase);
                 } else {
                     id = userService.insert(user);
                 }
